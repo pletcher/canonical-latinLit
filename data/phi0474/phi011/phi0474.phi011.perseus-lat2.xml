@@ -70,7 +70,12 @@
 				<refState unit="speech" delim="."/>
 				<refState unit="section"/>
 			</refsDecl>
-		</encodingDesc>
+				<refsDecl xml:id="CTS">
+				  <citeStructure match="/TEI/text/body" use="@xml:base">
+				    <citeStructure unit="section" delim=":" match="div/div/div[@subtype='section']" use="@n"/>
+				  </citeStructure>
+				</refsDecl>
+</encodingDesc>
 		
 		<profileDesc>
 			<langUsage>
@@ -80,6 +85,7 @@
 		</profileDesc>
 		
 		<revisionDesc>
+		  <change who="Charles Pletcher" when="2026-08-26">Add citeStructure refsDecl</change>
 			<change when="2026-06" who="Lisa Cerrato">Updates to header and encoding to reflect best practices.</change>
 			<change when="2016-04-19" who="Lisa Cerrato">Review of CTS and EpiDoc conversions; minor changes.</change>
 			<change when="2016-03-11" who="Zach Himes">Converted section milestones to divs. Moved some sections that weren't in the correct locations</change>
@@ -114,8 +120,8 @@
 	
 	
 	<text xml:lang="lat">
-	<body>
-	<div type="edition" xml:lang="lat" n="urn:cts:latinLit:phi0474.phi011.perseus-lat2" subtype="edition">
+	<body xml:base="urn:cts:latinLit:phi0474.phi011.perseus-lat2">
+	<div type="edition" xml:lang="lat" subtype="edition">
 	<head rend="align(center)">Orationes de Lege Agraria</head>
 	
 <div type="textpart" subtype="speech" xml:base="urn:cts:latinLit:phi0474.phi011.perseus-lat2" n="1"> 

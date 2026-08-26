@@ -69,7 +69,12 @@
          <refsDecl>
             <refState unit="section"/>
          </refsDecl>
-      </encodingDesc>
+            <refsDecl xml:id="CTS">
+              <citeStructure match="/TEI/text/body" use="@xml:base">
+                <citeStructure unit="section" delim=":" match="div/div[@subtype='section']" use="@n"/>
+              </citeStructure>
+            </refsDecl>
+</encodingDesc>
       <profileDesc>
          <langUsage>
             <language ident="lat">Latin</language>
@@ -77,6 +82,7 @@
          </langUsage>
       </profileDesc>
       <revisionDesc>
+        <change who="Charles Pletcher" when="2026-08-26">Add citeStructure refsDecl</change>
          <change when="2026-06" who="Lisa Cerrato">Updates to header and encoding to reflect best practices.</change>
          <change when="2016-05-20" who="Lisa Cerrato">Review of EpiDoc and CTS work. Minor edits.</change>
          <change when="2016-03-17" who="Zach Himes">Changed section milestones to divs.</change>
@@ -106,10 +112,10 @@
       </revisionDesc>
    </teiHeader>
    <text xml:lang="lat">
-      <body>
+      <body xml:base="urn:cts:latinLit:phi0474.phi019.perseus-lat2">
          
 
-<div type="edition" xml:lang="lat" n="urn:cts:latinLit:phi0474.phi019.perseus-lat2" subtype="edition"> 
+<div type="edition" xml:lang="lat" subtype="edition"> 
 <head rend="align(center)">ORATIO CVM SENATVI GRATIAS EGIT</head> 
          
 <milestone n="1" unit="chapter"/> 

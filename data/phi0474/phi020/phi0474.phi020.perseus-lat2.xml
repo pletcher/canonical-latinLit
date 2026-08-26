@@ -68,7 +68,12 @@
 					<p>This pointer pattern extracts section.</p>
 				</cRefPattern>
 			</refsDecl>
-		</encodingDesc>
+				<refsDecl xml:id="CTS">
+				  <citeStructure match="/TEI/text/body" use="@xml:base">
+				    <citeStructure unit="section" delim=":" match="div/div[@subtype='section']" use="@n"/>
+				  </citeStructure>
+				</refsDecl>
+</encodingDesc>
 
 		<profileDesc>
 			<langUsage>
@@ -78,6 +83,7 @@
 		</profileDesc>
 
 <revisionDesc>
+  <change who="Charles Pletcher" when="2026-08-26">Add citeStructure refsDecl</change>
 <change when="2026-06" who="Lisa Cerrato">Updates to header and encoding to reflect best practices.</change>
 <change who="Michael Konieczny" when="2021-01-19">Additional revisions for EpiDoc compliance</change> 
 <change who="Thibault Clérice" when="2021-01-19">Capitains + Epidoc markup</change> 
@@ -105,10 +111,10 @@
 	</teiHeader>
 
 	<text xml:lang="lat"> 
-	<body> 
+	<body xml:base="urn:cts:latinLit:phi0474.phi020.perseus-lat2"> 
 	
 
-<div xml:lang="lat" n="urn:cts:latinLit:phi0474.phi020.perseus-lat2" type="edition"> 
+<div xml:lang="lat" type="edition"> 
 	<head rend="align(center)">DE DOMO SVA AD PONTIFICES ORATIO</head> 
 	
 

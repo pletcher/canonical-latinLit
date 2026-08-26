@@ -69,7 +69,12 @@
 				<refState unit="section"/>
 			</refsDecl>
 
-		</encodingDesc>
+				<refsDecl xml:id="CTS">
+				  <citeStructure match="/TEI/text/body" use="@xml:base">
+				    <citeStructure unit="section" delim=":" match="div/div[@subtype='section']" use="@n"/>
+				  </citeStructure>
+				</refsDecl>
+</encodingDesc>
 
 		<profileDesc>
 			<langUsage>
@@ -79,6 +84,7 @@
 		</profileDesc>
 
 		<revisionDesc>
+		  <change who="Charles Pletcher" when="2026-08-26">Add citeStructure refsDecl</change>
 			<change when="2026-06" who="Lisa Cerrato">Updates to header and encoding to reflect best practices.</change>
 			<change when="2016-02-05" who="Lisa Cerrato">CTS structure</change>
 			<change when="2016-02-02" who="Lisa Cerrato">reorganized change log; added three letter
@@ -134,9 +140,9 @@
 		</revisionDesc>
 	</teiHeader>
 
-<text>
-<body> 
-<div type="edition" xml:lang="lat" n="urn:cts:latinLit:phi0474.phi004.perseus-lat2"> 
+<text xml:lang="lat">
+<body xml:base="urn:cts:latinLit:phi0474.phi004.perseus-lat2"> 
+<div type="edition" xml:lang="lat"> 
 <head rend="align(center)">M. Tulli Ciceroni in Q. Caecilium Oratio</head> <head rend="align(center)">Quae Divinatio Dicitur</head> 
 
 <div type="textpart" subtype="section" xml:base="urn:cts:latinLit:phi0474.phi004.perseus-lat2.xml" n="1">

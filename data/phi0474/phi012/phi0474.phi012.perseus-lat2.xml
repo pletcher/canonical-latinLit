@@ -67,7 +67,12 @@
 			<refsDecl>
 				<refState unit="section"/>
 			</refsDecl>
-		</encodingDesc>
+				<refsDecl xml:id="CTS">
+				  <citeStructure match="/TEI/text/body" use="@xml:base">
+				    <citeStructure unit="section" delim=":" match="div/div[@subtype='section']" use="@n"/>
+				  </citeStructure>
+				</refsDecl>
+</encodingDesc>
 		
 		<profileDesc>
 			<langUsage>
@@ -77,6 +82,7 @@
 		</profileDesc>
 		
 		<revisionDesc>
+		  <change who="Charles Pletcher" when="2026-08-26">Add citeStructure refsDecl</change>
 			<change when="2026-06" who="Lisa Cerrato">Updates to header and encoding to reflect best practices.</change>
 			<change when="2016-04-19" who="Lisa Cerrato">Minor changes; review of file conversion.</change>
 			<change when="2016-03-14" who="Zach Himes">Converted section milestones to divs.</change>
@@ -110,8 +116,8 @@
 	</teiHeader>
 	
 	<text xml:lang="lat">
-	<body> 
-	<div type="edition" xml:lang="lat" n="urn:cts:latinLit:phi0474.phi012.perseus-lat2" subtype="edition"> 
+	<body xml:base="urn:cts:latinLit:phi0474.phi012.perseus-lat2"> 
+	<div type="edition" xml:lang="lat" subtype="edition"> 
 	<head rend="align(center)">PRO C. RABIRIO PERDVELLIONIS REO AD QVIRITES ORATIO</head> 
 
 <div type="textpart" subtype="section" xml:base="urn:cts:latinLit:phi0474.phi012.perseus-lat2" n="1"><p rend="align(indent)"><milestone n="1" unit="chapter"/> <reg>etsi</reg>, Quirites, non est meae consuetudinis initio dicendi rationem reddere qua de causa quemque defendam, propterea quod cum omnibus civibus in eorum periculis semper satis iustam mihi causam necessitudinis esse duxi, tamen in hac defensione capitis, famae fortunarumque omnium C. Rabiri proponenda ratio videtur esse offici mei, propterea quod, quae iustissima mihi causa ad hunc defendendum esse visa est, eadem vobis ad absolvendum debet videri. </p></div> 

@@ -65,7 +65,12 @@
             <refState delim="." unit="chapter"/>
             <refState unit="section"/>
          </refsDecl>
-      </encodingDesc>
+            <refsDecl xml:id="CTS">
+              <citeStructure match="/TEI/text/body" use="@xml:base">
+                <citeStructure unit="chapter" delim=":" match="div/div/div[@subtype='chapter']" use="@n"/>
+              </citeStructure>
+            </refsDecl>
+</encodingDesc>
       <profileDesc >
          <langUsage>
             <language ident="eng">English</language>
@@ -73,7 +78,8 @@
             <language ident="grc">Ancient Greek</language>
          </langUsage>
       </profileDesc>
-      <revisionDesc> 
+      <revisionDesc>
+        <change who="Charles Pletcher" when="2026-08-26">Add citeStructure refsDecl</change> 
 <change who="rsingh04" when="2010-08-31">cleaned up log keyword</change>
  
 <change who="rsingh04" when="2009-10-09">more reorganizing of texts module by collection </change>
@@ -100,10 +106,9 @@
       </revisionDesc>
    </teiHeader>
    <text xml:lang="eng">
-      <body>
+      <body xml:base="urn:cts:latinLit:phi0474.phi035.perseus-eng1">
          <div xml:lang="eng"
-              type="edition"
-              n="urn:cts:latinLit:phi0474.phi035.perseus-eng1">
+              type="edition">
             <div type="textpart" n="1" subtype="speech">
                <head >THE FOURTEEN ORATIONS OF M. T. CICERO AGAINST MARCUS ANTONIUS, CALLED PHILIPPICS.</head>
                <head >THE FIRST PHILIPPIC.</head>

@@ -61,14 +61,22 @@
             <refState delim="." unit="letter"/>
             <refState unit="section"/>
          </refsDecl>
-      </encodingDesc>
+            <refsDecl xml:id="CTS">
+              <citeStructure match="/TEI/text/body" use="@xml:base">
+                <citeStructure unit="book" delim=":" match="div/div[@subtype='book']" use="@n">
+                  <citeStructure unit="section" delim="." match="div/div[@subtype='section']" use="@n"/>
+                </citeStructure>
+              </citeStructure>
+            </refsDecl>
+</encodingDesc>
       <profileDesc>
          <langUsage>
             <language ident="lat">Latin </language>
             <language ident="grc">Greek </language>
          </langUsage>
       </profileDesc>
-      <revisionDesc> 
+      <revisionDesc>
+        <change who="Charles Pletcher" when="2026-08-26">Add citeStructure refsDecl</change> 
          <change who="gcrane" when="2011-07-09">        header problem fixed</change>
         
          <change who="gcrane" when="2011-07-09">         cleaned up tagging problems in the header</change>
@@ -140,8 +148,8 @@
       </revisionDesc>
    </teiHeader>
    <text xml:lang="lat">
-      <body>
-         <div xml:lang="lat" type="edition" n="urn:cts:latinLit:phi0474.phi057.perseus-lat1">
+      <body xml:base="urn:cts:latinLit:phi0474.phi057.perseus-lat1">
+         <div xml:lang="lat" type="edition">
             <div type="textpart" n="1" subtype="book">
                <div type="textpart" n="1" subtype="letter">
                   <milestone unit="vulgate-letter" n="1"/>

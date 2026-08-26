@@ -67,7 +67,12 @@
 			<refsDecl>
 			<refState unit="section"/>
 			</refsDecl>
-		</encodingDesc>
+				<refsDecl xml:id="CTS">
+				  <citeStructure match="/TEI/text/body" use="@xml:base">
+				    <citeStructure unit="section" delim=":" match="div/div[@subtype='section']" use="@n"/>
+				  </citeStructure>
+				</refsDecl>
+</encodingDesc>
 
 		
 		<profileDesc>
@@ -78,6 +83,7 @@
 		</profileDesc>
 		
 		<revisionDesc>
+		  <change who="Charles Pletcher" when="2026-08-26">Add citeStructure refsDecl</change>
 			<change when="2026-06" who="Lisa Cerrato">Updates to header and encoding to reflect best practices.</change>
 			<change when="2016-04-13" who="Lisa Cerrato">Minor revisions.</change>
 			<change when="2016-03-10" who="Zach Himes">Converted milestone sections to divs. Minor edits.</change>
@@ -117,8 +123,8 @@
 	</teiHeader>
 	
 <text xml:lang="lat">
-<body>
-<div type="edition" xml:lang="lat" n="urn:cts:latinLit:phi0474.phi010.perseus-lat2" subtype="edition">
+<body xml:base="urn:cts:latinLit:phi0474.phi010.perseus-lat2">
+<div type="edition" xml:lang="lat" subtype="edition">
 <head rend="align(center)">PRO A. CLVENTIO ORATIO</head>
 
 <div type ="textpart" subtype="section" xml:base="urn:cts:latinLit:phi0474.phi010.perseus-lat2" n="1"><p rend="align(indent)"> <milestone n="1" unit="chapter"/>

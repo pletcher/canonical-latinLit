@@ -71,7 +71,12 @@
 					<p>This pointer pattern extracts section.</p>
 				</cRefPattern>
 			</refsDecl>
-		</encodingDesc>
+				<refsDecl xml:id="CTS">
+				  <citeStructure match="/TEI/text/body" use="@xml:base">
+				    <citeStructure unit="section" delim=":" match="div/div[@subtype='section']" use="@n"/>
+				  </citeStructure>
+				</refsDecl>
+</encodingDesc>
 
 		<profileDesc>
 			<langUsage>
@@ -81,6 +86,7 @@
 		</profileDesc>
 
 		<revisionDesc>
+		  <change who="Charles Pletcher" when="2026-08-26">Add citeStructure refsDecl</change>
 <change when="2026-06" who="Lisa Cerrato">Updates to header and encoding to reflect best practices.</change>	
 <change who="Michael Konieczny" when="2021-01-13">edited for CTS and EpiDoc compliance</change> 
 <change who="Stella Dee" when="2014-08-01">edited markup</change> 
@@ -110,9 +116,9 @@
 	</teiHeader>
 
 	<text xml:lang="lat">
-		<body>
+		<body xml:base="urn:cts:latinLit:phi0474.phi031.perseus-lat2">
 			
-<div xml:lang="lat" n="urn:cts:latinLit:phi0474.phi031.perseus-lat2" type="edition">
+<div xml:lang="lat" type="edition">
 <head rend="align(center)">PRO T. ANNIO MILONE ORATIO</head>
 				
 <div type="textpart" subtype="section" xml:base="urn:cts:latinLit:phi0474.phi031.perseus-lat2" n="1"> <p rend="align(indent)"><milestone unit="chapter" n="1" resp="editor"/><reg>etsi</reg> vereor, iudices, ne turpe sit pro fortissimo viro dicere incipientem timere minimeque deceat, cum T. Annius ipse magis de rei publicae salute quam de sua perturbetur<note>turbetur <hi rend="italic">T</hi></note>, me ad eius causam parem animi magnitudinem adferre non posse, tamen haec novi iudici nova forma terret oculos qui, quocumque inciderunt, veterem<note>veterem <hi rend="italic"><foreign xml:lang="grc">Σ</foreign>BH<foreign xml:lang="grc">δ</foreign></hi>: <hi rend="italic">om. ET, Quintil.</hi> xi. 3. 50</note> consuetudinem fori et pristinum morem iudiciorum requirunt. <reg>non</reg> enim corona consessus vester cinctus est, ut solebat; non usitata frequentia stipati sumus; </p> </div> 

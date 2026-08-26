@@ -55,7 +55,14 @@
                 <refState unit="book"/>
                 <refState unit="chapter" n="chunk"/>
             </refsDecl>
-        </encodingDesc>
+                <refsDecl xml:id="CTS">
+                  <citeStructure match="/TEI/text/body" use="@xml:base">
+                    <citeStructure match="div[@type='book']" use="@n" unit="book" delim=":">
+                      <citeStructure match=".//milestone[@unit='chapter']" use="@n" unit="chapter" delim="." n="chunk"/>
+                    </citeStructure>
+                  </citeStructure>
+                </refsDecl>
+</encodingDesc>
         <profileDesc>
             <langUsage default="false">
                 <language ident="en">English </language>
@@ -65,6 +72,7 @@
             </langUsage>
         </profileDesc>
         <revisionDesc>
+          <change who="Charles Pletcher" when="2026-08-26">Add citeStructure refsDecl</change>
             <!--
             <change>
                 <date>4/5/2006</date>
@@ -78,8 +86,8 @@
             <change when="2014-10-09" who="Stella Dee">edited markup</change>
         </revisionDesc>
     </teiHeader>
-    <text xml:lang="en">
-        <body>
+    <text xml:lang="eng">
+        <body xml:base="urn:cts:latinLit:phi0914.phi00130.perseus-eng2">
             <pb n="1283" xml:id="p.1283"/>
             <div part="N" sample="complete" org="uniform" n="30" type="book">
                 <head>BOOK XXX.</head>

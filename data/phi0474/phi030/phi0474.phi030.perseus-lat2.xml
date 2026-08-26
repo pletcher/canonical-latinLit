@@ -67,7 +67,12 @@
 				<p>This pointer pattern extracts section.</p>
 				</cRefPattern>
 			</refsDecl>
-		</encodingDesc>
+				<refsDecl xml:id="CTS">
+				  <citeStructure match="/TEI/text/body" use="@xml:base">
+				    <citeStructure unit="section" delim=":" match="div/div[@subtype='section']" use="@n"/>
+				  </citeStructure>
+				</refsDecl>
+</encodingDesc>
 		<profileDesc>
 			<langUsage>
 				<language ident="lat">Latin</language>
@@ -76,6 +81,7 @@
 		</profileDesc>
 
 		<revisionDesc>
+		  <change who="Charles Pletcher" when="2026-08-26">Add citeStructure refsDecl</change>
 <change when="2026-06" who="Lisa Cerrato">Updates to header and encoding to reflect best practices.</change>
 <change who="Michael Konieczny" when="2021-02-09">Revisions for CTS and EpiDoc compliance</change> 
 <change who="Thibault Clérice" when="2021-01-29">Capitains + Epidoc</change> 
@@ -106,9 +112,9 @@
 	</teiHeader>
 	
 	<text xml:lang="lat">
-		<body>
+		<body xml:base="urn:cts:latinLit:phi0474.phi030.perseus-lat2">
 			
-<div type="edition" n="urn:cts:latinLit:phi0474.phi030.perseus-lat2" xml:lang="lat">
+<div type="edition" xml:lang="lat">
 <head rend="align(center)">PRO C. RABIRIO POSTVMO ORATIO</head>
 				
 	<div n="1" type="textpart" subtype="section" xml:base="urn:cts:latinLit:phi0474.phi030.perseus-lat2">  <p rend="align(indent)"><milestone resp="editor" n="1" unit="chapter"/> <reg>si</reg> quis est, iudices, qui C. Rabirium, quod fortunas suas, fundatas praesertim atque optime constitutas opes, potestati regiae libidinique commiserit, reprehendendum putet, ascribat ad iudicium suum non modo meam sed huius etiam ipsius qui commisit sententiam; nec enim cuiquam eius consilium vehementius quam ipsi displicet. <reg>quamquam</reg> hoc plerumque facimus ut consilia eventis ponderemus et, cui bene quid processerit, multum illum providisse, cui secus, nihil sensisse dicamus. <reg>si</reg> exstitisset in rege fides, nihil sapientius Postumo, quia fefellit rex, nihil hoc amentius dicitur, ut iam nihil esse videatur nisi divinare sapientis. </p> </div> 

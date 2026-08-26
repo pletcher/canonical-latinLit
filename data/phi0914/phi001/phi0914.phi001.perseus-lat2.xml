@@ -97,14 +97,24 @@
         	<correction status="low"><p>Perseus OCR. Correction appears poor and many misprints remain. Section markers appear automatically added and seem frequently incorrect. Note that choice tags appear to represent OCR correction and may not represent app crit as printed. This is unclear as attestation to variants was not found in print sources.</p></correction>
         	<punctuation><p>converted all irregular quotation marks such as single quotes and German double quotes to curly quotes and placed stops within marks</p></punctuation>
         	</editorialDecl>
-        </encodingDesc>
+                <refsDecl xml:id="CTS">
+                  <citeStructure match="/TEI/text/body" use="@xml:base">
+                    <citeStructure unit="book" delim=":" match="div/div/div[@subtype='book']" use="@n">
+                      <citeStructure unit="chapter" delim="." match="div[@subtype='chapter']" use="@n">
+                        <citeStructure unit="section" delim="." match="div[@subtype='section']" use="@n"/>
+                      </citeStructure>
+                    </citeStructure>
+                  </citeStructure>
+                </refsDecl>
+</encodingDesc>
         <profileDesc>
             <langUsage>
                 <language ident="lat">Latin</language>
                 <language ident="eng">English</language>
             </langUsage>
         </profileDesc>
-        <revisionDesc> 
+        <revisionDesc>
+          <change who="Charles Pletcher" when="2026-08-26">Add citeStructure refsDecl</change> 
         	<change when="2018-06-21" who="Lisa Cerrato">updating lost typographical corrections; regularizing quotation marks with vary across print editions and were inconsistent in this file</change>
             <change when="2018-06-20" who="Lisa Cerrato">Reviewing composite files for completeness; added info to header to reflect Perseus history and derivation; added HathiTrust reference</change>
             <change when="2018-02-21" who="#LeaFrering">Adding a second note in NoteStmt.</change>
@@ -117,9 +127,9 @@
         	<change when="2006-07-19" who="Gregory Crane">ed.</change>
         </revisionDesc>
     </teiHeader>
-    <text>
-        <body>
-            <div xml:lang="lat" type="edition" n="urn:cts:latinLit:phi0914.phi001.perseus-lat2">
+    <text xml:lang="lat">
+        <body xml:base="urn:cts:latinLit:phi0914.phi001.perseus-lat2">
+            <div xml:lang="lat" type="edition">
                 <div type="textpart" subtype="part" n="1">
                     <div type="textpart" subtype="index">
                         <head>Index notarum.</head>
