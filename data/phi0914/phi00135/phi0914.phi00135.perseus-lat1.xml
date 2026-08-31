@@ -36,7 +36,7 @@
                                 <publisher>Weidmannsche Buchhandlung</publisher>
                                 <date>1873</date>
                             </imprint>
-                            <biblScope type="volume">8</biblScope>
+                            <biblScope unit="volume">8</biblScope>
                         </monogr>
                     </biblStruct>
                 </listBibl>
@@ -48,9 +48,21 @@
                 <refState unit="chapter" delim="."/>
                 <refState unit="section"/>
             </refsDecl>
+                <refsDecl n="CTS">
+                	<cRefPattern n="chapter"
+                		matchPattern="(\w+).(\w+)"
+                		replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@subtype='book'][@n='$1']/.//tei:milestone[@unit='chapter'][@n='$2'])">
+                		<p>This pointer pattern extracts book and chapter</p>
+                	</cRefPattern>
+                	<cRefPattern n="book"
+                		matchPattern="(\w+)"
+                		replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@subtype='book'][@n='$1'])">
+                		<p>This pointer pattern extracts book</p>
+                	</cRefPattern>
+                </refsDecl>
                 <refsDecl xml:id="CTS">
                   <citeStructure match="/TEI/text/body" use="@xml:base">
-                    <citeStructure match="div[@type='book']" use="@n" unit="book" delim=":">
+                    <citeStructure match="div/div[@subtype='book']" use="@n" unit="book" delim=":">
                       <citeStructure match=".//milestone[@unit='chapter']" use="@n" unit="chapter" delim="." n="chunk"/>
                     </citeStructure>
                   </citeStructure>
@@ -79,8 +91,8 @@
         </revisionDesc>
     </teiHeader>
     <text xml:lang="lat">
-        <body xml:base="urn:cts:latinLit:phi0914.phi00135.perseus-lat1">
-            <div part="N" sample="complete" org="uniform" n="35" type="book">
+        <body xml:base="urn:cts:latinLit:phi0914.phi00135.perseus-lat1"><div type="edition" n="urn:cts:latinLit:phi0914.phi00135.perseus-lat1" xml:lang="lat">
+            <div part="N" sample="complete" org="uniform" n="35" type="textpart" subtype="book">
                 <pb n="vol.8.p.1"/>
                 <p>
                     <milestone n="1" unit="chapter"/>
@@ -1598,7 +1610,7 @@
                     <pb n="notedatea" xml:id="vol.8.p.55"/> Quinctius legatique Corinthum redierunt.
                     inde, ut quaeque <note anchored="true" place="unspecified">
                         <date>a. Ch. 192.</date>
-                    </note> de Antiocho <gap/> nihil per se ipsi moti et sedentes expectare adventum
+                    </note> de Antiocho <gap reason="undefined"/> nihil per se ipsi moti et sedentes expectare adventum
                     viderentur regis, <milestone n="2" unit="section"/> concilium quidem universae
                     gentis post dimissos Romanos non habuerunt, per apocletos autem — ita vocant
                     sanctius consilium; ex delectis constat viris — id agitabant, quonam modo in
@@ -1615,7 +1627,7 @@
                         unit="section"/> hunc exul Eurylochus, de cuius fuga causaque fugae ante
                     dictum est, quia reditus in patriam nulla alia erat spes, adiuvit. <milestone
                         n="7" unit="section"/> litteris Eurylochi admoniti propinqui amicique et qui
-                    eiusdem factionis erant liberos et coniugem eius cum sordida veste <gap/> ,
+                    eiusdem factionis erant liberos et coniugem eius cum sordida veste <gap reason="undefined"/> ,
                     tenentes velamenta supplicum, contionem frequentem adierunt singulos
                     universosque obtestantes, ne insontem indemnatum consenescere in exilio
                     sinerent. <milestone n="8" unit="section"/> et simplices homines misericordia et
@@ -2261,6 +2273,6 @@
                     principio sibi orsus bellum videbatur, quod tanta insula et tot opportunae urbes
                     in suam dicionem venissent. </p>
             </div>
-        </body>
+        </div></body>
     </text>
 </TEI>

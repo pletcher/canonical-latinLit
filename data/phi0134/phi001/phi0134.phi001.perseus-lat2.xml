@@ -110,8 +110,7 @@
    </teiHeader>
    
    <text xml:lang="lat">
-      <body xml:base="urn:cts:latinLit:phi0134.phi001.perseus-lat2">
-         <div xml:lang="lat" type="edition">
+      <body xml:base="urn:cts:latinLit:phi0134.phi001.perseus-lat2"><div n="urn:cts:latinLit:phi0134.phi001.perseus-lat2" xml:lang="lat" type="edition">
             <div type="textpart" subtype="act" n="front">
            <l xml:base="urn:cts:latinLit:phi0134.phi001.perseus-lat2" n="cast">
               <listPerson>

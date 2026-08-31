@@ -78,8 +78,7 @@
       </revisionDesc>
    </teiHeader>
    <text xml:lang="lat">
-      <body xml:base="urn:cts:latinLit:phi0474.phi052.perseus-lat2">
-         <div xml:lang="lat" type="edition">
+      <body xml:base="urn:cts:latinLit:phi0474.phi052.perseus-lat2"><div n="urn:cts:latinLit:phi0474.phi052.perseus-lat2" xml:lang="lat" type="edition">
             <head>Laelius de Amicitia</head> <pb xml:id="p.108"/> 
 <div type="textpart" n="1" subtype="section"><p rend="indent"><milestone unit="chapter" n="1"/>Q. Mucius augur multa narrare de C. Laelio socero suo memoriter et iucunde solebat nec dubitare illum in omni sermone appellare sapientem. <reg>ego</reg> autem a patre ita eram deductus ad Scaevolam sumpta virili toga, ut, quoad possem et liceret, a senis latere numquam discederem. <reg>itaque</reg> multa ab eo prudenter disputata, multa etiam breviter et commode dicta memoriae mandabam, fierique studebam eius prudentia doctior. <reg>quo</reg> mortuo me ad pontificem Scaevolam contuli, quem unum nostrae civitatis et ingenio et iustitia praestantissimum audeo dicere. <reg>sed</reg> de hoc alias, nunc redeo ad augurem.</p></div> 
             <div type="textpart" n="2" subtype="section"><p rend="indent"><reg>cum</reg> saepe multa, tum memini domi in hemicyclio sedentem, ut solebat, cum et ego essem una et pauci admodum familiares, in eum sermonem illum incidere, qui tum fere multis<note>tum fere multis <emph rend="italic">MSS.;</emph> tum forte <emph rend="italic">Müller; Nauck om.</emph> multis</note> erat in ore. <reg>memi</reg>nisti <pb xml:id="p.110"/>  enim profecto, Attice, et eo magis, quod P. Sulpicio utebare multum, cum is tribunus plebis capitali odio a Q. Pompeio, qui tum erat consul, dissideret, quocum coniunctissime et amantissime vixerat, quanta esset hominum vel admiratio vel querella.</p></div> 

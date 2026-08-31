@@ -113,8 +113,7 @@
   </teiHeader>
 
    <text xml:lang="eng">
-      <body xml:base="urn:cts:latinLit:phi0690.phi003.perseus-eng2">
-         <div type="translation" xml:lang="eng">
+      <body xml:base="urn:cts:latinLit:phi0690.phi003.perseus-eng2"><div n="urn:cts:latinLit:phi0690.phi003.perseus-eng2" type="translation" xml:lang="eng">
          <div type="textpart" subtype="book" n="1">
             <div type="textpart" subtype="card" resp="p" n="1">
                <l n="1">Arms and the man I sing, who first made way,</l>

@@ -97,8 +97,7 @@
 
 
    <text xml:lang="lat">
-      <body xml:base="urn:cts:latinLit:phi0893.phi005.perseus-lat2">
-         <div xml:lang="lat"
+      <body xml:base="urn:cts:latinLit:phi0893.phi005.perseus-lat2"><div n="urn:cts:latinLit:phi0893.phi005.perseus-lat2" xml:lang="lat"
               type="edition">
             <div type="textpart" n="1" subtype="book">
                <div type="textpart" n="1" subtype="poem">

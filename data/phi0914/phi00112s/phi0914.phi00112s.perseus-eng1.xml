@@ -46,9 +46,16 @@
                 <refState unit="book"/>
                 <refState unit="chapter" n="chunk"/>
             </refsDecl>
+                <refsDecl n="CTS">
+                	<cRefPattern n="book"
+                		matchPattern="(\w+)"
+                		replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@subtype='book'][@n='$1'])">
+                		<p>This pointer pattern extracts book</p>
+                	</cRefPattern>
+                </refsDecl>
                 <refsDecl xml:id="CTS">
                   <citeStructure match="/TEI/text/body" use="@xml:base">
-                    <citeStructure match="div[@type='book']" use="@n" unit="book" delim=":" n="chunk"/>
+                    <citeStructure match="div/div[@subtype='book']" use="@n" unit="book" delim=":" n="chunk"/>
                   </citeStructure>
                 </refsDecl>
 </encodingDesc>
@@ -75,8 +82,8 @@
         </revisionDesc>
     </teiHeader>
     <text xml:lang="eng">
-        <body xml:base="urn:cts:latinLit:phi0914.phi00112s.perseus-eng1">
-            <div part="N" sample="complete" org="uniform" n="12s" type="book">
+        <body xml:base="urn:cts:latinLit:phi0914.phi00112s.perseus-eng1"><div type="translation" n="urn:cts:latinLit:phi0914.phi00112s.perseus-eng1" xml:lang="eng">
+            <div part="N" sample="complete" org="uniform" n="12s" type="textpart" subtype="book">
                 <head>Summary of Book XII</head>
                 <p> ROMAN envoys having been put to death by the Senonian Gauls, war was for that
                     reason declared against the Gauls, and Lucius Caecilius the praetor and his
@@ -94,6 +101,6 @@
                         <hi rend="italics">SC.</hi> Rhegium. </note> put the inhabitants to death
                     and seized the city. </p>
             </div>
-        </body>
+        </div></body>
     </text>
 </TEI>

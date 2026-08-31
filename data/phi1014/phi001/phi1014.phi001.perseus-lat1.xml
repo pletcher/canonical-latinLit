@@ -93,7 +93,7 @@
 </teiHeader>
 
 
-<text xml:lang="lat"><body xml:base="urn:cts:latinLit:phi1014.phi001.perseus-lat1"><div type="edition" xml:lang="lat">
+<text xml:lang="lat"><body xml:base="urn:cts:latinLit:phi1014.phi001.perseus-lat1"><div n="urn:cts:latinLit:phi1014.phi001.perseus-lat1" type="edition" xml:lang="lat">
 <div type="textpart" n="1" subtype="book"><head>Annaei Senecae oratorum et rhetorum
 sententiae divisiones colores
 controversiarum liber I.</head>

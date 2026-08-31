@@ -36,7 +36,7 @@
                                 <publisher>Weidmannsche Buchhandlung</publisher>
                                 <date>1876</date>
                             </imprint>
-                            <biblScope type="volume">9.2</biblScope>
+                            <biblScope unit="volume">9.2</biblScope>
                         </monogr>
                     </biblStruct>
                 </listBibl>
@@ -48,9 +48,21 @@
                 <refState delim="." unit="chapter"/>
                 <refState unit="section"/>
             </refsDecl>
+                <refsDecl n="CTS">
+                	<cRefPattern n="chapter"
+                		matchPattern="(\w+).(\w+)"
+                		replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@subtype='book'][@n='$1']/.//tei:milestone[@unit='chapter'][@n='$2'])">
+                		<p>This pointer pattern extracts book and chapter</p>
+                	</cRefPattern>
+                	<cRefPattern n="book"
+                		matchPattern="(\w+)"
+                		replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@subtype='book'][@n='$1'])">
+                		<p>This pointer pattern extracts book</p>
+                	</cRefPattern>
+                </refsDecl>
                 <refsDecl xml:id="CTS">
                   <citeStructure match="/TEI/text/body" use="@xml:base">
-                    <citeStructure match="div[@type='book']" use="@n" unit="book" delim=":">
+                    <citeStructure match="div/div[@subtype='book']" use="@n" unit="book" delim=":">
                       <citeStructure match=".//milestone[@unit='chapter']" use="@n" unit="chapter" delim="." n="chunk"/>
                     </citeStructure>
                   </citeStructure>
@@ -79,13 +91,13 @@
         </revisionDesc>
     </teiHeader>
     <text xml:lang="lat">
-        <body xml:base="urn:cts:latinLit:phi0914.phi00141.perseus-lat1">
-            <div type="book" n="41" org="uniform" sample="complete" part="N">
+        <body xml:base="urn:cts:latinLit:phi0914.phi00141.perseus-lat1"><div type="edition" n="urn:cts:latinLit:phi0914.phi00141.perseus-lat1" xml:lang="lat">
+            <div type="textpart" subtype="book" n="41" org="uniform" sample="complete" part="N">
                 <pb n="vol.9.2.p.1"/>
                 <p>
                     <milestone unit="chapter" n="1"/>
                     <milestone unit="section" n="1"/>
-                    <gap/> a patre in pace habitam armasse eoque iuventuti praedandi cupidae
+                    <gap reason="undefined"/> a patre in pace habitam armasse eoque iuventuti praedandi cupidae
                     pergratus esse dicebatur. consilium de Histrico bello cum haberet consul, alii
                     gerendum extemplo, antequam contrahere copias hostes possent, alii consulendum
                     prius senatum censebant. <milestone unit="section" n="2"/>
@@ -342,7 +354,7 @@
                         <forename full="yes">M.</forename>
                         <surname full="yes">Titinio</surname>
                     </persName> praetore datus in aede Bellonae ad disserendas res, quas gessissent,
-                    postulandosque honores meritos <gap/> ut diis inmortalibus haberetur honos. </p>
+                    postulandosque honores meritos <gap reason="undefined"/> ut diis inmortalibus haberetur honos. </p>
                 <p>
                     <milestone unit="section" n="5"/> eodem tempore et in Sardinia magnum tumultum
                     esse literis <persName n="2">
@@ -501,7 +513,7 @@
                         place="unspecified" anchored="true">
                         <date>a. Ch. 177.</date>
                     </note> manumitterentur, mancipio dabant, libertinique cives essent; et quibus
-                    stirpes deesset, quam relinquerent, ut cives Romani <gap/> fiebant. <milestone
+                    stirpes deesset, quam relinquerent, ut cives Romani <gap reason="undefined"/> fiebant. <milestone
                         unit="section" n="11"/> postea his quoque imaginibus iuris spretis,
                     promiscue sine lege, sine stirpe in civitatem Romanam per migrationem et censum
                     transibant. <milestone unit="section" n="12"/>
@@ -571,7 +583,7 @@
                         n="2">
                         <forename full="yes">C.</forename>
                         <surname full="yes">Claudi</surname>
-                    </persName> cons. <gap/> Claudio decreta est. </p>
+                    </persName> cons. <gap reason="undefined"/> Claudio decreta est. </p>
                 <p>
                     <milestone unit="chapter" n="10"/>
                     <milestone unit="section" n="1"/> dum haec Romae geruntur, <persName n="2">
@@ -1015,7 +1027,7 @@
                     </persName> . ipse iam diu cupidus <note place="unspecified" anchored="true">
                         <date>a. u. 578.</date>
                     </note> provinciae, cum opportunae cupiditati eius litterae adlatae essent
-                    Ligures rebellasse, nonis Sextilibus paludatus <gap/>
+                    Ligures rebellasse, nonis Sextilibus paludatus <gap reason="undefined"/>
                     <hi rend="italics">senatus</hi> litteris auditis tumultus eius causa legionem
                     tertiam ad <persName n="2">
                         <forename full="yes">C.</forename>
@@ -1071,7 +1083,7 @@
                     hostem placebat, regiones, quas peterent. <milestone unit="section" n="8"/>
                     Valerium auspicato sortitum constabat, quod in templo fuisset; in Petilio id
                     vitii factum postea augures responderunt, quod extra templum sortem in sitellam
-                    in templum latam foris ipse <gap/> oporteret. <milestone unit="section" n="9"/>
+                    in templum latam foris ipse <gap reason="undefined"/> oporteret. <milestone unit="section" n="9"/>
                     <pb xml:id="vol.9.2.p.34" n="notedatea"/> profecti inde in diversas regiones.
                     Petilius adversus Ballistae et Leti iugum, quod eos <note place="unspecified"
                         anchored="true">
@@ -1095,12 +1107,12 @@
                     <persName n="2">
                         <forename full="yes">C.</forename>
                         <surname full="yes">Valerius</surname>
-                    </persName> audita <gap/>
+                    </persName> audita <gap reason="undefined"/>
                     <note place="unspecified" anchored="true">
                         <date>a. Ch. 176. 175.</date>
                     </note> periti religionum iurisque publici, <milestone unit="section" n="16"/>
                     quando duo ordinarii consules eius anni, alter morbo, alter ferro periisset,
-                    suffectum consulem negabant recte comitia habere posse. <gap/>
+                    suffectum consulem negabant recte comitia habere posse. <gap reason="undefined"/>
                 </p>
                 <p>
                     <milestone unit="chapter" n="19"/>
@@ -1149,7 +1161,7 @@
                 <p>
                     <milestone unit="chapter" n="20"/>
                     <milestone unit="section" n="1"/>
-                    <gap/> more sella eburnea posita ius dicebat disceptabatque controversias
+                    <gap reason="undefined"/> more sella eburnea posita ius dicebat disceptabatque controversias
                     minimarum rerum. <milestone unit="section" n="2"/> adeoque nulli fortunae
                     adhaerebat animus per omnia genera vitae errans, uti nec sibi nec aliis, quinam
                     homo esset, satis constaret. <milestone unit="section" n="3"/>
@@ -1187,7 +1199,7 @@
                     et modo volneribus tenus, modo sine missione etiam, et familiare oculis
                     gratumque id spectaculum fecit, et armorum studium plerisque iuvenum accendit.
                         <milestone unit="section" n="13"/> itaque, qui primo ab Roma magnis pretiis
-                    paratos gladiatores arcessere solitus erat, iam suo <gap/>
+                    paratos gladiatores arcessere solitus erat, iam suo <gap reason="undefined"/>
                 </p>
                 <p>
                     <hi rend="italics">Scipio</hi> inter peregrinos. <milestone unit="chapter"
@@ -1262,7 +1274,7 @@
                         <addName full="yes">Galba</addName>
                     </persName>
                     <hi rend="italics">in locum Caepionis,</hi>
-                    <gap/> in locum Tuditani. augures suffecti sunt in Gracchi locum <persName n="4">
+                    <gap reason="undefined"/> in locum Tuditani. augures suffecti sunt in Gracchi locum <persName n="4">
                         <forename full="yes">T.</forename>
                         <surname full="yes">Veturius</surname>
                         <addName full="yes">Gracchus</addName>
@@ -1300,7 +1312,7 @@
                     et Sinuessae unimanus, et Auximi puella cum dentibus, et arcus interdiu sereno
                     caelo super aedem Saturni in foro Romano intentus, <milestone unit="section"
                         n="13"/> et tres simul soles effulserunt, et faces eadem nocte plures per
-                    caelum lapsae sunt, et in Lanuvino <gap/> , Caeritesque anguem in oppido suo
+                    caelum lapsae sunt, et in Lanuvino <gap reason="undefined"/> , Caeritesque anguem in oppido suo
                     iubatum, aureis maculis sparsum, apparuisse adfirmabant, et in agro Campano
                     bovem locutum esse satis constabat </p>
                 <p>
@@ -1357,7 +1369,7 @@
                     Macedonia erat, quia, cum finibus suis <hi rend="italics">iis</hi>
                     interdixissent, intrare regni terminos ipsi non audebant. <milestone
                         unit="section" n="3"/> id cum Perseus animadvertisset, conprensis omnibus
-                    litterae <gap/> . ceterum ne similis fuga servorum postea fieret, cogitandum et
+                    litterae <gap reason="undefined"/> . ceterum ne similis fuga servorum postea fieret, cogitandum et
                     illis esse. <milestone unit="section" n="4"/> recitatis his litteris per
                     Xenarchum praetorem, qui privatae gratiae aditum apud regem quaerebat, et
                     plerisque moderate et benigne scriptas esse censentibus litteras, atque iis
@@ -1370,7 +1382,7 @@
                         <note place="unspecified" anchored="true">
                         <date>a. Ch. n. 174.</date>
                     </note> quodam modo actam esse. nam qui regibus Macedonum Macedonibusque ipsis
-                    finibus interdixissemus, manereque id decretum <gap/> , scilicet ne legatos,
+                    finibus interdixissemus, manereque id decretum <gap reason="undefined"/> , scilicet ne legatos,
                         <milestone unit="section" n="7"/> ne nuntios admitteremus regum, per quos
                     aliquorum ex nobis animi sollicitarentur, ii contionantem quodam modo absentem
                     audimus regem et, si dis placet, orationem eius probamus. <milestone
@@ -1459,7 +1471,7 @@
                     meruit, cur soli omnium hostes ei simus? <milestone unit="section" n="12"/>
                     quamquam et illud dicere poteram, tanta priorum Macedoniae regum merita erga nos
                     fuisse, ut Philippi unius iniurias, si quae forte fuerunt, utique post mortem
-                    <gap/> cum classis Romana Cenchreis staret, <milestone unit="section" n="13"/>
+                    <gap reason="undefined"/> cum classis Romana Cenchreis staret, <milestone unit="section" n="13"/>
                     consul cum exercitu Elatiae esset, triduum nos in concilio fuisse consultantis,
                     utrum Romanos an Philippum sequeremur. <milestone unit="section" n="14"/> nihil
                     metus praesens ab Romanis sententias nostras inclinarit; fuit certe tamen
@@ -1619,9 +1631,9 @@
                         anchored="true">
                         <date>a. Ch. 174.</date>
                     </note> praetoribusque praebendam, <milestone unit="section" n="6"/> et carceres
-                    in circo, et ova ad notas curriculis numerandis <gap/>
-                    <sic>dam</sic> , et metas trans <gap/> et caveas ferrea <gap/> intromitterentur
-                    <gap/> feriis in monte Albano consulibus, <milestone unit="section" n="7"/>
+                    in circo, et ova ad notas curriculis numerandis <gap reason="undefined"/>
+                    <sic>dam</sic> , et metas trans <gap reason="undefined"/> et caveas ferrea <gap reason="undefined"/> intromitterentur
+                    <gap reason="undefined"/> feriis in monte Albano consulibus, <milestone unit="section" n="7"/>
                     <pb xml:id="vol.9.2.p.56" n="notedatea"/> et clivom Capitolinum silice
                     sternendum curaverunt, et porticum ab aede Saturni in Capitolium <hi
                         rend="italics">et</hi> ad senaculum ac super id curiam. <note
@@ -1637,13 +1649,13 @@
                     consumpserunt. <milestone unit="section" n="11"/>
                     <pb xml:id="vol.9.2.p.57" n="notedatea"/> et alter ex iis Fulvius Flaccus — nam
                     Postumius nihil nisi senatus Romani populive iussu se locaturum ipsorum pecunia
-                    <gap/> — Iovis aedem Pisauri, et Fundis, et Potentiae etiam aquam adducendam, et
+                    <gap reason="undefined"/> — Iovis aedem Pisauri, et Fundis, et Potentiae etiam aquam adducendam, et
                     Pisauri viam silice sternendam, et Sinuessae <note place="unspecified"
                         anchored="true">
                         <date>a. Ch. 174.</date>
                     </note>
                     <milestone unit="section" n="12"/> magalia <hi rend="italics">addenda</hi>
-                    <gap/> aviariae in his et cloacas <gap/>
+                    <gap reason="undefined"/> aviariae in his et cloacas <gap reason="undefined"/>
                     <hi rend="italics">et murum</hi> circumducen <hi rend="italics">dum</hi> et
                     forum porticibus tabernisque claudendum et Ianos tris faciendos. <milestone
                         unit="section" n="13"/> haec ab uno censore opera locata cum magna gratia
@@ -1734,6 +1746,6 @@
                     tamen muneris ea summa fuit, ut per triduum quattuor et septuaginta homines
                     pugnarint. </p>
             </div>
-        </body>
+        </div></body>
     </text>
 </TEI>

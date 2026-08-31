@@ -46,9 +46,16 @@
                 <refState unit="book"/>
                 <refState unit="chapter" n="chunk"/>
             </refsDecl>
+                <refsDecl n="CTS">
+                	<cRefPattern n="book"
+                		matchPattern="(\w+)"
+                		replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@subtype='book'][@n='$1'])">
+                		<p>This pointer pattern extracts book</p>
+                	</cRefPattern>
+                </refsDecl>
                 <refsDecl xml:id="CTS">
                   <citeStructure match="/TEI/text/body" use="@xml:base">
-                    <citeStructure match="div[@type='book']" use="@n" unit="book" delim=":" n="chunk"/>
+                    <citeStructure match="div/div[@subtype='book']" use="@n" unit="book" delim=":" n="chunk"/>
                   </citeStructure>
                 </refsDecl>
 </encodingDesc>
@@ -75,8 +82,8 @@
         </revisionDesc>
     </teiHeader>
     <text xml:lang="lat">
-        <body xml:base="urn:cts:latinLit:phi0914.phi00113s.perseus-lat2">
-            <div part="N" sample="complete" org="uniform" n="13s" type="book">
+        <body xml:base="urn:cts:latinLit:phi0914.phi00113s.perseus-lat2"><div type="edition" n="urn:cts:latinLit:phi0914.phi00113s.perseus-lat2" xml:lang="lat">
+            <div part="N" sample="complete" org="uniform" n="13s" type="textpart" subtype="book">
                 <head>Libri XIII Periocha</head>
                 <p> VALERIUS LAEVINUS COS. parum prospere adversus Pyrrhum pugnavit, elephantorum
                     maxime inusitata facie territis militibus. <reg>post</reg> id proelium cum
@@ -101,6 +108,6 @@
                             rend="italics">MSS.</hi>
                     </note> prospere gestas continet. </p>
             </div>
-        </body>
+        </div></body>
     </text>
 </TEI>

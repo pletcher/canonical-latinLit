@@ -139,10 +139,7 @@
 	</teiHeader>
 	
 	<text xml:lang="lat">
-		<body xml:base="urn:cts:latinLit:phi0474.phi013.perseus-lat2">
-
-
-<div type="edition" xml:lang="lat">
+		<body xml:base="urn:cts:latinLit:phi0474.phi013.perseus-lat2"><div n="urn:cts:latinLit:phi0474.phi013.perseus-lat2" type="edition" xml:lang="lat">
 <head rend="align(center)">Orationes in Catilinam</head>
 
 

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
-    <teiHeader xml:lang="eng" type="text">
+    <teiHeader xml:lang="eng">
         <fileDesc>
             <titleStmt>
                 <title>In Defense of Quintus Ligarius </title>
@@ -54,6 +54,13 @@
                 <refState delim="." unit="chapter"/>
                 <refState unit="section"/>
             </refsDecl>
+                <refsDecl n="CTS">
+                	<cRefPattern n="chapter"
+                		matchPattern="(\w+)"
+                		replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/.//tei:milestone[@unit='chapter'][@n='$1'])">
+                		<p>This pointer pattern extracts chapter</p>
+                	</cRefPattern>
+                </refsDecl>
                 <refsDecl xml:id="CTS">
                   <citeStructure match="/TEI/text/body" use="@xml:base">
                     <citeStructure unit="chapter" delim="." match=".//milestone[@unit='chapter']" use="@n"/>
@@ -158,7 +165,7 @@ Added to repository.
         <pb n="469"/>
         <front>
             <head>THE SPEECH OF M. T. CICERO IN DEFENCE OF QUINTUS LIGARIUS.</head>
-            <argument>
+            <div type="textpart" subtype="argument">
                 <head>THE ARGUMENT.</head>
                 <p>Quintus Ligarius was a Roman knight, who had been one of the lieutenants of
                     Considius, the proconsul of Africa, and one of Pompey's partisans, and as such
@@ -177,9 +184,9 @@ Added to repository.
                     acquittal against his will; and he afterwards pardoned Ligarius and allowed him
                     to return to Rome. Ligarius afterwards became a great friend of Brutus, and
                     joined him in the conspiracy against Caesar.</p>
-            </argument>
+            </div>
         </front>
-        <body xml:base="urn:cts:latinLit:phi0474.phi033.perseus-eng1">
+        <body xml:base="urn:cts:latinLit:phi0474.phi033.perseus-eng1"><div type="translation" n="urn:cts:latinLit:phi0474.phi033.perseus-eng1" xml:lang="eng">
             <milestone n="1" unit="chapter"/>
             <milestone n="1" unit="section"/>
             <p>It is a new crime, and one never heard of before this day, O Caius Caesar, which my
@@ -516,8 +523,8 @@ Added to repository.
                 proper name. <milestone n="30" unit="section"/> I have, indeed, O Caius Caesar,
                 pleaded many causes with you, while your pursuit of honours detained you in the
                 forum; but certainly I never pleaded in this way, “Pardon my client, O judges; he
-                has erred, he has tripped, he did not think.<gap reason="* *"/> If ever
-                    hereafter<gap reason="* *"/>” This is the sort of way in which he pleads with a
+                has erred, he has tripped, he did not think.<gap reason="ellipsis"/> If ever
+                    hereafter<gap reason="ellipsis"/>” This is the sort of way in which he pleads with a
                 parent; to judges one says, “He never did it, he never thought of it the witnesses
                 are false, the accusation <pb n="480"/> is false.” Say, O Caesar, that you are
                 sitting as judge on the conduct of Ligarius. Ask me in what garrisons he was. I make
@@ -633,6 +640,6 @@ Added to repository.
                 yourself, than for me or any one else to be speaking to you, I shall now make an
                 end. This only will I remind you of, that if you do grant this protection to him who
                 is absent, you will be giving it also to all these men who are here present. </p>
-        </body>
+        </div></body>
     </text>
 </TEI>

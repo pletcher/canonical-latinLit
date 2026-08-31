@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
-    <teiHeader xml:lang="eng" type="text">
+    <teiHeader xml:lang="eng">
         <fileDesc>
             <titleStmt>
                 <title>In Defense of Caius Rabirius Postumus </title>
@@ -54,6 +54,13 @@
                 <refState delim="." unit="chapter"/>
                 <refState unit="section"/>
             </refsDecl>
+                <refsDecl n="CTS">
+                	<cRefPattern n="chapter"
+                		matchPattern="(\w+)"
+                		replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/.//tei:milestone[@unit='chapter'][@n='$1'])">
+                		<p>This pointer pattern extracts chapter</p>
+                	</cRefPattern>
+                </refsDecl>
                 <refsDecl xml:id="CTS">
                   <citeStructure match="/TEI/text/body" use="@xml:base">
                     <citeStructure unit="chapter" delim="." match=".//milestone[@unit='chapter']" use="@n"/>
@@ -158,7 +165,7 @@ Added to repository.
         <front>
             <pb n="438"/>
             <head>THE SPEECH OF M. T. CICERO IN DEFENCE OF CAIUS RABIRIUS POSTUMUS.</head>
-            <argument>
+            <div type="textpart" subtype="argument">
                 <head>THE ARGUMENT.</head>
                 <p>When Gabinius, the colleague of Piso, returned from his province of Syria, he was
                     prosecuted on two indictments; in the first prosecution Cicero appeared as a
@@ -184,9 +191,9 @@ Added to repository.
                     was to please Pompey that Cicero had undertaken his defence, he afterwards
                     attached himself to Caesar, and was employed by him in the war in Africa and in
                     Sicily.</p>
-            </argument>
+            </div>
         </front>
-        <body xml:base="urn:cts:latinLit:phi0474.phi030.perseus-eng1">
+        <body xml:base="urn:cts:latinLit:phi0474.phi030.perseus-eng1"><div type="translation" n="urn:cts:latinLit:phi0474.phi030.perseus-eng1" xml:lang="eng">
             <milestone n="1" unit="chapter"/>
             <milestone n="1" unit="section"/>
             <p>If there is any one, O judges, who thinks Caius Rabirius to be blamed for having
@@ -347,7 +354,7 @@ Added to repository.
                 tablet given you on which to record your judgment. According to what law? To the
                 Julian law about extortion and peculation. Concerning what defendant? Concerning a
                 Roman knight. But that body is not liable to the operation of that law. <gap
-                    reason="* * * *"/>But now I hear what you say. Postumus, then, is prosecuted
+                    reason="ellipsis"/>But now I hear what you say. Postumus, then, is prosecuted
                 under that law, from the operation of which not only he, but his whole order, is
                 released and wholly flee. <milestone n="6" unit="chapter"/><milestone n="13"
                     unit="section"/></p>
@@ -761,6 +768,6 @@ Added to repository.
                 be allowed with uplifted eyes to behold this city, and to pace around the forum; a
                 pleasure which fortune would have already deprived him of; if the power of one
                 single friend had not come to his assistance. </p>
-        </body>
+        </div></body>
     </text>
 </TEI>

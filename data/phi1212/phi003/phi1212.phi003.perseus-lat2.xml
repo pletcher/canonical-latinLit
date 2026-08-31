@@ -77,8 +77,7 @@
     </revisionDesc>
   </teiHeader>
 <text xml:lang="lat">
-  <body xml:base="urn:cts:latinLit:phi1212.phi003.perseus-lat2">
-    <div type="edition" xml:lang="lat">
+  <body xml:base="urn:cts:latinLit:phi1212.phi003.perseus-lat2"><div n="urn:cts:latinLit:phi1212.phi003.perseus-lat2" type="edition" xml:lang="lat">
 <pb n="p.1"/>
 <div type="textpart" n="1" subtype="chapter"><p rend="indent">ut ferme religiosis uiantium moris est, cum aliqui lucus
 aut aliqui locus sanctus in uia oblatus est, uotum postulare, pomum adponere, paulisper adsidere: ita mihi

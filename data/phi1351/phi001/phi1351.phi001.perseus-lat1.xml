@@ -80,7 +80,7 @@
   </teiHeader>
 
 <text xml:lang="lat">
-<body xml:base="urn:cts:latinLit:phi1351.phi001.perseus-lat1"><div type="edition" xml:lang="lat">
+<body xml:base="urn:cts:latinLit:phi1351.phi001.perseus-lat1"><div n="urn:cts:latinLit:phi1351.phi001.perseus-lat1" type="edition" xml:lang="lat">
 <head>De Vita Iulii Agricolae</head>
 <div type="textpart" n="1" subtype="chapter">
 <div type="textpart" n="1" subtype="section">

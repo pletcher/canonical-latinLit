@@ -80,8 +80,7 @@
             <change who="Thibault Clérice" when="2016-11-10">CapiTainS Guidelines + del and add</change>
     <change who="Thibault Clérice" when="2016-11-14">Bump URN</change> 
         </revisionDesc>
-    </teiHeader><text xml:lang="lat"> <body xml:base="urn:cts:latinLit:phi0631.phi003.perseus-lat2"> 
-        <div type="edition" xml:lang="lat">
+    </teiHeader><text xml:lang="lat"> <body xml:base="urn:cts:latinLit:phi0631.phi003.perseus-lat2"><div n="urn:cts:latinLit:phi0631.phi003.perseus-lat2" type="edition" xml:lang="lat">
         <pb n="p.146"/> <head>C. Sallusti Crispi Orationes et Epistulae</head>
 <div type="textpart" subtype="book" n="Lep"> <head>Oratio Lepidi cons. ad populum Romanum</head>
 <p>

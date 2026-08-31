@@ -119,8 +119,7 @@
    </teiHeader>
 
    <text xml:lang="eng">
-      <body xml:base="urn:cts:latinLit:phi0893.phi004.perseus-eng2">
-         <div xml:lang="lat"
+      <body xml:base="urn:cts:latinLit:phi0893.phi004.perseus-eng2"><div n="urn:cts:latinLit:phi0893.phi004.perseus-eng2" xml:lang="lat"
               type="edition">
             <div type="textpart" n="1" subtype="book">
                <div type="textpart" n="1" subtype="poem">

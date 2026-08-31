@@ -6,7 +6,7 @@
 %PersProse;
 ]>
 <TEI.2>
-<teiHeader type="text" status="new">
+<teiHeader>
 <fileDesc>
 <titleStmt>
 <title>A Dialogue on Oratory</title>
@@ -54,6 +54,13 @@
 <encodingDesc>
 <refsDecl doctype="TEI.2">
 <state n="chunk" unit="chapter"/>
+</refsDecl>
+<refsDecl xmlns="http://www.tei-c.org/ns/1.0" n="CTS">
+	<cRefPattern n="chapter"
+		matchPattern="(\w+)"
+		replacementPattern="#xpath(/TEI.2/text/body/div1[@type='chapter'][@n='$1'])">
+		<p>This pointer pattern extracts chapter</p>
+	</cRefPattern>
 </refsDecl>
 <refsDecl xml:id="CTS">
   <citeStructure match="/TEI/text/body" use="@xml:base">

@@ -96,8 +96,7 @@
   </teiHeader>
 
    <text xml:lang="lat">
-      <body xml:base="urn:cts:latinLit:phi0845.phi002.perseus-lat3">
-         <div xml:lang="lat" type="edition">
+      <body xml:base="urn:cts:latinLit:phi0845.phi002.perseus-lat3"><div n="urn:cts:latinLit:phi0845.phi002.perseus-lat3" xml:lang="lat" type="edition">
             <pb n="v.1.p.2"/>
 
             <div type="textpart" n="1" subtype="book">

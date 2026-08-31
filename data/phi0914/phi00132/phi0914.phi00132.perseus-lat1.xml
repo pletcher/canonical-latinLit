@@ -37,7 +37,7 @@
                                 <publisher>Weidmannsche Buchhandlung</publisher>
                                 <date>1883</date>
                             </imprint>
-                            <biblScope type="volume">7.1</biblScope>
+                            <biblScope unit="volume">7.1</biblScope>
                         </monogr>
                     </biblStruct>
                 </listBibl>
@@ -49,9 +49,21 @@
                 <refState unit="chapter" delim="."/>
                 <refState unit="section"/>
             </refsDecl>
+                <refsDecl n="CTS">
+                	<cRefPattern n="chapter"
+                		matchPattern="(\w+).(\w+)"
+                		replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@subtype='book'][@n='$1']/.//tei:milestone[@unit='chapter'][@n='$2'])">
+                		<p>This pointer pattern extracts book and chapter</p>
+                	</cRefPattern>
+                	<cRefPattern n="book"
+                		matchPattern="(\w+)"
+                		replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@subtype='book'][@n='$1'])">
+                		<p>This pointer pattern extracts book</p>
+                	</cRefPattern>
+                </refsDecl>
                 <refsDecl xml:id="CTS">
                   <citeStructure match="/TEI/text/body" use="@xml:base">
-                    <citeStructure match="div[@type='book']" use="@n" unit="book" delim=":">
+                    <citeStructure match="div/div[@subtype='book']" use="@n" unit="book" delim=":">
                       <citeStructure match=".//milestone[@unit='chapter']" use="@n" unit="chapter" delim="." n="chunk"/>
                     </citeStructure>
                   </citeStructure>
@@ -80,8 +92,8 @@
         </revisionDesc>
     </teiHeader>
     <text xml:lang="lat">
-        <body xml:base="urn:cts:latinLit:phi0914.phi00132.perseus-lat1">
-            <div part="N" sample="complete" org="uniform" n="32" type="book">
+        <body xml:base="urn:cts:latinLit:phi0914.phi00132.perseus-lat1"><div type="edition" n="urn:cts:latinLit:phi0914.phi00132.perseus-lat1" xml:lang="lat">
+            <div part="N" sample="complete" org="uniform" n="32" type="textpart" subtype="book">
                 <p>
                     <milestone n="1" unit="chapter"/>
                     <milestone n="1" unit="section"/> consules praetoresque, cum idibus Martiis
@@ -1319,7 +1331,7 @@
                     sollicitarent, satis iam omnibus praeparatis, ludis, qui Setiae prope diem
                     futuri erant, spectaculo intentum populum adgredi statuerant; <milestone n="8"
                         unit="section"/> Setia per caedem et repentinum tumultum capta Norbam et
-                    Cerceios occupare <gap/> servitia. huius rei tam foedae indicium Romam ad
+                    Cerceios occupare <gap reason="undefined"/> servitia. huius rei tam foedae indicium Romam ad
                         <persName n="3">
                         <forename full="yes">L.</forename>
                         <surname full="yes">Cornelium</surname>
@@ -1337,7 +1349,7 @@
                     tumultuario dilectu duobus milibus ferme hominum armatis Setiam omnibus, quo
                     pergeret, ignaris venit. <milestone n="13" unit="section"/> ibi raptim
                     principibus coniurationis comprehensis fuga servorum ex oppido facta est.
-                    dimissis deinde per agros, qui vestigarent <gap/> . egregia duorum opera
+                    dimissis deinde per agros, qui vestigarent <gap reason="undefined"/> . egregia duorum opera
                     servorum indicum et unius liberi fuit. <milestone n="14" unit="section"/>
                     <pb n="notedateA" xml:id="vol.7.1.p.154"/> ei centum milia gravis aeris dari
                     patres iusserunt, servis vicena quina milia aeris et libertatem; pretium eorum
@@ -1951,6 +1963,6 @@
                     <pb n="vol.7.1.p.190"/>
                 </p>
             </div>
-        </body>
+        </div></body>
     </text>
 </TEI>

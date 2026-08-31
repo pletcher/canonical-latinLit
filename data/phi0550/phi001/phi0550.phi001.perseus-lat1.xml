@@ -72,8 +72,7 @@
   <change when="2003-12-05" who="mimno">card breaks not yet aligned</change>
 </revisionDesc>
 </teiHeader>
-<text xml:lang="lat"><body xml:base="urn:cts:latinLit:phi0550.phi001.perseus-lat1">
-<div type="edition" xml:lang="lat" >
+<text xml:lang="lat"><body xml:base="urn:cts:latinLit:phi0550.phi001.perseus-lat1"><div n="urn:cts:latinLit:phi0550.phi001.perseus-lat1" type="edition" xml:lang="lat" >
 <div type="textpart" subtype="book" n="1">
 <head>Liber Primus</head>
 <milestone unit="card" n="1"/>

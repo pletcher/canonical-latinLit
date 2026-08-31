@@ -82,10 +82,7 @@
   </teiHeader>
   
 <text xml:lang="lat">
-  <body xml:base="urn:cts:latinLit:phi0430.phi001.perseus-lat1">
-    
-
-<div xml:lang="lat" type="edition">
+  <body xml:base="urn:cts:latinLit:phi0430.phi001.perseus-lat1"><div n="urn:cts:latinLit:phi0430.phi001.perseus-lat1" xml:lang="lat" type="edition">
 <pb n="p.310"/>
 
 

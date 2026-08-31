@@ -38,7 +38,7 @@
 								<publisher>Weidmannsche Buchhandlung</publisher>
 								<date>1881</date>
 							</imprint>
-							<biblScope type="volume">10.2</biblScope>
+							<biblScope unit="volume">10.2</biblScope>
 						</monogr>
 					</biblStruct>
 
@@ -53,6 +53,13 @@
 				<refState delim="." unit="chapter"/>
 				<refState unit="section"/>
 			</refsDecl>
+				<refsDecl n="CTS">
+					<cRefPattern n="chapter"
+						matchPattern="(\w+)"
+						replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/.//tei:milestone[@unit='chapter'][@n='$1'])">
+						<p>This pointer pattern extracts chapter</p>
+					</cRefPattern>
+				</refsDecl>
 				<refsDecl xml:id="CTS">
 				  <citeStructure match="/TEI/text/body" use="@xml:base">
 				    <citeStructure match=".//milestone[@unit='chapter']" use="@n" unit="chapter" delim="." n="chunk"/>
@@ -81,7 +88,7 @@
 	</teiHeader>
 
 	<text xml:lang="lat">
-		<body xml:base="urn:cts:latinLit:phi0914.phi00145.perseus-lat1">
+		<body xml:base="urn:cts:latinLit:phi0914.phi00145.perseus-lat1"><div type="edition" n="urn:cts:latinLit:phi0914.phi00145.perseus-lat1" xml:lang="lat">
 
 			<!--<div1 type="book" n="45">-->
 
@@ -198,7 +205,7 @@
 					n="NAMEus-a NAMEius"><forename>Paulus</forename>
 					<surname>Aemilius</surname></persName> consul cum castra, ut supra dictum est,
 				ad Siras terrae Odomanticae haberet, litterae ab rege Perseo per ignobiles tres
-				legatos <gap/> cerneret, et ipse inlacrimasse dicitur <note><date>a. u. c.
+				legatos <gap reason="undefined"/> cerneret, et ipse inlacrimasse dicitur <note><date>a. u. c.
 						586.</date></note> sorti humanae, <milestone unit="section" n="3"/> quod,
 				qui paulo ante non contentus regno Macedoniae Dardanos Illyriosque oppugnasset,
 				Bastarnarum excivisset auxilia, is tum amisso exercitu, extorris regno, in parvam
@@ -309,7 +316,7 @@
 				spectaculum tanta multitudo occurrit. patrum aetate Syphax rex captus in castra
 				Romana adductus erat. praeterquam quod nec sua nec gentis fama comparandus, tunc
 				accessio Punici belli fuerat, sicut Gentius Macedonici; <milestone unit="section"
-					n="3"/>Perseus caput belli erat, nec ipsius tantum patris avique <gap/> , quos
+					n="3"/>Perseus caput belli erat, nec ipsius tantum patris avique <gap reason="undefined"/> , quos
 				sanguine ac genere contingebat, fama conspectum eum efficiebat, sed effulgebant
 				Philippus ac magnus Alexander, qui summum inperium in orbe terrarum Macedonum
 				fecerant. <milestone unit="section" n="4"/><pb n="vol.10.2.p.15" type="notedatea"/>
@@ -381,7 +388,7 @@
 				<persName n="2"><forename>C.</forename>
 					<surname>Popilius</surname></persName>, qui <hi rend="italics">ad</hi> Delum
 				praesidio navibus Macedoniam petentibus erat, postquam debellatum in Macedonia et
-				statione summotos hostium lembos audivit, dimissis et ipse <gap/> adticis
+				statione summotos hostium lembos audivit, dimissis et ipse <gap reason="undefined"/> adticis
 						<note><date>a. u. c. 586.</date></note> navibus ad susceptam legationem
 				peragendam navigare Aegyptum pergit, ut prius occurrere Antiocho posset, quam ad
 				Alexandreae moenia accederet. <milestone unit="section" n="3"/>
@@ -421,7 +428,7 @@
 					n="vol.10.2.p.22" type="notedatea"/> legati non ultra quam <note><date>a. u. c.
 						586.</date></note>quinque dies Rhodi morati Alexandream proficiscuntur. nec
 				eo segnius iudicia ex decreto coram his facto Rhodii exercebant; quam perseverantiam
-				in exequenda re tam Decimi lenitas quam <gap/> . </p>
+				in exequenda re tam Decimi lenitas quam <gap reason="undefined"/> . </p>
 			<p><milestone unit="chapter" n="11"/><milestone unit="section" n="1"/>
 				<hi rend="italics">cum</hi> haec gererentur, Antiochus frustra temptatis moenibus
 				Alexandreae abscesserat ceteraque Aegypto potitus, relicto Memphi maiore Ptolemaeo,
@@ -457,8 +464,8 @@
 				reducturum, nisi sibi et tota Cypro et Pelusio agroque, qui circa Pelusiacum ostium
 				Nili esset, cederetur; diemque praestituit, intra quam de condicionibus peractis
 				responsum acciperet. <milestone unit="chapter" n="12"/><milestone unit="section"
-					n="1"/>postquam dies data indutiis praeteriit, <gap/> navigantibus ostio Nili ad
-				Pelusium, <milestone unit="section" n="2"/> per deserta Arabiae <gap/> ad Memphim
+					n="1"/>postquam dies data indutiis praeteriit, <gap reason="undefined"/> navigantibus ostio Nili ad
+				Pelusium, <milestone unit="section" n="2"/> per deserta Arabiae <gap reason="undefined"/> ad Memphim
 				incolebant, et ab ceteris Aegyptiis partim voluntate, partim metu, ad Alexandream
 				modicis itineribus descendit. <milestone unit="section" n="3"/> ad Eleusinem
 				transgresso flumen, qui locus quattuor milia ab Alexandrea abest, legati Romani
@@ -572,7 +579,7 @@
 				nomine esse. ipsum relinquere regnum et Africa excedere, praeterquam quod illi
 				inutile esset, non esse e re publica populi Romani senatum censere. <milestone
 					unit="section" n="5"/> petenti Masgabae, ut Hanno, Hamilcaris filius, obses in
-				locum <gap/> exigeret. <milestone unit="section" n="6"/> munera ex senatus consulto
+				locum <gap reason="undefined"/> exigeret. <milestone unit="section" n="6"/> munera ex senatus consulto
 				emere regulo quaestor iussus ex centum pondo argenti et prosequi eum Puteolos
 				omnemque sumptum, quoad in Italia esset, praebere et duas naves conducere, quibus
 				ipse comitesque regis in Africam deveherentur; <milestone unit="section" n="7"/> et
@@ -587,7 +594,7 @@
 				erant, <persName n="2"><forename>L.</forename>
 					<surname>Stertinius</surname></persName> quaestor Brundisium missus <hi
 					rend="italics">iussusque</hi> curare, ut aedes hospi<hi rend="italics">tio</hi>
-				<gap/>
+				<gap reason="undefined"/>
 				<note><date>a. u. c. 586.</date></note></p>
 			<p><milestone unit="chapter" n="15"/><milestone unit="section" n="1"/><pb
 					n="vol.10.2.p.33" type="notedatea"/>in quattuor urbanas tribus discripti erant
@@ -596,7 +603,7 @@
 				proxumo lustro censi essent, censeri iusserunt—et eos, qui praedium praediave
 				rustica pluris sestertium triginta milium haberent, — <milestone unit="section"
 					n="3"/><pb n="vol.10.2.p.34" type="notedatea"/>
-				<gap/> censendi ius factum est —. hoc cum ita servatum esset, negabat Claudius
+				<gap reason="undefined"/> censendi ius factum est —. hoc cum ita servatum esset, negabat Claudius
 				suffragii lationem iniussu populi censorem <note><date>a. u. c. 586.</date></note>
 				cuiquam homini, nedum ordini universo adimere posse. <milestone unit="section" n="4"
 				/> neque enim, si tribu movere posset, quod sit nihil aliud quam mutare iubere
@@ -639,7 +646,7 @@
 				conposuissent. <milestone unit="section" n="3"/><pb n="vol.10.2.p.37"
 					type="notedatea"/> consulibus Pisae et Gallia decretae cum binis <hi
 					rend="italics">legionibus</hi>
-				<gap/> peditum et equitum quadringenorum. <note><date>a. Chr. n. 168.
+				<gap reason="undefined"/> peditum et equitum quadringenorum. <note><date>a. Chr. n. 168.
 					167.</date></note> praetorum sortes fuere, <persName n="2"
 						><forename>Q.</forename>
 					<surname>Cassi</surname></persName> urbana, <persName n="3"
@@ -695,7 +702,7 @@
 						><persName n="3"><forename>Q.</forename>
 						<surname>Fabius</surname>
 						<addName n="added">Labeo</addName></persName></hi>
-				<gap/>
+				<gap reason="undefined"/>
 				<persName n="3"><forename>C.</forename>
 					<surname>Licinius</surname>
 					<addName>Crassus</addName></persName>, collega in consulatu Pauli, tum prorogato
@@ -759,7 +766,7 @@
 				vanum aut libertatem sociis nullam esse. <milestone unit="section" n="5"/> ne ipsos
 				quidem Macedonas id exercere posse; ubi in medio praeda administrantibus esset, ibi
 				numquam causas seditionum et certaminis defore. <milestone unit="section" n="6"/>
-				commune concilium gentis esse <gap/> , <hi rend="italics">ne</hi> inprobus vulgi
+				commune concilium gentis esse <gap reason="undefined"/> , <hi rend="italics">ne</hi> inprobus vulgi
 				adsentator aliquando libertatem salubri moderatione datam ad licentiam pestilentem
 				traheret. <milestone unit="section" n="7"/><pb n="vol.10.2.p.43" type="notedatea"/>
 				in quattuor regiones discribi Macedoniam, ut suum quaeque concilium haberet, placuit
@@ -813,7 +820,7 @@
 					unit="section" n="15"/> utrum enim partem regni petiturum esse, an totum
 				erepturum? si partem, ambo infirmos distractis viribus et omnibus iniuriis pro<hi
 					rend="italics">brisque</hi> obnoxios fore; si totum, privatumne ergo maiorem
-				fratrem an exulem illa aetate, illa corporis infirmitate <gap/> an <hi
+				fratrem an exulem illa aetate, illa corporis infirmitate <gap reason="undefined"/> an <hi
 					rend="italics">ad</hi> ultimum mori iussurum? <milestone unit="section" n="16"
 					/><pb n="vol.10.2.p.48" type="notedatea"/> egregium enim, ut fabulis traditus
 				impiorum fratrum eventus taceatur, Persei <note><date>a. u. c.
@@ -880,13 +887,13 @@
 				intercedendum venissent, desisterent victi auctoritatibus suadentium legem. tum
 				inter praetorem tribunosque omnia <note><date>a. u. c. 587.</date></note>
 				intempestive agendi certamen erat: <milestone unit="section" n="8"/> tribuni
-				festinationem praetoris ante tempus intercedendo <gap/> in adventum im<hi
+				festinationem praetoris ante tempus intercedendo <gap reason="undefined"/> in adventum im<hi
 					rend="italics">peratoris</hi>
-				<gap/> ‘ <milestone unit="chapter" n="22"/><milestone unit="section" n="1"/>
-				<gap/> est. peccaverimusne adhuc dubium est; poenas, ignominias omnes iam patimur.
+				<gap reason="undefined"/> ‘ <milestone unit="chapter" n="22"/><milestone unit="section" n="1"/>
+				<gap reason="undefined"/> est. peccaverimusne adhuc dubium est; poenas, ignominias omnes iam patimur.
 				antea, Carthaginiensibus victis, Philippo, Antiocho superatis cum Romam venissemus,
 				ex publico hospitio in curiam gratulatum vobis, patres conscripti, ex curia in
-				Capitolium ad deos vestros dona ferentes <gap/> ; nunc ex sordido deversorio,
+				Capitolium ad deos vestros dona ferentes <gap reason="undefined"/> ; nunc ex sordido deversorio,
 					<milestone unit="section" n="2"/><pb n="vol.10.2.p.53" type="notedatea"/> vix
 				mercede recepti ac prope hostium more extra urbem manere iussi in hoc squalore
 				venimus in curiam Romanam Rhodii, quos provinciis nuper Lycia atque Caria, quos
@@ -1028,7 +1035,7 @@
 				liberorum vestrae potestati permittemus hic passuri, quodcumque patiendum erit;
 					<milestone unit="section" n="13"/> procul ab oculis nostris urbs nostra
 				diripiatur, incendatur. <milestone unit="section" n="14"/> hostis Rhodios esse
-				Romani iudicare possunt <gap/> ; est enim et nostrum aliquod de nobis iudicium, quo
+				Romani iudicare possunt <gap reason="undefined"/> ; est enim et nostrum aliquod de nobis iudicium, quo
 				numquam iudicabimus nos vestros hostis, nec quicquam hostile, etiam si omnia
 				patiemur, faciemus.’ </p>
 			<p><milestone unit="chapter" n="25"/><milestone unit="section" n="1"/><pb
@@ -1256,7 +1263,7 @@
 			<p><milestone unit="chapter" n="30"/><milestone unit="section" n="1"/>haec pronuntiata
 				primo die conventus varie adfecerunt animos; libertas praeter spem data adrexit et
 				levatum annuum vectigal; <milestone unit="section" n="2"/><pb n="vol.10.2.p.81"
-					type="notedatea"/> regionatim commercio interruptis ita videri lacerata <gap/>
+					type="notedatea"/> regionatim commercio interruptis ita videri lacerata <gap reason="undefined"/>
 				tamquam animali in artus alterum alterius indigentis distracto: adeo, quanta
 				Macedonia esset, quam divisui facilis, quam se ipsa <note><date>a. Chr. n.
 						167.</date></note> quaeque contenta pars esset, Macedones quoque ignorabant.
@@ -1278,7 +1285,7 @@
 				aspera plaga est; cultorum quoque ingenia terrae <note><date>a. Chr. n.
 					167.</date></note>similia habet. ferociores eos et accolae barbari faciunt nunc
 				bello exercentes, nunc in pace miscentes ritus suos. <milestone unit="section" n="8"
-				/> divisa itaque Macedoniae partium usibus separatis, quanta univers <gap/>
+				/> divisa itaque Macedoniae partium usibus separatis, quanta univers <gap reason="undefined"/>
 				ostendit. </p>
 			<p><milestone unit="chapter" n="31"/><milestone unit="section" n="1"/> Macedoniae
 				formula dicta cum leges quoque se daturum ostendisset, Aetoli deinde citati. in qua
@@ -1427,7 +1434,7 @@
 					rend="italics">Gallos</hi> exciverat; <note><date>a. Chr. n. 167.</date></note>
 				iamque Synnada pervenerant, cum Eumenes ad Sardis undique exercitum contraxerat.
 					<milestone unit="section" n="12"/> ibi Romani cum et Solovettium ducem Gallorum
-				Synnadis <gap/> adlocuturi. et Attalus cum eis profectus; sed castra Gallorum
+				Synnadis <gap reason="undefined"/> adlocuturi. et Attalus cum eis profectus; sed castra Gallorum
 				intrare eum non placuit, ne animi ex disceptatione inritarentur. <milestone
 					unit="section" n="13"/>
 				<persName n="2"><forename>P.</forename>
@@ -1566,7 +1573,7 @@
 						><forename>Q.</forename>
 					<surname>Fabium</surname>
 					<addName>Maximum</addName></persName> dictatorem interfuerit, meminit.
-					<milestone unit="section" n="13"/> itaque accusatorem <gap/> hiscere potuisse et
+					<milestone unit="section" n="13"/> itaque accusatorem <gap reason="undefined"/> hiscere potuisse et
 				supervacaneam defensionem Pauli fuisse. <milestone unit="section" n="14"/><pb
 					n="vol.10.2.p.103" type="notedatea"/> transeatur ad alteram contionem; nec
 				Quirites vos, sed milites videor appellaturus, si nomen hoc <note><date>a. Chr. n.
@@ -1587,7 +1594,7 @@
 				Macedonici potest quam <persName n="2"><forename>C.</forename>
 					<surname>Lutatio</surname></persName> primi Punici belli, quam <persName n="2"
 						><forename>P.</forename>
-					<surname>Cornelio</surname></persName> secundi; <gap/> quam illi, qui
+					<surname>Cornelio</surname></persName> secundi; <gap reason="undefined"/> quam illi, qui
 				triumphaverant; <milestone unit="section" n="5"/> nec <persName n="2"
 						><forename>L.</forename>
 					<surname>Paulum</surname></persName> minorem aut maiorem imperatorem triumphus
@@ -1673,7 +1680,7 @@
 				traducendas in triumpho dicavit, alias alio caedente mactate. <milestone
 					unit="section" n="13"/><pb n="vol.10.2.p.110" type="notedatea"/> quid? illae
 				epulae senatus, quae nec privato loco nec publico profano, sed in Capitolio eduntur,
-				utrum hominum voluptatis causa an deorum honoris <gap/>
+				utrum hominum voluptatis causa an deorum honoris <gap reason="undefined"/>
 				<note><date>a. u. c. 587.</date></note> auctore Ser. <milestone unit="section"
 					n="14"/>Galba turbaturi estis? <persName n="2"><forename>L.</forename>
 					<surname>Pauli</surname></persName> triumpho portae claudentur? rex Macedonum
@@ -1682,7 +1689,7 @@
 					<surname>Paulus</surname></persName> privatus tamquam rure rediens a porta domum
 				ibit? <milestone unit="section" n="15"/><pb n="vol.10.2.p.111" type="notedatea"/> et
 				tu, centurio, miles, quibus ab imperatore Paulo do<hi rend="italics">natus</hi>
-				<gap/>
+				<gap reason="undefined"/>
 				<hi rend="italics">se</hi>natus decrevit potius quam <hi rend="italics">quid</hi>
 				<persName n="2"><forename>Ser.</forename>
 					<surname>Galba</surname></persName> fabuletur, audi. et <note><date>a. Chr. n.
@@ -1699,10 +1706,10 @@
 				publicam bene gerendam domi militiaeque fuit. <milestone unit="section" n="19"/> ego
 				hoc ferro saepe vexatum corpus vetus miles adulescentibus militibus ostendi; Galba
 				nitens et integrum denudet. <milestone unit="section" n="20"/> revocate, si videtur,
-				tribuni, ad suffragium tribus; ego ad vos milites, <gap/> .’ <milestone
+				tribuni, ad suffragium tribus; ego ad vos milites, <gap reason="undefined"/> .’ <milestone
 					unit="chapter" n="40"/><milestone unit="section" n="1"/><pb n="vol.10.2.p.112"
 					type="notedatea"/>
-				<gap/> summam omnis captivi auri argentique translati <note><date>a. u. c.
+				<gap reason="undefined"/> summam omnis captivi auri argentique translati <note><date>a. u. c.
 						587.</date></note><hi rend="italics">sestertium</hi> milliens ducenties
 				fuisse Valerius Antias tradit; qua haud dubie maior aliquanto summa ex numero
 				plaustrorum ponderibusque auri, argenti generatim ab ipso scriptis efficitur.
@@ -1772,7 +1779,7 @@
 				sortis mortalium exempla spectemur, ille, qui ante se captivos <hi rend="italics"
 					>captivus</hi> ipse duci liberos vidit, incolumes tamen eos habet; <milestone
 					unit="section" n="11"/> ego, qui de illo triumphavi, ab alterius funere filii
-				currum <gap/> ex Capitolio prope iam expirantem veni; neque ex tanta stirpe liberum
+				currum <gap reason="undefined"/> ex Capitolio prope iam expirantem veni; neque ex tanta stirpe liberum
 				superest, qui <persName n="3"><forename>L.</forename>
 					<surname>Aemilii</surname>
 					<addName>Pauli</addName></persName> nomen ferat. <milestone unit="section"
@@ -1793,7 +1800,7 @@
 					<surname>Cassius</surname>
 					<addName>Persea</addName></persName> regem cum Alexandro filio Albam in
 				custodiam duceret; comites, pecuniam, argentum, instrumentum, quod haberet, nihil
-				<gap/> . <hi rend="italics">Bithys, <milestone unit="section" n="5"/> filius
+				<gap reason="undefined"/> . <hi rend="italics">Bithys, <milestone unit="section" n="5"/> filius
 					Cotyis,</hi> regis Thracum, <hi rend="italics">cum</hi> obsidibus in custodiam
 				Carseolos est missus. ceteros captivos, qui in triumpho ducti erant, in carcerem
 				condi placuit. <milestone unit="section" n="6"/><pb n="vol.10.2.p.119"
@@ -1924,7 +1931,7 @@
 				sciat. <milestone unit="section" n="13"/> filii Nicomedis commendationem accipere.
 				quanta cura regum amicorum liberos tueatur populus Romanus, documento Ptolemaeum,
 				Aegypti regem, esse. <milestone unit="section" n="14"/> cum hoc responso Prusia est
-				dimissus. munera ei ex <gap/> sestertiis iussa dari et vasorum argenteorum pondo
+				dimissus. munera ei ex <gap reason="undefined"/> sestertiis iussa dari et vasorum argenteorum pondo
 				quinquaginta. <milestone unit="section" n="15"/> et filio regis Nicomedi ex ea summa
 				munera dari censuerunt, ex qua Masgabae, filio regis Masinissae, data essent; et ut
 				victimae aliaque, quae ad sacrificium pertinerent, seu Romae seu Praeneste immolare
@@ -1948,10 +1955,10 @@
 				deos servatores suos senatum appellasse aliamque orationem non tam honorificam
 				audientibus quam sibi deformem habuisse. <note><date>a. Chr. n. 167.</date></note>
 				moratus circa urbem triginta haud amplius dies in regnum est profectus. <milestone
-					unit="section" n="21"/> actumque in Asia bellum <gap/>
+					unit="section" n="21"/> actumque in Asia bellum <gap reason="undefined"/>
 			</p>
 			<!--</div1>-->
 
-		</body>
+		</div></body>
 	</text>
 </TEI>

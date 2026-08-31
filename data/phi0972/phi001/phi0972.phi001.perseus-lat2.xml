@@ -72,8 +72,7 @@
         </revisionDesc>
     </teiHeader>
     <text xml:lang="lat">
-        <body xml:base="urn:cts:latinLit:phi0972.phi001.perseus-lat2">
-            <div type="edition" xml:lang="lat">
+        <body xml:base="urn:cts:latinLit:phi0972.phi001.perseus-lat2"><div n="urn:cts:latinLit:phi0972.phi001.perseus-lat2" type="edition" xml:lang="lat">
                 <div type="textpart" n="1" subtype="section">
                     <ab> “Num alio genere furiarum
                         declamatores inquietantur, <note place="marg"><hi rend="italics"

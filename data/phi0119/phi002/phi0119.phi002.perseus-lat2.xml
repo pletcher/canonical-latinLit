@@ -97,8 +97,7 @@
 </teiHeader>
 
 <text xml:lang="lat">
-<body xml:base="urn:cts:latinLit:phi0119.phi002.perseus-lat2">
-<div type="edition" xml:lang="lat">
+<body xml:base="urn:cts:latinLit:phi0119.phi002.perseus-lat2"><div n="urn:cts:latinLit:phi0119.phi002.perseus-lat2" type="edition" xml:lang="lat">
 <div type="textpart" subtype="act" n="prologue">
 <div type="textpart" subtype="scene" n="pr">
 <milestone unit="card" resp="perseus" n="1"/>

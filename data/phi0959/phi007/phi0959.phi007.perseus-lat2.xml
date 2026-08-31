@@ -84,8 +84,7 @@
 
 
    <text xml:lang="lat">
-      <body xml:base="urn:cts:latinLit:phi0959.phi007.perseus-lat2">
-         <div type="edition" xml:lang="lat">
+      <body xml:base="urn:cts:latinLit:phi0959.phi007.perseus-lat2"><div n="urn:cts:latinLit:phi0959.phi007.perseus-lat2" type="edition" xml:lang="lat">
             <pb xml:id="p.2"/>
             <div type="textpart" subtype="book" n="1">
                <l n="1">Tempora cum causis Latium digesta per annum</l>

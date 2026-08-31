@@ -108,8 +108,7 @@
         </revisionDesc>
     </teiHeader>
 <text xml:lang="lat" >
-    <body xml:base="urn:cts:latinLit:phi0690.phi003.perseus-lat2">
-        <div type="edition"  xml:lang="lat" subtype="book">
+    <body xml:base="urn:cts:latinLit:phi0690.phi003.perseus-lat2"><div n="urn:cts:latinLit:phi0690.phi003.perseus-lat2" type="edition"  xml:lang="lat" subtype="book">
 <div n="1" type="textpart" subtype="book">
 <milestone ed="p" n="1" unit="card"/>
 <l n="1" rend="indent">Arma virumque cano, Troiae qui primus ab oris</l>

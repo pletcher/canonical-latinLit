@@ -90,8 +90,7 @@
   </teiHeader>
 
 <text xml:lang="lat">
-<body xml:base="urn:cts:latinLit:phi0448.phi002.perseus-lat3">
-<div type="edition" xml:lang="lat">
+<body xml:base="urn:cts:latinLit:phi0448.phi002.perseus-lat3"><div n="urn:cts:latinLit:phi0448.phi002.perseus-lat3" type="edition" xml:lang="lat">
 <pb n="p.2"/>
 <div type="textpart" subtype="book" n="1">
 <div type="textpart" subtype="chapter" n="1">

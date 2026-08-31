@@ -47,6 +47,23 @@
 <state unit="section"/>
 </refsDecl>
 
+        <refsDecl xmlns="http://www.tei-c.org/ns/1.0" n="CTS">
+        	<cRefPattern n="section"
+        		matchPattern="(\w+).(\w+).(\w+)"
+        		replacementPattern="#xpath(/TEI.2/text/body/div1[@type='book'][@n='$1']/div2[@type='letter'][@n='$2']/div3[@type='section'] | milestone[@unit='section'][@n='$3'])">
+        		<p>This pointer pattern extracts book and letter and section</p>
+        	</cRefPattern>
+        	<cRefPattern n="letter"
+        		matchPattern="(\w+).(\w+)"
+        		replacementPattern="#xpath(/TEI.2/text/body/div1[@type='book'][@n='$1']/div2[@type='letter'][@n='$2'])">
+        		<p>This pointer pattern extracts book and letter</p>
+        	</cRefPattern>
+        	<cRefPattern n="book"
+        		matchPattern="(\w+)"
+        		replacementPattern="#xpath(/TEI.2/text/body/div1[@type='book'][@n='$1'])">
+        		<p>This pointer pattern extracts book</p>
+        	</cRefPattern>
+        </refsDecl>
         <refsDecl xml:id="CTS">
           <citeStructure match="/TEI/text/body" use="@xml:base">
             <citeStructure match="div1[@type='book']" use="@n" unit="book" delim=":">
@@ -884,7 +901,7 @@ quam ille omnibus statim 1 totum non dubitans, non fastidiens aperiebat, voluptu
 <milestone unit="section" n="4"/>haec pauca de studiis, ceterum cetera quis competenti praeconio extollat, quod condicionis humanae per omnia memor clericos opere sermone populares, exhortatione maerentes destitutos solacio, captivos pretio ieiunos cibo nudos operimento consolabatur? pariter et super his plura
 <pb id="v.2.p.106"/>
 replicare superforaneum statuo. nam merita sua, quibus divitem conscientiam censu pauperatus locupletavit, spe futurae retributionis celare plus studuit. 
-<milestone unit="section" n="5"/><gap/> episcopum fratrem maiorem natu affectuosissime observans, quem diligebat ut filium, cum tamquam patrem veneraretur. sed et ille suspiciebat hunc granditer, habens in eo consiliarium in iudiciis vicarium in ecclesiis, procuratorem in negotiis vilicum in praediis, tabularium in tributis in lectionibus comitem, in expositionibus interpretem in itineribus contubernalem, sic utrique ab alterutro usque ad invidiam exempli mutua fide germanitatis officia restituebantur. 
+<milestone unit="section" n="5"/><gap reason="undefined"/> episcopum fratrem maiorem natu affectuosissime observans, quem diligebat ut filium, cum tamquam patrem veneraretur. sed et ille suspiciebat hunc granditer, habens in eo consiliarium in iudiciis vicarium in ecclesiis, procuratorem in negotiis vilicum in praediis, tabularium in tributis in lectionibus comitem, in expositionibus interpretem in itineribus contubernalem, sic utrique ab alterutro usque ad invidiam exempli mutua fide germanitatis officia restituebantur. 
 <milestone unit="section" n="6"/>sed quid dolorem nostrum moderaturi causis potius doloris fomenta sufficimus? ergo, ut dicere institueramus, huic iam, ut est illud Maronianum, cineri ingrato id est gratiam non relaturo neniam condidimus tristem luctuosamque propemodum laboriose, quia faceret dictandi desuetudo difficultatem, nisi quod animum natura desidiosissimurn dolor fletu gravidus accendit, eius hoc carmen est: 2
 
 <quote rend="blockquote">

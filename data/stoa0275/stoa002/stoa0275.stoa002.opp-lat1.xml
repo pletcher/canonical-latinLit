@@ -68,7 +68,7 @@
     <change who="Charles Pletcher" when="2026-08-26">Add citeStructure refsDecl</change>
   </revisionDesc>
 </teiHeader>
-<text xml:lang="lat"><body xml:base="urn:cts:latinLit:stoa0275.stoa002.opp-lat1"><div type="edition" xml:lang="lat">
+<text xml:lang="lat"><body xml:base="urn:cts:latinLit:stoa0275.stoa002.opp-lat1"><div n="urn:cts:latinLit:stoa0275.stoa002.opp-lat1" type="edition" xml:lang="lat">
 <pb xml:id="v.1.p.305"/>
 <head>AD NATIONES
 LIBER PRIMVS.</head>

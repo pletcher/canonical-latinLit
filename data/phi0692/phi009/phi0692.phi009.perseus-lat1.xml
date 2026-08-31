@@ -39,9 +39,21 @@
     </fileDesc>
 
     <encodingDesc>
+      <refsDecl n="CTS">
+      	<cRefPattern n="line"
+      		matchPattern="(\w+).(\w+)"
+      		replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@subtype='poem'][@n='$1']/.//tei:lb[@n='$2'])">
+      		<p>This pointer pattern extracts poem and line</p>
+      	</cRefPattern>
+      	<cRefPattern n="poem"
+      		matchPattern="(\w+)"
+      		replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@subtype='poem'][@n='$1'])">
+      		<p>This pointer pattern extracts poem</p>
+      	</cRefPattern>
+      </refsDecl>
       <refsDecl xml:id="CTS">
         <citeStructure match="/TEI/text/body" use="@xml:base">
-          <citeStructure match="div[@subtype='poem']" use="@n" unit="poem" delim=":" n="chunk">
+          <citeStructure match="div/div[@subtype='poem']" use="@n" unit="poem" delim=":" n="chunk">
             <citeStructure match=".//lb" use="@n" unit="line" delim="." />
           </citeStructure>
         </citeStructure>
@@ -61,7 +73,7 @@
   </teiHeader>
 
   <text xml:lang="lat" n="catalepton" xml:id="phi0692.phi009.perseus.lat1">
-    <body xml:base="urn:cts:latinLit:phi0692.phi009.perseus-lat1">
+    <body xml:base="urn:cts:latinLit:phi0692.phi009.perseus-lat1"><div type="edition" n="urn:cts:latinLit:phi0692.phi009.perseus-lat1" xml:lang="lat">
       <head>Catalepton</head>
 
       <div type="textpart" subtype="poem" n="1">
@@ -266,6 +278,6 @@
           ore fuit, <lb n="3" />illius haec quoque sunt diuini elementa poetae <lb n="4" />et rudis
           in uario carmine Calliope. </p>
       </div>
-    </body>
+    </div></body>
   </text>
 </TEI>

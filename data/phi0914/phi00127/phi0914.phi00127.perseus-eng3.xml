@@ -41,7 +41,7 @@
                                 <publisher>E. P. Dutton and Co.</publisher>
                                 <date>1912</date>
                             </imprint>
-                            <biblScope type="volume">1</biblScope>
+                            <biblScope unit="volume">1</biblScope>
                         </monogr>
                     </biblStruct>
                     <biblStruct default="false">
@@ -57,7 +57,7 @@
                                 <publisher>E. P. Dutton and Co.</publisher>
                                 <date>1912</date>
                             </imprint>
-                            <biblScope type="volume">2</biblScope>
+                            <biblScope unit="volume">2</biblScope>
                         </monogr>
                     </biblStruct>
                 </listBibl>
@@ -68,9 +68,16 @@
                 <refState unit="book"/>
                 <refState unit="chapter" n="chunk"/>
             </refsDecl>
+                <refsDecl n="CTS">
+                	<cRefPattern n="book"
+                		matchPattern="(\w+)"
+                		replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@subtype='book'][@n='$1'])">
+                		<p>This pointer pattern extracts book</p>
+                	</cRefPattern>
+                </refsDecl>
                 <refsDecl xml:id="CTS">
                   <citeStructure match="/TEI/text/body" use="@xml:base">
-                    <citeStructure match="div[@type='book']" use="@n" unit="book" delim=":" n="chunk"/>
+                    <citeStructure match="div/div[@subtype='book']" use="@n" unit="book" delim=":" n="chunk"/>
                   </citeStructure>
                 </refsDecl>
 </encodingDesc>
@@ -128,10 +135,10 @@ Added to repository. Passed SGML parse.
         </revisionDesc>
     </teiHeader>
     <text xml:lang="eng">
-        <body xml:base="urn:cts:latinLit:phi0914.phi00127.perseus-eng3">
-            <div part="N" sample="complete" org="uniform" n="27" type="book">
+        <body xml:base="urn:cts:latinLit:phi0914.phi00127.perseus-eng3"><div type="translation" n="urn:cts:latinLit:phi0914.phi00127.perseus-eng3" xml:lang="eng">
+            <div part="N" sample="complete" org="uniform" n="27" type="textpart" subtype="book">
                 <head>Scipio in Spain</head>
-                <div part="N" sample="complete" org="uniform" n="1" type="chapter">
+                <div part="N" sample="complete" org="uniform" n="1" type="textpart" subtype="chapter">
                     <p>
                         <milestone n="1" unit="section"/> Such was the position of affairs in Spain.
                         In Italy the consul Marcellus recovered Salapia, which was betrayed to him,
@@ -188,7 +195,7 @@ Added to repository. Passed SGML parse.
                         death. Those Romans who escaped from the fatal field fled by various routes,
                         almost wholly weaponless, to Marcellus in Samnium. </p>
                 </div>
-                <div part="N" sample="complete" org="uniform" n="2" type="chapter">
+                <div part="N" sample="complete" org="uniform" n="2" type="textpart" subtype="chapter">
                     <p>
                         <milestone n="1" unit="section"/> Marcellus was not particularly disturbed
                         by this serious disaster. He sent a despatch to the senate informing them of
@@ -234,7 +241,7 @@ Added to repository. Passed SGML parse.
                         always on the look-out for a chance of surprise or ambush, Marcellus never
                         moving but in daylight, and then only after careful reconnoitring. </p>
                 </div>
-                <div part="N" sample="complete" org="uniform" n="3" type="chapter">
+                <div part="N" sample="complete" org="uniform" n="3" type="textpart" subtype="chapter">
                     <p>
                         <milestone n="1" unit="section"/> At Capua, in the meantime, Flaccus was
                         occupied with the sale of the property of the principal citizens and the
@@ -272,7 +279,7 @@ Added to repository. Passed SGML parse.
                         army, with an equal number from the allied contingents, conveyed it to
                         Tarentum. </p>
                 </div>
-                <div part="N" sample="complete" org="uniform" n="4" type="chapter">
+                <div part="N" sample="complete" org="uniform" n="4" type="textpart" subtype="chapter">
                     <p>
                         <milestone n="1" unit="section"/> The summer was now drawing to a close, and
                         the date of the consular elections was near at hand. Marcellus wrote to say
@@ -327,7 +334,7 @@ Added to repository. Passed SGML parse.
                         Rome, and on the following day similar intercessions were to be offered in
                         Campania, at the grove of Feronia. </p>
                 </div>
-                <div part="N" sample="complete" org="uniform" n="5" type="chapter">
+                <div part="N" sample="complete" org="uniform" n="5" type="textpart" subtype="chapter">
                     <p>
                         <milestone n="1" unit="section"/> On receiving his letter of recall the
                         consul M. Valerius handed over the army and the administration of the
@@ -403,7 +410,7 @@ Added to repository. Passed SGML parse.
                         of the plebs P. Licinius Crassus, the Pontifex Maximus, was named by Q.
                         Fulvius as his Master of the Horse. </p>
                 </div>
-                <div part="N" sample="complete" org="uniform" n="6" type="chapter">
+                <div part="N" sample="complete" org="uniform" n="6" type="textpart" subtype="chapter">
                     <p>
                         <milestone n="1" unit="section"/> On the Dictator's arrival in Rome he sent
                         C. Sempronius Blaesus, who had been his second in command in Capua, to the
@@ -479,7 +486,7 @@ Added to repository. Passed SGML parse.
                         Games with great splendour, considering the resources available at the time.
                     </p>
                 </div>
-                <div part="N" sample="complete" org="uniform" n="7" type="chapter">
+                <div part="N" sample="complete" org="uniform" n="7" type="textpart" subtype="chapter">
                     <p>
                         <milestone n="1" unit="section"/> At the close of the year C. Laelius
                         arrived in Rome, thirty-four days after leaving Tarraco. His entrance into
@@ -540,7 +547,7 @@ Added to repository. Passed SGML parse.
                         Such were the distribution of the provinces and the military commands for
                         the year. </p>
                 </div>
-                <div part="N" sample="complete" org="uniform" n="8" type="chapter">
+                <div part="N" sample="complete" org="uniform" n="8" type="textpart" subtype="chapter">
                     <p>
                         <milestone n="1" unit="section"/> While the public attention was fixed on
                         more important matters an old controversy was revived on the occasion of the
@@ -615,7 +622,7 @@ Added to repository. Passed SGML parse.
                         accumulate a store at Catina to furnish supplies for the army which was to
                         pass the summer at Tarentum. </p>
                 </div>
-                <div part="N" sample="complete" org="uniform" n="9" type="chapter">
+                <div part="N" sample="complete" org="uniform" n="9" type="textpart" subtype="chapter">
                     <p>
                         <milestone n="1" unit="section"/> The deportation of the soldiers to Sicily,
                         most of whom belonged to the Latin and the allied nationalities, very nearly
@@ -676,7 +683,7 @@ Added to repository. Passed SGML parse.
                         colonies would take the same course, as would also the allies; all had
                         agreed together to betray the City of Rome to Hannibal. </p>
                 </div>
-                <div part="N" sample="complete" org="uniform" n="10" type="chapter">
+                <div part="N" sample="complete" org="uniform" n="10" type="textpart" subtype="chapter">
                     <p>
                         <milestone n="1" unit="section"/> The consuls spoke in reassuring terms to
                         the senate. They declared that the other colonies were as loyal and dutiful
@@ -730,7 +737,7 @@ Added to repository. Passed SGML parse.
                         whose successful operations were enhancing their own and their general's
                         reputation. </p>
                 </div>
-                <div part="N" sample="complete" org="uniform" n="11" type="chapter">
+                <div part="N" sample="complete" org="uniform" n="11" type="textpart" subtype="chapter">
                     <p>
                         <milestone n="1" unit="section"/> It was further decided that before the
                         consul left the City certain portents should be expiated. <milestone n="2"
@@ -791,7 +798,7 @@ Added to repository. Passed SGML parse.
                             unit="section"/> These comprised seven shops, the fish market and the
                         Hall of Vestal. </p>
                 </div>
-                <div part="N" sample="complete" org="uniform" n="12" type="chapter">
+                <div part="N" sample="complete" org="uniform" n="12" type="textpart" subtype="chapter">
                     <p>
                         <milestone n="1" unit="section"/> After despatching their business in Rome
                         the consuls started for the war. <milestone n="2" unit="section"/> Fulvius
@@ -858,7 +865,7 @@ Added to repository. Passed SGML parse.
                         of the wing which began the fight, and two from the legion which came up in
                         support. </p>
                 </div>
-                <div part="N" sample="complete" org="uniform" n="13" type="chapter">
+                <div part="N" sample="complete" org="uniform" n="13" type="textpart" subtype="chapter">
                     <p>
                         <milestone n="1" unit="section"/> When they were once more in camp,
                         Marcellus addressed such an impassioned and stinging remonstrance to his men
@@ -917,7 +924,7 @@ Added to repository. Passed SGML parse.
                         prolonged they might hold out. After all had been said and done to raise
                         their courage, they marched to battle. </p>
                 </div>
-                <div part="N" sample="complete" org="uniform" n="14" type="chapter">
+                <div part="N" sample="complete" org="uniform" n="14" type="textpart" subtype="chapter">
                     <p>
                         <milestone n="1" unit="section"/> When this was reported to Hannibal, he
                         remarked, "Evidently we have to do with an enemy who cannot endure either
@@ -972,7 +979,7 @@ Added to repository. Passed SGML parse.
                             unit="section"/> Reconnoitring parties who were sent out to watch his
                         movements reported that he had taken the direction of Bruttium. </p>
                 </div>
-                <div part="N" sample="complete" org="uniform" n="15" type="chapter">
+                <div part="N" sample="complete" org="uniform" n="15" type="textpart" subtype="chapter">
                     <p>
                         <milestone n="1" unit="section"/> About this time the Hirpini, the Lucani
                         and the Vulcientes surrendered to the consul Q. Fulvius, and delivered up
@@ -1051,7 +1058,7 @@ Added to repository. Passed SGML parse.
                         without meeting a single armed enemy. All the defenders who had been engaged
                         at the citadel and the harbour now combined to attack them. </p>
                 </div>
-                <div part="N" sample="complete" org="uniform" n="16" type="chapter">
+                <div part="N" sample="complete" org="uniform" n="16" type="textpart" subtype="chapter">
                     <p>
                         <milestone n="1" unit="section"/> The fighting in the forum commenced with
                         an impetuosity which was not sustained. The Tarentine was no match for the
@@ -1114,7 +1121,7 @@ Added to repository. Passed SGML parse.
                         promptly arrested. Terrified at the prospect of examination under torture,
                         they disclosed the plot. </p>
                 </div>
-                <div part="N" sample="complete" org="uniform" n="17" type="chapter">
+                <div part="N" sample="complete" org="uniform" n="17" type="textpart" subtype="chapter">
                     <p>
                         <milestone n="1" unit="section"/> P. Scipio had spent the whole winter in
                         winning over the various Spanish tribes, either by bribes or by restoring
@@ -1182,7 +1189,7 @@ Added to repository. Passed SGML parse.
                             <milestone n="17" unit="section"/> On their return they shared the Roman
                         camp and acted as guides until they reached the enemy. </p>
                 </div>
-                <div part="N" sample="complete" org="uniform" n="18" type="chapter">
+                <div part="N" sample="complete" org="uniform" n="18" type="textpart" subtype="chapter">
                     <p>
                         <milestone n="1" unit="section"/> The first army they came to was the one
                         commanded by Hasdrubal, which was encamped near the city of Baecula.
@@ -1256,7 +1263,7 @@ Added to repository. Passed SGML parse.
                         galloping wildly about, and were dreaded by the Carthaginians as much as by
                         the Romans. The enemies' losses amounted to 8000 men. </p>
                 </div>
-                <div part="N" sample="complete" org="uniform" n="19" type="chapter">
+                <div part="N" sample="complete" org="uniform" n="19" type="textpart" subtype="chapter">
                     <p>
                         <milestone n="1" unit="section"/> Hasdrubal had secured the war-chest before
                         the battle, and after sending on the elephants in advance and collecting all
@@ -1303,7 +1310,7 @@ Added to repository. Passed SGML parse.
                         beautifully caparisoned horse. He then ordered an escort of cavalry to
                         accompany him as far as he wanted to go, and dismissed him. </p>
                 </div>
-                <div part="N" sample="complete" org="uniform" n="20" type="chapter">
+                <div part="N" sample="complete" org="uniform" n="20" type="textpart" subtype="chapter">
                     <p>
                         <milestone n="1" unit="section"/> A council of war was then held. Some of
                         those present urged the immediate pursuit of Hasdrubal, but Scipio thought
@@ -1362,7 +1369,7 @@ Added to repository. Passed SGML parse.
                         avert the threatened disgrace, Fulvius also arrived to conduct the
                         elections. </p>
                 </div>
-                <div part="N" sample="complete" org="uniform" n="21" type="chapter">
+                <div part="N" sample="complete" org="uniform" n="21" type="textpart" subtype="chapter">
                     <p>
                         <milestone n="1" unit="section"/> The question of depriving Marcellus of his
                         command was debated in the Circus Flaminius before an enormous gathering in
@@ -1404,7 +1411,7 @@ Added to repository. Passed SGML parse.
                         commissioner, was really alive and a prisoner in the hands of the enemy.
                     </p>
                 </div>
-                <div part="N" sample="complete" org="uniform" n="22" type="chapter">
+                <div part="N" sample="complete" org="uniform" n="22" type="textpart" subtype="chapter">
                     <p>
                         <milestone n="1" unit="section"/> It was now the eleventh year of the Punic
                         War when M. Marcellus and T. Quinctius Crispinus entered upon their duties
@@ -1460,7 +1467,7 @@ Added to repository. Passed SGML parse.
                         Tubulus was also enjoined to be especially on his guard in case any
                         revolutionary projects were formed. </p>
                 </div>
-                <div part="N" sample="complete" org="uniform" n="23" type="chapter">
+                <div part="N" sample="complete" org="uniform" n="23" type="textpart" subtype="chapter">
                     <p>
                         <milestone n="1" unit="section"/> The praetors left for their provinces, but
                         the consuls were detained by religious matters; several portents had been
@@ -1495,7 +1502,7 @@ Added to repository. Passed SGML parse.
                         rule, and the day fixed for their celebration was July 5th, which was
                         henceforth observed as the day. </p>
                 </div>
-                <div part="N" sample="complete" org="uniform" n="24" type="chapter">
+                <div part="N" sample="complete" org="uniform" n="24" type="textpart" subtype="chapter">
                     <p>
                         <milestone n="1" unit="section"/> Day by day the reports from Arretium
                         became more serious and caused increasing anxiety to the senate. Written
@@ -1536,7 +1543,7 @@ Added to repository. Passed SGML parse.
                         that all hope of Etruria remaining quiet depended upon his taking such
                         precautions as to make any movement of disaffection impossible. </p>
                 </div>
-                <div part="N" sample="complete" org="uniform" n="25" type="chapter">
+                <div part="N" sample="complete" org="uniform" n="25" type="textpart" subtype="chapter">
                     <p>
                         <milestone n="1" unit="section"/> There was an animated debate in the senate
                         as to the treatment to be meted out to the Tarentines. Fabius was present,
@@ -1590,7 +1597,7 @@ Added to repository. Passed SGML parse.
                         certain that if the enemy would try his chance against two consular armies,
                         the war would be brought to a close. </p>
                 </div>
-                <div part="N" sample="complete" org="uniform" n="26" type="chapter">
+                <div part="N" sample="complete" org="uniform" n="26" type="textpart" subtype="chapter">
                     <p>
                         <milestone n="1" unit="section"/> Hannibal had already fought two battles
                         with Marcellus during the past year, in one he had been victorious, the
@@ -1638,7 +1645,7 @@ Added to repository. Passed SGML parse.
                         seriously alarmed at finding after misshaped and stunted parts such an
                         excess of growth. </p>
                 </div>
-                <div part="N" sample="complete" org="uniform" n="27" type="chapter">
+                <div part="N" sample="complete" org="uniform" n="27" type="textpart" subtype="chapter">
                     <p>
                         <milestone n="1" unit="section"/> Marcellus, however, was seized with such a
                         keen desire of engaging Hannibal that he never thought that their respective
@@ -1692,7 +1699,7 @@ Added to repository. Passed SGML parse.
                         story, however, most authorities agree that he left the camp to reconnoitre
                         the position, and all agree that he was ambushed. </p>
                 </div>
-                <div part="N" sample="complete" org="uniform" n="28" type="chapter">
+                <div part="N" sample="complete" org="uniform" n="28" type="textpart" subtype="chapter">
                     <p>
                         <milestone n="1" unit="section"/> Hannibal felt convinced that the enemy
                         would be thoroughly cowed by the death of one consul and the disablement of
@@ -1762,7 +1769,7 @@ Added to repository. Passed SGML parse.
                         fled in disorder to the sea and to their ships. Thus by the arrival of
                         Hannibal, the siege of Locri was raised. </p>
                 </div>
-                <div part="N" sample="complete" org="uniform" n="29" type="chapter">
+                <div part="N" sample="complete" org="uniform" n="29" type="textpart" subtype="chapter">
                     <p>
                         <milestone n="1" unit="section"/> As soon as Crispinus found that Hannibal
                         had withdrawn to Bruttium he ordered M. Marcellus to take the army which his
@@ -1808,7 +1815,7 @@ Added to repository. Passed SGML parse.
                         last meeting of their national council made him one of their two supreme
                         magistrates. </p>
                 </div>
-                <div part="N" sample="complete" org="uniform" n="30" type="chapter">
+                <div part="N" sample="complete" org="uniform" n="30" type="textpart" subtype="chapter">
                     <p>
                         <milestone n="1" unit="section"/> This being the position of affairs, Philip
                         moved southward into Greece. The Aetolians under the command of Pyrrhias,
@@ -1876,7 +1883,7 @@ Added to repository. Passed SGML parse.
                         battle to the Romans who were masters of the sea in that part of the world.
                     </p>
                 </div>
-                <div part="N" sample="complete" org="uniform" n="31" type="chapter">
+                <div part="N" sample="complete" org="uniform" n="31" type="textpart" subtype="chapter">
                     <p>
                         <milestone n="1" unit="section"/> While the king was preoccupied with the
                         preparations for the Games, and was allowing himself more recreation than
@@ -1922,7 +1929,7 @@ Added to repository. Passed SGML parse.
                         Dymae and crossed the Larisus, which separates the territory of Elia from
                         that of Dymae. </p>
                 </div>
-                <div part="N" sample="complete" org="uniform" n="32" type="chapter">
+                <div part="N" sample="complete" org="uniform" n="32" type="textpart" subtype="chapter">
                     <p>
                         <milestone n="1" unit="section"/> The first day of their advance in the
                         enemy's country was spent in plunder and destruction. The next day they
@@ -1965,7 +1972,7 @@ Added to repository. Passed SGML parse.
                         across Euboea, he arrived at Demetrias in Thessaly on the tenth day after
                         his departure from Dymae. </p>
                 </div>
-                <div part="N" sample="complete" org="uniform" n="33" type="chapter">
+                <div part="N" sample="complete" org="uniform" n="33" type="textpart" subtype="chapter">
                     <p>
                         <milestone n="1" unit="section"/> There he was met by still more alarming
                         tidings; the Dardanians were pouring into Macedonia and were already in
@@ -2008,7 +2015,7 @@ Added to repository. Passed SGML parse.
                         spared the unoffending armies and visited the rashness of the consuls on
                         their own heads. </p>
                 </div>
-                <div part="N" sample="complete" org="uniform" n="34" type="chapter">
+                <div part="N" sample="complete" org="uniform" n="34" type="textpart" subtype="chapter">
                     <p>
                         <milestone n="1" unit="section"/> When the patricians began to look round
                         and see who would make the best consuls, one man stood out conspicuously-C.
@@ -2063,7 +2070,7 @@ Added to repository. Passed SGML parse.
                         submission." <milestone n="15" unit="section"/> By their united efforts they
                         succeeded in making him consul with C. Claudius Nero. </p>
                 </div>
-                <div part="N" sample="complete" org="uniform" n="35" type="chapter">
+                <div part="N" sample="complete" org="uniform" n="35" type="textpart" subtype="chapter">
                     <p>
                         <milestone n="1" unit="section"/> Three days later came the election of
                         praetors. Those elected were L. Porcius Licinius, C. Mamilius and the two
@@ -2111,7 +2118,7 @@ Added to repository. Passed SGML parse.
                         Tarentum to Capua. One legion was given him, the one which Fulvius had
                         commanded. </p>
                 </div>
-                <div part="N" sample="complete" org="uniform" n="36" type="chapter">
+                <div part="N" sample="complete" org="uniform" n="36" type="textpart" subtype="chapter">
                     <p>
                         <milestone n="1" unit="section"/> Hasdrubal's appearance in Italy was looked
                         forward to with daily increasing anxiety. The first news came from the
@@ -2158,7 +2165,7 @@ Added to repository. Passed SGML parse.
                         appointed the military tribunes for the first four legions; the consuls
                         commissioned the rest. </p>
                 </div>
-                <div part="N" sample="complete" org="uniform" n="37" type="chapter">
+                <div part="N" sample="complete" org="uniform" n="37" type="textpart" subtype="chapter">
                     <p>
                         <milestone n="1" unit="section"/> Prior to the departure of the consuls
                         religious observances were kept up for nine days owing to the fall of a
@@ -2218,7 +2225,7 @@ Added to repository. Passed SGML parse.
                         two heifers were sacrificed by the Ten Keepers, and the cypress images were
                         carried into the shrine. </p>
                 </div>
-                <div part="N" sample="complete" org="uniform" n="38" type="chapter">
+                <div part="N" sample="complete" org="uniform" n="38" type="textpart" subtype="chapter">
                     <p>
                         <milestone n="1" unit="section"/> After the deities had been duly appeased,
                         the consuls proceeded with the levy and conducted it with a rigour and
@@ -2261,7 +2268,7 @@ Added to repository. Passed SGML parse.
                         is further stated that C. Mamilius sent 3000 bowmen and slingers from
                         Sicily. </p>
                 </div>
-                <div part="N" sample="complete" org="uniform" n="39" type="chapter">
+                <div part="N" sample="complete" org="uniform" n="39" type="textpart" subtype="chapter">
                     <p>
                         <milestone n="1" unit="section"/> The excitement and alarm in Rome were
                         heightened by a despatch from L. Porcius, the propraetor commanding in Gaul.
@@ -2315,7 +2322,7 @@ Added to repository. Passed SGML parse.
                         and had not forgotten his own unsuccessful attempt on that very colony after
                         his victory at the Trebia. </p>
                 </div>
-                <div part="N" sample="complete" org="uniform" n="40" type="chapter">
+                <div part="N" sample="complete" org="uniform" n="40" type="textpart" subtype="chapter">
                     <p>
                         <milestone n="1" unit="section"/> The consuls left for the front, each by a
                         separate route, and their departure was watched with feelings of painful
@@ -2368,7 +2375,7 @@ Added to repository. Passed SGML parse.
                         of the troops Hostilius was ordered to take to Capua and then hand them over
                         to Q. Fulvius the proconsul. </p>
                 </div>
-                <div part="N" sample="complete" org="uniform" n="41" type="chapter">
+                <div part="N" sample="complete" org="uniform" n="41" type="textpart" subtype="chapter">
                     <p>
                         <milestone n="1" unit="section"/> Hannibal assembled the whole of his force,
                         those in winter quarters and those on garrison duty in Bruttium, and marched
@@ -2408,7 +2415,7 @@ Added to repository. Passed SGML parse.
                         flock of sheep and could be ridden down and trampled under foot before they
                         could close their ranks. </p>
                 </div>
-                <div part="N" sample="complete" org="uniform" n="42" type="chapter">
+                <div part="N" sample="complete" org="uniform" n="42" type="textpart" subtype="chapter">
                     <p>
                         <milestone n="1" unit="section"/> Hannibal had not left his camp, when he
                         heard the noise of the battle. He lost not a moment in leading his force
@@ -2469,7 +2476,7 @@ Added to repository. Passed SGML parse.
                         while he was following him to Metapontum he sent Q. Fulvius into Lucania, so
                         that that country might not be left without a defending force. </p>
                 </div>
-                <div part="N" sample="complete" org="uniform" n="43" type="chapter">
+                <div part="N" sample="complete" org="uniform" n="43" type="textpart" subtype="chapter">
                     <p>
                         <milestone n="1" unit="section"/> After Hasdrubal had raised the siege of
                         Placentia, he sent off four Gaulish and two Numidian troopers with
@@ -2515,7 +2522,7 @@ Added to repository. Passed SGML parse.
                         his second in command, in charge of the camp he marched as rapidly as he
                         could to join his colleague. </p>
                 </div>
-                <div part="N" sample="complete" org="uniform" n="44" type="chapter">
+                <div part="N" sample="complete" org="uniform" n="44" type="textpart" subtype="chapter">
                     <p>
                         <milestone n="1" unit="section"/> The excitement and alarm in Rome were
                         quite as great as they had been two years previously, when the Carthaginian
@@ -2556,7 +2563,7 @@ Added to repository. Passed SGML parse.
                         they exaggerated the strength of the enemy and depreciated their own, their
                         fears made them look on the darkest side of everything. </p>
                 </div>
-                <div part="N" sample="complete" org="uniform" n="45" type="chapter">
+                <div part="N" sample="complete" org="uniform" n="45" type="textpart" subtype="chapter">
                     <p>
                         <milestone n="1" unit="section"/> When Nero had placed a sufficient distance
                         between himself and the enemy to make it safe for him to reveal his design,
@@ -2602,7 +2609,7 @@ Added to repository. Passed SGML parse.
                         occupy the same camp or separate ones. It was thought better that he should
                         come by night. </p>
                 </div>
-                <div part="N" sample="complete" org="uniform" n="46" type="chapter">
+                <div part="N" sample="complete" org="uniform" n="46" type="textpart" subtype="chapter">
                     <p>
                         <milestone n="1" unit="section"/> The consul Livius had issued a secret
                         order by means of the tessera that the tribunes should take in the tribunes
@@ -2652,7 +2659,7 @@ Added to repository. Passed SGML parse.
                             <milestone n="12" unit="section"/> As soon as the council broke up, the
                         red ensign was displayed and the army at once took the field. </p>
                 </div>
-                <div part="N" sample="complete" org="uniform" n="47" type="chapter">
+                <div part="N" sample="complete" org="uniform" n="47" type="textpart" subtype="chapter">
                     <p>
                         <milestone n="1" unit="section"/> The enemy were already standing in front
                         of their camp, in battle order. But there was a pause. Hasdrubal had ridden
@@ -2703,7 +2710,7 @@ Added to repository. Passed SGML parse.
                         which confined the stream, and by thus wasting the day he gave his enemy
                         time to follow him. </p>
                 </div>
-                <div part="N" sample="complete" org="uniform" n="48" type="chapter">
+                <div part="N" sample="complete" org="uniform" n="48" type="textpart" subtype="chapter">
                     <p>
                         <milestone n="1" unit="section"/> Nero with the whole of the cavalry was the
                         first to come up, then Porcius followed with the light infantry. <milestone
@@ -2761,7 +2768,7 @@ Added to repository. Passed SGML parse.
                         and thirst made them gasp for breath, until they were cut down or made
                         prisoners without offering any resistance. </p>
                 </div>
-                <div part="N" sample="complete" org="uniform" n="49" type="chapter">
+                <div part="N" sample="complete" org="uniform" n="49" type="textpart" subtype="chapter">
                     <p>
                         <milestone n="1" unit="section"/> More elephants were killed by their
                         drivers than by the enemy. They had a carpenter's chisel and a mallet, and
@@ -2799,7 +2806,7 @@ Added to repository. Passed SGML parse.
                         wipe out the whole lot, the consul replied: "Let some survive to carry the
                         news of their defeat and our victory." </p>
                 </div>
-                <div part="N" sample="complete" org="uniform" n="50" type="chapter">
+                <div part="N" sample="complete" org="uniform" n="50" type="textpart" subtype="chapter">
                     <p>
                         <milestone n="1" unit="section"/> The night after the battle Nero started
                         off at a more rapid pace than he had come, and in six days reached his camp
@@ -2841,7 +2848,7 @@ Added to repository. Passed SGML parse.
                         would not believe it till they had the consul's despatch and the report of
                         the envoys. </p>
                 </div>
-                <div part="N" sample="complete" org="uniform" n="51" type="chapter">
+                <div part="N" sample="complete" org="uniform" n="51" type="textpart" subtype="chapter">
                     <p>
                         <milestone n="1" unit="section"/> Word was brought that the envoys were
                         approaching. Everybody young and old alike ran out to meet them, each eager
@@ -2889,6 +2896,6 @@ Added to repository. Passed SGML parse.
                         were transported into Bruttian territory. </p>
                 </div>
             </div>
-        </body>
+        </div></body>
     </text>
 </TEI>

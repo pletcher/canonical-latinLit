@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
-    <teiHeader xml:lang="eng" type="text">
+    <teiHeader xml:lang="eng">
         <fileDesc>
             <titleStmt>
                 <title>Respecting the Answers of the Soothsayers </title>
@@ -54,6 +54,13 @@
                 <refState delim="." unit="chapter"/>
                 <refState unit="section"/>
             </refsDecl>
+                <refsDecl n="CTS">
+                	<cRefPattern n="chapter"
+                		matchPattern="(\w+)"
+                		replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/.//tei:milestone[@unit='chapter'][@n='$1'])">
+                		<p>This pointer pattern extracts chapter</p>
+                	</cRefPattern>
+                </refsDecl>
                 <refsDecl xml:id="CTS">
                   <citeStructure match="/TEI/text/body" use="@xml:base">
                     <citeStructure unit="chapter" delim="." match=".//milestone[@unit='chapter']" use="@n"/>
@@ -159,7 +166,7 @@ Added to repository.
             <pb n="68"/>
             <head>THE SPEECH OF M. T. CICERO RESPECTING THE ANSWERS OF THE SOOTHSAYERS. ADDRESSED TO
                 THE SENATE.</head>
-            <argument>
+            <div type="textpart" subtype="argument">
                 <head>THE ARGUMENT.</head>
                 <p>This speech was spoken towards the close of the year after the last speech, but
                     it follows it in nearly all editions, as it relates in some degree to the same
@@ -188,9 +195,9 @@ Added to repository.
                     guilty, he exhorted all citizens of all classes to lay aside their mutual
                     animosities, as the only way of regaining the favour of the gods and their
                     former prosperity.</p>
-            </argument>
+            </div>
         </front>
-        <body xml:base="urn:cts:latinLit:phi0474.phi021.perseus-eng1">
+        <body xml:base="urn:cts:latinLit:phi0474.phi021.perseus-eng1"><div type="translation" n="urn:cts:latinLit:phi0474.phi021.perseus-eng1" xml:lang="eng">
             <milestone n="1" unit="chapter"/>
             <milestone n="1" unit="section"/>
             <p>Yesterday, O conscript fathers, when I was greatly moved by the thoughts of your
@@ -1243,6 +1250,6 @@ Added to repository.
                 appoint atonements and prayers as we are ordered; but it is easy to address prayers
                 to those beings who of their own accord point out to us the path of safety. Our own
                 internal quarrels and dissensions must be terminated by ourselves. </p>
-        </body>
+        </div></body>
     </text>
 </TEI>

@@ -36,7 +36,7 @@
                                 <publisher>Weidmannsche Buchhandlung</publisher>
                                 <date>1880</date>
                             </imprint>
-                            <biblScope type="volume">10.1</biblScope>
+                            <biblScope unit="volume">10.1</biblScope>
                         </monogr>
                     </biblStruct>
                 </listBibl>
@@ -48,9 +48,21 @@
                 <refState delim="." unit="chapter"/>
                 <refState unit="section"/>
             </refsDecl>
+                <refsDecl n="CTS">
+                	<cRefPattern n="chapter"
+                		matchPattern="(\w+).(\w+)"
+                		replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@subtype='book'][@n='$1']/.//tei:milestone[@unit='chapter'][@n='$2'])">
+                		<p>This pointer pattern extracts book and chapter</p>
+                	</cRefPattern>
+                	<cRefPattern n="book"
+                		matchPattern="(\w+)"
+                		replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@subtype='book'][@n='$1'])">
+                		<p>This pointer pattern extracts book</p>
+                	</cRefPattern>
+                </refsDecl>
                 <refsDecl xml:id="CTS">
                   <citeStructure match="/TEI/text/body" use="@xml:base">
-                    <citeStructure match="div[@type='book']" use="@n" unit="book" delim=":">
+                    <citeStructure match="div/div[@subtype='book']" use="@n" unit="book" delim=":">
                       <citeStructure match=".//milestone[@unit='chapter']" use="@n" unit="chapter" delim="." n="chunk"/>
                     </citeStructure>
                   </citeStructure>
@@ -79,8 +91,8 @@
         </revisionDesc>
     </teiHeader>
     <text xml:lang="lat">
-        <body xml:base="urn:cts:latinLit:phi0914.phi00144.perseus-lat1">
-            <div type="book" n="44" org="uniform" sample="complete" part="N">
+        <body xml:base="urn:cts:latinLit:phi0914.phi00144.perseus-lat1"><div type="edition" n="urn:cts:latinLit:phi0914.phi00144.perseus-lat1" xml:lang="lat">
+            <div type="textpart" subtype="book" n="44" org="uniform" sample="complete" part="N">
                 <note place="unspecified" anchored="true">
                     <date>a. u. c. 585.</date>
                 </note>
@@ -91,7 +103,7 @@
                         <forename full="yes">Q.</forename>
                         <surname full="yes">Marcius</surname>
                         <addName full="yes">Philippus</addName>
-                    </persName> consul cum quinque milibus <gap/> , quot in supplementum legionum
+                    </persName> consul cum quinque milibus <gap reason="undefined"/> , quot in supplementum legionum
                     secum traiecturus erat, Brundisium pervenit. <milestone unit="section" n="2"/>
                     <persName n="2">
                         <forename full="yes">M.</forename>
@@ -122,8 +134,8 @@
                     viros, equos cum cura inspexisset, ornato exercitu obviam venienti consuli
                     processit. <milestone unit="section" n="7"/> et primus eorum congressus ex
                     dignitate ipsorum ac Romani nominis, <milestone unit="section" n="8"/> et in
-                    rebus deinde gerendis <gap/> . proconsul <milestone unit="section" n="9"/> enim
-                    ad exercitum <gap/> . paucis post diebus consul contionem apud milites habuit.
+                    rebus deinde gerendis <gap reason="undefined"/> . proconsul <milestone unit="section" n="9"/> enim
+                    ad exercitum <gap reason="undefined"/> . paucis post diebus consul contionem apud milites habuit.
                         <milestone unit="section" n="10"/> orsus ab parricidio Persei perpetrato in
                     fratrem, cogitato in parentem, adiecit post scelere partum regnum veneficia,
                     caedes, latrocinio nefando petitum Eumenen, iniurias in populum Romanum,
@@ -183,7 +195,7 @@
                     saltu ducere, ubi propter <note place="unspecified" anchored="true">
                         <date>a. Chr. n. 169.</date>
                     </note>
-                    <milestone unit="section" n="2"/> Ottolobum diximus regis castra <gap/> .
+                    <milestone unit="section" n="2"/> Ottolobum diximus regis castra <gap reason="undefined"/> .
                     praemitti tamen quattuor milia armatorum ad loca opportuna praeoccupanda
                     placuit, quis praepositi sunt <persName n="2">
                         <forename full="yes">M.</forename>
@@ -229,7 +241,7 @@
                         unit="section" n="3"/> congressi igitur extemplo tela coniecerunt. multa
                     utrimque volnera temerario incursu et accepta et inlata; pauci utriusque partis
                     ceciderunt. <milestone unit="section" n="4"/> inritatis in posterum diem animis
-                    maioribus copiis atque infestius concur <hi rend="italics"> sum <gap/> de </hi>
+                    maioribus copiis atque infestius concur <hi rend="italics"> sum <gap reason="undefined"/> de </hi>
                     summa belli, si loci satis ad explicandam aciem fuisset. iugum montis in
                     angustum dorsum cuneatum vix ternis ordinibus armatorum in fronte patuit.
                         <milestone unit="section" n="5"/> itaque paucis pugnantibus cetera
@@ -275,7 +287,7 @@
                         <milestone unit="section" n="3"/> per proclive sumpto fastigio longi duo
                     validi asseres ex inferiore parte in terra defigebantur, distantes inter se
                     paulo plus, quam quanta beluae latitudo est; <milestone unit="section" n="4"/>
-                    in eos transverso incumbente tigno <gap/> tricenos longi pedes, ut pons esset,
+                    in eos transverso incumbente tigno <gap reason="undefined"/> tricenos longi pedes, ut pons esset,
                     iniungebantur humusque insuper iniciebatur. <milestone unit="section" n="5"/>
                     modico deinde infra intervallo similis alter pons, dein tertius et plures ex
                     ordine, qua rupes abscisae erant, fiebant. <milestone unit="section" n="6"/>
@@ -306,7 +318,7 @@
                     die per aeque invia, sed adsuetudine peritius et meliore cum spe, quod nec
                     hostis usquam apparebat et mari adpropinquabant, degressi in campos inter
                     Heracleum et Libethrum posuerunt castra. <milestone unit="section" n="13"/>
-                    peditum, quorum pars maior tumulos tenebat, <gap/> ibi vallo campi quoque
+                    peditum, quorum pars maior tumulos tenebat, <gap reason="undefined"/> ibi vallo campi quoque
                     partem, ubi eques tenderet, amplectebantur. </p>
                 <p>
                     <milestone unit="chapter" n="6"/>
@@ -317,7 +329,7 @@
                     consilia et imperia trepidans duos ex amicis, Pellam alterum, ut, quae ad <note
                         place="unspecified" anchored="true">
                         <date>a. Chr. n. 169.</date>
-                    </note> Phacum pecunia deposita erat, <gap/> ex praesidiis revocat omnisque
+                    </note> Phacum pecunia deposita erat, <gap reason="undefined"/> ex praesidiis revocat omnisque
                     aditus aperit bello. <milestone unit="section" n="3"/> ipse ab Dio auratis
                     statuis omnibus raptis, ne praeda hosti essent, incolas eius loci demigrare
                     Pydnam cogit, et quae temeritas consulis videri potuisset, <milestone
@@ -627,7 +639,7 @@
                     cum trepidatione multa relicta opera sunt <hi rend="italics">ignisque</hi>
                     iniectus. ita a Meliboea abscessum est. <milestone unit="section" n="7"/>
                     Euphranor soluta unius urbis obsidione Demetriadem extemplo ducit. nocte moenia
-                    <gap/> modo, sed agros etiam confiderent se a populationibus tueri posse; et
+                    <gap reason="undefined"/> modo, sed agros etiam confiderent se a populationibus tueri posse; et
                     eruptiones in vagos populatores non sine volneribus hostium factae sunt.
                         <milestone unit="section" n="8"/> circumvecti tamen moenia sunt praetor et
                     rex, situm urbis contemplantes, si qua parte temptare aut opere aut vi possent.
@@ -687,7 +699,7 @@
                     belli sentire mari interim intercluso; inopem insulam esse, <hi rend="italics"
                         >nisi ma</hi> ritimis iuvetur <note place="unspecified" anchored="true">
                         <date>a. Chr. n. 169.</date>
-                    </note> colendi <gap/> itaque commeatibus. <milestone unit="section" n="11"/>
+                    </note> colendi <gap reason="undefined"/> itaque commeatibus. <milestone unit="section" n="11"/>
                     cum id ultra pati non possent, legatos alios ad Persea in Macedoniam misisse,
                     qui ei denuntiarent, Rhodiis placere pacem eum conponere cum Romanis; se Romam
                     eadem nuntiatum missos. <milestone unit="section" n="12"/> per quos stetisset,
@@ -796,7 +808,7 @@
                     </persName> primo quoque tempore ad comitia habenda veniret. <milestone
                         unit="section" n="3"/> senatus consultum Sulpicius praetor ad consulem <hi
                         rend="italics">misit litterasque receptas a consule</hi> post paucos dies
-                    recitavit, quibus ante diem <gap/> in urbem venturum. et consul maturavit et
+                    recitavit, quibus ante diem <gap reason="undefined"/> in urbem venturum. et consul maturavit et
                     comitia eo die, qui dictus erat, sunt perfecta. <milestone unit="section" n="4"
                     /> consules creati <persName n="3">
                         <forename full="yes">L.</forename>
@@ -874,7 +886,7 @@
                     segniter id bellum <persName n="2">
                         <forename full="yes">L.</forename>
                         <surname full="yes">Aemilium</surname>
-                    </persName> gesturum, praeterquam quod <gap/> aliis vir erat, etiam quod dies
+                    </persName> gesturum, praeterquam quod <gap reason="undefined"/> aliis vir erat, etiam quod dies
                     noctesque intentus ea sola, quae ad id bellum pertinerent, <note
                         place="unspecified" anchored="true">
                         <date>a. u. c. 585. 586.</date>
@@ -1018,7 +1030,7 @@
                     processisset, regem tenere; castra castris prope ita conlata esse, ut flumine
                     Elpeo interiecto arceantur. neque regem pugnandi potestatem facere, nec nostris
                     vim ad cogendum esse. <milestone unit="section" n="4"/> hiemem etiam insuper
-                    rebus gerendis intervenisse. in otio militem ali, nec plus quam sex <gap/>
+                    rebus gerendis intervenisse. in otio militem ali, nec plus quam sex <gap reason="undefined"/>
                     frumentum habere. Macedonum dici triginta milia armatorum esse. <milestone
                         unit="section" n="5"/> si <persName n="2">
                         <forename full="yes">Ap.</forename>
@@ -1119,7 +1131,7 @@
                         <surname full="yes">Licinius</surname>
                     </persName> collega, vir egregius, aeque enixe parabit ac si ipse id bellum
                     gesturus esset. <milestone unit="section" n="6"/> vos, quae scripsero senatui
-                    aut vobis <gap/>
+                    aut vobis <gap reason="undefined"/>
                     <hi rend="italics">ru</hi> mores credulitate vestra alatis, quorum auctor nemo
                     extabit. <milestone unit="section" n="7"/> nam nunc quidem, quod vulgo fieri,
                     hoc praecipue bello animadverti, nemo tam famae contemptor est, cuius non
@@ -1231,7 +1243,7 @@
                         <date>a. Chr. n. 168.</date>
                     </note> erat; <hi rend="italics">re</hi> vera occultiora quaedam agebantur, quae
                     in praesentia invisum quidem et suspectum Romanis Eumenen falsis gravioribus
-                    <gap/> ; proditor enim ac prope hostis habitus, <milestone unit="section" n="8"
+                    <gap reason="undefined"/> ; proditor enim ac prope hostis habitus, <milestone unit="section" n="8"
                     /> dum inter se duo reges captantes fraude et avaritia certant. <milestone
                         unit="section" n="9"/> Cydas erat Cretensis, ex intimis Eumenis. hic prius
                     ad Amphipolim cum Chimaro quodam populari suo, militante apud Persea, inde
@@ -1359,7 +1371,7 @@
                     alebatur, potuissent, neque progredi, cum ex <note place="unspecified"
                         anchored="true">
                         <date>a. Chr. n. 168.</date>
-                    </note> adverso castra Macedonum <gap/> , qui ea pependerant spe, <milestone
+                    </note> adverso castra Macedonum <gap reason="undefined"/> , qui ea pependerant spe, <milestone
                         unit="section" n="7"/> haud mediocriter debilitavit. <milestone
                         unit="section" n="8"/> eadem avaritia Gentium regem sibi alienavit. nam cum
                     trecenta talenta Pellae missis a Gentio numerasset, signare eos pecuniam passus
@@ -1453,7 +1465,7 @@
                     lembos ibi Macedonum quadraginta et quinque regis Eumenis quinqueremis
                     invenerunt. <milestone unit="section" n="2"/> sanctitas templi insulaeque
                     inviolatos praestabat omnes. itaque permixti Romanique et Macedones et Eumenis
-                    navales socii <gap/> et in templo, indutias religione loci praebente,
+                    navales socii <gap reason="undefined"/> et in templo, indutias religione loci praebente,
                     versabantur. <milestone unit="section" n="3"/>
                     <pb xml:id="vol.10.1.p.125" n="notedatea"/> Antenor, Persei <note
                         place="unspecified" anchored="true">
@@ -1530,7 +1542,7 @@
                     <choice>
                         <corr>Apolloniatium</corr>
                         <sic>Appolloniatium</sic>
-                    </choice> agros populandos. tum classis ad <gap/> to eo tradiderunt se. </p>
+                    </choice> agros populandos. tum classis ad <gap reason="undefined"/> to eo tradiderunt se. </p>
                 <p>
                     <milestone unit="chapter" n="31"/>
                     <milestone unit="section" n="1"/> deinceps et urbes regionis eius idem
@@ -1617,13 +1629,13 @@
                     fluminis adgressus est, quia sicco alveo transiri poterat. <milestone
                         unit="section" n="11"/> huic <hi rend="italics">operi</hi> ut omnis
                     multitudo vacaret, feminae ex propinquis urbibus cocta cibaria in castra
-                    adferebant; miles iussus ex propinquis silvis benigne <gap/>
+                    adferebant; miles iussus ex propinquis silvis benigne <gap reason="undefined"/>
                 </p>
                 <p>
                     <milestone unit="chapter" n="33"/>
                     <milestone unit="section" n="1"/>
                     <pb xml:id="vol.10.1.p.134" n="notedatea"/>
-                    <gap/> conferre, postremo sequi se putearios ad mare, quod minus trecentos
+                    <gap reason="undefined"/> conferre, postremo sequi se putearios ad mare, quod minus trecentos
                     passus aberat, iussit et in litore alios alibi <note place="unspecified"
                         anchored="true">
                         <date>a. u. c. 586.</date>
@@ -1637,7 +1649,7 @@
                     militibus expedire arma ipse cum tribunis primisque ordinibus ad contemplandos
                     transitus <hi rend="italics">est progressus, qua</hi> descensus facilis armatis,
                     qua in ulteriorem ripam minime inicus ascensus esset. <milestone unit="section"
-                        n="5"/> his satis exploratis illa quoque <gap/> ; primum, ut ordine ac sine
+                        n="5"/> his satis exploratis illa quoque <gap reason="undefined"/> ; primum, ut ordine ac sine
                     tumultu omnia in agmine ad nutum imperiumque ducis fierent, providit: <milestone
                         unit="section" n="6"/>
                     <pb xml:id="vol.10.1.p.135" n="notedatea"/> ubi omnibus simul pronuntiaretur,
@@ -1693,7 +1705,7 @@
                     <pb xml:id="vol.10.1.p.138" n="notedatea"/> neminem totis mox castris quietum
                     videres; acuere alii gladios, alii galeas bucculasque, scutorum <hi
                         rend="italics">alii</hi>
-                    <gap/> alii loricas tergere, <note place="unspecified" anchored="true">
+                    <gap reason="undefined"/> alii loricas tergere, <note place="unspecified" anchored="true">
                         <date>a. u. c. 586.</date>
                     </note> alii aptare corpori arma experirique sub his membrorum agilitatem,
                     quatere alii pila, alii micare gladiis mucronemque intueri, ut facile quis
@@ -1705,7 +1717,7 @@
                     cerneret, mota a Phila castra in adversa ripa posita, nunc ad contemplanda opera
                     sua circumire ducem haud dubie transitus speculan <hi rend="italics">tem,
                         nunc</hi>
-                    <gap/>
+                    <gap reason="undefined"/>
                     <note place="unspecified" anchored="true">
                         <date>a. Chr. n. 168.</date>
                     </note>
@@ -1713,7 +1725,7 @@
                 <p>
                     <milestone unit="chapter" n="35"/>
                     <milestone unit="section" n="1"/>
-                    <gap/>
+                    <gap reason="undefined"/>
                     <hi rend="italics">Roma</hi> norum esse; quae res Romanis auxit animos,
                     Macedonibus regique eorum haud mediocrem attulit terrorem. <milestone
                         unit="section" n="2"/> et primo supprimere in occulto famam eius rei est
@@ -1726,7 +1738,7 @@
                     venerunt cum iisdem de pace mandatis, quae Romae ingentem iram patrum
                     excitavere. <milestone unit="section" n="5"/> multo iniquioribus animis a
                     castrensi consilio auditi sunt. itaque cum <hi rend="italics">alii</hi>
-                    <gap/> alii praecipites sine responso agendos castris, pronuntiavit post diem
+                    <gap reason="undefined"/> alii praecipites sine responso agendos castris, pronuntiavit post diem
                     quintum decimum se responsum daturum. <milestone unit="section" n="6"/> interim,
                     ut appareret, quantum pacificantium Rhodiorum auctoritas valuisset, consultare
                     de ratione belli gerendi coepit. <milestone unit="section" n="7"/>
@@ -1734,7 +1746,7 @@
                     minoribus natu per Elpei ripam munitionesque <note place="unspecified"
                         anchored="true">
                         <date>a. u. c. 586.</date>
-                    </note> vim facere: confertis et uno <gap/> facientibus resistere Macedonas non
+                    </note> vim facere: confertis et uno <gap reason="undefined"/> facientibus resistere Macedonas non
                     posse, ex tot castellis aliquanto altioribus ac munitioribus, quae validis
                     praesidiis insedissent, priore anno deiectos. <milestone unit="section" n="8"/>
                     aliis placebat Octavium cum classe Thessalonicam petere et populatione maritumae
@@ -1800,16 +1812,16 @@
                     eo die amissis consul paulo serius recepit suos. <milestone unit="section"
                         n="23"/> tertio die proelio abstinuit, degressus ad imam partem castrorum,
                     veluti per devexum in mare bracchium transitum temptaturus. <milestone
-                        unit="section" n="24"/> Perseus, quod in oculis erat <gap/>
+                        unit="section" n="24"/> Perseus, quod in oculis erat <gap reason="undefined"/>
                 </p>
                 <p>
                     <milestone unit="chapter" n="36"/>
                     <milestone unit="section" n="1"/>
-                    <gap/> anni post circumactum solstitium erat; hora diei iam ad meridiem
+                    <gap reason="undefined"/> anni post circumactum solstitium erat; hora diei iam ad meridiem
                     vergebat; iter multo pulvere et incalescente sole factum erat. <milestone
                         unit="section" n="2"/>
                     <pb xml:id="vol.10.1.p.144" n="notedatea"/> lassitudo et sitis iam sentiebatur
-                    et meridie stante magis. adcesserunt tum <gap/> mox adparebat. statuit sic
+                    et meridie stante magis. adcesserunt tum <gap reason="undefined"/> mox adparebat. statuit sic
                     adfectos <note place="unspecified" anchored="true">
                         <date>a. u. c. 586.</date>
                     </note> recenti atque integro hosti non obicere; <milestone unit="section" n="3"
@@ -1903,7 +1915,7 @@
                         <milestone unit="section" n="13"/>
                     <pb xml:id="vol.10.1.p.150" n="notedatea"/> tertia demum hora sacrificio rite
                     perpetrato ad consilium vocavit atque ibi, quod rei gerendae tempus esset,
-                    loquendo et intempestive consultando videbatur quibusdam extrahere. <gap/>
+                    loquendo et intempestive consultando videbatur quibusdam extrahere. <gap reason="undefined"/>
                     sermones tamen consul orationem habuit. <note place="unspecified"
                         anchored="true">
                         <date>a. u. c. 586.</date>
@@ -2020,7 +2032,7 @@
                     flumen esset neutris lacessentibus, hora circiter nona iumentum e manibus
                     curantium elapsum in ulteriorem ripam effugit. <milestone unit="section" n="8"/>
                     quod cum per aquam ferme genus tenus altam tres milites sequerentur, Threces duo
-                    id iumentum ex medio alveo in suam ripam trahentes <gap/> , altero eorum occiso
+                    id iumentum ex medio alveo in suam ripam trahentes <gap reason="undefined"/> , altero eorum occiso
                     receptoque eo iumento ad stationem suorum <hi rend="italics">se</hi>
                     recipiebant. <milestone unit="section" n="9"/>
                     <pb xml:id="vol.10.1.p.156" n="notedatea"/> octingentorum Thracum praesidium
@@ -2029,12 +2041,12 @@
                     </note> in hostium ripa erat. ex his pauci primo, aegre passi popularem in suo
                     conspectu caesum, ad persequendos interfectores fluvium transgressi sunt,
                         <milestone unit="section" n="10"/> dein plures, postremo omnes, et cum
-                    praesidio <gap/>
+                    praesidio <gap reason="undefined"/>
                 </p>
                 <p>
                     <milestone unit="chapter" n="41"/>
                     <milestone unit="section" n="1"/>
-                    <gap/> proelium ducit. movebat imperii maiestas, gloria viri, ante omnia aetas,
+                    <gap reason="undefined"/> proelium ducit. movebat imperii maiestas, gloria viri, ante omnia aetas,
                     quod maior sexaginta annis iuvenum munia in parte praecipua laboris periculique
                     capessebat. intervallum, quod inter cetratos et phalanges erat, inplevit legio
                     atque aciem hostium interrupit. <milestone unit="section" n="2"/>
@@ -2054,7 +2066,7 @@
                     experiendo, cum <note place="unspecified" anchored="true">
                         <date>a. u. c. 586.</date>
                     </note> agi, non, quem ad modum agatur, edisseri oportet, sine ullo effectu
-                    evanescunt, ita tum elephantos <gap/> Macedonum sine ullo usu fuerunt.
+                    evanescunt, ita tum elephantos <gap reason="undefined"/> Macedonum sine ullo usu fuerunt.
                         <milestone unit="section" n="5"/> elephantorum impetum subsecuti sunt socii
                     nominis Latini pepuleruntque laevom cornu. <milestone unit="section" n="6"/> in
                     medio secunda legio inmissa dissipavit phalangem. neque ulla evidentior causa
@@ -2251,7 +2263,7 @@
                     occidentem hibernum; cingunt paludes <note place="unspecified" anchored="true">
                         <date>a. u. c. 586.</date>
                     </note> inexsuperabilis altitudinis aestate et hieme, quas restagnantes faciunt
-                    <gap/> . <hi rend="italics">arx</hi> Phacus in ipsa palude, <milestone
+                    <gap reason="undefined"/> . <hi rend="italics">arx</hi> Phacus in ipsa palude, <milestone
                         unit="section" n="6"/> qua proxima urbi est, velut insula eminet aggeri
                     operis ingentis imposita, qui et murum sustineat et umore circumfusae paludis
                     nihil laedatur. <milestone unit="section" n="7"/> muro urbis coniuncta procul
@@ -2268,9 +2280,9 @@
                     </note> maxime ex Thessalia, auditae sunt. <milestone unit="section" n="10"/>
                     nuntio deinde accepto Persea Samothracam traiecisse, profectus a Pella consul
                     quartis castris Amphipolim pervenit. <milestone unit="section" n="11"/> effusa
-                    omnis obviam turba cuivis indicio erat non bono ac iusto rege orba <gap/>
+                    omnis obviam turba cuivis indicio erat non bono ac iusto rege orba <gap reason="undefined"/>
                 </p>
             </div>
-        </body>
+        </div></body>
     </text>
 </TEI>

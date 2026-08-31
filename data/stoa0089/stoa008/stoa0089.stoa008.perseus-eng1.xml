@@ -47,6 +47,18 @@
                               <state unit="book" delim="."/>
                               <state unit="poem"/>
                      </refsDecl>
+                        <refsDecl xmlns="http://www.tei-c.org/ns/1.0" n="CTS">
+                        	<cRefPattern n="poem"
+                        		matchPattern="(\w+).(\w+)"
+                        		replacementPattern="#xpath(/TEI.2/text/body/div1[@type='book'][@n='$1']/div2[@type='poem'][@n='$2'])">
+                        		<p>This pointer pattern extracts book and poem</p>
+                        	</cRefPattern>
+                        	<cRefPattern n="book"
+                        		matchPattern="(\w+)"
+                        		replacementPattern="#xpath(/TEI.2/text/body/div1[@type='book'][@n='$1'])">
+                        		<p>This pointer pattern extracts book</p>
+                        	</cRefPattern>
+                        </refsDecl>
                         <refsDecl xml:id="CTS">
                           <citeStructure match="/TEI/text/body" use="@xml:base">
                             <citeStructure match="div1[@type='book']" use="@n" unit="book" delim=":">

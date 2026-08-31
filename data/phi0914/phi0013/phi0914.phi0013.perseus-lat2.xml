@@ -40,7 +40,7 @@
                                 <publisher>Oxford University Press</publisher>
                                 <date>1914</date>
                             </imprint>
-                            <biblScope type="volume">1</biblScope>
+                            <biblScope unit="volume">1</biblScope>
                         </monogr>
                     </biblStruct>
                 </listBibl>
@@ -52,9 +52,21 @@
                 <refState unit="chapter" delim="."/>
                 <refState unit="section"/>
             </refsDecl>
+                <refsDecl n="CTS">
+                	<cRefPattern n="chapter"
+                		matchPattern="(\w+).(\w+)"
+                		replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@subtype='book'][@n='$1']/.//tei:milestone[@unit='chapter'][@n='$2'])">
+                		<p>This pointer pattern extracts book and chapter</p>
+                	</cRefPattern>
+                	<cRefPattern n="book"
+                		matchPattern="(\w+)"
+                		replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@subtype='book'][@n='$1'])">
+                		<p>This pointer pattern extracts book</p>
+                	</cRefPattern>
+                </refsDecl>
                 <refsDecl xml:id="CTS">
                   <citeStructure match="/TEI/text/body" use="@xml:base">
-                    <citeStructure match="div[@type='book']" use="@n" unit="book" delim=":">
+                    <citeStructure match="div/div[@subtype='book']" use="@n" unit="book" delim=":">
                       <citeStructure match=".//milestone[@unit='chapter']" use="@n" unit="chapter" delim="." n="chunk"/>
                     </citeStructure>
                   </citeStructure>
@@ -151,8 +163,8 @@ Added to repository. Passed SGML parse.
         --><change when="2014-10-09" who="Stella Dee">edited markup</change> </revisionDesc>
     </teiHeader>
     <text xml:lang="lat">
-        <body xml:base="urn:cts:latinLit:phi0914.phi0013.perseus-lat2">
-            <div part="N" sample="complete" org="uniform" n="3" type="book">
+        <body xml:base="urn:cts:latinLit:phi0914.phi0013.perseus-lat2"><div type="edition" n="urn:cts:latinLit:phi0914.phi0013.perseus-lat2" xml:lang="lat">
+            <div part="N" sample="complete" org="uniform" n="3" type="textpart" subtype="book">
                 <milestone n="1" unit="chapter"/>
                 <milestone n="1" unit="section"/>
                 <pb n="p.3001"/>
@@ -2981,6 +2993,6 @@ Added to repository. Passed SGML parse.
                     nec abnuitur ita fuisse, si ad iudices alios itum foret; nunc haud sane quicquam bono causae leuatur dedecus iudicii; idque non Aricinis Ardeatibusque quam patribus Romanis foedius atque acerbius uisum. reliquum anni quietum ab urbanis motibus et ab externis mansit.
                 </p>
             </div>
-        </body>
+        </div></body>
     </text>
 </TEI>

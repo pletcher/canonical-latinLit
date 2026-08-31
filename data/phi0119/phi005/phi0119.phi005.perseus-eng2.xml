@@ -112,8 +112,7 @@
 </revisionDesc>
    </teiHeader>
    <text xml:lang="eng">
-      <body xml:base="urn:cts:latinLit:phi0119.phi005.perseus-eng2">
-         <div xml:lang="eng" type="translation">
+      <body xml:base="urn:cts:latinLit:phi0119.phi005.perseus-eng2"><div n="urn:cts:latinLit:phi0119.phi005.perseus-eng2" xml:lang="eng" type="translation">
             <div type="textpart" subtype="act" n="front">
                <l xml:base="urn:cts:latinLit:phi0119.phi005.perseus-eng2" n="cast">
                   <milestone unit="paragraph"/><foreign xml:lang="lat">Dramatis Personae</foreign>

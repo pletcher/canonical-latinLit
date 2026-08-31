@@ -78,8 +78,7 @@
 	  </revisionDesc>
 </teiHeader>
 	  <text xml:lang="lat">
-		    <body xml:base="urn:cts:latinLit:phi0959.phi005.perseus-lat2">
-			      <div type="edition" xml:lang="lat">
+		    <body xml:base="urn:cts:latinLit:phi0959.phi005.perseus-lat2"><div n="urn:cts:latinLit:phi0959.phi005.perseus-lat2" type="edition" xml:lang="lat">
 			         <head>Remedia amoris</head>
 				        <l n="1">Legerat huius Amor titulum nomenque libelli:</l>
 				        <l n="2" rend="indent">'Bella mihi, video, bella parantur' ait.</l>

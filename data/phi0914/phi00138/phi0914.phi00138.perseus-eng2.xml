@@ -46,7 +46,7 @@
                                 <publisher>John Child and son, printers, Bungay</publisher>
                                 <date>1850</date>
                             </imprint>
-                            <biblScope type="volume">4</biblScope>
+                            <biblScope unit="volume">4</biblScope>
                         </monogr>
                     </biblStruct>
                 </listBibl>
@@ -57,9 +57,21 @@
                 <refState unit="book"/>
                 <refState unit="chapter" n="chunk"/>
             </refsDecl>
+                <refsDecl n="CTS">
+                	<cRefPattern n="chapter"
+                		matchPattern="(\w+).(\w+)"
+                		replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@subtype='book'][@n='$1']/.//tei:milestone[@unit='chapter'][@n='$2'])">
+                		<p>This pointer pattern extracts book and chapter</p>
+                	</cRefPattern>
+                	<cRefPattern n="book"
+                		matchPattern="(\w+)"
+                		replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@subtype='book'][@n='$1'])">
+                		<p>This pointer pattern extracts book</p>
+                	</cRefPattern>
+                </refsDecl>
                 <refsDecl xml:id="CTS">
                   <citeStructure match="/TEI/text/body" use="@xml:base">
-                    <citeStructure match="div[@type='book']" use="@n" unit="book" delim=":">
+                    <citeStructure match="div/div[@subtype='book']" use="@n" unit="book" delim=":">
                       <citeStructure match=".//milestone[@unit='chapter']" use="@n" unit="chapter" delim="." n="chunk"/>
                     </citeStructure>
                   </citeStructure>
@@ -89,11 +101,11 @@
         </revisionDesc>
     </teiHeader>
     <text xml:lang="eng">
-        <body xml:base="urn:cts:latinLit:phi0914.phi00138.perseus-eng2">
+        <body xml:base="urn:cts:latinLit:phi0914.phi00138.perseus-eng2"><div type="translation" n="urn:cts:latinLit:phi0914.phi00138.perseus-eng2" xml:lang="eng">
             <pb n="1721" xml:id="p.1721"/>
-            <div part="N" sample="complete" org="uniform" n="38" type="book">
+            <div part="N" sample="complete" org="uniform" n="38" type="textpart" subtype="book">
                 <head>BOOK XXXVIII.</head>
-                <argument>
+                <div type="textpart" subtype="argument">
                     <p> Marcus Fulvius the consul besieged Ambracia, in Epirus, and received its
                         surrender; he reduced Cephallenia, and granted peace to the Aetolians, on
                         their complete subjection. Cneius Manlius the consul, his colleague,
@@ -129,7 +141,7 @@
                         not even so much was raised thereby as the amount in which he was fined. He
                         would not receive the countless sum collected by his relations and friends:
                         the mere necessaries of life were purchased back. </p>
-                </argument>
+                </div>
                 <milestone n="1" unit="chapter"/>
                 <p>
                     <milestone n="1" unit="section"/> WHILE the war is being carried on in Asia,
@@ -2893,6 +2905,6 @@
                         unit="section"/> And the public hatred which had been pointed against the
                     Scipios, reverted on the praetor, his advisers, and the accusers. </p>
             </div>
-        </body>
+        </div></body>
     </text>
 </TEI>

@@ -106,8 +106,7 @@
 </teiHeader>
 
 <text xml:lang="lat">
-<body xml:base="urn:cts:latinLit:phi0119.phi006.perseus-lat2">
-<div type="edition" xml:lang="lat">
+<body xml:base="urn:cts:latinLit:phi0119.phi006.perseus-lat2"><div n="urn:cts:latinLit:phi0119.phi006.perseus-lat2" type="edition" xml:lang="lat">
 <div type="textpart" subtype="act" n="prologue">
 <div type="textpart" subtype="scene" n="pr">
 <milestone unit="card" resp="perseus" n="1"/> 
@@ -586,7 +585,7 @@
 
 <sp><speaker>Cleostrata</speaker>
 <l xml:base="urn:cts:latinLit:phi0119.phi006.perseus-lat2" n="244">Té sene omniúm † senem néminem esse ignáviorem.</l>
-<l xml:base="urn:cts:latinLit:phi0119.phi006.perseus-lat2" n="245">únde is, nihili? ubí fuisti? ubí <choice><expan><abbr>lustratu's</abbr><ex>lustratus es</ex></expan></choice>? úbi bibisti?</l>
+<l xml:base="urn:cts:latinLit:phi0119.phi006.perseus-lat2" n="245">únde is, nihili? ubí fuisti? ubí <choice><abbr>lustratu's</abbr><expan>lustratus es</expan></choice>? úbi bibisti?</l>
 <lb ed="actscene" n="30"/>
 <l xml:base="urn:cts:latinLit:phi0119.phi006.perseus-lat2" n="246" part="I">mádes mecastor: víde, palliolum ut rúgat.</l></sp>
 
@@ -1170,7 +1169,7 @@
 <l xml:base="urn:cts:latinLit:phi0119.phi006.perseus-lat2" n="415c" part="F">Ecfer foras.</l></sp>
 
 <sp><speaker>Chalinvs</speaker>
-<l xml:base="urn:cts:latinLit:phi0119.phi006.perseus-lat2" n="416" part="I">Iamne <choice><expan><abbr>mortuo's</abbr><ex>mortuus es</ex></expan></choice>?</l></sp>
+<l xml:base="urn:cts:latinLit:phi0119.phi006.perseus-lat2" n="416" part="I">Iamne <choice><abbr>mortuo's</abbr><expan>mortuus es</expan></choice>?</l></sp>
 
 <sp><speaker>Olympio</speaker>
 <l xml:base="urn:cts:latinLit:phi0119.phi006.perseus-lat2" n="416b" part="M">Ostende. mea <add>haec</add> est.</l></sp>
@@ -2109,7 +2108,7 @@
 <l xml:base="urn:cts:latinLit:phi0119.phi006.perseus-lat2" n="733_735b" part="M">Quis erus?</l></sp>
 
 <sp><speaker>Lysidamvs</speaker>
-<l xml:base="urn:cts:latinLit:phi0119.phi006.perseus-lat2" n="733_735c" part="M">Cuius tú <choice><expan><abbr>servo's</abbr><ex>servus es</ex></expan></choice>.</l></sp>
+<l xml:base="urn:cts:latinLit:phi0119.phi006.perseus-lat2" n="733_735c" part="M">Cuius tú <choice><abbr>servo's</abbr><expan>servus es</expan></choice>.</l></sp>
 
 <sp><speaker>Olympio</speaker>
 <l xml:base="urn:cts:latinLit:phi0119.phi006.perseus-lat2" n="733_735d" part="M">Servós ego?</l></sp>
@@ -2323,7 +2322,7 @@
 <l xml:base="urn:cts:latinLit:phi0119.phi006.perseus-lat2" n="812b" part="M">Nimis tenax es.</l></sp>
 
 <sp><speaker>Lysidamvs</speaker>
-<l xml:base="urn:cts:latinLit:phi0119.phi006.perseus-lat2" n="812c" part="F">Num me <choice><expan><abbr>expertu's</abbr><ex>expertus es</ex></expan></choice>uspiam?</l></sp>
+<l xml:base="urn:cts:latinLit:phi0119.phi006.perseus-lat2" n="812c" part="F">Num me <choice><abbr>expertu's</abbr><expan>expertus es</expan></choice>uspiam?</l></sp>
 
 <sp><speaker>Olympio</speaker>
 <l xml:base="urn:cts:latinLit:phi0119.phi006.perseus-lat2" n="813">Di melius faciant. sed crepuit ostium, exitur foras.</l></sp>

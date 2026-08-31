@@ -80,8 +80,7 @@
   </teiHeader>
   
   <text xml:lang="eng">
-    <body xml:base="urn:cts:latinLit:phi0660.phi003.perseus-eng2">
-      <div type="translation" xml:lang="eng">
+    <body xml:base="urn:cts:latinLit:phi0660.phi003.perseus-eng2"><div n="urn:cts:latinLit:phi0660.phi003.perseus-eng2" type="translation" xml:lang="eng">
       <div type="textpart" subtype="poem" n="1">
         <l n="1">At last the love I've waited for has come.</l>
         <l n="2">(No shame to say so:  more to cover up).</l>

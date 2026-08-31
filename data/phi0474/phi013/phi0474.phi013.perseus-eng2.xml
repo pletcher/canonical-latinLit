@@ -159,8 +159,7 @@
  </teiHeader>
  
 <text xml:lang="eng">
-  <body xml:base="urn:cts:latinLit:phi0474.phi013.perseus-eng2">
-    <div type="translation" xml:lang="eng" subtype="translation">
+  <body xml:base="urn:cts:latinLit:phi0474.phi013.perseus-eng2"><div n="urn:cts:latinLit:phi0474.phi013.perseus-eng2" type="translation" xml:lang="eng" subtype="translation">
    
         <div type="textpart" n="1" subtype="speech">
     <head>THE FIRST ORATION OF M. T. CICERO AGAINST LUCIUS CATILINA. DELIVERED IN THE SENATE.</head>

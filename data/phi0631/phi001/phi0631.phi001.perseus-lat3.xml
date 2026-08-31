@@ -50,13 +50,13 @@
                 <cRefPattern 
                  n="chapter"
                  matchPattern="(\d+)"
-                 replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1'])">
+                 replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div/tei:div[@n='$1'])">
                     <p>This pointer pattern extracts chapter</p>
                 </cRefPattern>
             </refsDecl>
                 <refsDecl xml:id="CTS">
                   <citeStructure match="/TEI/text/body" use="@xml:base">
-                    <citeStructure unit="chapter" delim=":" match="div/div[@subtype='chapter']" use="@n"/>
+                    <citeStructure unit="chapter" delim=":" match="div/div/div[@subtype='chapter']" use="@n"/>
                   </citeStructure>
                 </refsDecl>
 </encodingDesc>
@@ -73,7 +73,7 @@
     <change who="Thibault Clérice" when="2016-11-10">CapiTainS Guidelines</change> 
     <change who="Thibault Clérice" when="2016-11-14">Bump URN</change> 
        </revisionDesc>
-    </teiHeader><text xml:lang="lat"> <body xml:base="urn:cts:latinLit:phi0631.phi001.perseus-lat3"> <pb n="p.2"/>
+    </teiHeader><text xml:lang="lat"> <body xml:base="urn:cts:latinLit:phi0631.phi001.perseus-lat3"><div type="edition" n="urn:cts:latinLit:phi0631.phi001.perseus-lat3" xml:lang="lat"> <pb n="p.2"/>
         <div type="edition" xml:lang="lat">
 <div type="textpart" subtype="chapter" n="1">
      <head>C. Sallusti Crispi Catilinae Coniuratio</head>
@@ -661,6 +661,6 @@
 <milestone unit="section" n="7"/>neque tamen exercitus populi Romani laetam aut incruentam victoriam adeptus erat. nam strenuissumus quisque aut occiderat in proelio aut graviter volneratus discesserat.
 <milestone unit="section" n="8"/>multi autem, qui e castris visundi aut spoliandi gratia processerant, volventes hostilia cadavera amicum alii, pars hospitem aut cognatum reperiebant; fuere item qui inimicos suos cognoscerent.
 <milestone unit="section" n="9"/>ita varie per omnem exercitum laetitia, maeror, luctus atque gaudia agitabantur.</p></div>
-    </div></body>
+    </div></div></body>
 </text>
 </TEI>

@@ -77,8 +77,7 @@
 </teiHeader>
 
    <text xml:lang="lat" xml:id="stoa0045.stoa0">
-      <body xml:base="urn:cts:latinLit:phi0959.phi010.perseus-lat2">
-         <div type="edition" xml:lang="lat">
+      <body xml:base="urn:cts:latinLit:phi0959.phi010.perseus-lat2"><div n="urn:cts:latinLit:phi0959.phi010.perseus-lat2" type="edition" xml:lang="lat">
             <pb xml:id="p.103"/>
 
 

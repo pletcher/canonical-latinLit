@@ -38,7 +38,7 @@
                                 <publisher>Oxford University Press</publisher>
                                 <date>1929</date>
                             </imprint>
-                            <biblScope type="volume">3</biblScope>
+                            <biblScope unit="volume">3</biblScope>
                         </monogr>
                     </biblStruct>
                 </listBibl>
@@ -50,9 +50,21 @@
                 <refState delim="." unit="chapter"/>
                 <refState unit="section"/>
             </refsDecl>
+                <refsDecl n="CTS">
+                	<cRefPattern n="chapter"
+                		matchPattern="(\w+).(\w+)"
+                		replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@subtype='book'][@n='$1']/.//tei:milestone[@unit='chapter'][@n='$2'])">
+                		<p>This pointer pattern extracts book and chapter</p>
+                	</cRefPattern>
+                	<cRefPattern n="book"
+                		matchPattern="(\w+)"
+                		replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@subtype='book'][@n='$1'])">
+                		<p>This pointer pattern extracts book</p>
+                	</cRefPattern>
+                </refsDecl>
                 <refsDecl xml:id="CTS">
                   <citeStructure match="/TEI/text/body" use="@xml:base">
-                    <citeStructure match="div[@type='book']" use="@n" unit="book" delim=":">
+                    <citeStructure match="div/div[@subtype='book']" use="@n" unit="book" delim=":">
                       <citeStructure match=".//milestone[@unit='chapter']" use="@n" unit="chapter" delim="." n="chunk"/>
                     </citeStructure>
                   </citeStructure>
@@ -80,8 +92,8 @@
         </revisionDesc>
     </teiHeader>
     <text xml:lang="lat">
-        <body xml:base="urn:cts:latinLit:phi0914.phi00123.perseus-lat1">
-            <div type="book" n="23" org="uniform" sample="complete" part="N">
+        <body xml:base="urn:cts:latinLit:phi0914.phi00123.perseus-lat1"><div type="edition" n="urn:cts:latinLit:phi0914.phi00123.perseus-lat1" xml:lang="lat">
+            <div type="textpart" subtype="book" n="23" org="uniform" sample="complete" part="N">
                 <milestone unit="chapter" n="1"/>
                 <p>
                     <milestone unit="section" n="1"/> Hannibal post Cannensem pugnam ltcastraquegt
@@ -2317,6 +2329,6 @@
                     Romanos defecerunt, multoque maiores ea aestate in Hispania quam in Italia res
                     gestae. </p>
             </div>
-        </body>
+        </div></body>
     </text>
 </TEI>

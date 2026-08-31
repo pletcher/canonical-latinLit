@@ -78,8 +78,7 @@
       </revisionDesc>
    </teiHeader>
    <text xml:lang="lat">
-      <body xml:base="urn:cts:latinLit:stoa0089.stoa012.perseus-lat2">
-         <div xml:lang="lat"
+      <body xml:base="urn:cts:latinLit:stoa0089.stoa012.perseus-lat2"><div n="urn:cts:latinLit:stoa0089.stoa012.perseus-lat2" xml:lang="lat"
               type="edition">
             <pb n="v.2.p.70"/>       
             <div n="pr" type="textpart" subtype="poem">

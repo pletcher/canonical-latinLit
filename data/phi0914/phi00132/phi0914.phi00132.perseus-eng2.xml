@@ -43,7 +43,7 @@
                                 <publisher>John Child and son, printers, Bungay</publisher>
                                 <date>1850</date>
                             </imprint>
-                            <biblScope type="volume">3</biblScope>
+                            <biblScope unit="volume">3</biblScope>
                         </monogr>
                     </biblStruct>
                 </listBibl>
@@ -54,9 +54,21 @@
                 <refState unit="book"/>
                 <refState unit="chapter" n="chunk"/>
             </refsDecl>
+                <refsDecl n="CTS">
+                	<cRefPattern n="chapter"
+                		matchPattern="(\w+).(\w+)"
+                		replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@subtype='book'][@n='$1']/.//tei:milestone[@unit='chapter'][@n='$2'])">
+                		<p>This pointer pattern extracts book and chapter</p>
+                	</cRefPattern>
+                	<cRefPattern n="book"
+                		matchPattern="(\w+)"
+                		replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@subtype='book'][@n='$1'])">
+                		<p>This pointer pattern extracts book</p>
+                	</cRefPattern>
+                </refsDecl>
                 <refsDecl xml:id="CTS">
                   <citeStructure match="/TEI/text/body" use="@xml:base">
-                    <citeStructure match="div[@type='book']" use="@n" unit="book" delim=":">
+                    <citeStructure match="div/div[@subtype='book']" use="@n" unit="book" delim=":">
                       <citeStructure match=".//milestone[@unit='chapter']" use="@n" unit="chapter" delim="." n="chunk"/>
                     </citeStructure>
                   </citeStructure>
@@ -83,11 +95,11 @@
         --><change when="2014-10-09" who="Stella Dee">edited markup</change> </revisionDesc>
     </teiHeader>
     <text xml:lang="eng">
-        <body xml:base="urn:cts:latinLit:phi0914.phi00132.perseus-eng2">
+        <body xml:base="urn:cts:latinLit:phi0914.phi00132.perseus-eng2"><div type="translation" n="urn:cts:latinLit:phi0914.phi00132.perseus-eng2" xml:lang="eng">
             <pb n="1395" xml:id="p.1395"/>
-            <div part="N" sample="complete" org="uniform" n="32" type="book">
+            <div part="N" sample="complete" org="uniform" n="32" type="textpart" subtype="book">
                 <head>BOOK XXXII.</head>
-                <argument>
+                <div type="textpart" subtype="argument">
                     <p>
                         Successes of Titus Quinctius Flamininus against Philip; and of his brother
 Lucius, with the fleet, assisted by Attalus and the Rhodians. Treaty of
@@ -96,7 +108,7 @@ suppressed. The number of the praetors augmented to six. Defeat of
 the Insubrian Gauls by Cornelius Cethegus. Treaty of friendship with
 Nabis, tyrant of Lacedaemon. Capture of several cities in Macedonia.
                     </p>
-                </argument>
+                </div>
                 <milestone n="1" unit="chapter"/>
                 <p>
                     <milestone n="1" unit="section"/>
@@ -1405,6 +1417,6 @@ Nabis, tyrant of Lacedaemon. Capture of several cities in Macedonia.
                     She invited the females to her house, sometimes singly, and sometimes several together, who were united by family connexion; and partly by fair speeches, partly by threats, stripped them, not only of their gold, but, at last, even of their garments, and every article of female attire.
                 </p>
             </div>
-        </body>
+        </div></body>
     </text>
 </TEI>

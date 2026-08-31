@@ -95,8 +95,7 @@
         </revisionDesc>
     </teiHeader>
     <text xml:lang="lat">
-        <body xml:base="urn:cts:latinLit:phi0690.phi002.perseus-lat2">
-            <div type="edition" xml:lang="lat">
+        <body xml:base="urn:cts:latinLit:phi0690.phi002.perseus-lat2"><div n="urn:cts:latinLit:phi0690.phi002.perseus-lat2" type="edition" xml:lang="lat">
             <div type="textpart" subtype="book" n="1">
                 <milestone ed="p" n="1" unit="card"/>
                 <l n="1">Quid faciat laetas segetes, quo sidere terram</l>

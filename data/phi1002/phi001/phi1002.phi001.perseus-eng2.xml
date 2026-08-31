@@ -118,8 +118,7 @@
         </revisionDesc>
     </teiHeader>
    <text xml:lang="eng">
-      <body xml:base="urn:cts:latinLit:phi1002.phi001.perseus-eng2">
-         <div type="translation" xml:lang="eng">
+      <body xml:base="urn:cts:latinLit:phi1002.phi001.perseus-eng2"><div n="urn:cts:latinLit:phi1002.phi001.perseus-eng2" type="translation" xml:lang="eng">
             <div n="pr" type="textpart" subtype="book">
                 <head>Preface</head>
                 <div n="pr" type="textpart" subtype="chapter">

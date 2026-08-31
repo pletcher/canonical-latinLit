@@ -40,7 +40,7 @@
                                 <publisher>Oxford University Press</publisher>
                                 <date>1919</date>
                             </imprint>
-                            <biblScope type="volume">2</biblScope>
+                            <biblScope unit="volume">2</biblScope>
                         </monogr>
                     </biblStruct>
                 </listBibl>
@@ -52,9 +52,21 @@
                 <refState unit="chapter" delim="."/>
                 <refState unit="section"/>
             </refsDecl>
+                <refsDecl n="CTS">
+                	<cRefPattern n="chapter"
+                		matchPattern="(\w+).(\w+)"
+                		replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@subtype='book'][@n='$1']/.//tei:milestone[@unit='chapter'][@n='$2'])">
+                		<p>This pointer pattern extracts book and chapter</p>
+                	</cRefPattern>
+                	<cRefPattern n="book"
+                		matchPattern="(\w+)"
+                		replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@subtype='book'][@n='$1'])">
+                		<p>This pointer pattern extracts book</p>
+                	</cRefPattern>
+                </refsDecl>
                 <refsDecl xml:id="CTS">
                   <citeStructure match="/TEI/text/body" use="@xml:base">
-                    <citeStructure match="div[@type='book']" use="@n" unit="book" delim=":">
+                    <citeStructure match="div/div[@subtype='book']" use="@n" unit="book" delim=":">
                       <citeStructure match=".//milestone[@unit='chapter']" use="@n" unit="chapter" delim="." n="chunk"/>
                     </citeStructure>
                   </citeStructure>
@@ -145,8 +157,8 @@ Added to repository. Passed SGML parse.
         </revisionDesc>
     </teiHeader>
     <text xml:lang="lat">
-        <body xml:base="urn:cts:latinLit:phi0914.phi0018.perseus-lat2">
-            <div part="N" sample="complete" org="uniform" n="8" type="book">
+        <body xml:base="urn:cts:latinLit:phi0914.phi0018.perseus-lat2"><div type="edition" n="urn:cts:latinLit:phi0914.phi0018.perseus-lat2" xml:lang="lat">
+            <div part="N" sample="complete" org="uniform" n="8" type="textpart" subtype="book">
                 <milestone n="1" unit="chapter"/>
                 <milestone n="1" unit="section"/>
                 <pb n="p.8001"/>
@@ -2159,6 +2171,6 @@ Added to repository. Passed SGML parse.
                     singulorum gesta et publica monumenta rerum confusa. nec quisquam aequalis
                     temporibus illis scriptor exstat quo satis certo auctore stetur. </p>
             </div>
-        </body>
+        </div></body>
     </text>
 </TEI>

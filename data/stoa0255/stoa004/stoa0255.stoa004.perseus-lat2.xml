@@ -89,8 +89,7 @@
         </revisionDesc>
     </teiHeader>
 <text xml:lang="lat">
-<body xml:base="urn:cts:latinLit:stoa0255.stoa004.perseus-lat2">
-    <div xml:lang="lat" type="edition">
+<body xml:base="urn:cts:latinLit:stoa0255.stoa004.perseus-lat2"><div n="urn:cts:latinLit:stoa0255.stoa004.perseus-lat2" xml:lang="lat" type="edition">
 	<pb n="p.286"/>
 	<div type="textpart" subtype="book" n="10">
 	<head>Liber X,

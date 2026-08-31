@@ -85,8 +85,7 @@
     </revisionDesc>
   </teiHeader>
 <text xml:lang="lat">
-<body xml:base="urn:cts:latinLit:phi0620.phi001.perseus-lat3">
-  <div type="edition" xml:lang="lat">
+<body xml:base="urn:cts:latinLit:phi0620.phi001.perseus-lat3"><div n="urn:cts:latinLit:phi0620.phi001.perseus-lat3" type="edition" xml:lang="lat">
 <div type="textpart" subtype="book" n="1">
 <div type="textpart" subtype="poem" n="1">
 <l n="1">Cynthia prima suis miserum me cepit ocellis,</l>

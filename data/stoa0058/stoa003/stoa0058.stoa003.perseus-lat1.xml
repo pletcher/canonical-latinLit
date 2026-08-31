@@ -74,8 +74,7 @@
    </revisionDesc>
 </teiHeader>
    <text xml:lang="lat">
-      <body xml:base="urn:cts:latinLit:stoa0058.stoa003.perseus-lat1">
-         <div xml:lang="lat" type="edition">
+      <body xml:base="urn:cts:latinLit:stoa0058.stoa003.perseus-lat1"><div n="urn:cts:latinLit:stoa0058.stoa003.perseus-lat1" xml:lang="lat" type="edition">
             <div type="textpart" subtype="section" n="1">
             <pb n="p.38"/>
             <head>quomodo substantiae</head>

@@ -46,7 +46,7 @@
                                 <publisher>John Child and son, printers</publisher>
                                 <date>1849</date>
                             </imprint>
-                            <biblScope type="volume">2</biblScope>
+                            <biblScope unit="volume">2</biblScope>
                         </monogr>
                     </biblStruct>
                 </listBibl>
@@ -57,9 +57,21 @@
                 <refState unit="book"/>
                 <refState unit="chapter" n="chunk"/>
             </refsDecl>
+                <refsDecl n="CTS">
+                	<cRefPattern n="chapter"
+                		matchPattern="(\w+).(\w+)"
+                		replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@subtype='book'][@n='$1']/.//tei:milestone[@unit='chapter'][@n='$2'])">
+                		<p>This pointer pattern extracts book and chapter</p>
+                	</cRefPattern>
+                	<cRefPattern n="book"
+                		matchPattern="(\w+)"
+                		replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@subtype='book'][@n='$1'])">
+                		<p>This pointer pattern extracts book</p>
+                	</cRefPattern>
+                </refsDecl>
                 <refsDecl xml:id="CTS">
                   <citeStructure match="/TEI/text/body" use="@xml:base">
-                    <citeStructure match="div[@type='book']" use="@n" unit="book" delim=":">
+                    <citeStructure match="div/div[@subtype='book']" use="@n" unit="book" delim=":">
                       <citeStructure match=".//milestone[@unit='chapter']" use="@n" unit="chapter" delim="." n="chunk"/>
                     </citeStructure>
                   </citeStructure>
@@ -89,10 +101,10 @@
         </revisionDesc>
     </teiHeader>
     <text xml:lang="eng">
-        <body xml:base="urn:cts:latinLit:phi0914.phi00126.perseus-eng2">
-            <div part="N" sample="complete" org="uniform" n="26" type="book">
+        <body xml:base="urn:cts:latinLit:phi0914.phi00126.perseus-eng2"><div type="translation" n="urn:cts:latinLit:phi0914.phi00126.perseus-eng2" xml:lang="eng">
+            <div part="N" sample="complete" org="uniform" n="26" type="textpart" subtype="book">
                 <head>BOOK XXVI.</head>
-                <argument>
+                <div type="textpart" subtype="argument">
                     <p> Hannibal encamps on the banks of the Anio, within three miles of Rome.
                         Attended by two thousand horsemen, he advances close to the Colline gate to
                         take a view of the walls and situation of the city. On two suc- cessive days
@@ -105,7 +117,7 @@
                         offering himself for the service, is sent to command in Spain; takes New
                         Carthage in one clay. Successes in Sicily. Treaty of friendship with the
                         Aetolians. War with Philip, king of Macedonia, and the Acarnanians. </p>
-                </argument>
+                </div>
                 <milestone n="1" unit="chapter"/>
                 <p>
                     <milestone n="1" unit="section"/> THE consuls, Cneius Fulvius Centumalus and
@@ -2821,6 +2833,6 @@
                     the same time, far from ignorant how much their strength had been diminished, in
                     every respect, by the loss of Carthage. </p>
             </div>
-        </body>
+        </div></body>
     </text>
 </TEI>

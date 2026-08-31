@@ -1,0 +1,11 @@
+<work xmlns="http://chs.harvard.edu/xmlns/cts" groupUrn="urn:cts:latinLit:phi0972" urn="urn:cts:latinLit:phi0972.phi001f" xml:lang="lat">
+	<title xml:lang="lat">FRAGMENTA</title>
+	<edition urn="urn:cts:latinLit:phi0972.phi001f.perseus-lat1" workUrn="urn:cts:latinLit:phi0972.phi001f" xml:lang="lat">
+		<label xml:lang="lat">FRAGMENTA</label>
+		<description xml:lang="eng">Petronius Arbiter. FRAGMENTA. Michael Heseltine, editor. London: William Heinemann, 1913.</description>
+	</edition>
+	<translation urn="urn:cts:latinLit:phi0972.phi001f.perseus-eng1" workUrn="urn:cts:latinLit:phi0972.phi001f" xml:lang="eng">
+		<label xml:lang="eng">Petronius</label>
+		<description xml:lang="eng">Petronius Arbiter. Petronius. Michael Heseltine, editor. London: William Heinemann, 1913.</description>
+	</translation>
+</work>

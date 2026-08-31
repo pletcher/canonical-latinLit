@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
-    <teiHeader xml:lang="eng" type="text">
+    <teiHeader xml:lang="eng">
         <fileDesc>
             <titleStmt>
                 <title>Against Publius Vatinius </title>
@@ -54,6 +54,13 @@
                 <refState delim="." unit="chapter"/>
                 <refState unit="section"/>
             </refsDecl>
+                <refsDecl n="CTS">
+                	<cRefPattern n="chapter"
+                		matchPattern="(\w+)"
+                		replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/.//tei:milestone[@unit='chapter'][@n='$1'])">
+                		<p>This pointer pattern extracts chapter</p>
+                	</cRefPattern>
+                </refsDecl>
                 <refsDecl xml:id="CTS">
                   <citeStructure match="/TEI/text/body" use="@xml:base">
                     <citeStructure unit="chapter" delim="." match=".//milestone[@unit='chapter']" use="@n"/>
@@ -158,7 +165,7 @@ Added to repository.
         <front>
             <head> THE SPEECH OF M. T. CICERO AGAINST PUBLIUS VATINIUS; CALLED ALSO, THE EXAMINATION
                 OF PUBLIUS VATINIUS.</head>
-            <argument>
+            <div type="textpart" subtype="argument">
                 <head>THE ARGUMENT.</head>
                 <p>This speech arose out of the preceding one. Vatinius was a partisan and creature
                     of Caesar's and instigated by him to appear as a witness against Sestius on his
@@ -175,9 +182,9 @@ Added to repository.
                     had been, and reminded him of his having not always entertained a favourable
                     opinion of Caesar; and Cicero replied, that he still preferred the condition of
                     Bibulus's consulship to the triumphs and victories of any one whatever.</p>
-            </argument>
+            </div>
         </front>
-        <body xml:base="urn:cts:latinLit:phi0474.phi023.perseus-eng1">
+        <body xml:base="urn:cts:latinLit:phi0474.phi023.perseus-eng1"><div type="translation" n="urn:cts:latinLit:phi0474.phi023.perseus-eng1" xml:lang="eng">
             <milestone n="1" unit="chapter"/>
             <milestone n="1" unit="section"/>
             <p>If, O Vatinius, I had chosen to regard merely what the unworthiness of your character
@@ -227,7 +234,7 @@ Added to repository.
                 nurse of all seditious men, was giving his evidence before you. For on a sudden you
                 sprang forward like a serpent out of his hole, with eyes starting out of your head
                 and your neck inflated and your throat swelling so that <milestone n="5"
-                    unit="section"/><gap reason="* * * * * *"/> I defended my old friend, who was,
+                    unit="section"/><gap reason="ellipsis"/> I defended my old friend, who was,
                 nevertheless an acquaintance of yours, though in this city an attack on another,
                 such as you are now making, is sometimes found fault with, but the defence of a man
                 never is. </p>
@@ -608,7 +615,7 @@ Added to repository.
                 Antonius, and undertaken the prosecution, and after a president of the court and a
                 bench of judges had been selected, he was unwilling to allow his adversary a power
                 of striking off judges which would have been too favourable for him.<gap
-                    reason="* * *"/></p>
+                    reason="ellipsis"/></p>
             <p>Quintus Maximus did nothing inconsistent either with his <pb n="239"/> own virtue, or
                 with the precedents of those most illustrious men, the Paulli, the Maximi, and
                 Africani; whose renown we not only hope will be renewed by this man's virtue, but we
@@ -837,6 +844,6 @@ Added to repository.
                 attributing to you any authority by so doing, I ask whether you gave evidence
                 against a man on his trial for violence, who you say never ought to have been
                 prosecuted for violence at all?</p>
-        </body>
+        </div></body>
     </text>
 </TEI>

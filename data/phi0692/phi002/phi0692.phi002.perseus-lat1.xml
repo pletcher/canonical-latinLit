@@ -53,6 +53,13 @@
 <state unit="section"/>
 </refsDecl>
 
+        <refsDecl xmlns="http://www.tei-c.org/ns/1.0" n="CTS">
+        	<cRefPattern n="line"
+        		matchPattern="(\w+)"
+        		replacementPattern="#xpath(/TEI.2/text/body/.//lb[@n='$1'])">
+        		<p>This pointer pattern extracts line</p>
+        	</cRefPattern>
+        </refsDecl>
         <refsDecl xml:id="CTS">
           <citeStructure match="/TEI/text/body" use="@xml:base">
             <citeStructure match=".//lb" use="@n" unit="line" delim=":"/>

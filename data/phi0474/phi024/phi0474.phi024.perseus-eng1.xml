@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
-    <teiHeader xml:lang="eng" type="text">
+    <teiHeader xml:lang="eng">
         <fileDesc>
             <titleStmt>
                 <title>In Defense of Marcus Caelius </title>
@@ -54,6 +54,13 @@
                 <refState delim="." unit="chapter"/>
                 <refState unit="section"/>
             </refsDecl>
+                <refsDecl n="CTS">
+                	<cRefPattern n="chapter"
+                		matchPattern="(\w+)"
+                		replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/.//tei:milestone[@unit='chapter'][@n='$1'])">
+                		<p>This pointer pattern extracts chapter</p>
+                	</cRefPattern>
+                </refsDecl>
                 <refsDecl xml:id="CTS">
                   <citeStructure match="/TEI/text/body" use="@xml:base">
                     <citeStructure unit="chapter" delim="." match=".//milestone[@unit='chapter']" use="@n"/>
@@ -157,7 +164,7 @@ Added to repository.
     <text xml:lang="eng">
         <front>
             <head>THE SPEECH OF M. T. CICERO IN DEFENCE OF MARCUS CAELIUS.</head>
-            <argument>
+            <div type="textpart" subtype="argument">
                 <head>THE ARGUMENT.</head>
                 <p>Marcus Caelius was a young man of the equestrian order, and had been a sort of
                     pupil of Cicero himself; and was a man of very considerable abilities. When a
@@ -178,9 +185,9 @@ Added to repository.
                             <persName><surname>Milo</surname></persName> was murdered by the
                     soldiery, with whom he was tampering in the hopes of being able to effect some
                     diversion in favour of Pompey, a short time before the battle of Pharsalia.</p>
-            </argument>
+            </div>
         </front>
-        <body xml:base="urn:cts:latinLit:phi0474.phi024.perseus-eng1">
+        <body xml:base="urn:cts:latinLit:phi0474.phi024.perseus-eng1"><div type="translation" n="urn:cts:latinLit:phi0474.phi024.perseus-eng1" xml:lang="eng">
             <milestone n="1" unit="chapter"/>
             <milestone n="1" unit="section"/>
             <p>If any one, O judges, were now present by any chance, ignorant of our laws, and of
@@ -443,9 +450,9 @@ Added to repository.
                 Crassus, said a little time before, when he was making a complaint of the arrival of
                 king Ptolemaeus:— <quote>
                     <l>“I wish that in the Pelian grove.”</l>
-                </quote><gap reason="* * *"/> And I might go on much farther in applying this poem, <quote>
+                </quote><gap reason="ellipsis"/> And I might go on much farther in applying this poem, <quote>
                     <l>“For my wandering mistress would never”</l>
-                </quote><gap reason="* * *"/> have given us all this trouble. <quote>
+                </quote><gap reason="ellipsis"/> have given us all this trouble. <quote>
                     <l>“Medea, sick at heart, wounded in the fierce love.”</l>
                 </quote><note anchored="true">These lines are from Ennius's tragedy of Medea, being
                     very nearly a translation of the first lines of the <title>Medea</title> of
@@ -564,14 +571,14 @@ Added to repository.
                 habit of visiting him, had aided him when he was a candidate for the praetorship.
                 These things do not move me at all, for they are notoriously false. In fact he is
                 stating that those men supped together who are either in different places, or <gap
-                    reason="* * *"/></p>
+                    reason="ellipsis"/></p>
             <p>Nor am I moved by that assertion either, that he said that Caelius had been a comrade
                 of his own in the Lupercal games. No doubt, it is a savage and purely pastoral and
                 uncivilized sort of companionship,<note anchored="true">See Smith, Dict, Ant p. 583,
                     v. <foreign xml:lang="la">Lupercalia</foreign>.</note> that of the Lupercal
                 comrades, whose sylvan companies were established before the institution of
                 civilization and of laws. Since these companions not only prosecute one another, but
-                even in the accusation speak of the companionship as a crime, <gap reason="* * *"/>
+                even in the accusation speak of the companionship as a crime, <gap reason="ellipsis"/>
                 so that they seem to be afraid, lest any one should be ignorant of it. <milestone
                     n="27" unit="section"/> But I will pass over these things, and reply to those
                 which I thought of more consequence. </p>
@@ -684,7 +691,7 @@ Added to repository.
                 race yourself, had married into a most renowned family, why was Caelius so intimate
                 with you? Was he a relation? a connection? Was he a friend of your husband? Nothing
                 of the sort. What then was the reason, except it was some folly or lust? <gap
-                    reason="* * *"/> Even if the images of us, the men of your family, had no
+                    reason="ellipsis"/> Even if the images of us, the men of your family, had no
                 influence over you, did not even my own daughter, that celebrated Quinta Claudia,
                 admonish you to emulate the praise belonging to our house from the glory of its
                 women? Did not that vestal virgin Claudia recur to your mind, who embraced her
@@ -1281,7 +1288,7 @@ Added to repository.
                 law, still calls for the exercise of your severity. His early youth was devoted to
                 strict discipline; and to those pursuits by which we are prepared for these forensic
                 labours,—for taking part in the administration of the republic,—for honour, <pb
-                    n="281"/> and glory, and dignity <gap reason="* * * *"/> and to those
+                    n="281"/> and glory, and dignity <gap reason="ellipsis"/> and to those
                 friendships with his elders, whose industry and temperance he might most desire to
                 imitate; and to those studies of the youths of his own age: so that he appeared to
                 be pursuing the same course of glory as the most virtuous and most highly-born of
@@ -1403,6 +1410,6 @@ Added to repository.
                 will have him dedicated, devoted, and wholly bound to you and to your children, and
                 you will enjoy, O judges, in the greatest possible degree, the abundant and lasting
                 fruits of all his exertions and labours. </p>
-        </body>
+        </div></body>
     </text>
 </TEI>

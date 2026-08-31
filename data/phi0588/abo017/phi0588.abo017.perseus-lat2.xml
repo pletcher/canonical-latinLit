@@ -84,8 +84,7 @@
     
   </teiHeader>
   <text xml:lang="lat">
-    <body xml:base="urn:cts:latinLit:phi0588.abo017.perseus-lat2">
-      <div type="edition" xml:lang="lat">
+    <body xml:base="urn:cts:latinLit:phi0588.abo017.perseus-lat2"><div n="urn:cts:latinLit:phi0588.abo017.perseus-lat2" type="edition" xml:lang="lat">
       <div type="textpart" subtype="chapter" n="1">
       <p>
       <seg type="section" n="1">Agesilaus Lacedaemonius cum a ceteris scriptoribus tum eximie a Xenophonte Socratico

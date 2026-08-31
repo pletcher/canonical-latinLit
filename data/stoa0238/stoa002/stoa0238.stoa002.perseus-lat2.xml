@@ -84,8 +84,7 @@
   </teiHeader>
 
    <text xml:lang="lat">
-      <body xml:base="urn:cts:latinLit:stoa0238.stoa002.perseus-lat2">
-         <div xml:lang="lat"
+      <body xml:base="urn:cts:latinLit:stoa0238.stoa002.perseus-lat2"><div n="urn:cts:latinLit:stoa0238.stoa002.perseus-lat2" xml:lang="lat"
               type="edition">
             <div type="textpart" subtype="preface" n="pr">
                <pb n="p.274"/>

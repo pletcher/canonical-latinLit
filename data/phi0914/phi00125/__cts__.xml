@@ -1,0 +1,25 @@
+<work xmlns="http://chs.harvard.edu/xmlns/cts" groupUrn="urn:cts:latinLit:phi0914" urn="urn:cts:latinLit:phi0914.phi00125" xml:lang="lat">
+	<title xml:lang="lat">Ab Urbe Condita</title>
+	<edition urn="urn:cts:latinLit:phi0914.phi00125.perseus-lat1" workUrn="urn:cts:latinLit:phi0914.phi00125" xml:lang="lat">
+		<label xml:lang="lat">Ab urbe condita</label>
+		<description xml:lang="eng">Livy. Ab urbe condita. Robert Seymour Conway, Charles Flamstead Walters, editor. Oxford: Oxford University Press, 1929.</description>
+	</edition>
+	<translation urn="urn:cts:latinLit:phi0914.phi00125.perseus-eng3" workUrn="urn:cts:latinLit:phi0914.phi00125" xml:lang="eng">
+		<label xml:lang="eng">History of Rome</label>
+		<description xml:lang="eng">Livy. History of Rome. New York, New York: E. P. Dutton and Co., 1912.</description>
+	</translation>
+	<translation urn="urn:cts:latinLit:phi0914.phi00125.perseus-eng2" workUrn="urn:cts:latinLit:phi0914.phi00125" xml:lang="eng">
+		<label xml:lang="eng">History of Rome by Titus Livius, books nine to twenty-six</label>
+		<description xml:lang="eng">Livy. History of Rome by Titus Livius, books nine to twenty-six. York Street, Covent Garden, London: Henry G. Bohn, 1849.</description>
+	</translation>
+	<translation urn="urn:cts:latinLit:phi0914.phi00125.perseus-eng1" workUrn="urn:cts:latinLit:phi0914.phi00125" xml:lang="eng">
+		<label xml:lang="eng">Books XXIII-XXV With An English Translation</label>
+		<description xml:lang="eng">Livy. Books XXIII-XXV With An English Translation. Cambridge: Cambridge, Mass., Harvard University Press; London, William
+                                Heinemann, Ltd., 1940: no copyright notice.</description>
+	</translation>
+	<edition urn="urn:cts:latinLit:phi0914.phi00125.perseus-lat3" workUrn="urn:cts:latinLit:phi0914.phi00125" xml:lang="lat">
+		<label xml:lang="lat">Books XXIII-XXV With An English Translation</label>
+		<description xml:lang="eng">Livy. Books XXIII-XXV With An English Translation. Cambridge: Cambridge, Mass., Harvard University Press; London, William
+                                Heinemann, Ltd., 1940: no copyright notice.</description>
+	</edition>
+</work>

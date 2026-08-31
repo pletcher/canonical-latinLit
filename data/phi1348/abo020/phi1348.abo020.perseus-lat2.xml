@@ -111,8 +111,7 @@
     </revisionDesc>
   </teiHeader>
   <text xml:lang="lat">
-    <body xml:base="urn:cts:latinLit:phi1348.abo020.perseus-lat2">
-      <div xml:lang="lat" type="edition">
+    <body xml:base="urn:cts:latinLit:phi1348.abo020.perseus-lat2"><div n="urn:cts:latinLit:phi1348.abo020.perseus-lat2" xml:lang="lat" type="edition">
         <div type="textpart" n="1" subtype="chapter">
           <div type="textpart" subtype="section" n="1">
           <p>Rebellione trium principum et caede incertum diu et quasi uagum imperium suscepit

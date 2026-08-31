@@ -46,7 +46,7 @@
                                 <publisher>John Child and son, printers</publisher>
                                 <date>1849</date>
                             </imprint>
-                            <biblScope type="volume">2</biblScope>
+                            <biblScope unit="volume">2</biblScope>
                         </monogr>
                     </biblStruct>
                 </listBibl>
@@ -57,9 +57,21 @@
                 <refState unit="book"/>
                 <refState unit="chapter" n="chunk"/>
             </refsDecl>
+                <refsDecl n="CTS">
+                	<cRefPattern n="chapter"
+                		matchPattern="(\w+).(\w+)"
+                		replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@subtype='book'][@n='$1']/.//tei:milestone[@unit='chapter'][@n='$2'])">
+                		<p>This pointer pattern extracts book and chapter</p>
+                	</cRefPattern>
+                	<cRefPattern n="book"
+                		matchPattern="(\w+)"
+                		replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@subtype='book'][@n='$1'])">
+                		<p>This pointer pattern extracts book</p>
+                	</cRefPattern>
+                </refsDecl>
                 <refsDecl xml:id="CTS">
                   <citeStructure match="/TEI/text/body" use="@xml:base">
-                    <citeStructure match="div[@type='book']" use="@n" unit="book" delim=":">
+                    <citeStructure match="div/div[@subtype='book']" use="@n" unit="book" delim=":">
                       <citeStructure match=".//milestone[@unit='chapter']" use="@n" unit="chapter" delim="." n="chunk"/>
                     </citeStructure>
                   </citeStructure>
@@ -89,11 +101,11 @@
         </revisionDesc>
     </teiHeader>
     <text xml:lang="eng">
-        <body xml:base="urn:cts:latinLit:phi0914.phi00122.perseus-eng2">
+        <body xml:base="urn:cts:latinLit:phi0914.phi00122.perseus-eng2"><div type="translation" n="urn:cts:latinLit:phi0914.phi00122.perseus-eng2" xml:lang="eng">
             <pb n="765" xml:id="p.765"/>
-            <div part="N" sample="complete" org="uniform" n="22" type="book">
+            <div part="N" sample="complete" org="uniform" n="22" type="textpart" subtype="book">
                 <head>BOOK XXII.</head>
-                <argument>
+                <div type="textpart" subtype="argument">
                     <p> Hannibal, after an uninterrupted march of four days and three nights, ar-
                         rives in Etruria, through the marshes, in which he lost an eye. Caius
                         Flaminius, the consul, an inconsiderate man, having gone forth in opposi-
@@ -122,7 +134,7 @@
                         Afri- canus. Successes in Spain, eight thousand slaves are enlisted by the
                         Ro- mans, they refuse to ransom the captives, they go out in a body to meet
                         Varro, and thank him for not having despaired of the commonwealth. </p>
-                </argument>
+                </div>
                 <milestone n="1" unit="chapter"/>
                 <p>
                     <milestone n="1" unit="section"/> SPRING was now at hand, when Hannibal quitted
@@ -2817,6 +2829,6 @@
                         unit="section"/> a Carthaginian commander, no species of punishment would
                     have been spared. </p>
             </div>
-        </body>
+        </div></body>
     </text>
 </TEI>

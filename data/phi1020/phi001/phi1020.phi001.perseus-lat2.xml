@@ -85,8 +85,7 @@
   </teiHeader>
 
   <text xml:lang="lat">
-      <body xml:base="urn:cts:latinLit:phi1020.phi001.perseus-lat2">
-         <div type="edition" xml:lang="lat">
+      <body xml:base="urn:cts:latinLit:phi1020.phi001.perseus-lat2"><div n="urn:cts:latinLit:phi1020.phi001.perseus-lat2" type="edition" xml:lang="lat">
             <pb n="v.1.p.340"/>
             <div type="textpart" subtype="book" n="1">
                <l n="1">Fraternas acies alternaque regna profanis</l>

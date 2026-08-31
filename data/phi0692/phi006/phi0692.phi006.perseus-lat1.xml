@@ -53,6 +53,13 @@
 <state unit="section"/>
 </refsDecl>
 
+        <refsDecl xmlns="http://www.tei-c.org/ns/1.0" n="CTS">
+        	<cRefPattern n="line"
+        		matchPattern="(\w+)"
+        		replacementPattern="#xpath(/TEI.2/text/body/.//lb[@n='$1'])">
+        		<p>This pointer pattern extracts line</p>
+        	</cRefPattern>
+        </refsDecl>
         <refsDecl xml:id="CTS">
           <citeStructure match="/TEI/text/body" use="@xml:base">
             <citeStructure match=".//lb" use="@n" unit="line" delim=":"/>
@@ -240,7 +247,7 @@
 <lb n="141"/>nunc ego quid possum? tellus leuis ossa teneto,
 <lb n="142"/>pendula librato pondus et ipsa tuum.
 <lb n="143"/>semper serta tibi dabimus, tibi semper odores,
-<lb n="144"/>non umquam sitiens, florida semper eris. <gap/>
+<lb n="144"/>non umquam sitiens, florida semper eris. <gap reason="undefined"/>
 <lb n="145"/>sic est Maecenas fato ueniente locutus, 
 <lb n="146"/>frigidus et iamiam cum moriturus erat.
 <lb n="147"/>Men, inquit, iuuenis primaeui, Iuppiter, ante

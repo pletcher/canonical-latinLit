@@ -73,7 +73,7 @@
 		</revisionDesc>
 	</teiHeader>
 	<text xml:lang="eng">
-		<body xml:base="urn:cts:latinLit:phi1348.abo012.perseus-eng2"><div xml:lang="eng" type="translation">
+		<body xml:base="urn:cts:latinLit:phi1348.abo012.perseus-eng2"><div n="urn:cts:latinLit:phi1348.abo012.perseus-eng2" xml:lang="eng" type="translation">
 			<div type="textpart" n="1" subtype="chapter">
 				<p>THAT the family of the Octavii was of the first distinction in <placeName key="perseus,Velitrae">Velitrae</placeName>,<note anchored="true">A town in
 						the ancient Volscian territory, now called Veletri. It stands on the verge

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
-    <teiHeader xml:lang="eng" type="text">
+    <teiHeader xml:lang="eng">
         <fileDesc>
             <titleStmt>
                 <title>In Defense of Publius Sestius </title>
@@ -54,6 +54,13 @@
                 <refState delim="." unit="chapter"/>
                 <refState unit="section"/>
             </refsDecl>
+                <refsDecl n="CTS">
+                	<cRefPattern n="chapter"
+                		matchPattern="(\w+)"
+                		replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/.//tei:milestone[@unit='chapter'][@n='$1'])">
+                		<p>This pointer pattern extracts chapter</p>
+                	</cRefPattern>
+                </refsDecl>
                 <refsDecl xml:id="CTS">
                   <citeStructure match="/TEI/text/body" use="@xml:base">
                     <citeStructure unit="chapter" delim="." match=".//milestone[@unit='chapter']" use="@n"/>
@@ -158,7 +165,7 @@ Added to repository.
         <front>
             <pb n="151"/>
             <head>THE SPEECH OF M. T. CICERO IN DEFENCE OF PUBLIUS SESTIUS.</head>
-            <argument>
+            <div type="textpart" subtype="argument">
                 <head>THE ARGUMENT.</head>
                 <p>Publius Sestius, when tribune of the people, had been one of those who had
                     exerted themselves most strenuously to promote Cicero's recall, and had shown
@@ -174,9 +181,9 @@ Added to repository.
                     (See the next speech.) </p>
                 <p>This speech was delivered A. U. C. 698. </p>
                 <p>Sestius was unanimously acquitted.</p>
-            </argument>
+            </div>
         </front>
-        <body xml:base="urn:cts:latinLit:phi0474.phi022.perseus-eng1">
+        <body xml:base="urn:cts:latinLit:phi0474.phi022.perseus-eng1"><div type="translation" n="urn:cts:latinLit:phi0474.phi022.perseus-eng1" xml:lang="eng">
             <milestone n="1" unit="chapter"/>
             <milestone n="1" unit="section"/>
             <p>If any one in times past, O judges, was used to wonder what was the reason why in a
@@ -2143,26 +2150,26 @@ Added to repository.
                 representation of the genius of the great poet whose play was being acted not merely
                 by his art as an actor, but by his real grief. “What, shall he who with a constant
                 mind assisted and supported the state; who has always stood on the side of the
-                    Greeks<gap reason="* * *"/>” He said that I had always stood on your side; he
+                    Greeks<gap reason="ellipsis"/>” He said that I had always stood on your side; he
                 pointed to your ranks; he was encored by every body. “Who in a critical state of
                 affairs, did not hesitate to expose his life, did not spare his own person or
-                    privileges<gap reason="* * *"/>.” <milestone n="121" unit="section"/> What
+                    privileges<gap reason="ellipsis"/>.” <milestone n="121" unit="section"/> What
                 shouts were raised as he recited these passages! when, omitting all consideration of
                 his acting, the people applauded the words of the poet and the zeal of the actor,
                 and the encouragement of their expectations respecting me. “A most excellent friend,
-                in a most important war<gap reason="* * *"/>:” for the actor added that of himself,
+                in a most important war<gap reason="ellipsis"/>:” for the actor added that of himself,
                 from his friendly inclination towards me; and perhaps men applauded it on account of
                 their regret for me: “A man endowed with the highest ability.” <milestone n="57"
                     unit="chapter"/></p>
             <p>Then came those words in the same play, with what groans on the part of the Roman
                 people were they accompanied when the actor repeated them! “Oh my father<gap
-                    reason="* * *"/>.” He thought me,—me, I say, deserving to be lamented as his
+                    reason="ellipsis"/>.” He thought me,—me, I say, deserving to be lamented as his
                 father, whom Quintus Catulus and whom many other men had repeatedly styled in the
                 senate the Father of my country. With what great weeping for my ruin and for the
                 confirmation of my property were his words accompanied, when he deplored his father
                 driven away, his country afflicted, his house burnt and destroyed. He acted in such
                 a manner, when after having dilated on his former fortune, he turned his description
-                in this way. “All these things have I seen destroyed by fire<gap reason="* * *"/>,”
+                in this way. “All these things have I seen destroyed by fire<gap reason="ellipsis"/>,”
                 as to rouse the tears of even my enemies and my enviers. <milestone n="122"
                     unit="section"/> O ye immortal gods, what did he do next? in <pb n="212"/> what
                 way did he pronounce the next words? which indeed seem to me to have been acted and
@@ -2593,6 +2600,6 @@ Added to repository.
                 of the services of the virtuous citizens, to strengthen me, and to renew the
                 republic. Wherefore, I beseech and entreat you, if you wish for my safety, to save
                 those men by whose instrumentality you have recovered me. </p>
-        </body>
+        </div></body>
     </text>
 </TEI>

@@ -36,7 +36,7 @@
                                 <publisher>Weidmannsche Buchhandlung</publisher>
                                 <date>1873</date>
                             </imprint>
-                            <biblScope type="volume">8</biblScope>
+                            <biblScope unit="volume">8</biblScope>
                         </monogr>
                     </biblStruct>
                 </listBibl>
@@ -48,9 +48,21 @@
                 <refState delim="." unit="chapter"/>
                 <refState unit="section"/>
             </refsDecl>
+                <refsDecl n="CTS">
+                	<cRefPattern n="chapter"
+                		matchPattern="(\w+).(\w+)"
+                		replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@subtype='book'][@n='$1']/.//tei:milestone[@unit='chapter'][@n='$2'])">
+                		<p>This pointer pattern extracts book and chapter</p>
+                	</cRefPattern>
+                	<cRefPattern n="book"
+                		matchPattern="(\w+)"
+                		replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@subtype='book'][@n='$1'])">
+                		<p>This pointer pattern extracts book</p>
+                	</cRefPattern>
+                </refsDecl>
                 <refsDecl xml:id="CTS">
                   <citeStructure match="/TEI/text/body" use="@xml:base">
-                    <citeStructure match="div[@type='book']" use="@n" unit="book" delim=":">
+                    <citeStructure match="div/div[@subtype='book']" use="@n" unit="book" delim=":">
                       <citeStructure match=".//milestone[@unit='chapter']" use="@n" unit="chapter" delim="." n="chunk"/>
                     </citeStructure>
                   </citeStructure>
@@ -79,8 +91,8 @@
         </revisionDesc>
     </teiHeader>
     <text xml:lang="lat">
-        <body xml:base="urn:cts:latinLit:phi0914.phi00136.perseus-lat1">
-            <div type="book" n="36" org="uniform" sample="complete" part="N">
+        <body xml:base="urn:cts:latinLit:phi0914.phi00136.perseus-lat1"><div type="edition" n="urn:cts:latinLit:phi0914.phi00136.perseus-lat1" xml:lang="lat">
+            <div type="textpart" subtype="book" n="36" org="uniform" sample="complete" part="N">
                 <p>
                     <milestone unit="chapter" n="1"/>
                     <milestone unit="section" n="1"/>
@@ -319,7 +331,7 @@
                         <surname full="yes">Acilio</surname>
                     </persName> consuli non defuisset. <milestone unit="section" n="5"/> item ab
                     Carthaginiensibus et Masinissa rege legati venerunt. Carthaginienses tritici
-                    modium <gap/> milia, hordei quingenta ad exercitum, dimidium eius Romam
+                    modium <gap reason="undefined"/> milia, hordei quingenta ad exercitum, dimidium eius Romam
                     apportaturos polliciti: <milestone unit="section" n="6"/> id ut ab se munus
                     Romani acciperent, petere sese, et classem [suorum] suo sumptu comparaturos,
                         <milestone unit="section" n="7"/> et stipendium, quod pluribus pensionibus
@@ -1117,7 +1129,7 @@
                     <milestone unit="section" n="1"/> et Romani quidem operibus magis quam armis
                     urbem oppugnabant, Aetoli contra armis se tuebantur. <milestone unit="section"
                         n="2"/> nam cum ariete quaterentur muri, non laqueis, ut solet, exceptos
-                    declinabant ictus, sed armati frequentes <gap/> , quidam ignes etiam, quos
+                    declinabant ictus, sed armati frequentes <gap reason="undefined"/> , quidam ignes etiam, quos
                     aggeribus inicerent, ferebant. <milestone unit="section" n="3"/>
                     <pb xml:id="vol.8.p.127" n="notedatea"/> fornices quoque in muro erant apti ad
                     excurrendum, et ipsi, cum pro dirutis reficerent muros, crebriores eos, ut <note
@@ -1994,6 +2006,6 @@
                         <addName n="added" full="yes">Labeo</addName>
                     </persName> . </p>
             </div>
-        </body>
+        </div></body>
     </text>
 </TEI>

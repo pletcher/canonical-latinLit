@@ -89,7 +89,7 @@
       <change who="Charles Pletcher" when="2026-08-26">Add citeStructure refsDecl</change><change who="Zach Himes" when="2015-11-13">Converted to TEI P5 and EpiDoc</change></revisionDesc>
   </teiHeader>
 
-  <text xml:lang="lat"><body xml:base="urn:cts:latinLit:phi1038.phi001.perseus-lat1"><div type="edition" xml:lang="lat">
+  <text xml:lang="lat"><body xml:base="urn:cts:latinLit:phi1038.phi001.perseus-lat1"><div n="urn:cts:latinLit:phi1038.phi001.perseus-lat1" type="edition" xml:lang="lat">
 <head>Facta et Dicta Memorabilia</head>
 <div type="textpart" n="1" subtype="book">
 <head>LIBER PRIMVS</head> 

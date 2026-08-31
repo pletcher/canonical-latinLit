@@ -36,7 +36,7 @@
                                 <publisher>Weidmannsche Buchhandlung</publisher>
                                 <date>1880</date>
                             </imprint>
-                            <biblScope type="volume">10.1</biblScope>
+                            <biblScope unit="volume">10.1</biblScope>
                         </monogr>
                     </biblStruct>
                 </listBibl>
@@ -48,9 +48,21 @@
                 <refState delim="." unit="chapter"/>
                 <refState unit="section"/>
             </refsDecl>
+                <refsDecl n="CTS">
+                	<cRefPattern n="chapter"
+                		matchPattern="(\w+).(\w+)"
+                		replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@subtype='book'][@n='$1']/.//tei:milestone[@unit='chapter'][@n='$2'])">
+                		<p>This pointer pattern extracts book and chapter</p>
+                	</cRefPattern>
+                	<cRefPattern n="book"
+                		matchPattern="(\w+)"
+                		replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@subtype='book'][@n='$1'])">
+                		<p>This pointer pattern extracts book</p>
+                	</cRefPattern>
+                </refsDecl>
                 <refsDecl xml:id="CTS">
                   <citeStructure match="/TEI/text/body" use="@xml:base">
-                    <citeStructure match="div[@type='book']" use="@n" unit="book" delim=":">
+                    <citeStructure match="div/div[@subtype='book']" use="@n" unit="book" delim=":">
                       <citeStructure match=".//milestone[@unit='chapter']" use="@n" unit="chapter" delim="." n="chunk"/>
                     </citeStructure>
                   </citeStructure>
@@ -79,14 +91,14 @@
         </revisionDesc>
     </teiHeader>
     <text xml:lang="lat">
-        <body xml:base="urn:cts:latinLit:phi0914.phi00143.perseus-lat1">
-            <div type="book" n="43" org="uniform" sample="complete" part="N">
+        <body xml:base="urn:cts:latinLit:phi0914.phi00143.perseus-lat1"><div type="edition" n="urn:cts:latinLit:phi0914.phi00143.perseus-lat1" xml:lang="lat">
+            <div type="textpart" subtype="book" n="43" org="uniform" sample="complete" part="N">
                 <pb n="vol.10.1.p.1"/>
                 <p>
                     <milestone unit="chapter" n="1"/>
                     <milestone unit="section" n="1"/> eadem aestate, qua in Thessalia <hi
                         rend="italics">haec gesta sunt,</hi>
-                    <gap/> legatus in Illyricum a consule missus opulenta duo oppida oppugnavit;
+                    <gap reason="undefined"/> legatus in Illyricum a consule missus opulenta duo oppida oppugnavit;
                         <milestone unit="section" n="2"/> Ceremiam vi atque armis coegit in
                     deditionem omniaque iis sua concessit, ut opinione clementiae eos, qui
                     Carnuntem, munitam urbem, incolebant, adliceret. postquam nec, ut dederent se,
@@ -267,7 +279,7 @@
                     caverent: <milestone unit="section" n="7"/>
                     <pb xml:id="vol.10.1.p.9" n="notedatea"/> classis eos magnae parandae consilium
                     cepisse specie pro Romanis et adversus Macedonas; ubi ea parata instructaque
-                    esset, ipsorum fore potestatis, quem hostem aut socium habeant. hanc iniec <gap/>
+                    esset, ipsorum fore potestatis, quem hostem aut socium habeant. hanc iniec <gap reason="undefined"/>
                     <note place="unspecified" anchored="true">
                         <date>a. Chr. n. 171.</date>
                     </note>
@@ -275,7 +287,7 @@
                 <p>
                     <milestone unit="chapter" n="4"/>
                     <milestone unit="section" n="1"/>
-                    <gap/> tis tantum extitit <gap/> pavorem ingressi castra, ostentantes capita,
+                    <gap reason="undefined"/> tis tantum extitit <gap reason="undefined"/> pavorem ingressi castra, ostentantes capita,
                     fecerunt, ut, si admotus extemplo exercitus foret, capi castra potuerint.
                         <milestone unit="section" n="2"/> tum quoque fuga ingens facta est; et
                     erant, qui legatos mittendos ad pacem precibus petendam censerent, civitatesque
@@ -408,7 +420,7 @@
                     sterilem terram ararent ipsosque etiam agrestis peregrino frumento alerent,
                     tamen, ne deessent officio, confecisse et alia, quae imperarentur, praestare
                     paratos esse. <milestone unit="section" n="4"/>
-                    <pb xml:id="vol.10.1.p.15" n="notedatea"/> Milesii nihil <gap/> praestitissent
+                    <pb xml:id="vol.10.1.p.15" n="notedatea"/> Milesii nihil <gap reason="undefined"/> praestitissent
                     memorantes, si quid <note place="unspecified" anchored="true">
                         <date>a. Chr. n. 170.</date>
                     </note> imperare ad bellum senatus vellet, praestare se paratos esse polliciti
@@ -710,7 +722,7 @@
                     infrequentem commeatibus vulgo datis per ambitionem esse; culpam eius rei
                     consulem in tribunos militum, contra illos in consulem conferre. <milestone
                         unit="section" n="11"/> ignominiam Claudi temeritate acceptam elevare eos
-                    <gap/> patres acceperunt; quippe paucos Italici generis et magna <hi
+                    <gap reason="undefined"/> patres acceperunt; quippe paucos Italici generis et magna <hi
                         rend="italics">ex parte</hi> tumultuario dilectu conscriptos ibi milites
                     amissos referebant. <milestone unit="section" n="12"/>
                     <pb xml:id="vol.10.1.p.27" n="notedatea"/> consules designati ubi primum
@@ -727,7 +739,7 @@
                         <forename full="yes">L.</forename>
                         <surname full="yes">Flamininus</surname>
                     </persName>
-                    <gap/> pontifices duo decesserunt <persName n="3">
+                    <gap reason="undefined"/> pontifices duo decesserunt <persName n="3">
                         <forename full="yes">L.</forename>
                         <surname full="yes">Furius</surname>
                         <addName full="yes">Philus</addName>
@@ -1337,7 +1349,7 @@
                     radicibus prope inviis montium ad mille hominum ex agmine inpedito occidit, ad
                     ducentos cepit. <milestone unit="section" n="3"/> Appius superatis angustiis in
                     campo, quem Meleona vocant, stativa dierum paucorum habuit. interim Cleuas
-                    adsumpto Philostrato, qui <gap/> Epirotarum gente habebat, in agrum Antigonensem
+                    adsumpto Philostrato, qui <gap reason="undefined"/> Epirotarum gente habebat, in agrum Antigonensem
                     transcendit. <milestone unit="section" n="4"/>
                     <pb xml:id="vol.10.1.p.55" n="notedatea"/> Macedones ad depopulationem profecti;
                     Philostratus cum cohorte sua in insidiis loco obscuro consedit. in palatos
@@ -1359,6 +1371,6 @@
                     quantum in eo praesidii esset, nec tamen impetrare ab animo posset, ut inpensam
                     in rem maximi ad omnia momenti faceret. </p>
             </div>
-        </body>
+        </div></body>
     </text>
 </TEI>

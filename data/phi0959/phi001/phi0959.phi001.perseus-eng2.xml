@@ -89,8 +89,7 @@
 	</revisionDesc>
 </teiHeader>
 	<text xml:lang="eng">
-		<body xml:base="urn:cts:latinLit:phi0959.phi001.perseus-eng2">
-			<div type="translation" xml:lang="eng">
+		<body xml:base="urn:cts:latinLit:phi0959.phi001.perseus-eng2"><div n="urn:cts:latinLit:phi0959.phi001.perseus-eng2" type="translation" xml:lang="eng">
 			<div type="textpart" subtype="book" n="1">
 				<div type="textpart" subtype="poem" n="ep">
 					<p>The epigram is not here translated. </p>

@@ -54,6 +54,23 @@
 <state unit="section"/>
 </refsDecl>
 
+        <refsDecl xmlns="http://www.tei-c.org/ns/1.0" n="CTS">
+        	<cRefPattern n="section"
+        		matchPattern="(\w+).(\w+).(\w+)"
+        		replacementPattern="#xpath(/TEI.2/text/body/div1[@type='book'][@n='$1']/div2[@type='chapter'][@n='$2']/p/milestone[@unit='section'][@n='$3'])">
+        		<p>This pointer pattern extracts book and chapter and section</p>
+        	</cRefPattern>
+        	<cRefPattern n="chapter"
+        		matchPattern="(\w+).(\w+)"
+        		replacementPattern="#xpath(/TEI.2/text/body/div1[@type='book'][@n='$1']/div2[@type='chapter'][@n='$2'])">
+        		<p>This pointer pattern extracts book and chapter</p>
+        	</cRefPattern>
+        	<cRefPattern n="book"
+        		matchPattern="(\w+)"
+        		replacementPattern="#xpath(/TEI.2/text/body/div1[@type='book'][@n='$1'])">
+        		<p>This pointer pattern extracts book</p>
+        	</cRefPattern>
+        </refsDecl>
         <refsDecl xml:id="CTS">
           <citeStructure match="/TEI/text/body" use="@xml:base">
             <citeStructure match="div1[@type='book']" use="@n" unit="book" delim=":">
@@ -212,7 +229,7 @@ lowed.</p>
 <div1 type="book" n="14">
 <head>ARGUMENT.</head>
 
-<argument><p><milestone unit="section" n="1"/>The cruelty of the C&aelig;sar Gallus.&mdash;II. The incursions of the Isau-
+<div type="textpart" subtype="argument"><p><milestone unit="section" n="1"/>The cruelty of the C&aelig;sar Gallus.&mdash;II. The incursions of the Isau-
 rians.&mdash;III. The unsuccessful plans of the Persians.&mdash;IV. The
 invasion of the Saracens, and the manners of that people.&mdash;
 V. The punishment of the adherents of Magnentius.&mdash;VI. The
@@ -221,7 +238,7 @@ inhumanity of the C&aelig;sar Gallus.&mdash;VIII. A description of the pro-
 vinces of the East.&mdash;IX. About the C&aelig;sar Constantius Gallus.&mdash;
 X. The Emperor Constantius grants the Allemanni peace at their
 request.&mdash;XI. The C&aelig;sar Constantius Gallus is sent for by the
-Emperor Constantius, and beheaded.</p></argument>
+Emperor Constantius, and beheaded.</p></div>
 <div2 type="chapter" n="1">
 <head>A.D. 353.</head>
 
@@ -2039,7 +2056,7 @@ of mountains.</p></div2></div1>
 
 <head>ARGUMENT.</head>
 
-<argument><p>I. The death of the C&aelig;sar Gallus is announced to the emperor.&mdash;
+<div type="textpart" subtype="argument"><p>I. The death of the C&aelig;sar Gallus is announced to the emperor.&mdash;
 II. Ursicinus, the commander of the cavalry in the East; Julian,
 the brother of the C&aelig;sar Gallus; and Gorgonius, the high cham-
 berlain. are accused of treason.&mdash;III. The adherents and servants
@@ -2058,7 +2075,7 @@ Gauls; and of their treaties.&mdash;X. Of the Gallic Alps, and of
 the various passes over them.&mdash;XI. A brief description of Gaul,
 and of the course of the River Rhone.&mdash;XII. Of the manners of
 the Gauls.&mdash;XIII. Of Musonianus, prefect of the Pr&aelig;torium in
-the East.</p></argument>
+the East.</p></div>
 
 <div2 type="chapter" n="1">
 
@@ -3600,7 +3617,7 @@ Mesopotamia.</p>
 
 <head>ARGUMENT.</head>
 
-<argument><p>I. A panegyric of Julian the C&aelig;sar.&mdash;II. Julian attacks and defeats
+<div type="textpart" subtype="argument"><p>I. A panegyric of Julian the C&aelig;sar.&mdash;II. Julian attacks and defeats
 the Allemanni.&mdash;III. He recovers Cologne, which had been taken
 by the Franks, and concludes a peace with the king of the Franks.
 &mdash;IV. He is besieged in the city of Sens by the Allemanni.&mdash;V. His
@@ -3613,7 +3630,7 @@ X.&mdash;The triumphal entry of Constantius into Rome.&mdash;XI. Julian
 attacks the Allemanni in the islands of the Rhine in which they
 had taken refuge, and repairs the fort of Saverne.&mdash;XII. He
 attacks the kings of the Allemanni on the borders of Gaul, and
-defeats them at Strasburg.</p></argument>
+defeats them at Strasburg.</p></div>
 
 
 
@@ -5267,7 +5284,7 @@ try to keep them in the shade.</p>
 
 <head>ARGUMENT.</head>
 
-<argument><p>I. Julian crosses the Rhine and plunders and burns the towns of the
+<div type="textpart" subtype="argument"><p>I. Julian crosses the Rhine and plunders and burns the towns of the
 Allemanni, repairs the fortress of Trajan, and grants the barbarians
 a truce for ten months.&mdash;II. He hems in six hundred Franks
 who are devastating the second Germania, and starves them into
@@ -5295,7 +5312,7 @@ exiles, whom he restores to their country and to freedom.&mdash;XIII. He
 compels the Limigantes, after defeating them with great slaughter,
 to emigrate, and harangues his own soldiers.&mdash;XIV. The Romon
 ambassadors, who had been sent to treat for peace, return from
-Persia; and Sapor returns into Armenia and Mesopotamia.</p></argument>
+Persia; and Sapor returns into Armenia and Mesopotamia.</p></div>
 
 
 
@@ -6807,7 +6824,7 @@ committed himself to a revolutionary movement.</p>
 
 <head>ARGUMENT.</head>
 
-<argument><p><milestone unit="section" n="1"/>The C&aelig;sar Julian consults the welfare of the Gauls, and provides
+<div type="textpart" subtype="argument"><p><milestone unit="section" n="1"/>The C&aelig;sar Julian consults the welfare of the Gauls, and provides
 for the general observance of justice.&mdash;II. He repairs the walls of
 the castles on the Rhine which he had recovered; crosses the
 Rhine, and having conquered those of the Alemanni who remained
@@ -6829,7 +6846,7 @@ Illyrian cavalry are surprised by the Persians, and put to flight&mdash;
 Ursicinus escapes in one direction, and Marcellinus in another.&mdash;
 IX. A description of Amida; and how many legions and squadrons
 were there in garrison.&mdash;X. Sapor receives the surrender of two
-Roman fortresses.</p></argument>
+Roman fortresses.</p></div>
 
 
 
@@ -7886,7 +7903,7 @@ recent examples that he tempered the greatness of his success with humanity and 
 
 <head>ARGUMENT.</head>
 
-<argument><p><milestone unit="section" n="1"/>Sapor, while exhorting the citizens of Amida to surrender, is assailed
+<div type="textpart" subtype="argument"><p><milestone unit="section" n="1"/>Sapor, while exhorting the citizens of Amida to surrender, is assailed
 with arrows and javelins by the garrison&mdash;And when king Grumbates makes a similar attempt, his son is slain.&mdash;II. Amida is
 blockaded, and within two days is twice assaulted by the Persians.
 &mdash;III. Ursicinus makes a vain proposal to sally out by night, and
@@ -7908,7 +7925,7 @@ XI. The Limigantes of Sarmatia, under pretence of suing for
 peace, attack Constantius, who is deceived by their trick; but are
 driven back with heavy loss.&mdash;XII. Many are prosecuted for
 treason, and condemned.&mdash;XIII. Lauricius, of the Isaurians,
-checks the hordes of banditti.</p></argument>
+checks the hordes of banditti.</p></div>
 
 
 <pb id="p.185"/>
@@ -9004,7 +9021,7 @@ of particular notice.</p>
 
 <head>ARGUMENT.</head>
 
-<argument><p>I. Lupicinus is sent as commander-in-chief into Britain with an army
+<div type="textpart" subtype="argument"><p>I. Lupicinus is sent as commander-in-chief into Britain with an army
 to check the incursions of the Picts and Scots.&mdash;II. Ursicinus,
 commander of the infantry, is attacked by calumnies, and dis-
 missed.&mdash;III. An eclipse of the sun&mdash;A discussion on the two
@@ -9030,7 +9047,7 @@ Julian unexpectedly attacks a Frank tribe, known as the Attuarii,
 on the other side of the Rhine; slays some, takes others prisoners,
 and grants peace to the rest, on their petition.&mdash;XI. Constantius
 attacks Bezabde with his whole force, but fails&mdash;A discussion on
-the rainbow.</p></argument>
+the rainbow.</p></div>
 
 
 
@@ -10281,7 +10298,7 @@ of his generals; and this, as we remember, usually happened.</p>
 
 <head>ARGUMENT.</head>
 
-<argument><p>I. The Emperor Julian at Vienne learns that Constantins is about to
+<div type="textpart" subtype="argument"><p>I. The Emperor Julian at Vienne learns that Constantins is about to
 die&mdash;How he knew it&mdash;An essay on the different arts of learning
 the future.&mdash;II. Julian at Vienne feigns to be a Christian in order
 to conciliate the multitude, and on a day of festival worships God
@@ -10318,7 +10335,7 @@ presently, when news of his death arrives, surrenders to Julian.&mdash;
 XIII. Sapor leads back his army home, because the auspices forbid
 war&mdash;Constantius, intending to march against Julian, harangues
 his soldiers. &mdash;XIV. Omens of the death of Constantius.&mdash;
-XV. Constantius dies at Mopsucren&aelig; in Cilicia.&mdash;XVI. His virtues and vices.</p></argument>
+XV. Constantius dies at Mopsucren&aelig; in Cilicia.&mdash;XVI. His virtues and vices.</p></div>
 
 
 
@@ -11742,7 +11759,7 @@ only curtailed and shadowy.</p>
 
 <head>ARGUMENT.</head>
 
-<argument><p>I. From fear of Constantius Julian halts in Dacia, and secretly con-
+<div type="textpart" subtype="argument"><p>I. From fear of Constantius Julian halts in Dacia, and secretly con-
 sults the augurs and soothsayers.&mdash;II. When he hears of Constantius's death he passes through Thrace, and enters Constantinople, which he finds quiet; and without a battle becomes sole
 master of the Roman empire.&mdash;III. Some of the adherents of
 Constantius are condemned, some deservedly, some wrongfully.&mdash;
@@ -11776,7 +11793,7 @@ Christians, and orders the great church at Antioch to be shut up.
 &mdash;XIV. He sacrifices to Jupiter on Mount Casius&mdash;Why he writes
 the Misopogon in his anger against the citizens of Antioch.&mdash;
 XV. A description of Egypt; mention of the Nile, the crocodile,
-the ibis, and the pyramids.&mdash;XVI. Description of the five provinces of Egypt, and of their famous cities.</p></argument>
+the ibis, and the pyramids.&mdash;XVI. Description of the five provinces of Egypt, and of their famous cities.</p></div>
 
 
 
@@ -13381,7 +13398,7 @@ now return to my original subject.</p>
 
 <head>ARGUMENT.</head>
 
-<argument><p>I. Julian in vain attempts to restore the temple at Jerusalem, which
+<div type="textpart" subtype="argument"><p>I. Julian in vain attempts to restore the temple at Jerusalem, which
 had been destroyed long before. &mdash;II. He orders Arsaces, king of
 Armenia, to prepare for the war with Persia, and with an army
 and auxiliary troops of the Scythians crosses the Euphrates.&mdash;
@@ -13393,7 +13410,7 @@ engines, balist&aelig;, scorpions, or wild-asses, battering-rams, helepoles,
 and fire-machines.&mdash;V. Julian, with all his army, crosses the river
 Aboras by a bridge of boats at Circesium&mdash;He harangues his
 soldiers.&mdash;VI. A description of the eighteen principal provinces
-of Persia, their cities, and the customs of their inhabitants.</p></argument>
+of Persia, their cities, and the customs of their inhabitants.</p></div>
 
 
 <pb id="p.317"/>
@@ -14642,7 +14659,7 @@ British sea; though of an inferior value.</p>
 
 <head>ARGUMENT.</head>
 
-<argument><p>I. Julian invades Assyria with his army; receives the surrender of
+<div type="textpart" subtype="argument"><p>I. Julian invades Assyria with his army; receives the surrender of
 Anatha, a fort on the Euphrates, and burns it.&mdash; II. Having made
 attempts on other fortresses and towns, he burns some which were
 deserted, and receives the surrender of Pirisabora, and burns it.&mdash;
@@ -14658,7 +14675,7 @@ presents many of his soldiers with crowns.&mdash;VII. Being deterred
 from laying siege to Ctesiphon, he rashly orders all his boats to
 be burnt, and retreats from the river.&mdash;VIII. As he was neither
 able to make bridges, nor to be joined by a portion of his forces,
-he determines to return by Corduena.</p></argument>
+he determines to return by Corduena.</p></div>
 
 
 
@@ -15800,7 +15817,7 @@ it was that had so long obscured the view.</p>
 
 <head>ARGUMENT.</head>
 
-<argument><p>I. The Persians attack the Romans on their march, but are gallantly
+<div type="textpart" subtype="argument"><p>I. The Persians attack the Romans on their march, but are gallantly
 repelled.&mdash;II. The army is distressed by want of corn and forage;
 Julian is alarmed by prodigies.&mdash;III. The emperor, while, in order
 to repulse the Persians, who pressed him on all quarters, he
@@ -15825,7 +15842,7 @@ Amida&mdash;Five provinces, with the city of Singara, and sixteen
 fortresses, are, according to the terms of the treaty, handed over
 to the Persian nobles. X Jovian, fearing a revolution, marches
 with great speed through Syria, Cilicia, Cappadocia, and Galatia,
-and at Ancyra enters on the consulship, with his infant son Varronianus, and soon afterwards dies suddenly at Dadastana.</p></argument>
+and at Ancyra enters on the consulship, with his infant son Varronianus, and soon afterwards dies suddenly at Dadastana.</p></div>
 
 
 
@@ -17162,7 +17179,7 @@ above.</p>
 
 <head>ARGUMENT.</head>
 
-<argument><p>I. Valentinian, the tribune of the second school of the Scutarii, by the
+<div type="textpart" subtype="argument"><p>I. Valentinian, the tribune of the second school of the Scutarii, by the
 unanimous consent of both the civil and military officers, is elected
 emperor at Nic&aelig;a, in his absence&mdash;A dissertation on leap-year.&mdash;
 II. Valentinian, being summoned from Ancyra, comes with
@@ -17187,7 +17204,7 @@ Bithynia acknowledges the sovereignty of Procopius; as presently,
 after Cyzicus is stormed, the Hellespont does likewise.&mdash;IX. Procopius is deserted by his troops in Bithynia, Lycia, and Phrygia,
 is delivered alive to Valens, and beheaded.&mdash;X. Marcellus, a
 captain of the guard, his kinsman, and many of his partisans are
-put to death.</p></argument>
+put to death.</p></div>
 
 
 
@@ -18433,7 +18450,7 @@ where it had been driven.</p>
 
 <head>ARGUMENT.</head>
 
-<argument><p><milestone unit="section" n="1"/>The Allemanni having defeated the Romans, put the counts Chari-
+<div type="textpart" subtype="argument"><p><milestone unit="section" n="1"/>The Allemanni having defeated the Romans, put the counts Chari-
 etto and Severianus to death.&mdash;II. Jovinus, the commander of tile
 cavalry in Gaul, surprises and routs two divisions of the Allemanni;
 defeats a third army in the country of the Catalauni, the enemy
@@ -18458,7 +18475,7 @@ attended with heavy loss to both sides, defeats and routs the
 Allemanni, who had taken refuge in their highest mountains.&mdash;
 XI. On the high family, wealth, dignity, and character of Probus
 &mdash;XII. The Romans and Persians quarrel about the possession of
-Armenia and Iberia.</p></argument>
+Armenia and Iberia.</p></div>
 
 
 
@@ -19765,7 +19782,7 @@ the Romans had made with a view to their own interests.</p>
 
 <head>ARGUMENT.</head>
 
-<argument><p>I. Many persons, even senators and women of senatorial family are
+<div type="textpart" subtype="argument"><p>I. Many persons, even senators and women of senatorial family are
 accused at Rome of poisonings, adultery, and debauchery, and are
 punished.&mdash;II. The Emperor Valentinian fortifies the whole Gallic
 bank of the Rhine with forts, castles, and towers; the Allemanni
@@ -19784,7 +19801,7 @@ invade Germany; but they, finding themselves tricked and deceived, put all their
 VI. The ravages inflicted in the province of Tripoli, and on the
 people of Leptis and &OElig;a, by the Asturians, are concealed from
 Valentinian by the bad faith of the Roman count; and so are not
-properly avenged.</p></argument>
+properly avenged.</p></div>
 
 
 
@@ -21235,7 +21252,7 @@ hanged himself, as we shall relate in the proper place.</p>
 
 <head>ARGUMENT.</head>
 
-<argument><p>I. Theodorus, the secretary, aims at the imperial authority, and being
+<div type="textpart" subtype="argument"><p>I. Theodorus, the secretary, aims at the imperial authority, and being
 accused of treason before Valens at Antioch, and convicted, is
 executed, with many of his accomplices.&mdash;II. In the East many
 persons are informed against as guilty of poisoning and other
@@ -21252,7 +21269,7 @@ VI. The Quadi, being provoked by the wicked murder of their
 king Galerius, in conjunction with the Sarmatians, lay waste both
 the Pannonias and Valeria with tire and sword, and destroy almost
 the whole of two legions&mdash;A dissertation on the city prefecture of
-Claudius.</p></argument>
+Claudius.</p></div>
 
 
 
@@ -22454,7 +22471,7 @@ Basur&aelig;, the Cautauriani, the Anastomates, the Cafaves, the
 Davares, and other people in their neighbourhood, trying
 to bring them over to our alliance, either by presents,
 threats, or by promises of pardon for past violence.
-<gap/> seeking by delays and intrigues to crush an enemy
+<gap reason="undefined"/> seeking by delays and intrigues to crush an enemy
 who offered so stout a resistance to his attacks, just as
 Pompey in times past had subdued Mithridates.</p>
 <p><milestone unit="section" n="34"/>On this account Firmus, avoiding immediate destruction, although he was strengthened by a large body of
@@ -22888,7 +22905,7 @@ title is close to it.</p></div2></div1>
 
 <head>ARGUMENT.</head>
 
-<argument><p>I. Para, king of Armenia, being summoned by Valens to Tarsus, and
+<div type="textpart" subtype="argument"><p>I. Para, king of Armenia, being summoned by Valens to Tarsus, and
 being detained there under pretence of doing him honour, escapes
 with three hundred of his countrymen; and having baffled the
 sentinels on the roads, he regains his kingdom on horseback; but
@@ -22908,7 +22925,7 @@ passion, to the ambassadors of the Quadi, who are trying to excuse
 their countrymen, bursts a blood-vessel, and dies.&mdash;VII. Who his
 father was, and what was his conduct as emperor.&mdash;VIII. His
 cruelty, avarice, envy, and cowardice.&mdash;IX. His virtues.&mdash;X. Valentinian the younger, the son of Valentinian, is saluted as emperor in
-the camp at Bregetio.</p></argument>
+the camp at Bregetio.</p></div>
 
 
 
@@ -24234,7 +24251,7 @@ and brought him up with great care.</p></div2></div1>
 
 <head>ARGUMENT.</head>
 
-<argument><p>I. Omens announcing the death of the Emperor Valens, and a disaster
+<div type="textpart" subtype="argument"><p>I. Omens announcing the death of the Emperor Valens, and a disaster
 to be inflicted by the Gauls.&mdash;II. A description of the abodes and
 customs of the Huns, the Alani, and other tribes, natives of Asiatic
 Scythia.&mdash;III. The Huns, either by arms or by treaties, unite the
@@ -24283,7 +24300,7 @@ means to take the city, without success, they at last retire.&mdash;
 XVI. The Goths, having by bribes won over the forces of the
 Huns and of the Alani to join them, make an attack upon Constantinople without success. The device by which Julius, the
 commander of tile forces beyond Mount Taurus, delivered the
-eastern provinces from the Goths.</p></argument>
+eastern provinces from the Goths.</p></div>
 
 
 

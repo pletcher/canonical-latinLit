@@ -36,7 +36,7 @@
                                 <publisher>Weidmannsche Buchhandlung</publisher>
                                 <date>1873</date>
                             </imprint>
-                            <biblScope type="volume">8</biblScope>
+                            <biblScope unit="volume">8</biblScope>
                         </monogr>
                     </biblStruct>
                 </listBibl>
@@ -48,9 +48,21 @@
                 <refState unit="chapter" delim="."/>
                 <refState unit="section"/>
             </refsDecl>
+                <refsDecl n="CTS">
+                	<cRefPattern n="chapter"
+                		matchPattern="(\w+).(\w+)"
+                		replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@subtype='book'][@n='$1']/.//tei:milestone[@unit='chapter'][@n='$2'])">
+                		<p>This pointer pattern extracts book and chapter</p>
+                	</cRefPattern>
+                	<cRefPattern n="book"
+                		matchPattern="(\w+)"
+                		replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@subtype='book'][@n='$1'])">
+                		<p>This pointer pattern extracts book</p>
+                	</cRefPattern>
+                </refsDecl>
                 <refsDecl xml:id="CTS">
                   <citeStructure match="/TEI/text/body" use="@xml:base">
-                    <citeStructure match="div[@type='book']" use="@n" unit="book" delim=":">
+                    <citeStructure match="div/div[@subtype='book']" use="@n" unit="book" delim=":">
                       <citeStructure match=".//milestone[@unit='chapter']" use="@n" unit="chapter" delim="." n="chunk"/>
                     </citeStructure>
                   </citeStructure>
@@ -79,8 +91,8 @@
         </revisionDesc>
     </teiHeader>
     <text xml:lang="lat">
-        <body xml:base="urn:cts:latinLit:phi0914.phi00138.perseus-lat1">
-            <div part="N" sample="complete" org="uniform" n="38" type="book">
+        <body xml:base="urn:cts:latinLit:phi0914.phi00138.perseus-lat1"><div type="edition" n="urn:cts:latinLit:phi0914.phi00138.perseus-lat1" xml:lang="lat">
+            <div part="N" sample="complete" org="uniform" n="38" type="textpart" subtype="book">
                 <note anchored="true" place="unspecified">
                     <date>a. u. 565.</date>
                 </note>
@@ -406,7 +418,7 @@
                     </persName> , Laevini filius, qui cum ea gente primum amicitiam pepigerat,
                     consulis frater matre eadem genitus, egregie adiuvit. <milestone n="9"
                         unit="section"/> Ambracienses prius pacti, ut Aetolorum auxiliares sine
-                    fraude emitterent, aperuerunt portas. dein <gap/> quingenta Euboica ut darent
+                    fraude emitterent, aperuerunt portas. dein <gap reason="undefined"/> quingenta Euboica ut darent
                     talenta, ex quibus ducenta praesentia, trecenta per annos sex pensionibus
                     aequis; captivos perfugasque redderent Romanis; <milestone n="10" unit="section"
                     /> urbem ne quam formulae sui iuris facerent, quae post id tempus, quo <persName
@@ -913,7 +925,7 @@
                     elephantis in proxima tumulis planitie reliquit; edictum praefectis, ut intenti,
                     quid ubique geratur, animadvertant opemque ferre, quo postulet res, possint.
                         <milestone n="21" unit="chapter"/>
-                    <milestone n="1" unit="section"/> Galli et <gap/> ab duobus lateribus satis
+                    <milestone n="1" unit="section"/> Galli et <gap reason="undefined"/> ab duobus lateribus satis
                     fidentes invia esse, ab ea parte, quae in meridiem vergeret, ut armis clauderent
                     viam, quattuor milia fere armatorum ad tumulum imminentem viae minus mille
                     passuum a castris occupandum mittunt, eo se rati veluti castello iter
@@ -1232,7 +1244,7 @@
                     <pb n="notedatea" xml:id="vol.8.p.318"/> metus ad omnes valuit, ne deditionem
                     recusarent. obsides inde imperatos <note anchored="true" place="unspecified">
                         <date>a. u. 565.</date>
-                    </note> pro viribus inopes populi <gap/> vicenos autem Cranii et Palenses et
+                    </note> pro viribus inopes populi <gap reason="undefined"/> vicenos autem Cranii et Palenses et
                     Samaei dederunt. <milestone n="7" unit="section"/> insperata pax Cephallaniae
                     adfulserat, cum repente una civitas, incertum quam ob causam, Samaei
                     desciverunt. <milestone n="8" unit="section"/> quia opportuno loco urbs posita
@@ -1688,7 +1700,7 @@
                     Romanis sociisque. <milestone n="8" unit="section"/>
                     <pb n="notedatea" xml:id="vol.8.p.337"/> elephantos tradito omnis neque alios
                     parato. tradito et naves longas armamentaque earum, neu plures quam decem naves
-                    <gap/> actuarias, quarum nulla plus quam <note anchored="true"
+                    <gap reason="undefined"/> actuarias, quarum nulla plus quam <note anchored="true"
                         place="unspecified">
                         <date>a. Ch. 188.</date>
                     </note> triginta remis agatur, habeto, neve monerem [ex] belli causa, quod ipse
@@ -2628,7 +2640,7 @@
                         <forename full="yes">P.</forename>
                         <surname full="yes">Africano</surname>
                     </persName> palmam peteretis ? nullisne meritis suis, <milestone n="4"
-                        unit="section"/> nullis vestris honoribus <gap/> umquam in arcem tutam et
+                        unit="section"/> nullis vestris honoribus <gap reason="undefined"/> umquam in arcem tutam et
                     velut sanctam clari viri pervenient, ubi, si non venerabilis, inviolata saltem
                     senectus eorum considat? <milestone n="5" unit="section"/> “ movit et decretum
                     et adiecta oratio non ceteros modo, sed ipsos etiam accusatores, et
@@ -2648,7 +2660,7 @@
                     morientem rure eo ipso loco sepeliri se iussisse ferunt monumentumque ibi
                     aedificari, ne funus sibi in ingrata patria fieret. <milestone n="9"
                         unit="section"/> vir memorabilis; bellicis tamen quam pacis artibus
-                    memorabilior, <gap/> prima pars vitae quam postrema fuit, quia in iuventa bella
+                    memorabilior, <gap reason="undefined"/> prima pars vitae quam postrema fuit, quia in iuventa bella
                     adsidue gesta, cum senecta res quoque defloruere, nec praebita est materia
                     ingenio. <milestone n="10" unit="section"/> quid ad primum consulatum secundus,
                     etiam si censuram adicias? quid Asiatica legatio, et valetudine adversa inutilis
@@ -3095,6 +3107,6 @@
                     <pb n="vol.8.p.396"/>
                 </p>
             </div>
-        </body>
+        </div></body>
     </text>
 </TEI>

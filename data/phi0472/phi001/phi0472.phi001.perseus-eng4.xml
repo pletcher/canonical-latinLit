@@ -95,8 +95,7 @@
      </teiHeader>
      
      <text xml:lang="eng">
-          <body xml:base="urn:cts:latinLit:phi0472.phi001.perseus-eng4">
-<div type="translation" xml:lang="eng">
+          <body xml:base="urn:cts:latinLit:phi0472.phi001.perseus-eng4"><div n="urn:cts:latinLit:phi0472.phi001.perseus-eng4" type="translation" xml:lang="eng">
                
 <div type="textpart" subtype="poem" xml:base="urn:cts:latinLit:phi0472.phi001.perseus-eng4" n="1">
 <l xml:base="urn:cts:latinLit:phi0472.phi001.perseus-eng4:1" n="1">To whom inscribe my charming new book—just out and with ashen pumice polished? <persName><surname>Cornelius</surname></persName>, to you! for you used to deem my triflings of account, </l>

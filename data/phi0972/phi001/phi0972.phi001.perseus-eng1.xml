@@ -45,6 +45,13 @@
             <refsDecl>
                 <refState unit="section" />
             </refsDecl>
+            <refsDecl n="CTS">
+            	<cRefPattern n="section"
+            		matchPattern="(\w+)"
+            		replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/.//tei:milestone[@unit='section'][@n='$1'])">
+            		<p>This pointer pattern extracts section</p>
+            	</cRefPattern>
+            </refsDecl>
             <refsDecl xml:id="CTS">
                 <citeStructure match="/TEI/text/body" use="@xml:base">
                     <citeStructure unit="section" delim="." match=".//milestone[@unit='section']"
@@ -76,7 +83,7 @@
         </revisionDesc>
     </teiHeader>
     <text xml:lang="eng">
-        <body xml:base="urn:cts:latinLit:phi0972.phi001.perseus-eng1">
+        <body xml:base="urn:cts:latinLit:phi0972.phi001.perseus-eng1"><div type="translation" n="urn:cts:latinLit:phi0972.phi001.perseus-eng1" xml:lang="eng">
             <p><milestone unit="section" n="1" />"Are our rhetoricians tormented by a new tribe of
                 Furies when they cry: 'These scars I earned in the struggle for popular rights; I
                 sacrificed this eye for you: where is a guiding hand to lead me to my children? My
@@ -3912,6 +3919,6 @@
                 bosoms.</quote> . . .</p>
             <pb xml:id="p.325" />
 
-        </body>
+        </div></body>
     </text>
 </TEI>

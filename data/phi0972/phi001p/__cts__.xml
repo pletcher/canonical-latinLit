@@ -1,0 +1,7 @@
+<work xmlns="http://chs.harvard.edu/xmlns/cts" groupUrn="urn:cts:latinLit:phi0972" urn="urn:cts:latinLit:phi0972.phi001p" xml:lang="lat">
+	<title xml:lang="lat">Petronius</title>
+	<edition urn="urn:cts:latinLit:phi0972.phi001p.perseus-lat1" workUrn="urn:cts:latinLit:phi0972.phi001p" xml:lang="lat">
+		<label xml:lang="lat">Petronius</label>
+		<description xml:lang="eng">Petronius Arbiter. Petronius. Michael Heseltine, editor. London: William Heinemann, 1913.</description>
+	</edition>
+</work>

@@ -95,8 +95,7 @@
 
 
    <text xml:lang="eng">
-      <body xml:base="urn:cts:latinLit:phi0893.phi001.perseus-eng2">
-         <div xml:lang="eng" type="translation">
+      <body xml:base="urn:cts:latinLit:phi0893.phi001.perseus-eng2"><div n="urn:cts:latinLit:phi0893.phi001.perseus-eng2" xml:lang="eng" type="translation">
 
             <div type="textpart" n="1" subtype="book">
                <div type="textpart" n="1" met="abba" subtype="poem">

@@ -45,7 +45,7 @@
                                 <publisher>John Child and son, printers, Bungay</publisher>
                                 <date>1850</date>
                             </imprint>
-                            <biblScope type="volume">3</biblScope>
+                            <biblScope unit="volume">3</biblScope>
                         </monogr>
                     </biblStruct>
                 </listBibl>
@@ -56,9 +56,21 @@
                 <refState unit="book"/>
                 <refState unit="chapter" n="chunk"/>
             </refsDecl>
+                <refsDecl n="CTS">
+                	<cRefPattern n="chapter"
+                		matchPattern="(\w+).(\w+)"
+                		replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@subtype='book'][@n='$1']/.//tei:milestone[@unit='chapter'][@n='$2'])">
+                		<p>This pointer pattern extracts book and chapter</p>
+                	</cRefPattern>
+                	<cRefPattern n="book"
+                		matchPattern="(\w+)"
+                		replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@subtype='book'][@n='$1'])">
+                		<p>This pointer pattern extracts book</p>
+                	</cRefPattern>
+                </refsDecl>
                 <refsDecl xml:id="CTS">
                   <citeStructure match="/TEI/text/body" use="@xml:base">
-                    <citeStructure match="div[@type='book']" use="@n" unit="book" delim=":">
+                    <citeStructure match="div/div[@subtype='book']" use="@n" unit="book" delim=":">
                       <citeStructure match=".//milestone[@unit='chapter']" use="@n" unit="chapter" delim="." n="chunk"/>
                     </citeStructure>
                   </citeStructure>
@@ -88,10 +100,10 @@
         </revisionDesc>
     </teiHeader>
     <text xml:lang="eng">
-        <body xml:base="urn:cts:latinLit:phi0914.phi00131.perseus-eng2">
-            <div part="N" sample="complete" org="uniform" n="31" type="book">
+        <body xml:base="urn:cts:latinLit:phi0914.phi00131.perseus-eng2"><div type="translation" n="urn:cts:latinLit:phi0914.phi00131.perseus-eng2" xml:lang="eng">
+            <div part="N" sample="complete" org="uniform" n="31" type="textpart" subtype="book">
                 <head>BOOK XXXI.</head>
-                <argument>
+                <div type="textpart" subtype="argument">
                     <p> Renewal of the war with Philip, king of Macedon. Successes of Publius
                         Sulpicius, consul, who had the conduct of that war. The Abydenians, besieged
                         by Philip, put themselves to death, together with their wives and children.
@@ -99,7 +111,7 @@
                         Hamilcar, who stirred up the insurrection, is slain, with thirty-five
                         thousand men. Further operations of Sulpicius, Attalus, and the Rhodians
                         against Philip. </p>
-                </argument>
+                </div>
                 <milestone n="1" unit="chapter"/>
                 <p>
                     <milestone n="1" unit="section"/> IT is delightful even to me to have come to
@@ -2182,6 +2194,6 @@
                     retire from the province; the commons ordered Cneius Cornelius Lentulus and
                     Lucius Stertinius, proconsuls, to command in Spain. </p>
             </div>
-        </body>
+        </div></body>
     </text>
 </TEI>

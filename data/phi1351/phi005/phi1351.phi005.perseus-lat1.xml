@@ -6,7 +6,7 @@
 %PersProse;
 ]>
 <TEI.2>
-  <teiHeader status="new">
+  <teiHeader>
     <fileDesc>
       <titleStmt>
 	<title>Annales</title>
@@ -46,6 +46,18 @@
         <state unit="book"/>
         <state n="chunk" unit="chapter"/>
       </refsDecl>
+        <refsDecl xmlns="http://www.tei-c.org/ns/1.0" n="CTS">
+        	<cRefPattern n="chapter"
+        		matchPattern="(\w+).(\w+)"
+        		replacementPattern="#xpath(/TEI.2/text/body/div1[@type='book'][@n='$1']/.//milestone[@unit='chapter'][@n='$2'])">
+        		<p>This pointer pattern extracts book and chapter</p>
+        	</cRefPattern>
+        	<cRefPattern n="book"
+        		matchPattern="(\w+)"
+        		replacementPattern="#xpath(/TEI.2/text/body/div1[@type='book'][@n='$1'])">
+        		<p>This pointer pattern extracts book</p>
+        	</cRefPattern>
+        </refsDecl>
         <refsDecl xml:id="CTS">
           <citeStructure match="/TEI/text/body" use="@xml:base">
             <citeStructure match="div1[@type='book']" use="@n" unit="book" delim=":">
@@ -1414,7 +1426,7 @@ caedibus perfidiam ultus est.
 eius in ripa cum ceteris primoribus Arminius adstitit, quaesitoque an Caesar venisset, postquam adesse responsum est, 
 ut liceret cum fratre conloqui oravit. erat is in exercitu 
 cognomento Flavus, insignis fide et amisso per vulnus oculo 
-paucis ante annis duce Tiberio. tum permissu<gap/>progressusque salutatur ab Arminio; qui amotis stipatoribus, ut 
+paucis ante annis duce Tiberio. tum permissu<gap reason="undefined"/>progressusque salutatur ab Arminio; qui amotis stipatoribus, ut 
 sagittarii nostra pro ripa dispositi abscederent postulat, et 
 postquam digressi, unde ea deformitas oris interrogat fratrem. illo locum et proelium referente, quodnam praemium 
 recepisset exquirit. Flavus aucta stipendia, torquem et 
@@ -2684,7 +2696,7 @@ arguentes. quippe absurdum videbatur inter aliena servitia
 et tot adstantium visu, ipso Germanico coram, id ausum; offerebatque familiam reus et ministros in tormenta flagitabat. 
 sed iudices per diversa implacabiles erant, Caesar ob bellum 
 provinciae inlatum, senatus numquam satis credito sine 
-fraude Germanicum interisse.<gap/>scripsissent expostulantes, 
+fraude Germanicum interisse.<gap reason="undefined"/>scripsissent expostulantes, 
 quod haud minus Tiberius quam Piso abnuere. simul populi 
 ante curiam voces audiebantur: non temperaturos manibus 
 si patrum sententias evasisset. effigiesque Pisonis traxerant in Gemonias ac divellebant, ni iussu principis protectae 
@@ -2713,7 +2725,7 @@ amicos eius dictitavisse, litteras Tiberii et mandata in Germanicum contineri, a
 principemque arguere, ni elusus a Seiano per vana promissa foret; nec illum sponte extinctum verum immisso percussore. quorum neutrum adseveraverim: neque tamen 
 occulere debui narratum ab iis qui nostram ad iuventam 
 duraverunt. Caesar flexo in maestitiam ore suam invidiam 
-tali morte quaesitam apud senatum  <gap/> crebrisque interrogationibus exquirit qualem Piso diem supremum noctemque <pb ed="oct"/> 
+tali morte quaesitam apud senatum  <gap reason="undefined"/> crebrisque interrogationibus exquirit qualem Piso diem supremum noctemque <pb ed="oct"/> 
 exegisset. atque illo pleraque sapienter quaedam inconsultius respondente, recitat codicillos a Pisone in hunc 
 ferme modum compositos: 'conspiratione inimicorum et 
 invidia falsi criminis oppressus, quatenus veritati et innocentiae meae nusquam locus est, deos inmortalis testor 
@@ -3148,7 +3160,7 @@ omnis cremavit.
 virtute legatos, se consiliis superfuisse. simul causas cur 
 non ipse, non Drusus profecti ad id bellum forent, adiunxit, 
 magnitudinem imperii extollens, neque decorum principibus, 
-si una alterave civitas turbet<gap/>omissa urbe, unde in omnia 
+si una alterave civitas turbet<gap reason="undefined"/>omissa urbe, unde in omnia 
 regimen. nunc quia non metu ducatur iturum ut praesentia spectaret componeretque. decrevere patres vota pro 
 reditu eius supplicationesque et alia decora. solus Dolabella 
 Cornelius dum antire ceteros parat absurdam in adulationem progressus, censuit ut ovans e Campania urbem introiret. 
@@ -4399,7 +4411,7 @@ silentii impatientiam.
 <milestone n="53" unit="chapter"/></p>
 <p>At Agrippina pervicax irae et morbo corporis implicata, cum viseret eam Caesar, profusis diu ac per silentium 
 lacrimis, mox invidiam et preces orditur: subveniret solitudini, daret maritum; habilem adhuc iuventam sibi neque 
-aliud probis quam ex matrimonio solacium; esse in civitate,<gap/>Germanici coniugem ac liberos eius recipere 
+aliud probis quam ex matrimonio solacium; esse in civitate,<gap reason="undefined"/>Germanici coniugem ac liberos eius recipere 
 dignarentur. sed Caesar non ignarus quantum ex re publica peteretur, ne tamen offensionis aut metus manifestus 
 foret sine responso quamquam instantem reliquit. id ego, 
 a scriptoribus annalium non traditum, repperi in commentariis Agrippinae filiae quae Neronis principis mater vitam 
@@ -4796,12 +4808,12 @@ pro vexillis secuti forent, duces imperatoresque deligerent?
 probris increpitaque per edictum plebe, questus apud patres 
 quod fraude unius senatoris imperatoria maiestas elusa 
 publice foret, integra tamen sibi cuncta postulavit. nec 
-ultra deliberatum quo minus non quidem extrema decernerent (id enim vetitum), sed paratos ad ultionem vi principis impediri testarentur <gap/> </p></div1>
+ultra deliberatum quo minus non quidem extrema decernerent (id enim vetitum), sed paratos ad ultionem vi principis impediri testarentur <gap reason="undefined"/> </p></div1>
 <div1 type="book" n="5(6)">
 <head>LIBER VI</head>
 <milestone n="6" unit="chapter"/>
-<p> <gap/> Quattuor et quadraginta orationes super ea re 
-habitae, ex quis ob metum paucae, plures adsuetudine  <gap/>  <gap/> 'mihi pudorem aut Seiano invidiam adlaturum censui. 
+<p> <gap reason="undefined"/> Quattuor et quadraginta orationes super ea re 
+habitae, ex quis ob metum paucae, plures adsuetudine  <gap reason="undefined"/>  <gap reason="undefined"/> 'mihi pudorem aut Seiano invidiam adlaturum censui. 
 versa est fortuna et ille quidem qui collegam et generum 
 adsciverat sibi ignoscit: ceteri quem per dedecora fovere 
 cum scelere insectantur. miserius sit ob amicitiam accusari 
@@ -5457,7 +5469,7 @@ impositus, nullam ob eximiam artem sed quod par negotiis
 neque supra erat.
 <milestone n="40" unit="chapter"/></p>
 <p>Quintus Plautius Sex. Papinius consules sequuntur. 
-eo anno neque quod L. Aruseius<gap/>morte adfecti forent, 
+eo anno neque quod L. Aruseius<gap reason="undefined"/>morte adfecti forent, 
 adsuetudine malorum ut atrox advertebatur, sed exterruit 
 quod Vibulenus Agrippa eques Romanus, cum perorassent 
 accusatores, in ipsa curia depromptum sinu venenum hausit 
@@ -5650,7 +5662,7 @@ utebatur.
 <div1 type="book" n="11">
 <head>LIBER XI</head>
 <milestone n="1" unit="chapter"/>
-<p>*<gap/>nam Valerium Asiaticum, bis consulem, fuisse 
+<p>*<gap reason="undefined"/>nam Valerium Asiaticum, bis consulem, fuisse 
 quondam adulterum eius credidit, pariterque hortis inhians, 
 quos ille a Lucullo coeptos insigni magnificentia extollebat, 
 Suillium accusandis utrisque immittit. adiungitur Sosibius 
@@ -6986,7 +6998,7 @@ senatus consultum quo libertinus sestertii ter milies possessor antiquae parsimo
 <milestone n="54" unit="chapter"/></p>
 <p>At non frater eius, cognomento Felix, pari moderatione agebat, iam pridem Iudaeae impositus et cuncta 
 malefacta sibi impune ratus tanta potentia subnixo. sane 
-praebuerant Iudaei speciem motus orta seditione, postquam<gap/>cognita caede eius haud obtemperatum esset, 
+praebuerant Iudaei speciem motus orta seditione, postquam<gap reason="undefined"/>cognita caede eius haud obtemperatum esset, 
 manebat metus ne quis principum eadem imperitaret. 
 atque interim Felix intempestivis remediis delicta accendebat, aemulo ad deterrima Ventidio <add>Cumano</add>, cui pars 
 provinciae habebatur, ita divisis ut huic Galilaeorum natio, 
@@ -9056,7 +9068,7 @@ pro incerta et trepida vita suasisse. repertus est certe per
 medium diei nudus exercitando corpori. talem eum centurio 
 trucidavit coram Pelagone spadone quem Nero centurioni 
 et manipulo, quasi satellitibus ministrum regium, praeposuerat. caput interfecti relatum; cuius aspectu (ipsa principis 
-verba referam) 'cur', inquit, 'Nero<gap/>' et posito metu nuptias Poppaeae ob eius modi terrores dilatas maturare parat 
+verba referam) 'cur', inquit, 'Nero<gap reason="undefined"/>' et posito metu nuptias Poppaeae ob eius modi terrores dilatas maturare parat 
 Octaviamque coniugem amoliri, quamvis modeste ageret, 
 nomine patris et studiis populi gravem. sed ad senatum 
 litteras misit de caede Sullae Plautique haud confessus, 
@@ -9077,7 +9089,7 @@ domumque Burri, praedia Plauti, infausta dona accipit:
 mox in Campaniam pulsa est addita militari custodia. inde 
 crebri questus nec occulti per vulgum, cui minor sapientia 
 <add>et</add> ex mediocritate fortunae pauciora pericula sunt. his 
- <gap/> tamquam Nero paenitentia flagitii coniugem revocarit 
+ <gap reason="undefined"/> tamquam Nero paenitentia flagitii coniugem revocarit 
 Octaviam.
 <milestone n="61" unit="chapter"/></p>
 <p>Exim laeti Capitolium scandunt deosque tandem 
@@ -9446,7 +9458,7 @@ sestertium rei publicae largiri.
 <p>Percrebuerat ea tempestate pravus mos, cum 
 propinquis comitiis aut sorte provinciarum plerique orbi 
 fictis adoptionibus adsciscerent filios, praeturasque et provincias inter patres sortiti statim emitterent manu quos 
-adoptaverant <gap/> magna cum invidia senatum adeunt, ius 
+adoptaverant <gap reason="undefined"/> magna cum invidia senatum adeunt, ius 
 naturae, labores educandi adversus fraudem et artes et 
 brevitatem adoptionis enumerant. satis pretii esse orbis 
 quod multa securitate, nullis oneribus gratiam honores 
@@ -10229,7 +10241,7 @@ ipsius advolvi et dextram osculis fatigare. atque ille gaudium id credens Antoni
 indicia impunitate remuneratur. Milichus praemiis ditatus 
 conservatoris sibi nomen, Graeco eius rei vocabulo, adsumpsit. e tribunis Gavius Silvanus quamvis absolutus sua 
 manu cecidit; Statius Proxumus veniam quam ab imperatore acceperat vanitate exitus corrupit. exuti dehinc 
-tribunatu<gap/>Pompeius, Cornelius Martialis, Flavius Nepos 
+tribunatu<gap reason="undefined"/>Pompeius, Cornelius Martialis, Flavius Nepos 
 Statius Domitius, quasi principem non quidem odissent sed 
 tamen existimarentur. Novio Prisco per amicitiam Senecae 
 et Glitio Gallo atque Annio Pollioni infamatis magis quam 
@@ -10250,13 +10262,13 @@ sine pretio frumentum, quo ante ex modo annonae utebantur. tum quasi gesta bello
 et triumphale decus Petronio Turpiliano consulari, Cocceio 
 Nervae praetori designato, Tigellino praefecto praetorii 
 tribuit, Tigellinum et Nervam ita extollens ut super triumphalis in foro imagines apud Palatium quoque effigies 
-eorum sisteret. consularia insignia Nymphidio<gap/>quia 
+eorum sisteret. consularia insignia Nymphidio<gap reason="undefined"/>quia 
 nunc primum oblatus est, pauca repetam: nam et ipse 
 pars Romanarum cladium erit. igitur matre libertina ortus 
 quae corpus decorum inter servos libertosque principum 
 vulgaverat, ex G. Caesare se genitum ferebat, quoniam forte 
 quadam habitu procerus et torvo vultu erat, sive G. Caesar, 
-scortorum quoque cupiens, etiam matri eius inlusit<gap/>
+scortorum quoque cupiens, etiam matri eius inlusit<gap reason="undefined"/>
 <milestone n="73" unit="chapter"/></p>
 <p>Sed Nero vocato senatu, oratione inter patres 
 habita, edictum apud populum et conlata in libros indicia 
@@ -10278,7 +10290,7 @@ in quo facinus parabatur, qui occulta coniurationis numine
 retexisset; utque circensium Cerealium ludicrum pluribus 
 equorum cursibus celebraretur mensisque Aprilis Neronis 
 cognomentum acciperet; templum Saluti extrueretur eo loci 
-*<gap/>ex quo Scaevinus ferrum prompserat. ipse eum pugionem apud Capitolium sacravit inscripsitque Iovi Vindici: in 
+*<gap reason="undefined"/>ex quo Scaevinus ferrum prompserat. ipse eum pugionem apud Capitolium sacravit inscripsitque Iovi Vindici: in 
 praesens haud animadversum; post arma Iulii Vindicis ad 
 auspicium et praesagium futurae ultionis trahebatur. reperio 
 in commentariis senatus Cerialem Anicium consulem 
@@ -10741,6 +10753,6 @@ humum super spargens, propius vocato quaestore 'libamus'
 inquit 'Iovi liberatori. specta, iuvenis; et omen quidem dii 
 prohibeant, ceterum in ea tempora natus es quibus firmare 
 animum expediat constantibus exemplis.' post lentitudine 
-exitus gravis cruciatus adferente, obversis in Demetrium<gap/></p></div1>
+exitus gravis cruciatus adferente, obversis in Demetrium<gap reason="undefined"/></p></div1>
 </body></text>
 </TEI.2>

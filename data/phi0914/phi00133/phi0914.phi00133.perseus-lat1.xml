@@ -37,7 +37,7 @@
                                 <publisher>Weidmannsche Buchhandlung</publisher>
                                 <date>1883</date>
                             </imprint>
-                            <biblScope type="volume">7.2</biblScope>
+                            <biblScope unit="volume">7.2</biblScope>
                         </monogr>
                     </biblStruct>
                 </listBibl>
@@ -49,9 +49,21 @@
                 <refState unit="chapter" delim="."/>
                 <refState unit="section"/>
             </refsDecl>
+                <refsDecl n="CTS">
+                	<cRefPattern n="chapter"
+                		matchPattern="(\w+).(\w+)"
+                		replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@subtype='book'][@n='$1']/.//tei:milestone[@unit='chapter'][@n='$2'])">
+                		<p>This pointer pattern extracts book and chapter</p>
+                	</cRefPattern>
+                	<cRefPattern n="book"
+                		matchPattern="(\w+)"
+                		replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@subtype='book'][@n='$1'])">
+                		<p>This pointer pattern extracts book</p>
+                	</cRefPattern>
+                </refsDecl>
                 <refsDecl xml:id="CTS">
                   <citeStructure match="/TEI/text/body" use="@xml:base">
-                    <citeStructure match="div[@type='book']" use="@n" unit="book" delim=":">
+                    <citeStructure match="div/div[@subtype='book']" use="@n" unit="book" delim=":">
                       <citeStructure match=".//milestone[@unit='chapter']" use="@n" unit="chapter" delim="." n="chunk"/>
                     </citeStructure>
                   </citeStructure>
@@ -77,8 +89,8 @@
         --><change when="2014-10-09" who="Stella Dee">edited markup</change> </revisionDesc>
     </teiHeader>
     <text xml:lang="lat">
-        <body xml:base="urn:cts:latinLit:phi0914.phi00133.perseus-lat1">
-            <div part="N" sample="complete" org="uniform" n="33" type="book">
+        <body xml:base="urn:cts:latinLit:phi0914.phi00133.perseus-lat1"><div type="edition" n="urn:cts:latinLit:phi0914.phi00133.perseus-lat1" xml:lang="lat">
+            <div part="N" sample="complete" org="uniform" n="33" type="textpart" subtype="book">
                 <pb n="vol.7.2.p.1"/>
                 <p>
                     <milestone n="1" unit="chapter"/>
@@ -319,7 +331,7 @@
                     <milestone n="8" unit="chapter"/>
                     <milestone n="1" unit="section"/>
                     laetior res quam pro successu pugnae nuntiata, cum alii super alios recurrentes ex proelio clamarent fugere pavidos Romanos, invitum et cunctabundum et dicentem
-                    <gap/>
+                    <gap reason="undefined"/>
                     temere fieri,
                     <milestone n="2" unit="section"/>
                     non locum sibi placere, non tempus, perpulit, ut educeret omnes copias in aciem.
@@ -589,7 +601,7 @@
                     inde extemplo per Phliasiorum fines nocte Cleonas insciis omnibus, quid pararet, pervenit.
                     <milestone n="12" unit="section"/>
                     erant autem cum eo quinque milia peditum, ex quibus
-                    <gap/>
+                    <gap reason="undefined"/>
                     armaturae levis, et trecenti equites. cum iis copiis, dimissis qui specularentur, quam in partem hostes effunderent sese, opperiebatur.
                     <milestone n="15" unit="chapter"/>
                     <milestone n="1" unit="section"/>
@@ -1688,7 +1700,7 @@
                         <date>a. Chr. n. 196.</date>
                     </note>
                     urbana est missus, alios
-                    <gap/>
+                    <gap reason="undefined"/>
                     ,
                     <hi rend="italics">alios</hi>
                     iam congregatos pugnando vicit;
@@ -2460,6 +2472,6 @@
                     reiecit.
                 </p>
             </div>
-        </body>
+        </div></body>
     </text>
 </TEI>

@@ -95,8 +95,7 @@
     </revisionDesc>
   </teiHeader>
   <text xml:lang="lat">
-    <body xml:base="urn:cts:latinLit:phi1348.abo011.rolfe-lat1">
-      <div xml:lang="lat" type="edition">
+    <body xml:base="urn:cts:latinLit:phi1348.abo011.rolfe-lat1"><div n="urn:cts:latinLit:phi1348.abo011.rolfe-lat1" xml:lang="lat" type="edition">
 <div type="textpart" subtype="chapter" xml:base="urn:cts:latinLit:phi1348.abo011.rolfe-lat1" n="1">
 <div type="textpart" subtype="section" xml:base="urn:cts:latinLit:phi1348.abo011.rolfe-lat1:1" n="1">
 <gap rend="* * * * * * * * " reason="lost"/> <pb n="p.2"/> <note resp="editor" xml:lang="mul">See p. xxi.</note> <p rend="align(indent)">Annum agens sextum decimum patrem amisit; sequentibusque consulibus flamen Dialis destinatus dimissa Cossutia, quae familia equestri sed admodum dives praetextato desponsata fuerat, Corneliam Cinnae quater consulis filiam duxit uxorem, ex qua illi mox Iulia nata est; neque ut repudiaret compelli a dictatore Sulla ullo modo potuit.</p> </div>

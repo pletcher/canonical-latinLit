@@ -111,8 +111,7 @@
 <change when="1997-07-03" who="KW">Scanne, proofread and tagged by KW. Assembled and massaged by WM July 1997. Needs line nos and decapitalize initial letters of a line not preceded by *</change>
 </revisionDesc>
 </teiHeader>     
-<text xml:lang="eng"><body xml:base="urn:cts:latinLit:phi0959.phi006.perseus-eng3">
-<div type="translation" xml:lang="eng">
+<text xml:lang="eng"><body xml:base="urn:cts:latinLit:phi0959.phi006.perseus-eng3"><div n="urn:cts:latinLit:phi0959.phi006.perseus-eng3" type="translation" xml:lang="eng">
 <div type="textpart" subtype="book" n="1"><head>BOOK 1</head>
 <div type="textpart" subtype="card" n="1">
 <milestone ed="Magnus" n="Invocatio." unit="tale"/>

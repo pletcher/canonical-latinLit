@@ -137,8 +137,7 @@
 </teiHeader>
 
 <text xml:lang="lat">
-<body xml:base="urn:cts:latinLit:phi0448.phi001.perseus-lat2">
-<div type="edition"  xml:lang="lat">
+<body xml:base="urn:cts:latinLit:phi0448.phi001.perseus-lat2"><div n="urn:cts:latinLit:phi0448.phi001.perseus-lat2" type="edition"  xml:lang="lat">
 <div n="1" type="textpart" subtype="book" xml:base="urn:cts:latinLit:phi0448.phi001.perseus-lat2">
 <head>COMMENTARIUS PRIMUS</head>
 <div  type="textpart" subtype="chapter" xml:base="urn:cts:latinLit:phi0448.phi001.perseus-lat2:1" n="1">

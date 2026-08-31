@@ -6,7 +6,7 @@
 %PersProse;
 ]>
 <TEI.2>
-  <teiHeader status="new">
+  <teiHeader>
     <fileDesc>
       <titleStmt>
       	<title>Dialogus de Oratoribus</title>
@@ -45,6 +45,18 @@
         <state n="chunk" unit="chapter"/>
         <state unit="section"/>
       </refsDecl>
+        <refsDecl xmlns="http://www.tei-c.org/ns/1.0" n="CTS">
+        	<cRefPattern n="section"
+        		matchPattern="(\w+).(\w+)"
+        		replacementPattern="#xpath(/TEI.2/text/body/div1[@type='chapter'][@n='$1']/div2[@type='section'][@n='$2'])">
+        		<p>This pointer pattern extracts chapter and section</p>
+        	</cRefPattern>
+        	<cRefPattern n="chapter"
+        		matchPattern="(\w+)"
+        		replacementPattern="#xpath(/TEI.2/text/body/div1[@type='chapter'][@n='$1'])">
+        		<p>This pointer pattern extracts chapter</p>
+        	</cRefPattern>
+        </refsDecl>
         <refsDecl xml:id="CTS">
           <citeStructure match="/TEI/text/body" use="@xml:base">
             <citeStructure match="div1[@type='chapter']" use="@n" unit="chapter" delim=":" n="chunk">
@@ -715,7 +727,7 @@ videntur verum dixisse: sed mox ad singulos veniam, nunc
 mihi cum universis negotium est. </p></div2></div1>
 <div1 type="chapter" n="19">
 <div2 type="section" n="1">
-<p>Nam quatenus antiquorum admiratores hunc velut terminum antiquitatis constituere solent, qui usque ad Cassium<gap/>, 
+<p>Nam quatenus antiquorum admiratores hunc velut terminum antiquitatis constituere solent, qui usque ad Cassium<gap reason="undefined"/>, 
 quem reum faciunt, quem primum adfirmant flexisse ab 
 illa vetere atque directa dicendi via, non infirmitate ingenii 
 nec inscitia litterarum transtulisse se ad aliud dicendi genus
@@ -797,7 +809,7 @@ marmore nitent et auro radiantur? </p></div2></div1>
 <div1 type="chapter" n="21">
 <div2 type="section" n="1">
 <p>Equidem fatebor vobis simpliciter me in quibusdam antiquorum vix risum, in quibusdam autem vix somnum tenere. 
-nec unum de populo Canuti aut Atti  <gap/> de Furnio et Toranio quique alios in eodem valetudinario haec ossa et hanc 
+nec unum de populo Canuti aut Atti  <gap reason="undefined"/> de Furnio et Toranio quique alios in eodem valetudinario haec ossa et hanc 
 maciem probant: ipse mihi Calvus, cum unum et viginti, ut 
 puto, libros reliquerit, vix in una et altera oratiuncula satis
 </p></div2>
@@ -1422,10 +1434,10 @@ declamatio quoque adhibeatur. sic fit ut tyrannicidarum
 praemia aut vitiatarum electiones aut pestilentiae remedia 
 aut incesta matrum aut quidquid in schola cotidie agitur, in 
 foro vel raro vel numquam, ingentibus verbis persequantur: 
-cum ad veros iudices ventum  <gap/> </p></div2></div1>
+cum ad veros iudices ventum  <gap reason="undefined"/> </p></div2></div1>
 <div1 type="chapter" n="36">
 <div2 type="section" n="1">
-<p> <gap/> rem cogitant. nihil humile, nihil abiectum eloqui 
+<p> <gap reason="undefined"/> rem cogitant. nihil humile, nihil abiectum eloqui 
 poterat. magna eloquentia, sicut flamma, materia alitur et 
 motibus excitatur et urendo clarescit. eadem ratio in nostra
 </p></div2>

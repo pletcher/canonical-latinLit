@@ -150,8 +150,7 @@
 	</teiHeader>
  <text xml:lang="eng">
    
-   <body xml:base="urn:cts:latinLit:phi0474.phi006.perseus-eng2">
-     <div type="translation" subtype="translation" xml:lang="eng">
+   <body xml:base="urn:cts:latinLit:phi0474.phi006.perseus-eng2"><div n="urn:cts:latinLit:phi0474.phi006.perseus-eng2" type="translation" subtype="translation" xml:lang="eng">
 					<head>THE FRAGMENTS WHICH REMAIN OF THE SPEECH OF M. T. CICERO ON BEHALF OF MARCUS TULLIUS.</head>
 					  <div type="commentary" resp="ed">
 						<note anchored="true">This Oration is in a very imperfect and corrupt state. It is only lately

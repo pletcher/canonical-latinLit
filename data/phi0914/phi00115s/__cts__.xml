@@ -1,0 +1,13 @@
+<work xmlns="http://chs.harvard.edu/xmlns/cts" groupUrn="urn:cts:latinLit:phi0914" urn="urn:cts:latinLit:phi0914.phi00115s" xml:lang="lat">
+	<title xml:lang="lat">Ab urbe condita</title>
+	<edition urn="urn:cts:latinLit:phi0914.phi00115s.perseus-lat2" workUrn="urn:cts:latinLit:phi0914.phi00115s" xml:lang="lat">
+		<label xml:lang="lat">Books VIII-X With An English Translation</label>
+		<description xml:lang="eng">Livy. Books VIII-X With An English Translation. Cambridge: Cambridge, Mass., Harvard University Press; London, William
+                                Heinemann, Ltd., 1926: no copyright notice.</description>
+	</edition>
+	<translation urn="urn:cts:latinLit:phi0914.phi00115s.perseus-eng1" workUrn="urn:cts:latinLit:phi0914.phi00115s" xml:lang="eng">
+		<label xml:lang="eng">Books VIII-X With An English Translation</label>
+		<description xml:lang="eng">Livy. Books VIII-X With An English Translation. Cambridge: Cambridge, Mass., Harvard University Press; London, William
+                                Heinemann, Ltd., 1926: no copyright notice.</description>
+	</translation>
+</work>

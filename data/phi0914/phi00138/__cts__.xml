@@ -1,0 +1,22 @@
+<work xmlns="http://chs.harvard.edu/xmlns/cts" groupUrn="urn:cts:latinLit:phi0914" urn="urn:cts:latinLit:phi0914.phi00138" xml:lang="lat">
+	<title xml:lang="lat">Ab Urbe Condita</title>
+	<translation urn="urn:cts:latinLit:phi0914.phi00138.perseus-eng1" workUrn="urn:cts:latinLit:phi0914.phi00138" xml:lang="eng">
+		<label xml:lang="eng">Books XXXVIII-XXXIX with an English Translation</label>
+		<description xml:lang="eng">Livy. Books XXXVIII-XXXIX with an English Translation. Cambridge: Cambridge, Mass., Harvard University Press; London, William
+                                Heinemann, Ltd., 1936: published without copyright notice.</description>
+	</translation>
+	<edition urn="urn:cts:latinLit:phi0914.phi00138.perseus-lat1" workUrn="urn:cts:latinLit:phi0914.phi00138" xml:lang="lat">
+		<label xml:lang="lat">Ab urbe condita</label>
+		<description xml:lang="eng">Livy. Ab urbe condita. W. Weissenborn, editor. Berlin: Weidmannsche Buchhandlung, 1873.</description>
+	</edition>
+	<translation urn="urn:cts:latinLit:phi0914.phi00138.perseus-eng3" workUrn="urn:cts:latinLit:phi0914.phi00138" xml:lang="eng">
+		<label xml:lang="eng">History of Rome</label>
+		<description xml:lang="eng">Livy. History of Rome. New York, New York: E. P. Dutton and Co., 1912.</description>
+	</translation>
+	<translation urn="urn:cts:latinLit:phi0914.phi00138.perseus-eng2" workUrn="urn:cts:latinLit:phi0914.phi00138" xml:lang="eng">
+		<label xml:lang="eng">History of Rome by Titus Livius, books thirty-seven to the end,
+                                with the epitomes and fragments of the lost books</label>
+		<description xml:lang="eng">Livy. History of Rome by Titus Livius, books thirty-seven to the end,
+                                with the epitomes and fragments of the lost books. York Street, Covent Garden, London: Henry G. Bohn, 1850.</description>
+	</translation>
+</work>

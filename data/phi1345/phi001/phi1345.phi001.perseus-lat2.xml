@@ -83,8 +83,7 @@
 </teiHeader>
 
   <text xml:lang="lat">
-      <body xml:base="urn:cts:latinLit:phi1345.phi001.perseus-lat2">
-         <div type="edition" xml:lang="lat">
+      <body xml:base="urn:cts:latinLit:phi1345.phi001.perseus-lat2"><div n="urn:cts:latinLit:phi1345.phi001.perseus-lat2" type="edition" xml:lang="lat">
          <head>Punica</head>
             <div type="textpart" subtype="book" n="1">
 

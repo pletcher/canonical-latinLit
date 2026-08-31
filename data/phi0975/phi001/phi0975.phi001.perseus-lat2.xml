@@ -68,8 +68,7 @@
   	</revisionDesc>
   </teiHeader>
 <text xml:lang="lat">
-<body xml:base="urn:cts:latinLit:phi0975.phi001.perseus-lat2">
-<div type="edition" xml:lang="lat">
+<body xml:base="urn:cts:latinLit:phi0975.phi001.perseus-lat2"><div n="urn:cts:latinLit:phi0975.phi001.perseus-lat2" type="edition" xml:lang="lat">
 <div n="1" subtype="book" type="textpart">
 <head>Liber Primus</head>
 

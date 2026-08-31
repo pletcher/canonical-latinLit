@@ -47,9 +47,21 @@
                 <refState unit="book"/>
                 <refState n="chunk" unit="chapter"/>
             </refsDecl>
+                <refsDecl n="CTS">
+                	<cRefPattern n="chapter"
+                		matchPattern="(\w+).(\w+)"
+                		replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@subtype='book'][@n='$1']/.//tei:milestone[@unit='chapter'][@n='$2'])">
+                		<p>This pointer pattern extracts book and chapter</p>
+                	</cRefPattern>
+                	<cRefPattern n="book"
+                		matchPattern="(\w+)"
+                		replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@subtype='book'][@n='$1'])">
+                		<p>This pointer pattern extracts book</p>
+                	</cRefPattern>
+                </refsDecl>
                 <refsDecl xml:id="CTS">
                   <citeStructure match="/TEI/text/body" use="@xml:base">
-                    <citeStructure match="div[@type='book']" use="@n" unit="book" delim=":">
+                    <citeStructure match="div/div[@subtype='book']" use="@n" unit="book" delim=":">
                       <citeStructure match=".//milestone[@unit='chapter']" use="@n" unit="chapter" delim="." n="chunk"/>
                     </citeStructure>
                   </citeStructure>
@@ -78,9 +90,9 @@
         </revisionDesc>
     </teiHeader>
     <text xml:lang="eng">
-        <body xml:base="urn:cts:latinLit:phi0914.phi00141.perseus-eng1">
+        <body xml:base="urn:cts:latinLit:phi0914.phi00141.perseus-eng1"><div type="translation" n="urn:cts:latinLit:phi0914.phi00141.perseus-eng1" xml:lang="eng">
             <pb n="p.184"/>
-            <div type="book" n="41" org="uniform" sample="complete" part="N">
+            <div type="textpart" subtype="book" n="41" org="uniform" sample="complete" part="N">
                 <head>Liber XLI</head>
                 <p>
                     <milestone unit="chapter" n="1"/>
@@ -1946,6 +1958,6 @@
                     </note> muneris ea summa fuit quod per triduum quattuor et septuaginta homines
                     pugnarint. </p>
             </div>
-        </body>
+        </div></body>
     </text>
 </TEI>

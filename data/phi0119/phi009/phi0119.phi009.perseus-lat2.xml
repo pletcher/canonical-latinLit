@@ -103,9 +103,7 @@
 </teiHeader>
 
 <text xml:lang="lat">
-<body xml:base="urn:cts:latinLit:phi0119.phi009.perseus-lat2">
-
-<div type="edition" xml:lang="lat">
+<body xml:base="urn:cts:latinLit:phi0119.phi009.perseus-lat2"><div n="urn:cts:latinLit:phi0119.phi009.perseus-lat2" type="edition" xml:lang="lat">
 <div type="textpart" subtype="act" n="1">
 <div type="textpart" subtype="scene" n="1">
 	<milestone unit="card" resp="perseus" n="1"/>
@@ -1068,7 +1066,7 @@
 <l xml:base="urn:cts:latinLit:phi0119.phi009.perseus-lat2" n="284" part="I">et placet.</l></sp>
 
 <sp><speaker>Epidicvs</speaker>
-<l xml:base="urn:cts:latinLit:phi0119.phi009.perseus-lat2" n="284b" part="F">Tum tu igitur calide quidquid <choice><expan><abbr>acturu's</abbr><ex>acturus es</ex></expan></choice> age.</l></sp>
+<l xml:base="urn:cts:latinLit:phi0119.phi009.perseus-lat2" n="284b" part="F">Tum tu igitur calide quidquid <choice><abbr>acturu's</abbr><expan>acturus es</expan></choice> age.</l></sp>
 
 <sp><speaker>Periphanes</speaker>
 <l xml:base="urn:cts:latinLit:phi0119.phi009.perseus-lat2" n="285" part="I">Rem hercle loquere.</l></sp>
@@ -1805,7 +1803,7 @@
 <l xml:base="urn:cts:latinLit:phi0119.phi009.perseus-lat2" n="551" part="I">Vbi te visitavi?</l></sp>
 
 <sp><speaker>Philippa</speaker>
-<l xml:base="urn:cts:latinLit:phi0119.phi009.perseus-lat2" n="551b" part="M">Inique <choice><expan><abbr>iniuriu's</abbr><ex>iniurius es</ex></expan></choice>.</l></sp>
+<l xml:base="urn:cts:latinLit:phi0119.phi009.perseus-lat2" n="551b" part="M">Inique <choice><abbr>iniuriu's</abbr><expan>iniurius es</expan></choice>.</l></sp>
 
 <sp><speaker>Periphanes</speaker>
 <l xml:base="urn:cts:latinLit:phi0119.phi009.perseus-lat2" n="551c" part="M">Quid iam?</l></sp>
@@ -2111,7 +2109,7 @@
 
 <sp><speaker>Stratippocles</speaker>
 <l xml:base="urn:cts:latinLit:phi0119.phi009.perseus-lat2" n="629b" part="F">Siquidem istius gratia</l>
-<l xml:base="urn:cts:latinLit:phi0119.phi009.perseus-lat2" n="630">id <choice><expan><abbr>remoratu's</abbr><ex>remoratus es</ex></expan></choice> quod ista voluit, nimium advenisti cito.</l></sp>
+<l xml:base="urn:cts:latinLit:phi0119.phi009.perseus-lat2" n="630">id <choice><abbr>remoratu's</abbr><expan>remoratus es</expan></choice> quod ista voluit, nimium advenisti cito.</l></sp>
 
 <sp><speaker>Danista</speaker>
 <lb ed="actscene" n="25"/>
@@ -2205,7 +2203,7 @@
 <l xml:base="urn:cts:latinLit:phi0119.phi009.perseus-lat2" n="652" part="I">Perdidisti et repperisti me, soror.</l></sp>
 
 <sp><speaker>Epidicvs</speaker>
-<l xml:base="urn:cts:latinLit:phi0119.phi009.perseus-lat2" n="652b" part="F"><choice><expan><abbr>Stultu's</abbr><ex>stultus es</ex></expan></choice>, tace.</l>
+<l xml:base="urn:cts:latinLit:phi0119.phi009.perseus-lat2" n="652b" part="F"><choice><abbr>Stultu's</abbr><expan>stultus es</expan></choice>, tace.</l>
 <l xml:base="urn:cts:latinLit:phi0119.phi009.perseus-lat2" n="653">tibi quidem quod ames domi praéstost, fidicina, opera mea;</l>
 <l xml:base="urn:cts:latinLit:phi0119.phi009.perseus-lat2" n="654">et sororem in libertatem idem opera concilio mea.</l></sp>
 
@@ -2408,7 +2406,7 @@
 
 <sp><speaker>Periphanes</speaker>
 <lb ed="actscene" n="45"/>
-<l xml:base="urn:cts:latinLit:phi0119.phi009.perseus-lat2" n="710" part="I">Quor dare <choice><expan><abbr>ausu's</abbr><ex>ausus es</ex></expan></choice>?</l></sp>
+<l xml:base="urn:cts:latinLit:phi0119.phi009.perseus-lat2" n="710" part="I">Quor dare <choice><abbr>ausu's</abbr><expan>ausus es</expan></choice>?</l></sp>
 
 <sp><speaker>Epidicvs</speaker>
 <l xml:base="urn:cts:latinLit:phi0119.phi009.perseus-lat2" n="710b" part="M">Quia mi libitum est.</l></sp>

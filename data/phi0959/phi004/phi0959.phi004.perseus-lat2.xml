@@ -89,8 +89,7 @@
 
 	  </teiHeader>
 	  <text xml:lang="lat">
-		    <body xml:base="urn:cts:latinLit:phi0959.phi004.perseus-lat2">
-			      <div xml:lang="lat" type="edition">
+		    <body xml:base="urn:cts:latinLit:phi0959.phi004.perseus-lat2"><div n="urn:cts:latinLit:phi0959.phi004.perseus-lat2" xml:lang="lat" type="edition">
 				        <head>Ars Amatoria</head>
 				        <div type="textpart" subtype="book" n="1">
 					          <head>Liber primus</head>

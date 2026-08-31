@@ -105,8 +105,7 @@
 </revisionDesc>
 </teiHeader>
 
-<text xml:lang="eng"><body xml:base="urn:cts:latinLit:phi0959.phi006.perseus-eng4">
-<div type="translation" xml:lang="eng">
+<text xml:lang="eng"><body xml:base="urn:cts:latinLit:phi0959.phi006.perseus-eng4"><div n="urn:cts:latinLit:phi0959.phi006.perseus-eng4" type="translation" xml:lang="eng">
 <div type="textpart" subtype="book" n="1">
 <div type="textpart" subtype="card" n="1">
 <l n="1">Of shapes transformde to bodies straunge, I purpose to entreate,</l>

@@ -36,7 +36,7 @@
                                 <publisher>Weidmannsche Buchhandlung</publisher>
                                 <date>1875</date>
                             </imprint>
-                            <biblScope type="volume">9.1</biblScope>
+                            <biblScope unit="volume">9.1</biblScope>
                         </monogr>
                     </biblStruct>
                 </listBibl>
@@ -48,9 +48,21 @@
                 <refState delim="." unit="chapter"/>
                 <refState unit="section"/>
             </refsDecl>
+                <refsDecl n="CTS">
+                	<cRefPattern n="chapter"
+                		matchPattern="(\w+).(\w+)"
+                		replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@subtype='book'][@n='$1']/.//tei:milestone[@unit='chapter'][@n='$2'])">
+                		<p>This pointer pattern extracts book and chapter</p>
+                	</cRefPattern>
+                	<cRefPattern n="book"
+                		matchPattern="(\w+)"
+                		replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@subtype='book'][@n='$1'])">
+                		<p>This pointer pattern extracts book</p>
+                	</cRefPattern>
+                </refsDecl>
                 <refsDecl xml:id="CTS">
                   <citeStructure match="/TEI/text/body" use="@xml:base">
-                    <citeStructure match="div[@type='book']" use="@n" unit="book" delim=":">
+                    <citeStructure match="div/div[@subtype='book']" use="@n" unit="book" delim=":">
                       <citeStructure match=".//milestone[@unit='chapter']" use="@n" unit="chapter" delim="." n="chunk"/>
                     </citeStructure>
                   </citeStructure>
@@ -79,8 +91,8 @@
         </revisionDesc>
     </teiHeader>
     <text xml:lang="lat">
-        <body xml:base="urn:cts:latinLit:phi0914.phi00139.perseus-lat1">
-            <div type="book" n="39" org="uniform" sample="complete" part="N">
+        <body xml:base="urn:cts:latinLit:phi0914.phi00139.perseus-lat1"><div type="edition" n="urn:cts:latinLit:phi0914.phi00139.perseus-lat1" xml:lang="lat">
+            <div type="textpart" subtype="book" n="39" org="uniform" sample="complete" part="N">
                 <pb n="vol.9.1.p.1"/>
                 <p>
                     <milestone unit="chapter" n="1"/>
@@ -512,7 +524,7 @@
                     paucis tradita sunt, deinde vulgari coepta per viros mulieresque. additae
                     voluptates religioni vini et epularum, quo plurium animi inlicerentur.
                         <milestone unit="section" n="6"/>
-                    <pb xml:id="vol.9.1.p.17" n="notedatea"/> cum vinum animos <gap/> et nox et
+                    <pb xml:id="vol.9.1.p.17" n="notedatea"/> cum vinum animos <gap reason="undefined"/> et nox et
                     mixti feminis mares, aetatis tenerae maioribus, discrimen omne pudoris
                     exstinxissent, corruptelae primum omnis generis fieri coeptae, cum ad id
                     quisque, quo natura pronioris libidinis esset, paratam <note place="unspecified"
@@ -929,7 +941,7 @@
                         <forename full="yes">P.</forename>
                         <surname full="yes">Aebutio</surname>
                     </persName> emerita stipendia essent, ne invitus militaret, neve censor ei
-                    <gap/> equum publicum adsignaret; <milestone unit="section" n="5"/>
+                    <gap reason="undefined"/> equum publicum adsignaret; <milestone unit="section" n="5"/>
                     <pb xml:id="vol.9.1.p.38" n="notedatea"/> utique Feceniae Hispalae datio
                     deminutio gentis enuptio tutoris optio item esset, quasi ei vir <note
                         place="unspecified" anchored="true">
@@ -1033,7 +1045,7 @@
                 <p>
                     <milestone unit="chapter" n="22"/>
                     <milestone unit="section" n="1"/> per eos dies, quibus haec ex Hispania nuntiata
-                    sunt, ludi Taurii per biduum facti religionis causa. decem <gap/> adparatos
+                    sunt, ludi Taurii per biduum facti religionis causa. decem <gap reason="undefined"/> adparatos
                     deinde ludos <persName n="2">
                         <forename full="yes">M.</forename>
                         <surname full="yes">Fulvius</surname>
@@ -3058,6 +3070,6 @@
                         <addName full="yes">Nasica</addName>
                     </persName> . </p>
             </div>
-        </body>
+        </div></body>
     </text>
 </TEI>

@@ -101,9 +101,7 @@
 </revisionDesc>
    </teiHeader>
    <text xml:lang="lat">
-      <body xml:base="urn:cts:latinLit:phi0119.phi007.perseus-lat2">
-         
-<div xml:lang="lat" type="edition">
+      <body xml:base="urn:cts:latinLit:phi0119.phi007.perseus-lat2"><div n="urn:cts:latinLit:phi0119.phi007.perseus-lat2" xml:lang="lat" type="edition">
             
 <div type="textpart" n="1" subtype="act">          
 <div type="textpart" n="1" subtype="scene">

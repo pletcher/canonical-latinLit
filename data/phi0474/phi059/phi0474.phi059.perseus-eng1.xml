@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
-  <teiHeader xml:lang="eng" type="text">
+  <teiHeader xml:lang="eng">
     <fileDesc>
       <titleStmt>
         <title>Letters to Brutus</title>
@@ -61,9 +61,16 @@
         <refState unit="letter"/>
         <refState unit="section"/>
       </refsDecl>
+        <refsDecl n="CTS">
+        	<cRefPattern n="letter"
+        		matchPattern="(\w+)"
+        		replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@subtype='letter'][@n='$1'])">
+        		<p>This pointer pattern extracts letter</p>
+        	</cRefPattern>
+        </refsDecl>
         <refsDecl xml:id="CTS">
           <citeStructure match="/TEI/text/body" use="@xml:base">
-            <citeStructure unit="letter" delim=":" match="div[@type='letter']" use="@n"/>
+            <citeStructure unit="letter" delim=":" match="div/div[@subtype='letter']" use="@n"/>
           </citeStructure>
         </refsDecl>
 </encodingDesc>
@@ -245,14 +252,14 @@ Combined into single file.
     </revisionDesc>
   </teiHeader>
   <text xml:lang="eng">
-    <body xml:base="urn:cts:latinLit:phi0474.phi059.perseus-eng1">
-      <div n="text=BRUT.:book=2:letter=1" type="letter" xml:id="s833">
+    <body xml:base="urn:cts:latinLit:phi0474.phi059.perseus-eng1"><div type="translation" n="urn:cts:latinLit:phi0474.phi059.perseus-eng1" xml:lang="eng">
+      <div n="text=BRUT.:book=2:letter=1" type="textpart" subtype="letter" xml:id="s833">
         <head>DCCCXXXIII (BRUT. II, 1)</head>
 
-        <opener>
-          <salute>TO MARCUS IUNIUS BRUTUS (IN MACEDONIA)</salute>
+        
+          <p rend="salute">TO MARCUS IUNIUS BRUTUS (IN MACEDONIA)</p>
           <dateline>ROME (MARCH-APRIL)</dateline>
-        </opener>
+        
         <p> AT the time of my writing this it is thought that the decisive hour has arrived. For
           melancholy despatches and messages are arriving about our friend Decimus Brutus. For my
           part I am not excessively alarmed by them, for I cannot possibly distrust such armies and
@@ -282,13 +289,13 @@ Combined into single file.
           believe that, if at this time a success is achieved, you will have to reform the
           constitution; if a reverse is sustained, your task will be its restoration. </p>
       </div>
-      <div n="text=BRUT.:book=2:letter=3" type="letter" xml:id="s834">
+      <div n="text=BRUT.:book=2:letter=3" type="textpart" subtype="letter" xml:id="s834">
         <head>DCCCXXXIV (BRUT. II, 3)</head>
 
-        <opener>
-          <salute>M. IUNIUS BRUTUS TO CICERO (AT ROME)</salute>
+        
+          <p rend="salute">M. IUNIUS BRUTUS TO CICERO (AT ROME)</p>
           <dateline>DYRRACHIUM, I APRIL</dateline>
-        </opener>
+        
         <p> I am anxiously expecting the letter which you wrote after you received the news of my
           movements and of the death of Trebonius. <note n="1" anchored="true">The murder of
             Trebonius by <foreign xml:lang="la">Dolabella</foreign>. See pp.189, 210. </note> For I
@@ -334,13 +341,13 @@ Combined into single file.
             <milestone unit="para"/>1 April, Dyrrachium. <pb n="206"/>
         </p>
       </div>
-      <div n="text=BRUT.:book=2:letter=2" type="letter" xml:id="s836">
+      <div n="text=BRUT.:book=2:letter=2" type="textpart" subtype="letter" xml:id="s836">
         <head>DCCCXXXVI (BRUT. II, 2)</head>
 
-        <opener>
-          <salute>TO MARCUS IUNIUS BRUTUS (IN MACEDONIA)</salute>
+        
+          <p rend="salute">TO MARCUS IUNIUS BRUTUS (IN MACEDONIA)</p>
           <dateline>ROME, 11 APRIL</dateline>
-        </opener>
+        
         <p> YOU have had the opportunity of learning Plancus's splendid loyalty to the Republic, his
           legions, auxiliaries, and forces from his own letter, a copy of which I think has been
           sent to you. The fickleness and inconstancy of your relative Lepidus, who, next to his own
@@ -375,13 +382,13 @@ Combined into single file.
             letter has been lost. </note>
         </p>
       </div>
-      <div n="text=BRUT.:book=2:letter=4" type="letter" xml:id="s837">
+      <div n="text=BRUT.:book=2:letter=4" type="textpart" subtype="letter" xml:id="s837">
         <head>DCCCXXXVII (BRUT. II, 4)</head>
 
-        <opener>
-          <salute>TO M. IUNIUS BRUTUS (AT DYRRACHIUM)</salute>
+        
+          <p rend="salute">TO M. IUNIUS BRUTUS (AT DYRRACHIUM)</p>
           <dateline>ROME, 12 APRIL</dateline>
-        </opener>
+        
         <p> AFTER I had given Scaptius a letter for you on the morning of the 11th of April, I
           received one from you in the evening of the same day, dated from Dyracchium on the 1st of
           April. Accordingly, on the morning of the 12th, having been informed by Scaptius that the
@@ -433,13 +440,13 @@ Combined into single file.
           as I am bound to be, and if you exaggerate it from affection for him, the mere fact of
           your being attached to him rejoices me more than I can say. </p>
       </div>
-      <div n="text=BRUT.:book=2:letter=5" type="letter" xml:id="s839">
+      <div n="text=BRUT.:book=2:letter=5" type="textpart" subtype="letter" xml:id="s839">
         <head>DCCCXXXIX (BRUT. II, 5)</head>
 
-        <opener>
-          <salute>TO M. IUNIUS BRUTUS (AT DYRRACHIUM)</salute>
+        
+          <p rend="salute">TO M. IUNIUS BRUTUS (AT DYRRACHIUM)</p>
           <dateline>ROME, 16 APRIL</dateline>
-        </opener>
+        
         <p> I BELIEVE that your friends—to not one of whom do I yield in affection to you—have
           written to tell you what despatches were read in the senate on the 13th of April from you,
           and at the same time from Antony. But though there was no need for us all to repeat the
@@ -548,13 +555,13 @@ Combined into single file.
           as possible by your side <pb n="217"/> He will find no better school of virtue than the
           contemplation and imitation of you. <milestone unit="para"/>16 April. </p>
       </div>
-      <div n="text=BRUT.:book=1:letter=2.3-6" type="letter" xml:id="s840">
+      <div n="text=BRUT.:book=1:letter=2.3-6" type="textpart" subtype="letter" xml:id="s840">
         <head>DCCCXL (BRUT. I, 2, §§ 3-6)</head>
 
-        <opener>
-          <salute>TO M. IUNIUS BRUTUS (AT DYRRACHIUM)</salute>
+        
+          <p rend="salute">TO M. IUNIUS BRUTUS (AT DYRRACHIUM)</p>
           <dateline>ROME, 17 APRIL</dateline>
-        </opener>
+        
         <p> I rejoice that you have found the army and cavalry well affected to you. About
           Dolabella, as you remark, you will inform me' if you hear any news. In regard to this, I
           am pleased to think that I foresaw how independent your judgment would be as to making war
@@ -580,13 +587,13 @@ Combined into single file.
           senate, nor the same leader of the senate. Regard these words as uttered by the oracle of
           the Pythian Apollo. Nothing can be truer. <milestone unit="para"/>17 April. </p>
       </div>
-      <div n="text=BRUT.:book=1:letter=3.1-3" type="letter" xml:id="s841">
+      <div n="text=BRUT.:book=1:letter=3.1-3" type="textpart" subtype="letter" xml:id="s841">
         <head>DCCCXLI (BRUT. I, 3, §§ 1-3)</head>
 
-        <opener>
-          <salute>TO M. IUNIUS BRUTUS (AT DYRRACHIUM)</salute>
+        
+          <p rend="salute">TO M. IUNIUS BRUTUS (AT DYRRACHIUM)</p>
           <dateline>ROME, 21 APRIL</dateline>
-        </opener>
+        
         <p> OUR cause seems in a better position: for I feel sure that you have had letters telling
           you what has happened. <note n="1" anchored="true">The victory of Forum <foreign
               xml:lang="la">Gallorum</foreign> See p.211 sq. </note> The consuls have shewn
@@ -630,13 +637,13 @@ Combined into single file.
           all loyal citizens. What your view of this is I must leave you to judge for yourself: my
           opinion is that all three brothers stand on one and the same ground. </p>
       </div>
-      <div n="text=BRUT.:book=1:letter=3.4" type="letter" xml:id="s843">
+      <div n="text=BRUT.:book=1:letter=3.4" type="textpart" subtype="letter" xml:id="s843">
         <head>DCCCXLIII (BRUT. 1, 3, § 4)</head>
 
-        <opener>
-          <salute>TO M. IUNIUS BRUTUS (AT DYRRACHIUM)</salute>
+        
+          <p rend="salute">TO M. IUNIUS BRUTUS (AT DYRRACHIUM)</p>
           <dateline>ROME, 27 APRIL</dateline>
-        </opener>
+        
         <p> WE have lost two consuls-good men enough; yes, at any rate good men. As for Hirtius, he
           fell in the moment of <pb n="221"/> victory, <note n="1" anchored="true">In storming
             Antony's camp a week after the battle of Forum <foreign xml:lang="la">Gallorum</foreign>
@@ -656,13 +663,13 @@ Combined into single file.
           senate ought to be informed by you of the merits of his case. <milestone unit="para"/>27
           April. </p>
       </div>
-      <div n="text=BRUT.:book=1:letter=11" type="letter" xml:id="s846">
+      <div n="text=BRUT.:book=1:letter=11" type="textpart" subtype="letter" xml:id="s846">
         <head>DCCCXLVI (BRUT. I, II)</head>
 
-        <opener>
-          <salute>M. IUNIUS BRUTUS TO CICERO (AT ROME)</salute>
+        
+          <p rend="salute">M. IUNIUS BRUTUS TO CICERO (AT ROME)</p>
           <dateline>DYRRACHIUM (MAY)</dateline>
-        </opener>
+        
         <p> ANTISTIUS VETUS is so devoted to the Republic that I feel no doubt of his shewing
           himself in the case both of Caesar and Antony a most determined champion of the common
           liberty, if he ever gets the opportunity. For the man who, meeting P. Dolabella in Achaia
@@ -693,13 +700,13 @@ Combined into single file.
           be capable of being incited by your praises and kindness still more to embrace and hold
           fast your principles. I shall be very grateful if it is so. </p>
       </div>
-      <div n="text=BRUT.:book=1:letter=5" type="letter" xml:id="s848">
+      <div n="text=BRUT.:book=1:letter=5" type="textpart" subtype="letter" xml:id="s848">
         <head>DCCCXLVIII (BRUT. 1,5)</head>
 
-        <opener>
-          <salute>TO M. IUNIUS BRUTUS (AT DYRRACHIUM)</salute>
+        
+          <p rend="salute">TO M. IUNIUS BRUTUS (AT DYRRACHIUM)</p>
           <dateline>ROME (5 MAY)</dateline>
-        </opener>
+        
         <p> ON the 27th of April, when the speeches were being delivered in the senate as to the
           proceedings to be taken against the men who had been adjudged public enemies, Servilius
           referred among others to the case of Ventidius, <note n="1" anchored="true">Ventidius
@@ -792,13 +799,13 @@ Combined into single file.
               >auspicia</foreign> had long disappeared. </note> Pray write and tell me your views on
           the whole question. <milestone unit="para"/>5 May. </p>
       </div>
-      <div n="text=BRUT.:book=1:letter=4.1-3" type="letter" xml:id="s853">
+      <div n="text=BRUT.:book=1:letter=4.1-3" type="textpart" subtype="letter" xml:id="s853">
         <head>DCCCLIII (BRUT. I, 4, §§ 1-3)</head>
 
-        <opener>
-          <salute>M. IUNIUS BRUTUS TO CICERO (AT ROME)</salute>
+        
+          <p rend="salute">M. IUNIUS BRUTUS TO CICERO (AT ROME)</p>
           <dateline>DYRRACHIUM (7 MAY)</dateline>
-        </opener>
+        
         <p> MY joy at hearing of the success of our friend Decimus Brutus and the Consuls it is
           easier for you to imagine than for me to write. <note n="1" anchored="true">
             <foreign xml:lang="la">Brutus</foreign> could not have known of the death of the
@@ -841,13 +848,13 @@ Combined into single file.
             <note n="2" anchored="true">The end of the letter is lost. </note>
         </p>
       </div>
-      <div n="text=BRUT.:book=1:letter=16" type="letter" xml:id="s860">
+      <div n="text=BRUT.:book=1:letter=16" type="textpart" subtype="letter" xml:id="s860">
         <head>DCCCLX (BRUT. I, 16)</head>
 
-        <opener>
-          <salute>M. IUNIUS BRUTUS TO CICERO (AT ROME)</salute>
+        
+          <p rend="salute">M. IUNIUS BRUTUS TO CICERO (AT ROME)</p>
           <dateline>MACEDONIA (MAY)</dateline>
-        </opener>
+        
         <p> I<note n="1" anchored="true">The textual history of this and the following letter (to
               <foreign xml:lang="la">Atticus</foreign>) is strong enough, and the references in
             Plutarch's <foreign xml:lang="la">Brutus</foreign> (ch. xxii) are sufficient to prove
@@ -1013,13 +1020,13 @@ Combined into single file.
           leaders in their resistance to the plots of traitors. <pb n="249"/>
         </p>
       </div>
-      <div n="text=BRUT.:book=1:letter=17" type="letter" xml:id="s861">
+      <div n="text=BRUT.:book=1:letter=17" type="textpart" subtype="letter" xml:id="s861">
         <head>DCCCLXI (BRUT. I, 17)</head>
 
-        <opener>
-          <salute>M. IUNIUS BRUTUS TO ATTICUS (AT ROME)</salute>
+        
+          <p rend="salute">M. IUNIUS BRUTUS TO ATTICUS (AT ROME)</p>
           <dateline>MACEDONIA (MAY)</dateline>
-        </opener>
+        
         <p> YOU say in your letter that Cicero wonders at my never making any remark about his
           political actions. Since you ask me, under compulsion from you I will set down my
           sentiments. I know that Cicero does everything with the best intentions—for what could be
@@ -1139,13 +1146,13 @@ Combined into single file.
             Cicero may have asked him to write. </note> ask me the same, and I know the man and his
           views. </p>
       </div>
-      <div n="text=BRUT.:book=1:letter=4.3-6" type="letter" xml:id="s862">
+      <div n="text=BRUT.:book=1:letter=4.3-6" type="textpart" subtype="letter" xml:id="s862">
         <head>DCCCLXII (BRUT. I, 4, §§ 3-6)</head>
 
-        <opener>
-          <salute>M. IUNIUS BRUTUS TO CICERO (AT ROME)</salute>
+        
+          <p rend="salute">M. IUNIUS BRUTUS TO CICERO (AT ROME)</p>
           <dateline>CAMP IN EPIRUS, 15 MAY</dateline>
-        </opener>
+        
         <p> ... <note n="3" anchored="true">This letter-forming in the MSS. the latter part of
             DCCCLIII-is imperfect. The first part of it appears to have been lost. </note> Now,
           Cicero, now is the time for action, lest we turn out to have rejoiced in vain at the
@@ -1199,13 +1206,13 @@ Combined into single file.
           see that. Your son is well, and has been sent in advance into Macedonia with the cavalry.
             <milestone unit="para"/>15 May, in camp. </p>
       </div>
-      <div n="text=BRUT.:book=1:letter=6" type="letter" xml:id="s863">
+      <div n="text=BRUT.:book=1:letter=6" type="textpart" subtype="letter" xml:id="s863">
         <head>DCCCLXIII (BRUT. I, 6)</head>
 
-        <opener>
-          <salute>M. IUNIUS BRUTUS TO CICERO (AT ROME)</salute>
+        
+          <p rend="salute">M. IUNIUS BRUTUS TO CICERO (AT ROME)</p>
           <dateline>IMA CANDAVIA,</dateline>
-        </opener>
+        
         <p>
           <note n="3" anchored="true">
             <foreign xml:lang="la">Candavia</foreign> is a mountain across which the Egnatian Way
@@ -1255,13 +1262,13 @@ Combined into single file.
             unit="para"/>19 May, in camp at Ima Candavia. <pb n="256"/>
         </p>
       </div>
-      <div n="text=BRUT.:book=1:letter=7" type="letter" xml:id="s864">
+      <div n="text=BRUT.:book=1:letter=7" type="textpart" subtype="letter" xml:id="s864">
         <head>DCCCLXIV (BRUT. I, 7)</head>
 
-        <opener>
-          <salute>M. IUNIUS BRUTUS TO CICERO (AT ROME)</salute>
+        
+          <p rend="salute">M. IUNIUS BRUTUS TO CICERO (AT ROME)</p>
           <dateline>(MACEDONIA, LATTER PART OF MAY)</dateline>
-        </opener>
+        
         <p> No one can better judge than you how dear Lucius Bibulus ought to be to me, considering
           his great struggles and anxieties on behalf of the Republic. Accordingly, his own
           excellence as well as our intimacy ought to make him your friend. I think myself therefore
@@ -1282,13 +1289,13 @@ Combined into single file.
           to deserve your most select praises. <pb n="257"/>
         </p>
       </div>
-      <div n="text=BRUT.:book=1:letter=1" type="letter" xml:id="s869">
+      <div n="text=BRUT.:book=1:letter=1" type="textpart" subtype="letter" xml:id="s869">
         <head>DCCCLXIX (BRUT. I, I)</head>
 
-        <opener>
-          <salute>TO M. IUNIUS BRUTUS (IN MACEDONIA)</salute>
+        
+          <p rend="salute">TO M. IUNIUS BRUTUS (IN MACEDONIA)</p>
           <dateline>ROME (LATE IN MAY)</dateline>
-        </opener>
+        
         <p> L. Clodius, <note n="1" anchored="true">Vol. ii., p 19; vol. iii., p.224. </note>
           tribune-designate, is much attached to me, or, to speak with more empressement, loves me
           dearly. And when I am assured of that I feel certain—for you know me—that you will
@@ -1312,13 +1319,13 @@ Combined into single file.
           you, and is such a citizen as a man of the greatest sense and most ample fortune is bound
           to be. </p>
       </div>
-      <div n="text=BRUT.:book=1:letter=2.1-3" type="letter" xml:id="s870">
+      <div n="text=BRUT.:book=1:letter=2.1-3" type="textpart" subtype="letter" xml:id="s870">
         <head>DCCCLXX (BRUT. I, 2, §§ 1-3)</head>
 
-        <opener>
-          <salute>TO M. IUNIUS BRUTUS (IN MACEDONIA)</salute>
+        
+          <p rend="salute">TO M. IUNIUS BRUTUS (IN MACEDONIA)</p>
           <dateline>ROME (LATE IN MAY)</dateline>
-        </opener>
+        
         <p> WHEN I had already written and sealed a despatch to you, a letter from you was delivered
           to me full of startling intelligence. But the most surprising of all was that Dolabella
           had sent five cohorts <note n="1" anchored="true">That is, half a legion. </note> into the
@@ -1354,13 +1361,13 @@ Combined into single file.
             to prevent his being rescued by his brother Marcus. </note>
         </p>
       </div>
-      <div n="text=BRUT.:book=1:letter=8" type="letter" xml:id="s883">
+      <div n="text=BRUT.:book=1:letter=8" type="textpart" subtype="letter" xml:id="s883">
         <head>DCCCLXXXIII (BRUT. I, 8)</head>
 
-        <opener>
-          <salute>TO M. IUNIUS BRUTUS (IN MACEDONIA)</salute>
+        
+          <p rend="salute">TO M. IUNIUS BRUTUS (IN MACEDONIA)</p>
           <dateline>ROME (MAY-JUNE)</dateline>
-        </opener>
+        
         <p> I SHALL recommend many to you, and it is inevitable that I should do so—for it is always
           the best men and best citizens that are most inclined to follow your judgment; and it is
           for your approval that all brave men desire to work and study with activity; and finally
@@ -1382,13 +1389,13 @@ Combined into single file.
           shall be very much obliged if you treat him so as to enable him to thank me for favours
           received from you. </p>
       </div>
-      <div n="text=BRUT.:book=1:letter=10" type="letter" xml:id="s892">
+      <div n="text=BRUT.:book=1:letter=10" type="textpart" subtype="letter" xml:id="s892">
         <head>DCCCXCII (BRUT. I, 10)</head>
 
-        <opener>
-          <salute>TO M. IUNIUS BRUTUS (IN MACEDONIA)</salute>
+        
+          <p rend="salute">TO M. IUNIUS BRUTUS (IN MACEDONIA)</p>
           <dateline>ROME (JUNE)</dateline>
-        </opener>
+        
         <p> I have no letter as yet from you—not so much as a rumour—to shew that you are aware of
           the resolution of the senate and are bringing your army into Italy. That you should do so,
           and with all speed, the Republic urgently requires: for <pb n="298"/> the internal
@@ -1459,13 +1466,13 @@ Combined into single file.
           Republic, which ought to have been immortal: but for myself—what a brief span of life is
           left! </p>
       </div>
-      <div n="text=BRUT.:book=1:letter=9" type="letter" xml:id="s897">
+      <div n="text=BRUT.:book=1:letter=9" type="textpart" subtype="letter" xml:id="s897">
         <head>DCCCXCVII (BRUT. I, 9)</head>
 
-        <opener>
-          <salute>TO M. IUNIUS BRUTUS (IN MACEDONIA)</salute>
+        
+          <p rend="salute">TO M. IUNIUS BRUTUS (IN MACEDONIA)</p>
           <dateline>ROME (8 JUNE)</dateline>
-        </opener>
+        
         <p> I would have performed the function, which you performed in my own time of mourning, and
           have written you a letter of consolation, had I not known that you did not stand in need
           of those remedies in your sorrow with which you relieved mine. And I should hope that you
@@ -1501,13 +1508,13 @@ Combined into single file.
             anchored="true">See pp.205, 313. </note>
         </p>
       </div>
-      <div n="text=BRUT.:book=1:letter=13" type="letter" xml:id="s903">
+      <div n="text=BRUT.:book=1:letter=13" type="textpart" subtype="letter" xml:id="s903">
         <head>CMIII (BRUT. I, 13)</head>
 
-        <opener>
-          <salute>M. IUNIUS BRUTUS TO CICERO (AT ROME)</salute>
+        
+          <p rend="salute">M. IUNIUS BRUTUS TO CICERO (AT ROME)</p>
           <dateline>MACEDONIA, I JULY</dateline>
-        </opener>
+        
         <p> The fear which others entertain makes me nervous about M. Lepidus. If he has wrenched
           himself from us—which I hope it will turn out that people have suspected about him
           hurriedly and without good grounds—I beg and beseech you, Cicero, appealing to our close
@@ -1529,13 +1536,13 @@ Combined into single file.
           private ties put aside. What you mean to do please write and tell me as soon as possible.
             <milestone unit="para"/>1 July, in camp. </p>
       </div>
-      <div n="text=BRUT.:book=1:letter=12" type="letter" xml:id="s904">
+      <div n="text=BRUT.:book=1:letter=12" type="textpart" subtype="letter" xml:id="s904">
         <head>CMIV (BRUT. I, 12)</head>
 
-        <opener>
-          <salute>TO M. IUNIUS BRUTUS (IN MACEDONIA)</salute>
+        
+          <p rend="salute">TO M. IUNIUS BRUTUS (IN MACEDONIA)</p>
           <dateline>ROME (BEGINNING OF JULY)</dateline>
-        </opener>
+        
         <p> Though I am immediately about to give a letter to Messalla Corvinus, <note n="1"
             anchored="true">The celebrated M. Valerius <foreign xml:lang="la">Messalla</foreign>
             Corvinus, the protector of Tibullus. See p.76. For Vetus see p.308. </note> yet I could
@@ -1571,13 +1578,13 @@ Combined into single file.
           My son I hope shortly to see: for I feel confident that he will promptly come to Italy in
           your train. </p>
       </div>
-      <div n="text=BRUT.:book=1:letter=14" type="letter" xml:id="s908">
+      <div n="text=BRUT.:book=1:letter=14" type="textpart" subtype="letter" xml:id="s908">
         <head>CMVIII (BRUT. I, 14)</head>
 
-        <opener>
-          <salute>TO M. IUNIUS BRUTUS (IN MACEDONIA)</salute>
+        
+          <p rend="salute">TO M. IUNIUS BRUTUS (IN MACEDONIA)</p>
           <dateline>ROME, II JULY</dateline>
-        </opener>
+        
         <p> YOURS was a very short letter. "Short" do I say? Rather it was not a letter at all.
           Brutus write to me in three lines at such a crisis as this? I would rather have written
           nothing at all. And you talk of not hearing from me! Which of your men ever came to you
@@ -1608,13 +1615,13 @@ Combined into single file.
           fellow citizens, than you will do if you now arrive in good time. <milestone unit="para"
           />11 July. </p>
       </div>
-      <div n="text=BRUT.:book=1:letter=15" type="letter" xml:id="s909">
+      <div n="text=BRUT.:book=1:letter=15" type="textpart" subtype="letter" xml:id="s909">
         <head>CMIX (BRUT. I, 15)</head>
 
-        <opener>
-          <salute>TO M. IUNIUS BRUTUS (IN MACEDONIA)</salute>
+        
+          <p rend="salute">TO M. IUNIUS BRUTUS (IN MACEDONIA)</p>
           <dateline>ROME (MIDDLE OF JULY)</dateline>
-        </opener>
+        
         <p> You have Messalla with you. What letter, therefore, can I write with such minute care as
           to enable me to explain to you what is being done and what is occurring in public affairs,
           more thoroughly than he will describe them to you, who has at once the most intimate
@@ -1767,13 +1774,13 @@ Combined into single file.
           consistency. But there is nothing in which I more wish to be and to seem consistent than
           in loving you. </p>
       </div>
-      <div n="text=BRUT.:book=1:letter=18" type="letter" xml:id="s910">
+      <div n="text=BRUT.:book=1:letter=18" type="textpart" subtype="letter" xml:id="s910">
         <head>CMX (BRUT. I, 18)</head>
 
-        <opener>
-          <salute>TO M. IUNIUS BRUTUS (IN MACEDONIA)</salute>
+        
+          <p rend="salute">TO M. IUNIUS BRUTUS (IN MACEDONIA)</p>
           <dateline>ROME, 27 JULY</dateline>
-        </opener>
+        
         <p> AFTER I had often urged you by letter to come as soon as possible to the aid of the
           state, and to bring your army into Italy, and when I thought that your relatives had no
           doubt on that subject, I was asked by that most prudent and careful lady your mother—whose
@@ -1831,6 +1838,6 @@ Combined into single file.
           there ever arise any circumstance in which I shall not, even at the risk of my life, say
           and do whatever I think is your wish and to your interest. </p>
       </div>
-    </body>
+    </div></body>
   </text>
 </TEI>

@@ -80,8 +80,7 @@
 
    </teiHeader>
    <text xml:lang="lat">
-      <body xml:base="urn:cts:latinLit:phi0917.phi001.perseus-lat2">
-         <div type="commentary">
+      <body xml:base="urn:cts:latinLit:phi0917.phi001.perseus-lat2"><div n="urn:cts:latinLit:phi0917.phi001.perseus-lat2" type="commentary">
             <div type="textpart" subtype="book" n="1">
                <list type="simple">
                   <item>Praefatur poeta argumentum. <bibl n="Luc. 1.1">1</bibl>

@@ -89,7 +89,7 @@
 </teiHeader>
 
 
-<text xml:lang="lat"><body xml:base="urn:cts:latinLit:phi1014.phi002.perseus-lat1"><div type="edition" xml:lang="lat">
+<text xml:lang="lat"><body xml:base="urn:cts:latinLit:phi1014.phi002.perseus-lat1"><div n="urn:cts:latinLit:phi1014.phi002.perseus-lat1" type="edition" xml:lang="lat">
 <pb n="p.140"/><pb n="b.339"/>
 <div type="textpart" n="1" subtype="book"><head>excerpta controversiarum.
 liber primus.</head>

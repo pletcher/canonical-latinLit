@@ -111,10 +111,7 @@
 	</teiHeader>
 
 	<text xml:lang="lat"> 
-	<body xml:base="urn:cts:latinLit:phi0474.phi020.perseus-lat2"> 
-	
-
-<div xml:lang="lat" type="edition"> 
+	<body xml:base="urn:cts:latinLit:phi0474.phi020.perseus-lat2"><div n="urn:cts:latinLit:phi0474.phi020.perseus-lat2" xml:lang="lat" type="edition"> 
 	<head rend="align(center)">DE DOMO SVA AD PONTIFICES ORATIO</head> 
 	
 

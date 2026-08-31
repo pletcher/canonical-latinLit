@@ -1,0 +1,7 @@
+<ti:work xmlns:ti="http://chs.harvard.edu/xmlns/cts" groupUrn="urn:cts:latinLit:phi0692" urn="urn:cts:latinLit:phi0692.phi009" xml:lang="lat">
+	<ti:title xml:lang="lat">Appendix Vergiliana, sive carmina minora Vergilio adtributa</ti:title>
+	<ti:edition urn="urn:cts:latinLit:phi0692.phi009.perseus-lat1" workUrn="urn:cts:latinLit:phi0692.phi009" xml:lang="lat">
+		<ti:label xml:lang="lat">Appendix Vergiliana, sive carmina minora Vergilio adtributa</ti:label>
+		<ti:description xml:lang="eng">Appendix Vergiliana, sive carmina minora Vergilio adtributa. Robinson Ellis, editor. Oxonii: e Typographeo Clarendoniano, 1907.</ti:description>
+	</ti:edition>
+</ti:work>

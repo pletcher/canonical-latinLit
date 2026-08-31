@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
-    <teiHeader xml:lang="eng" type="text">
+    <teiHeader xml:lang="eng">
         <fileDesc>
             <titleStmt>
                 <title>Against Lucius Calpurnius Piso </title>
@@ -54,6 +54,13 @@
                 <refState delim="." unit="chapter"/>
                 <refState unit="section"/>
             </refsDecl>
+                <refsDecl n="CTS">
+                	<cRefPattern n="chapter"
+                		matchPattern="(\w+)"
+                		replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/.//tei:milestone[@unit='chapter'][@n='$1'])">
+                		<p>This pointer pattern extracts chapter</p>
+                	</cRefPattern>
+                </refsDecl>
                 <refsDecl xml:id="CTS">
                   <citeStructure match="/TEI/text/body" use="@xml:base">
                     <citeStructure unit="chapter" delim="." match=".//milestone[@unit='chapter']" use="@n"/>
@@ -157,7 +164,7 @@ Added to repository.
     <text xml:lang="eng">
         <front>
             <head>THE ORATION OF M. T. CICERO AGAINST LUCIUS CALPURNIUS PISO.</head>
-            <argument>
+            <div type="textpart" subtype="argument">
                 <head>THE ARGUMENT.</head>
                 <p>After the decision which the senate came to in consequence of Cicero's speech on
                     the subject of the consular provinces, Piso returned home from <placeName
@@ -176,46 +183,46 @@ Added to repository.
                     exasperated by this attack to break out with the following invective against him
                     by way of reply, of which a good deal of the beginning is lost, and one or two
                     other portions are in a very corrupt or doubtful state.</p>
-            </argument>
+            </div>
         </front>
-        <body xml:base="urn:cts:latinLit:phi0474.phi027.perseus-eng1">
+        <body xml:base="urn:cts:latinLit:phi0474.phi027.perseus-eng1"><div type="translation" n="urn:cts:latinLit:phi0474.phi027.perseus-eng1" xml:lang="eng">
             <milestone n="fr1" unit="section"/>
-            <p>O ye immortal gods, what a day is this which has dawned <gap reason="****"/></p>
-            <p><gap reason="****"/>What specimen, even the slightest, have you ever given of
+            <p>O ye immortal gods, what a day is this which has dawned <gap reason="ellipsis"/></p>
+            <p><gap reason="ellipsis"/>What specimen, even the slightest, have you ever given of
                 ability? Of ability, do I say? Rather should I say, what proof have you ever given
                 of being an honourable or a free man? You, who by your complexion seem to throw a
                 doubt on your country, by your speech on your family, by your morals on your name
-                    <gap reason="****"/><milestone n="fr9" unit="section"/></p>
-            <p><gap reason="****"/>This has nothing to do with leading us to think slightly of
+                    <gap reason="ellipsis"/><milestone n="fr9" unit="section"/></p>
+            <p><gap reason="ellipsis"/>This has nothing to do with leading us to think slightly of
                     <placeName key="perseus,Placentia">Placentia</placeName>, of which place he
                 boasts that he is a native: for my nature does not incline me to his; nor does the
                 dignity of a municipal town, especially of one which has <pb n="343"/> deserved
-                exceedingly well at my hands, allow me to entertain such feelings.<gap reason="****"
+                exceedingly well at my hands, allow me to entertain such feelings.<gap reason="ellipsis"
                     /><milestone n="fr11" unit="section"/></p>
-            <p><gap reason="****"/>There was a certain Insubrian who was both a merchant and a
+            <p><gap reason="ellipsis"/>There was a certain Insubrian who was both a merchant and a
                 crier; he, when he had come to <placeName key="perseus,Rome">Rome</placeName> with
                 his daughter, ventured to call a young man of high birth, named Caesoninus, the son
-                of a most thorough rogue: he gave his daughter in marriage to <gap reason="****"/>
+                of a most thorough rogue: he gave his daughter in marriage to <gap reason="ellipsis"/>
                 him. And she became the mother of you, a beast rather than a man. [Concerning Piso's
-                maternal grandfather] <gap reason="****"/> When he had settled on the banks of the
+                maternal grandfather] <gap reason="ellipsis"/> When he had settled on the banks of the
                 Po at <placeName key="perseus,Placentia">Placentia</placeName>, a few years
                 afterwards he obtained the freedom of that city; for it was a city at that time. For
                 before that he was considered a <placeName key="tgn,1000070">Gaul</placeName>; then
                 a man of Gallic extraction; and at last he began to be considered a sort of
-                    half-Placentian.<gap reason="****"/><milestone n="fr12" unit="section"/></p>
-            <p><gap reason="****"/>That Insubrian grandfather of his adopted the elder<gap
-                    reason="****"/><milestone n="fr13" unit="section"/></p>
-            <p><gap reason="****"/>Your father wanted a more luxurious son-in-law than Caius Piso
-                did at that time of his distress <gap reason="****"/> I did not give my daughter in
+                    half-Placentian.<gap reason="ellipsis"/><milestone n="fr12" unit="section"/></p>
+            <p><gap reason="ellipsis"/>That Insubrian grandfather of his adopted the elder<gap
+                    reason="ellipsis"/><milestone n="fr13" unit="section"/></p>
+            <p><gap reason="ellipsis"/>Your father wanted a more luxurious son-in-law than Caius Piso
+                did at that time of his distress <gap reason="ellipsis"/> I did not give my daughter in
                 marriage to that man whom, when I had the power of choosing from all the world, I
-                should have selected in preference to any one.<gap reason="****"/><milestone
+                should have selected in preference to any one.<gap reason="ellipsis"/><milestone
                     n="fr15" unit="section"/></p>
-            <p><gap reason="****"/>When the whole of your relations arrive in a wagon <gap
-                    reason="****"/></p>
-            <p><gap reason="***"/> You put out your head, butting at him <gap reason="****"/></p>
-            <p><gap reason="**"/> I was sitting next to Pompeius<gap reason="****"/>
+            <p><gap reason="ellipsis"/>When the whole of your relations arrive in a wagon <gap
+                    reason="ellipsis"/></p>
+            <p><gap reason="ellipsis"/> You put out your head, butting at him <gap reason="ellipsis"/></p>
+            <p><gap reason="ellipsis"/> I was sitting next to Pompeius<gap reason="ellipsis"/>
                 <milestone n="1" unit="chapter"/><milestone n="1" unit="section"/></p>
-            <p><gap reason="******"/> Do you not see now, do you not feel, O you beast, what
+            <p><gap reason="ellipsis"/> Do you not see now, do you not feel, O you beast, what
                 complaints men make of your impudence? No one complains that a Syrian, that a man
                 whom nobody knows, that some one of that body of lately emancipated slaves, was made
                 consul. For that complexion, like that of slaves, and those hairy cheeks and
@@ -1582,7 +1589,7 @@ Added to repository.
                 you forgotten your prostration and abjectness of mind when news was brought to you
                 that <placeName key="tgn,7006667">Macedonia</placeName> was made praetorian
                 province, and when you fell down fainting a half dead, not only because your
-                successor was appointed, but also that Gabinius's was not? <gap reason="****"/><note
+                successor was appointed, but also that Gabinius's was not? <gap reason="ellipsis"/><note
                     anchored="true">There is great corruption of the text here.</note> Did you not
                 send away a quaestor of aedilitian rank? Was not every one of the most virtuous of
                 your lieutenants insulted by you? Did you not refuse to receive the military
@@ -1778,7 +1785,7 @@ Added to repository.
                 court; nor shall I rejoice less at seeing you in constant and unceasing distress,
                 than I should if I saw you for a short time in the mourning robe of a criminal on
                 his trial.</p>
-        </body>
+        </div></body>
     </text>
 
 </TEI>

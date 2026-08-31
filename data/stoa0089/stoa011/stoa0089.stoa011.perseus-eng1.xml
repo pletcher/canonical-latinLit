@@ -46,6 +46,13 @@
                      <refsDecl doctype="TEI.2">
                               <state unit="poem"/>
                      </refsDecl>
+                        <refsDecl xmlns="http://www.tei-c.org/ns/1.0" n="CTS">
+                        	<cRefPattern n="poem"
+                        		matchPattern="(\w+)"
+                        		replacementPattern="#xpath(/TEI.2/text/body/div1[@type='poem'][@n='$1'])">
+                        		<p>This pointer pattern extracts poem</p>
+                        	</cRefPattern>
+                        </refsDecl>
                         <refsDecl xml:id="CTS">
                           <citeStructure match="/TEI/text/body" use="@xml:base">
                             <citeStructure match="div1[@type='poem']" use="@n" unit="poem" delim=":" n="chunk"/>

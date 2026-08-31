@@ -87,8 +87,7 @@
       </revisionDesc>
    </teiHeader>
    <text xml:lang="lat">
-      <body xml:base="urn:cts:latinLit:stoa0023.stoa001.perseus-lat2"> 
-<div xml:lang="lat" type="edition"> 
+      <body xml:base="urn:cts:latinLit:stoa0023.stoa001.perseus-lat2"><div n="urn:cts:latinLit:stoa0023.stoa001.perseus-lat2" xml:lang="lat" type="edition"> 
    <head>Ammiani Marcellini Rerum Gestarum libri qui supersunt</head> <pb n="v1.p.2"/> 
 <div type="textpart" n="14" subtype="book"> <head>Liber XIV</head> 
 <div type="textpart" n="1" subtype="chapter"> <head> Galli Caesaris saevitia.<note>These summaries, which are not the work of Ammianus but of some early editor, are put for convenience at the beginning of each chapter. Usually the summaries of each book are put all together at the beginning of that book, or (e.g. by Eyssenhardt) the summaries of all the books are collected at the end of the entire text.</note> </head> 

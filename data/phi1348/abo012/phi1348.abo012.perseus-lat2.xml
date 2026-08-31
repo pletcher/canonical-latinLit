@@ -99,8 +99,7 @@
       </revisionDesc>
    </teiHeader>
    <text xml:lang="lat">
-      <body xml:base="urn:cts:latinLit:phi1348.abo012.perseus-lat2">
-         <div type="edition" xml:lang="lat">
+      <body xml:base="urn:cts:latinLit:phi1348.abo012.perseus-lat2"><div n="urn:cts:latinLit:phi1348.abo012.perseus-lat2" type="edition" xml:lang="lat">
             <div type="textpart" subtype="chapter" n="1">
 
                <div type="textpart" subtype="section" n="1">

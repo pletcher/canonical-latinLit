@@ -71,8 +71,7 @@
 </revisionDesc>
   </teiHeader>
   <text xml:lang="lat">
-    <body xml:base="urn:cts:latinLit:phi0978.phi001.perseus-lat2">
-      <div type="edition" xml:lang="lat">
+    <body xml:base="urn:cts:latinLit:phi0978.phi001.perseus-lat2"><div n="urn:cts:latinLit:phi0978.phi001.perseus-lat2" type="edition" xml:lang="lat">
         <div type="textpart" subtype="book" n="1">
           <head>C. PLINI SECVNDI</head>
           <head>NATVRALIS HISTORIAE</head>

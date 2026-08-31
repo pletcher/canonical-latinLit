@@ -90,8 +90,7 @@
     <text xml:lang="lat" n="urn:cts:latinLit:phi1294.phi002.perseus-lat2"
          
          xml:id="stoa0045.stoa0">
-        <body xml:base="urn:cts:latinLit:phi1294.phi002.perseus-lat2">
-            <div type="edition" xml:lang="lat">
+        <body xml:base="urn:cts:latinLit:phi1294.phi002.perseus-lat2"><div n="urn:cts:latinLit:phi1294.phi002.perseus-lat2" type="edition" xml:lang="lat">
                 <div type="textpart" subtype="book" n="1">
                     <div type="textpart" subtype="poem" n="pr">
                         <l n="1">Spero me secutum in libellis meis tale temperamen-</l>

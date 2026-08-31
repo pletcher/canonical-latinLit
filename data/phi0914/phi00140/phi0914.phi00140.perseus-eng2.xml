@@ -46,7 +46,7 @@
                                 <publisher>John Child and son, printers, Bungay</publisher>
                                 <date>1850</date>
                             </imprint>
-                            <biblScope type="volume">4</biblScope>
+                            <biblScope unit="volume">4</biblScope>
                         </monogr>
                     </biblStruct>
                 </listBibl>
@@ -57,9 +57,21 @@
                 <refState unit="book"/>
                 <refState unit="chapter" n="chunk"/>
             </refsDecl>
+                <refsDecl n="CTS">
+                	<cRefPattern n="chapter"
+                		matchPattern="(\w+).(\w+)"
+                		replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@subtype='book'][@n='$1']/.//tei:milestone[@unit='chapter'][@n='$2'])">
+                		<p>This pointer pattern extracts book and chapter</p>
+                	</cRefPattern>
+                	<cRefPattern n="book"
+                		matchPattern="(\w+)"
+                		replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@subtype='book'][@n='$1'])">
+                		<p>This pointer pattern extracts book</p>
+                	</cRefPattern>
+                </refsDecl>
                 <refsDecl xml:id="CTS">
                   <citeStructure match="/TEI/text/body" use="@xml:base">
-                    <citeStructure match="div[@type='book']" use="@n" unit="book" delim=":">
+                    <citeStructure match="div/div[@subtype='book']" use="@n" unit="book" delim=":">
                       <citeStructure match=".//milestone[@unit='chapter']" use="@n" unit="chapter" delim="." n="chunk"/>
                     </citeStructure>
                   </citeStructure>
@@ -89,11 +101,11 @@
         </revisionDesc>
     </teiHeader>
     <text xml:lang="eng">
-        <body xml:base="urn:cts:latinLit:phi0914.phi00140.perseus-eng2">
+        <body xml:base="urn:cts:latinLit:phi0914.phi00140.perseus-eng2"><div type="translation" n="urn:cts:latinLit:phi0914.phi00140.perseus-eng2" xml:lang="eng">
             <pb n="1854" xml:id="p.1854"/>
-            <div part="N" sample="complete" org="uniform" n="40" type="book">
+            <div part="N" sample="complete" org="uniform" n="40" type="textpart" subtype="book">
                 <head>BOOK XL.</head>
-                <argument>
+                <div type="textpart" subtype="argument">
                     <p> When Philip had ordered the children of those whom he had put to death, to
                         be sought after as hostages, Theoxena, fearing the king's passion for her
                         own children and those of her sister, who were still quite young, brought
@@ -121,7 +133,7 @@
                         punishment of Perseus and desired to leave his friend Antigonus, rather than
                         him, as his successor. But, whilst forming this project, he was hurried off
                         by death. Perseus received the kingdom. </p>
-                </argument>
+                </div>
                 <milestone n="1" unit="chapter"/>
                 <p>
                     <milestone n="1" unit="section"/> AT the commencement of the next year, the
@@ -2553,6 +2565,6 @@
                     that the mice gnawed the olives on the table. For the expiation of these,
                     nothing more was done than repeating the celebration of the games. </p>
             </div>
-        </body>
+        </div></body>
     </text>
 </TEI>

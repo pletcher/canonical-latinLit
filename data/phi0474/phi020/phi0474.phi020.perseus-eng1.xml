@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
-    <teiHeader xml:lang="eng" type="text">
+    <teiHeader xml:lang="eng">
         <fileDesc>
             <titleStmt>
                 <title>Address to the Priests</title>
@@ -54,6 +54,13 @@
                 <refState delim="." unit="chapter"/>
                 <refState unit="section"/>
             </refsDecl>
+                <refsDecl n="CTS">
+                	<cRefPattern n="chapter"
+                		matchPattern="(\w+)"
+                		replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/.//tei:milestone[@unit='chapter'][@n='$1'])">
+                		<p>This pointer pattern extracts chapter</p>
+                	</cRefPattern>
+                </refsDecl>
                 <refsDecl xml:id="CTS">
                   <citeStructure match="/TEI/text/body" use="@xml:base">
                     <citeStructure unit="chapter" delim="." match=".//milestone[@unit='chapter']" use="@n"/>
@@ -157,7 +164,7 @@ Added to repository.
     <text xml:lang="eng">
         <front>
             <head>THE SPEECH OF M. T. CICERO FOR HIS HOUSE. ADDRESSED TO THE PRIESTS</head>
-            <argument>
+            <div type="textpart" subtype="argument">
                 <head>THE ARGUMENT.</head>
                 <p>Cicero soon after his consulship, had purchased the house of Marcus Crassus on
                     the <placeName key="tgn,2565724">Palatine Hill</placeName>, which adjoined that
@@ -217,9 +224,9 @@ Added to repository.
                     as his indignation and the greatness of the injury done to him gave him especial
                     energy and force of oratory.” Some critics, but apparently without any good
                     reason, have doubted the genuineness of this oration.</p>
-            </argument>
+            </div>
         </front>
-        <body xml:base="urn:cts:latinLit:phi0474.phi020.perseus-eng1">
+        <body xml:base="urn:cts:latinLit:phi0474.phi020.perseus-eng1"><div type="translation" n="urn:cts:latinLit:phi0474.phi020.perseus-eng1" xml:lang="eng">
             <milestone n="1" unit="chapter"/>
             <milestone n="1" unit="section"/>
             <p>Many things, O priests, have been devised and established with divine wisdom by our
@@ -1139,7 +1146,7 @@ Added to repository.
                 to destroy the cities of enemies;—not of all enemies indeed, but of those with whom
                 we have waged any bitter and intestine war; because when our minds have been
                 inflamed against any people by reason of their cruelty, there always appears to be
-                some war still lingering in their abodes and habitations,<gap reason="* * *"/>
+                some war still lingering in their abodes and habitations,<gap reason="ellipsis"/>
                 <milestone n="24" unit="chapter"/><milestone n="62" unit="section"/></p>
             <p>No law had been passed respecting me. I had not been ordered to appear in court; I
                 had not been summoned. I was absent. I was even in your own opinion a citizen with
@@ -1409,7 +1416,7 @@ Added to repository.
                 you, then,—you, a man devoted to the people,—think that our rights as citizens, and
                 our freedom, ought to he established on this principle; so that when a tribune of
                 the people brings forward a motion, “Do you approve and determine”<gap
-                    reason="* * * *"/>if a hundred Sedulii should say that they do approve and
+                    reason="ellipsis"/>if a hundred Sedulii should say that they do approve and
                 determine, any one of us may lose our privileges? Our ancestors, then, were not
                 attached to the interests of the people, who with respect to the rights of
                 citizenship and liberty established those principles which neither the power of
@@ -2343,6 +2350,6 @@ Added to repository.
                 will of the senate that you should do so, to place me, whom you have restored by
                 your authority and zeal and votes to my country, with your own hands in my house.
             </p>
-        </body>
+        </div></body>
     </text>
 </TEI>

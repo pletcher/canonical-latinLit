@@ -53,6 +53,13 @@
 <state unit="section"/>
 </refsDecl>
 
+        <refsDecl xmlns="http://www.tei-c.org/ns/1.0" n="CTS">
+        	<cRefPattern n="line"
+        		matchPattern="(\w+)"
+        		replacementPattern="#xpath(/TEI.2/text/body/.//lb[@n='$1'])">
+        		<p>This pointer pattern extracts line</p>
+        	</cRefPattern>
+        </refsDecl>
         <refsDecl xml:id="CTS">
           <citeStructure match="/TEI/text/body" use="@xml:base">
             <citeStructure match=".//lb" use="@n" unit="line" delim=":"/>
@@ -103,7 +110,7 @@
 <lb n="24"/>Et tu cui meritis oritur fiducia chartis,
 <lb n="25"/>Octaui uenerande, meis adlabere coeptis, 
 <lb n="26"/>sancte puer, tibi namque canit non pagina bellum
-<lb n="27"/>triste Iouis ponitque  <gap/> <lb n="28"/>Phlegra, Giganteo sparsa est quae sanguine tellus,
+<lb n="27"/>triste Iouis ponitque  <gap reason="undefined"/> <lb n="28"/>Phlegra, Giganteo sparsa est quae sanguine tellus,
 <lb n="29"/>nec Centaureos Lapithas compellit in ensis,
 <lb n="30"/>urit Erichthonias Oriens non ignibus arces, 
 <lb n="31"/>non perfossus Athos nec magno uincula ponto
@@ -265,7 +272,7 @@
 <lb n="163"/>nam solitum uoluens ad tempus tractibus isdem
 <lb n="164"/>immanis uario maculatus corpore serpens
 <lb n="165"/>mersus ut in limo magno sub sideris aestu 
-<gap/>
+<gap reason="undefined"/>
 <lb n="166"/>obuia uibranti carpens grauis aere linguae
 <lb n="167"/>squamosos late torquebat motibus orbis.
 <lb n="168"/>&dagger;tollebant aurae uenientis ad omnia uisus.&dagger;
@@ -443,7 +450,7 @@
 <lb n="316"/>obiectoque dabat clipeo certamina, et illinc
 <lb n="317"/>Hector erat, Troiae summum decus, acer uterque
 <lb n="318"/>(fulminibus ueluti fragor est e turbine nisis),
-<lb n="319"/>hic manibus telisque super  <gap/> <lb n="320"/>eriperet reditus, alter Vulcania ferro 
+<lb n="319"/>hic manibus telisque super  <gap reason="undefined"/> <lb n="320"/>eriperet reditus, alter Vulcania ferro 
 
 
 

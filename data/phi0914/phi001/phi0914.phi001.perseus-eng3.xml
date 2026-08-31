@@ -131,8 +131,7 @@
 		    </revisionDesc>
 	  </teiHeader>
 	  <text xml:lang="eng">
-		    <body xml:base="urn:cts:latinLit:phi0914.phi001.perseus-eng3">
-		    	<div type="edition" xml:lang="eng">
+		    <body xml:base="urn:cts:latinLit:phi0914.phi001.perseus-eng3"><div n="urn:cts:latinLit:phi0914.phi001.perseus-eng3" type="edition" xml:lang="eng">
 			      <div subtype="book" n="1" type="textpart">
 				        <head>Book I</head>
 				        <head>The Earliest Legends</head>

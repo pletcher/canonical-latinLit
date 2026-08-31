@@ -99,8 +99,7 @@
 	</teiHeader>
 	
 	<text xml:lang="lat">
-		<body xml:base="urn:cts:latinLit:phi1254.phi001.perseus-lat2"> 
-<div type="edition" xml:lang="lat"> 
+		<body xml:base="urn:cts:latinLit:phi1254.phi001.perseus-lat2"><div n="urn:cts:latinLit:phi1254.phi001.perseus-lat2" type="edition" xml:lang="lat"> 
 <!--<div type="textpart" n="capitula" subtype="book"> <pb xml:id="v1.p.xxxviii"/> 
 <div type="textpart" n="1sum" subtype="book"><head>Capitula Libri Primi <note><hi rend="italic">For variants see the chapters to which the headings belong. The headings are divided among the separate volumes.</hi></note> </head> 
 <div type="textpart" n="1" subtype="chapter"><head>I</head> <p>Quali proportione quibusque collectionibus Plutarchus ratiocinatum esse Pythagoram philosophum dixerit de comprehendenda corporis proceritate qua fuit Hercules, cum vitam inter homines viveret. <ref target="v1.p.2">2</ref> </p> </div> 

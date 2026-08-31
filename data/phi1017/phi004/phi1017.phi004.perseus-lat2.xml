@@ -95,8 +95,7 @@
     </teiHeader>
 
    <text xml:lang="lat" n="Med.">
-      <body xml:base="urn:cts:latinLit:phi1017.phi004.perseus-lat2">
-         <div xml:lang="lat" type="edition">
+      <body xml:base="urn:cts:latinLit:phi1017.phi004.perseus-lat2"><div n="urn:cts:latinLit:phi1017.phi004.perseus-lat2" xml:lang="lat" type="edition">
     
     
             <milestone n="1" unit="card"/>

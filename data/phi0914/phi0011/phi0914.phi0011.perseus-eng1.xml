@@ -46,9 +46,21 @@
                 <refState unit="book"/>
                 <refState unit="chapter" n="chunk"/>
             </refsDecl>
+                <refsDecl n="CTS">
+                	<cRefPattern n="chapter"
+                		matchPattern="(\w+).(\w+)"
+                		replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@subtype='book'][@n='$1']/.//tei:milestone[@unit='chapter'][@n='$2'])">
+                		<p>This pointer pattern extracts book and chapter</p>
+                	</cRefPattern>
+                	<cRefPattern n="book"
+                		matchPattern="(\w+)"
+                		replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@subtype='book'][@n='$1'])">
+                		<p>This pointer pattern extracts book</p>
+                	</cRefPattern>
+                </refsDecl>
                 <refsDecl xml:id="CTS">
                   <citeStructure match="/TEI/text/body" use="@xml:base">
-                    <citeStructure match="div[@type='book']" use="@n" unit="book" delim=":">
+                    <citeStructure match="div/div[@subtype='book']" use="@n" unit="book" delim=":">
                       <citeStructure match=".//milestone[@unit='chapter']" use="@n" unit="chapter" delim="." n="chunk"/>
                     </citeStructure>
                   </citeStructure>
@@ -76,9 +88,9 @@
         </revisionDesc>
     </teiHeader>
     <text xml:lang="eng">
-        <body xml:base="urn:cts:latinLit:phi0914.phi0011.perseus-eng1">
+        <body xml:base="urn:cts:latinLit:phi0914.phi0011.perseus-eng1"><div type="translation" n="urn:cts:latinLit:phi0914.phi0011.perseus-eng1" xml:lang="eng">
             <pb n="p.3"/>
-            <div part="N" sample="complete" org="uniform" n="1" type="book">
+            <div part="N" sample="complete" org="uniform" n="1" type="textpart" subtype="book">
                 <head>Livy from the Founding of the City: Book I</head>
                 <p>
                     <milestone n="pr" unit="chapter"/>
@@ -3169,6 +3181,6 @@
                     Collatinus. </p>
                 <pb n="p.211"/>
             </div>
-        </body>
+        </div></body>
     </text>
 </TEI>

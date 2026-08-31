@@ -86,8 +86,7 @@
   </revisionDesc>
 </teiHeader>
    <text xml:lang="lat" xml:id="stoa0045.stoa0">
-      <body xml:base="urn:cts:latinLit:phi0959.phi009.perseus-lat2">
-         <div type="edition" xml:lang="lat">
+      <body xml:base="urn:cts:latinLit:phi0959.phi009.perseus-lat2"><div n="urn:cts:latinLit:phi0959.phi009.perseus-lat2" type="edition" xml:lang="lat">
             <div type="textpart" subtype="book" n="1">
                <head>Ex Ponto</head>
                <div type="textpart" subtype="poem" n="1">

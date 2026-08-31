@@ -46,7 +46,7 @@
                                 <publisher>John Child and son, printers</publisher>
                                 <date>1849</date>
                             </imprint>
-                            <biblScope type="volume">2</biblScope>
+                            <biblScope unit="volume">2</biblScope>
                         </monogr>
                     </biblStruct>
                 </listBibl>
@@ -57,9 +57,21 @@
                 <refState unit="book"/>
                 <refState unit="chapter" n="chunk"/>
             </refsDecl>
+                <refsDecl n="CTS">
+                	<cRefPattern n="chapter"
+                		matchPattern="(\w+).(\w+)"
+                		replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@subtype='book'][@n='$1']/.//tei:milestone[@unit='chapter'][@n='$2'])">
+                		<p>This pointer pattern extracts book and chapter</p>
+                	</cRefPattern>
+                	<cRefPattern n="book"
+                		matchPattern="(\w+)"
+                		replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@subtype='book'][@n='$1'])">
+                		<p>This pointer pattern extracts book</p>
+                	</cRefPattern>
+                </refsDecl>
                 <refsDecl xml:id="CTS">
                   <citeStructure match="/TEI/text/body" use="@xml:base">
-                    <citeStructure match="div[@type='book']" use="@n" unit="book" delim=":">
+                    <citeStructure match="div/div[@subtype='book']" use="@n" unit="book" delim=":">
                       <citeStructure match=".//milestone[@unit='chapter']" use="@n" unit="chapter" delim="." n="chunk"/>
                     </citeStructure>
                   </citeStructure>
@@ -89,11 +101,11 @@
         </revisionDesc>
     </teiHeader>
     <text xml:lang="eng">
-        <body xml:base="urn:cts:latinLit:phi0914.phi00123.perseus-eng2">
+        <body xml:base="urn:cts:latinLit:phi0914.phi00123.perseus-eng2"><div type="translation" n="urn:cts:latinLit:phi0914.phi00123.perseus-eng2" xml:lang="eng">
             <pb n="835" xml:id="p.835"/>
-            <div part="N" sample="complete" org="uniform" n="23" type="book">
+            <div part="N" sample="complete" org="uniform" n="23" type="textpart" subtype="book">
                 <head>BOOK XXIII.</head>
-                <argument>
+                <div type="textpart" subtype="argument">
                     <p> The Campanians revolt to Hannibal. Mago is sent to Carthage to announce the
                         victory of Cannœ. Hanno advises the Carthaginian senate to make peace with
                         the Romans, but is overborne by the Barcine faction. Claudi- us Marcellus
@@ -110,7 +122,7 @@
                         general, Mago, and Han- no prisoners. Claudius Marcellus again defeats the
                         army of Hannibal at Nola, and the hopes of the Romans are revived as to the
                         results of the war. </p>
-                </argument>
+                </div>
                 <milestone n="1" unit="chapter"/>
                 <p>
                     <milestone n="1" unit="section"/> AFTER the battle of Cannae, Hannibal, having
@@ -2456,6 +2468,6 @@
                     over to the Romans, and the achievements in Spain during that summer were much
                     more important than those in Italy. </p>
             </div>
-        </body>
+        </div></body>
     </text>
 </TEI>

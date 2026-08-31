@@ -80,8 +80,7 @@
 
 
    <text xml:lang="lat">
-      <body xml:base="urn:cts:latinLit:phi0893.phi002.perseus-lat2">
-        <div type="edition" xml:lang="lat">
+      <body xml:base="urn:cts:latinLit:phi0893.phi002.perseus-lat2"><div n="urn:cts:latinLit:phi0893.phi002.perseus-lat2" type="edition" xml:lang="lat">
          <pb n="p.116"/>
          <div type="textpart" subtype="poem" n="1">
 

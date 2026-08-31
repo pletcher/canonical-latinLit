@@ -53,6 +53,18 @@
 <state unit="section"/>
 </refsDecl>
 
+        <refsDecl xmlns="http://www.tei-c.org/ns/1.0" n="CTS">
+        	<cRefPattern n="chapter"
+        		matchPattern="(\w+).(\w+)"
+        		replacementPattern="#xpath(/TEI.2/text/body/div1[@type='book'][@n='$1']/div2[@type='chapter'][@n='$2'])">
+        		<p>This pointer pattern extracts book and chapter</p>
+        	</cRefPattern>
+        	<cRefPattern n="book"
+        		matchPattern="(\w+)"
+        		replacementPattern="#xpath(/TEI.2/text/body/div1[@type='book'][@n='$1'])">
+        		<p>This pointer pattern extracts book</p>
+        	</cRefPattern>
+        </refsDecl>
         <refsDecl xml:id="CTS">
           <citeStructure match="/TEI/text/body" use="@xml:base">
             <citeStructure match="div1[@type='book']" use="@n" unit="book" delim=":">
@@ -2874,7 +2886,7 @@ pulpam caesam, alicam elixam, teres cerebellum
 ex iure coctum, ova confringis et conmiscis
 ut unum corpus efficias, liquamine temperas et
 oleum modice mittis, piper integrum, nucleos abundanter.
-fac in pensam et inples pullum vel porcellum <gap/> 
+fac in pensam et inples pullum vel porcellum <gap reason="undefined"/> 
 
 </p></div2>
 

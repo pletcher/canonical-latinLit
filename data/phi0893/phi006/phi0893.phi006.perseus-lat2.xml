@@ -87,8 +87,7 @@
    </teiHeader>
 
    <text xml:lang="lat">
-      <body xml:base="urn:cts:latinLit:phi0893.phi006.perseus-lat2">
-         <div xml:lang="lat" type="edition">
+      <body xml:base="urn:cts:latinLit:phi0893.phi006.perseus-lat2"><div n="urn:cts:latinLit:phi0893.phi006.perseus-lat2" xml:lang="lat" type="edition">
             
             <l n="1">Humano capiti cervicem pictor equinam </l>
             <l n="2">iungere si velit, et varias inducere plumas, </l>

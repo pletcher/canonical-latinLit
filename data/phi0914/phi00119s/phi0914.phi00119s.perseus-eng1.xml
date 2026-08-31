@@ -46,9 +46,16 @@
                 <refState unit="book"/>
                 <refState unit="chapter" n="chunk"/>
             </refsDecl>
+                <refsDecl n="CTS">
+                	<cRefPattern n="book"
+                		matchPattern="(\w+)"
+                		replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@subtype='book'][@n='$1'])">
+                		<p>This pointer pattern extracts book</p>
+                	</cRefPattern>
+                </refsDecl>
                 <refsDecl xml:id="CTS">
                   <citeStructure match="/TEI/text/body" use="@xml:base">
-                    <citeStructure match="div[@type='book']" use="@n" unit="book" delim=":" n="chunk"/>
+                    <citeStructure match="div/div[@subtype='book']" use="@n" unit="book" delim=":" n="chunk"/>
                   </citeStructure>
                 </refsDecl>
 </encodingDesc>
@@ -75,8 +82,8 @@
         </revisionDesc>
     </teiHeader>
     <text xml:lang="eng">
-        <body xml:base="urn:cts:latinLit:phi0914.phi00119s.perseus-eng1">
-            <div part="N" sample="complete" org="uniform" n="19s" type="book">
+        <body xml:base="urn:cts:latinLit:phi0914.phi00119s.perseus-eng1"><div type="translation" n="urn:cts:latinLit:phi0914.phi00119s.perseus-eng1" xml:lang="eng">
+            <div part="N" sample="complete" org="uniform" n="19s" type="textpart" subtype="book">
                 <head>Summary of Book XIX</head>
                 <p> CAECILIUS METELLUS, after a prosperous campaign against the Carthaginians,
                     triumphed brilliantly, having thirteen of the enemy's generals and a hundred and
@@ -112,6 +119,6 @@
                     from the flames. <reg>two</reg> tribes were added, the Velina and the Quirina.
                 </p>
             </div>
-        </body>
+        </div></body>
     </text>
 </TEI>

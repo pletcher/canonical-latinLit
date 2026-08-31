@@ -13,4 +13,11 @@
 
 
 
+
+	<ti:translation urn="urn:cts:latinLit:phi0474.phi026.perseus-eng1" workUrn="urn:cts:latinLit:phi0474.phi026" xml:lang="eng">
+		<ti:label xml:lang="eng">In Defense of Lucius Cornelius Balbus</ti:label>
+	
+		<ti:description xml:lang="eng">M. Tullius Cicero. The Orations of Marcus Tullius Cicero, literally translated by C. D.
+                            Yonge, B. A.. London: George Bell &amp; Sons, York Street, Covent
+                                Garden, 1891.</ti:description></ti:translation>
 </ti:work>

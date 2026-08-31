@@ -101,8 +101,7 @@ needs line nos.</change>
       </revisionDesc>
    </teiHeader>
    <text xml:lang="lat">
-      <body xml:base="urn:cts:latinLit:phi0893.phi001.perseus-lat2">
-         <div xml:lang="lat" type="edition">
+      <body xml:base="urn:cts:latinLit:phi0893.phi001.perseus-lat2"><div n="urn:cts:latinLit:phi0893.phi001.perseus-lat2" xml:lang="lat" type="edition">
             <div type="textpart" n="1" subtype="book">
                <div type="textpart" n="1" met="First Asclepiadean" subtype="poem">
                   <l n="1">Maecenas atavis edite regibus,</l>

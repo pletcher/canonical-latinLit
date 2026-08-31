@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
-    <teiHeader xml:lang="eng" type="text">
+    <teiHeader xml:lang="eng">
         <fileDesc>
             <titleStmt>
                 <title>On the Subject of the Consular Provinces </title>
@@ -54,6 +54,13 @@
                 <refState delim="." unit="chapter"/>
                 <refState unit="section"/>
             </refsDecl>
+                <refsDecl n="CTS">
+                	<cRefPattern n="chapter"
+                		matchPattern="(\w+)"
+                		replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/.//tei:milestone[@unit='chapter'][@n='$1'])">
+                		<p>This pointer pattern extracts chapter</p>
+                	</cRefPattern>
+                </refsDecl>
                 <refsDecl xml:id="CTS">
                   <citeStructure match="/TEI/text/body" use="@xml:base">
                     <citeStructure unit="chapter" delim="." match=".//milestone[@unit='chapter']" use="@n"/>
@@ -157,7 +164,7 @@ Added to repository.
     <text xml:lang="eng">
         <front>
             <head> THE SPEECH OF M. T. CICERO ON THE SUBJECT OF THE CONSULAR PROVINCES.</head>
-            <argument>
+            <div type="textpart" subtype="argument">
                 <head>THE ARGUMENT.</head>
                 <p>This speech was delivered about the middle of the year of the consulship of
                     Cnaeus Cornelius Lentulus Marcellinus and Lucius Marcius Philippus, A. U. C.
@@ -191,9 +198,9 @@ Added to repository.
                     were given to the new consuls.<note anchored="true">See the oration against
                             <placeName key="tgn,2040810">Piso</placeName>.</note>
                 </p>
-            </argument>
+            </div>
         </front>
-        <body xml:base="urn:cts:latinLit:phi0474.phi025.perseus-eng1">
+        <body xml:base="urn:cts:latinLit:phi0474.phi025.perseus-eng1"><div type="translation" n="urn:cts:latinLit:phi0474.phi025.perseus-eng1" xml:lang="eng">
             <milestone n="1" unit="chapter"/>
             <milestone n="1" unit="section"/>
             <p>If any one of you, O conscript fathers, is waiting to see what provinces I shall
@@ -267,7 +274,7 @@ Added to repository.
             <p>The soldiers of the Roman people have been taken prisoners, put to death, abandoned,
                 and dispersed in a most miserable manner. They have been wasted away by neglect, <pb
                     n="288"/> by famine, by disease, by every sort of disaster; so that (and it is a
-                most scandalous thing) the wickedness of the general appears <gap reason="* * *"/>to
+                most scandalous thing) the wickedness of the general appears <gap reason="ellipsis"/>to
                 have been chastised by the punishment of the fatherland and the army. And this
                     <placeName key="tgn,7006667">Macedonia</placeName>, as all the neighbouring
                 nations had been subdued, and all the barbarians checked, we used to be able to
@@ -422,7 +429,7 @@ Added to repository.
                 the curtain, or else he has wiser friends than Gabinius, from whom no letters are
                 produced. <milestone n="7" unit="chapter"/><milestone n="15" unit="section"/></p>
             <p>Shall we then have these men for our generals? the one of whom does not venture to
-                inform us whether <gap reason="* * * *"/>he is styled <foreign xml:lang="la"
+                inform us whether <gap reason="ellipsis"/>he is styled <foreign xml:lang="la"
                     >Imperator</foreign>; and the other must in a few days repent of having ventured
                 to mention such a thing to us, if his clerks do not tire of writing. And if that man
                 has any friends, or indeed, if it be possible that any one should be a friend to so
@@ -779,7 +786,7 @@ Added to repository.
             <p>The other disregards all consideration of the Gallic war; he discharges the duty of a
                 virtuous senator: though he thinks the law invalid, still he observes it; for he
                 fixes beforehand a day for his successor to enter on his office. <gap
-                    reason="* *  *"/> But it seems to me that nothing is more inconsistent with the
+                    reason="ellipsis"/> But it seems to me that nothing is more inconsistent with the
                 dignity and principles of our ancestors than for the consul, who on the first of
                 January is to have a province, to have it promised to him in this way, and not
                 regularly decreed to him. Suppose he were during the whole of his consulship without
@@ -998,6 +1005,6 @@ Added to repository.
                 shielded my enemy in spite of your authority; or those who found fault with my
                 reconciliation with their enemy, while they themselves do not hesitate to be
                 reconciled both to my enemy and to their own.</p>
-        </body>
+        </div></body>
     </text>
 </TEI>

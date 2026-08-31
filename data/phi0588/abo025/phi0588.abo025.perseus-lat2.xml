@@ -84,8 +84,7 @@
 
   </teiHeader>
   <text xml:lang="lat">
-    <body xml:base="urn:cts:latinLit:phi0588.abo025.perseus-lat2">
-        <div type="edition" xml:lang="lat">
+    <body xml:base="urn:cts:latinLit:phi0588.abo025.perseus-lat2"><div n="urn:cts:latinLit:phi0588.abo025.perseus-lat2" type="edition" xml:lang="lat">
       <div type="textpart" subtype="chapter" n="1"><p><seg type="section" n="1"><abbr ><expan><ex>Titus</ex></expan>T.</abbr> Pomponius Atticus, ab origine ultima stirpis Romanae
         generatus, perpetuo a maioribus acceptam equestrem obtinuit dignitatem. </seg> 
           <seg type="section" n="2"> patre usus est diligente et, ut tum erant tempora, diti inprimisque

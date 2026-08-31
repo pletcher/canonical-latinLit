@@ -43,7 +43,7 @@
                                 <publisher>John Child and son, printers</publisher>
                                 <date>1857</date>
                             </imprint>
-                            <biblScope type="volume">1</biblScope>
+                            <biblScope unit="volume">1</biblScope>
                         </monogr>
                     </biblStruct>
                 </listBibl>
@@ -54,9 +54,21 @@
                 <refState unit="book"/>
                 <refState unit="chapter" n="chunk"/>
             </refsDecl>
+                <refsDecl n="CTS">
+                	<cRefPattern n="chapter"
+                		matchPattern="(\w+).(\w+)"
+                		replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@subtype='book'][@n='$1']/.//tei:milestone[@unit='chapter'][@n='$2'])">
+                		<p>This pointer pattern extracts book and chapter</p>
+                	</cRefPattern>
+                	<cRefPattern n="book"
+                		matchPattern="(\w+)"
+                		replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@subtype='book'][@n='$1'])">
+                		<p>This pointer pattern extracts book</p>
+                	</cRefPattern>
+                </refsDecl>
                 <refsDecl xml:id="CTS">
                   <citeStructure match="/TEI/text/body" use="@xml:base">
-                    <citeStructure match="div[@type='book']" use="@n" unit="book" delim=":">
+                    <citeStructure match="div/div[@subtype='book']" use="@n" unit="book" delim=":">
                       <citeStructure match=".//milestone[@unit='chapter']" use="@n" unit="chapter" delim="." n="chunk"/>
                     </citeStructure>
                   </citeStructure>
@@ -86,11 +98,11 @@
         </revisionDesc>
     </teiHeader>
     <text xml:lang="eng">
-        <body xml:base="urn:cts:latinLit:phi0914.phi0015.perseus-eng2">
+        <body xml:base="urn:cts:latinLit:phi0914.phi0015.perseus-eng2"><div type="translation" n="urn:cts:latinLit:phi0914.phi0015.perseus-eng2" xml:lang="eng">
             <pb n="322" xml:id="p.322"/>
-            <div part="N" sample="complete" org="uniform" n="5" type="book">
+            <div part="N" sample="complete" org="uniform" n="5" type="textpart" subtype="book">
                 <head>BOOK V.</head>
-                <argument>
+                <div type="textpart" subtype="argument">
                     <p> During the siege of Veii winter dwellings erected for the soldiers. This
                         being a novelty, affords the tribunes of the people a pretext for exciting
                         discontent. The cavalry for the first time serve on horses of their own.
@@ -108,7 +120,7 @@
                         themselves. Whilst the gold is being weighed to them, Camillus, who had been
                         appointed dictator, arrives with an army, expels the Gauls, and destroys
                         their army. He successfully opposes the design of removing to Veii. </p>
-                </argument>
+                </div>
                 <milestone n="1" unit="chapter"/>
                 <p>
                     <milestone n="1" unit="section"/> PEACE being established in every other
@@ -2749,6 +2761,6 @@
                     houses, and why the form of the city appears more like one taken up by
                     individuals, than regularly portioned out [by commissioners]. </p>
             </div>
-        </body>
+        </div></body>
     </text>
 </TEI>

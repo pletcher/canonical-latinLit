@@ -73,8 +73,7 @@
    </revisionDesc>
 </teiHeader>
    <text xml:lang="lat">
-      <body xml:base="urn:cts:latinLit:stoa0058.stoa023.perseus-lat1">
-         <div xml:lang="lat" type="edition">
+      <body xml:base="urn:cts:latinLit:stoa0058.stoa023.perseus-lat1"><div n="urn:cts:latinLit:stoa0058.stoa023.perseus-lat1" xml:lang="lat" type="edition">
             <pb n="p.72"/>
             <head>contra Eutychen</head>
             <label n="opener">Anicii Manui Severini Boethii V.C. et inl. excons. ord. pathicii

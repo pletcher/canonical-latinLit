@@ -44,17 +44,17 @@
 
     <encodingDesc>
         <refsDecl n="CTS">
-            <cRefPattern n="line" matchPattern="(\d+).(\d+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1']/tei:l[@n='$2'])">
+            <cRefPattern n="line" matchPattern="(\d+).(\d+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div/tei:div[@n='$1']/tei:l[@n='$2'])">
                 <p>This pattern extracts lines within poems</p>
             </cRefPattern>
-            <cRefPattern n="poem" matchPattern="(\d+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1'])">
+            <cRefPattern n="poem" matchPattern="(\d+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div/tei:div[@n='$1'])">
                 <p>This pattern extracts poem</p>
             </cRefPattern>
         </refsDecl>
       <p>Keyboarding</p>
         <refsDecl xml:id="CTS">
           <citeStructure match="/TEI/text/body" use="@xml:base">
-            <citeStructure use="@n" match="div[@type]" n="chunk">
+            <citeStructure use="@n" match="div/div[@type]" n="chunk">
               <citeStructure unit="line" delim=":" match="l" use="@n"/>
             </citeStructure>
           </citeStructure>
@@ -77,7 +77,7 @@
   </teiHeader>
 
   <text xml:lang="lat">
-  <body xml:base="urn:cts:latinLit:phi0969.phi001.perseus-lat2">
+  <body xml:base="urn:cts:latinLit:phi0969.phi001.perseus-lat2"><div type="edition" n="urn:cts:latinLit:phi0969.phi001.perseus-lat2" xml:lang="lat">
   <pb n="p.310"/>
   <div type="edition" xml:lang="lat">
 <div n="pr" subtype="prologue" type="textpart">
@@ -853,4 +853,4 @@
 <l n="79"><q rend="merge">iam decies redit in rugam.</q> depunge ubi sistam:</l>
 <l n="80">inventus, Chrysippe, tui finitor acervi.</l>
 <note xml:id="n.400.1" xml:lang="eng"><foreign xml:lang="lat">repone</foreign> L and old edd. Büch. has <foreign xml:lang="lat">neu dicta</foreign> <quote xml:lang="lat">pone paterna  <gap reason="omitted"/> sumptus.</quote> <quote xml:lang="lat">quid reliqum est?</quote> Housm. suggests <foreign xml:lang="lat">neu dic ita</foreign>, <quote xml:lang="lat">pone paterna  <gap reason="omitted"/> reliqum est.</quote> <foreign xml:lang="lat">reliqum?</foreign> and explains, <quote>Do not say <q>state what you inherited, add interest, subtract expenditure, and see how much is left.</q> Left, quotha?</quote> (l.c. p. 31). <foreign xml:lang="lat">ita</foreign> then means <gloss>as follows.</gloss> Büch. takes <foreign xml:lang="lat">pone</foreign> to mean <gloss>invest.</gloss></note>
-</div></div></body></text></TEI>
+</div></div></div></body></text></TEI>

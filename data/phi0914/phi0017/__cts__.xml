@@ -1,0 +1,16 @@
+<work xmlns="http://chs.harvard.edu/xmlns/cts" groupUrn="urn:cts:latinLit:phi0914" urn="urn:cts:latinLit:phi0914.phi0017" xml:lang="lat">
+	<title xml:lang="lat">Ab Urbe Condita</title>
+	<edition urn="urn:cts:latinLit:phi0914.phi0017.perseus-lat3" workUrn="urn:cts:latinLit:phi0914.phi0017" xml:lang="lat">
+		<label xml:lang="lat">Ab urbe condita</label>
+		<description xml:lang="eng">Livy. Ab urbe condita. Charles Flamstead Walters, Robert Seymour Conway, editor. Oxford: Oxford University Press, 1919.</description>
+	</edition>
+	<translation urn="urn:cts:latinLit:phi0914.phi0017.perseus-eng1" workUrn="urn:cts:latinLit:phi0914.phi0017" xml:lang="eng">
+		<label xml:lang="eng">Books V, VI and VII With An English Translation</label>
+		<description xml:lang="eng">Livy. Books V, VI and VII With An English Translation. Cambridge: Cambridge, Mass., Harvard University Press; London, William
+                                Heinemann, Ltd., 1924: no copyright notice.</description>
+	</translation>
+	<translation urn="urn:cts:latinLit:phi0914.phi0017.perseus-eng2" workUrn="urn:cts:latinLit:phi0914.phi0017" xml:lang="eng">
+		<label xml:lang="eng">History of Rome by Titus Livius, the first eight Books</label>
+		<description xml:lang="eng">Livy. History of Rome by Titus Livius, the first eight Books. York Street, Covent Garden, London: Henry G. Bohn, 1857.</description>
+	</translation>
+</work>

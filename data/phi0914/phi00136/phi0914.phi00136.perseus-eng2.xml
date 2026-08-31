@@ -43,7 +43,7 @@
                                 <publisher>John Child and son, printers, Bungay</publisher>
                                 <date>1850</date>
                             </imprint>
-                            <biblScope type="volume">3</biblScope>
+                            <biblScope unit="volume">3</biblScope>
                         </monogr>
                     </biblStruct>
                 </listBibl>
@@ -54,9 +54,21 @@
                 <refState unit="book"/>
                 <refState unit="chapter" n="chunk"/>
             </refsDecl>
+                <refsDecl n="CTS">
+                	<cRefPattern n="chapter"
+                		matchPattern="(\w+).(\w+)"
+                		replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@subtype='book'][@n='$1']/.//tei:milestone[@unit='chapter'][@n='$2'])">
+                		<p>This pointer pattern extracts book and chapter</p>
+                	</cRefPattern>
+                	<cRefPattern n="book"
+                		matchPattern="(\w+)"
+                		replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@subtype='book'][@n='$1'])">
+                		<p>This pointer pattern extracts book</p>
+                	</cRefPattern>
+                </refsDecl>
                 <refsDecl xml:id="CTS">
                   <citeStructure match="/TEI/text/body" use="@xml:base">
-                    <citeStructure match="div[@type='book']" use="@n" unit="book" delim=":">
+                    <citeStructure match="div/div[@subtype='book']" use="@n" unit="book" delim=":">
                       <citeStructure match=".//milestone[@unit='chapter']" use="@n" unit="chapter" delim="." n="chunk"/>
                     </citeStructure>
                   </citeStructure>
@@ -83,10 +95,10 @@
         --><change when="2014-10-09" who="Stella Dee">edited markup</change> </revisionDesc>
     </teiHeader>
     <text xml:lang="eng">
-        <body xml:base="urn:cts:latinLit:phi0914.phi00136.perseus-eng2">
-            <div part="N" sample="complete" org="uniform" n="36" type="book">
+        <body xml:base="urn:cts:latinLit:phi0914.phi00136.perseus-eng2"><div type="translation" n="urn:cts:latinLit:phi0914.phi00136.perseus-eng2" xml:lang="eng">
+            <div part="N" sample="complete" org="uniform" n="36" type="textpart" subtype="book">
                 <head>BOOK XXVI.</head>
-                <argument>
+                <div type="textpart" subtype="argument">
                     <p>
                         Manius Acilius Glabrio, the consul, aided by king Philip, defeats Antiochus
 at Thermopylae, and drives him out of Greece; reduces the Aetolians to
@@ -94,7 +106,7 @@ sue for peace. Publius Cornelius Scipio Nasica reduces the Boian Gauls
 to submission. Sea-fight between the Roman fleet and that of Antiochus,
 in which the Romans are victorious.
                     </p>
-                </argument>
+                </div>
                 <milestone n="1" unit="chapter"/>
                 <p>
                     <milestone n="1" unit="section"/>
@@ -1443,6 +1455,6 @@ in which the Romans are victorious.
                     At the close of the year, the elections were held at Rome, in which were chosen consuls, Lucius Cornelius Scipio and Caius Laelius, from whom all men expected the conclusion of the war with Antiochus. Next day were elected praetors, Marcus Tuccius, Lucius Aurunculeius, Cneius Fulvius, Lucius Aemilius, Publius Junius, and Caius Atinius Labeo.
                 </p>
             </div>
-        </body>
+        </div></body>
     </text>
 </TEI>

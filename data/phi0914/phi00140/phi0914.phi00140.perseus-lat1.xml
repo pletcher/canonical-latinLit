@@ -36,7 +36,7 @@
                                 <publisher>Weidmannsche Buchhandlung</publisher>
                                 <date>1875</date>
                             </imprint>
-                            <biblScope type="volume">9.1</biblScope>
+                            <biblScope unit="volume">9.1</biblScope>
                         </monogr>
                     </biblStruct>
                 </listBibl>
@@ -48,9 +48,21 @@
                 <refState delim="." unit="chapter"/>
                 <refState unit="section"/>
             </refsDecl>
+                <refsDecl n="CTS">
+                	<cRefPattern n="chapter"
+                		matchPattern="(\w+).(\w+)"
+                		replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@subtype='book'][@n='$1']/.//tei:milestone[@unit='chapter'][@n='$2'])">
+                		<p>This pointer pattern extracts book and chapter</p>
+                	</cRefPattern>
+                	<cRefPattern n="book"
+                		matchPattern="(\w+)"
+                		replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@subtype='book'][@n='$1'])">
+                		<p>This pointer pattern extracts book</p>
+                	</cRefPattern>
+                </refsDecl>
                 <refsDecl xml:id="CTS">
                   <citeStructure match="/TEI/text/body" use="@xml:base">
-                    <citeStructure match="div[@type='book']" use="@n" unit="book" delim=":">
+                    <citeStructure match="div/div[@subtype='book']" use="@n" unit="book" delim=":">
                       <citeStructure match=".//milestone[@unit='chapter']" use="@n" unit="chapter" delim="." n="chunk"/>
                     </citeStructure>
                   </citeStructure>
@@ -79,8 +91,8 @@
         </revisionDesc>
     </teiHeader>
     <text xml:lang="lat">
-        <body xml:base="urn:cts:latinLit:phi0914.phi00140.perseus-lat1">
-            <div type="book" n="40" org="uniform" sample="complete" part="N">
+        <body xml:base="urn:cts:latinLit:phi0914.phi00140.perseus-lat1"><div type="edition" n="urn:cts:latinLit:phi0914.phi00140.perseus-lat1" xml:lang="lat">
+            <div type="textpart" subtype="book" n="40" org="uniform" sample="complete" part="N">
                 <p>
                     <milestone unit="chapter" n="1"/>
                     <milestone unit="section" n="1"/> principio insequentis anni consules
@@ -1893,7 +1905,7 @@
                     Ligustini belli. <milestone unit="section" n="3"/>
                     <pb xml:id="vol.9.1.p.181" n="notedatea"/> ager publicus populi Romani erat in
                     Samnitibus; Taurasinorum <hi rend="italics">fuerat. eo cum</hi> traducere
-                    Ligures Apuanos vellent, edixerunt, Ligures ab Anido <gap/>
+                    Ligures Apuanos vellent, edixerunt, Ligures ab Anido <gap reason="undefined"/>
                     <note place="unspecified" anchored="true">
                         <date>a. Ch. 180.</date>
                     </note> montibus descenderent cum liberis coniugibusque, sua omnia secum
@@ -2072,7 +2084,7 @@
                     <milestone unit="section" n="1"/> eodem anno <persName n="2">
                         <forename full="yes">L.</forename>
                         <surname full="yes">Duronius</surname>
-                    </persName> , qui praetor anno superiore <gap/> ex Illyrico cum decem navibus
+                    </persName> , qui praetor anno superiore <gap reason="undefined"/> ex Illyrico cum decem navibus
                     Brundisium redierat. inde in portu relictis navibus cum venisset Romam, inter
                     exponendas res, quas ibi gessisset, haud dubie in regem Illyriorum Gentium
                     latrocinii omnis maritimi causam avertit: <milestone unit="section" n="2"/> ex
@@ -2214,7 +2226,7 @@
                     </persName> , <milestone unit="section" n="5"/> et post paucos dies cum
                     militibus, quos secum deduxerat, triumphans urbem est invectus. <milestone
                         unit="section" n="6"/> tulit in triumpho coronas aureas centum viginti
-                    quattuor, praeterea auri pondo triginta unum, <gap/> et signati Oscensis nummum
+                    quattuor, praeterea auri pondo triginta unum, <gap reason="undefined"/> et signati Oscensis nummum
                     centum septuaginta tria milia ducentos. <milestone unit="section" n="7"/>
                     militibus de praeda quinquagenos denarios dedit, duplex centurionibus, triplex
                     equiti, tantundem sociis Latini nominis, et stipendium omnibus duplex.
@@ -2377,7 +2389,7 @@
                     per annos multos vobis ipsis graves et atroces geritis, quae periculum est ne ex
                     hac die nobis et rei publicae quam vobis graviores fiant. <milestone
                         unit="section" n="6"/> de quibus causis hoc timeamus, multa subcurrunt, quae
-                    dicerentur, nisi forte inplacabiles fueritis <gap/> inplicaverint animos
+                    dicerentur, nisi forte inplacabiles fueritis <gap reason="undefined"/> inplicaverint animos
                     vestros. <milestone unit="section" n="7"/> has ut hodie, ut in isto templo
                     finiatis simultates, quaesumus vos universi, et quos coniunxit suffragiis suis
                     populus Romanus, hos etiam reconciliatione gratiae coniungi a nobis sinatis;
@@ -2508,7 +2520,7 @@
                         <date>a. u. 575.</date>
                     </note> victurum respondisset, quaesivit iterum, si cum Romanis militare
                     liceret. <milestone unit="section" n="7"/> id quoque Graccho permittente
-                    ”sequar“ inquit ” vos adversus veteres socios meos, quoniam illos ad me <gap/>
+                    ”sequar“ inquit ” vos adversus veteres socios meos, quoniam illos ad me <gap reason="undefined"/>
                     suspicere.“ secutus est inde Romanos fortique ac fideli opera multis locis rem
                     Romanam adiuvit. <milestone unit="chapter" n="50"/>
                     <milestone unit="section" n="1"/> Ergavica inde, nobilis et potens civitas,
@@ -2520,7 +2532,7 @@
                     luce ad sextam horam diei signis conlatis pugnasse, <milestone unit="section"
                         n="3"/>
                     <pb xml:id="vol.9.1.p.203" n="notedatea"/> multos utrimque cecidisse, nec aliud
-                    magnopere, <gap/>
+                    magnopere, <gap reason="undefined"/>
                     <note place="unspecified" anchored="true">
                         <date>a. Ch. 179.</date>
                     </note> crederes, fecisse Romanos, nisi quod postero die lacessierint proelio
@@ -2622,12 +2634,12 @@
                     <persName n="2">
                         <forename full="yes">M.</forename>
                         <surname full="yes">Aemili</surname>
-                    </persName> filio <gap/> auspicio, imperio, felicitate ductuque eius inter
+                    </persName> filio <gap reason="undefined"/> auspicio, imperio, felicitate ductuque eius inter
                     Ephesum, Samum Chiumque inspectante eopse Antiocho <hi rend="italics">cum</hi>
                     exercitu omni, <milestone unit="section" n="6"/> equitatu elephantisque, classis
                     regis Antiochi antea invicta fusa, contusa, fugataque est, ibique eo die naves
                     longae cum omnibus sociis captae quadraginta duae. ea pugna pugnata rex
-                    Antiochus regnumque <gap/> eius rei ergo aedem Laribus permarinis vovit.
+                    Antiochus regnumque <gap reason="undefined"/> eius rei ergo aedem Laribus permarinis vovit.
                         <milestone unit="section" n="7"/>
                     <pb xml:id="vol.9.1.p.210" n="notedatea"/> ” eodem exemplo tabula in aede Iovis
                     in Capitolio supra valvas fixa est. <note place="unspecified" anchored="true">
@@ -2646,7 +2658,7 @@
                     vicit, sed castra quoque eodem die cepit. tria milia ducenti hostium omnisque ea
                     regio Ligurum in deditionem venit. <milestone unit="section" n="3"/> consul
                     deditos in campestres agros deduxit praesidiaque montibus inposuit. celeriter
-                    <gap/> et ex provincia litterae Romam venerunt. supplicationes ob eas res gestas
+                    <gap reason="undefined"/> et ex provincia litterae Romam venerunt. supplicationes ob eas res gestas
                     in triduum decretae sunt; <milestone unit="section" n="4"/> praetores
                     quadraginta hostiis maioribus per supplicationes rem divinam fecerunt. ab altero
                     consule <persName n="2">
@@ -2753,7 +2765,7 @@
                     facta esset mors regis. <milestone unit="section" n="11"/>
                     <pb xml:id="vol.9.1.p.215" n="notedatea"/> medicus Calligenes, qui curationi
                     praeerat, non expectata morte regis a primis desperationis notis nuntios per
-                    dispositos <gap/> , <note place="unspecified" anchored="true">
+                    dispositos <gap reason="undefined"/> , <note place="unspecified" anchored="true">
                         <date>a. Ch. 179.</date>
                     </note> ita ut convenerat, misit ad Perseum et mortem regis in adventum eius
                     omnes, qui extra regiam erant, celavit. <milestone unit="chapter" n="57"/>
@@ -2794,7 +2806,7 @@
                 <p>
                     <milestone unit="chapter" n="58"/>
                     <milestone unit="section" n="1"/>
-                    <gap/> ingressi sunt pacato agmine; <hi rend="italics">digressu</hi> deinde
+                    <gap reason="undefined"/> ingressi sunt pacato agmine; <hi rend="italics">digressu</hi> deinde
                     Cottonis et Antigoni et haud multo post <hi rend="italics">ad</hi> famam mortis
                     Philippi neque Thraces commercio faciles erant <hi rend="italics">neque</hi>
                     Bastarnae empto contenti esse poterant aut in agmine contineri, ne decederent
@@ -2888,6 +2900,6 @@
                     <pb n="vol.9.1.p.226"/>
                 </p>
             </div>
-        </body>
+        </div></body>
     </text>
 </TEI>

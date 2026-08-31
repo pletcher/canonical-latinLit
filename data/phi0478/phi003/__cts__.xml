@@ -5,4 +5,11 @@
 		<ti:description xml:lang="mul">Cicero, Quintus Tullius. M. Tullis Ciceronis. Epistulae, Volume 3. Purser, Louis Claude, editor.
 		Oxford: Clarendon Press, 1901.</ti:description>
 	</ti:edition>
+
+	<ti:translation urn="urn:cts:latinLit:phi0478.phi003.perseus-eng1" workUrn="urn:cts:latinLit:phi0478.phi003" xml:lang="eng">
+		<ti:label xml:lang="eng">Pet.</ti:label>
+	
+		<ti:description xml:lang="eng">Cicero. The Letters of Cicero; the whole extant
+                                                  correspondence in chronological order, in four
+                                                  volumes. Evelyn S. Shuckburgh, editor. London: George Bell and Sons, 1908-1909.</ti:description></ti:translation>
 </ti:work>

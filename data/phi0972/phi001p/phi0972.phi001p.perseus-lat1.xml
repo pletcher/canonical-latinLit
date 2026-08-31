@@ -44,9 +44,16 @@
             <refsDecl>
                 <refState unit="section" />
             </refsDecl>
+            <refsDecl n="CTS">
+            	<cRefPattern n="section"
+            		matchPattern="(\w+)"
+            		replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:milestone[@unit='section'][@n='$1'])">
+            		<p>This pointer pattern extracts section</p>
+            	</cRefPattern>
+            </refsDecl>
             <refsDecl xml:id="CTS">
                 <citeStructure match="/TEI/text/body" use="@xml:base">
-                    <citeStructure unit="section" delim=":" match="milestone[@unit='section']"
+                    <citeStructure unit="section" delim=":" match="div/milestone[@unit='section']"
                         use="@n" />
                 </citeStructure>
             </refsDecl>
@@ -75,7 +82,7 @@
         </revisionDesc>
     </teiHeader>
     <text xml:lang="lat">
-        <body xml:base="urn:cts:latinLit:phi0972.phi001p.perseus-lat1">
+        <body xml:base="urn:cts:latinLit:phi0972.phi001p.perseus-lat1"><div type="edition" n="urn:cts:latinLit:phi0972.phi001p.perseus-lat1" xml:lang="lat">
             <pb xml:id="p.342" />
 
             <milestone unit="section" n="1" />
@@ -611,6 +618,6 @@
             </p>
 
 
-        </body>
+        </div></body>
     </text>
 </TEI>

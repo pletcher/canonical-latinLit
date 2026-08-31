@@ -90,8 +90,7 @@
   </revisionDesc>
  </teiHeader>
  <text xml:lang="lat">
-  <body xml:base="urn:cts:latinLit:phi1017.phi013.perseus-lat2">
-   <div type="edition" xml:lang="lat">
+  <body xml:base="urn:cts:latinLit:phi1017.phi013.perseus-lat2"><div n="urn:cts:latinLit:phi1017.phi013.perseus-lat2" type="edition" xml:lang="lat">
     <pb xml:id="p.2"/>
     <div type="textpart" subtype="book" n="1">
      <head>L. Annaei Senecae ad Aebutium Liberalem: de Beneficiis</head> 

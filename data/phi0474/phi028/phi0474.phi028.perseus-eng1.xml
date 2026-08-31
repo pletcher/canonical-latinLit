@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
-    <teiHeader xml:lang="eng" type="text">
+    <teiHeader xml:lang="eng">
         <fileDesc>
             <titleStmt>
                 <title>In Defense of Cnaeus Plancius </title>
@@ -54,6 +54,13 @@
                 <refState delim="." unit="chapter"/>
                 <refState unit="section"/>
             </refsDecl>
+                <refsDecl n="CTS">
+                	<cRefPattern n="chapter"
+                		matchPattern="(\w+)"
+                		replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/.//tei:milestone[@unit='chapter'][@n='$1'])">
+                		<p>This pointer pattern extracts chapter</p>
+                	</cRefPattern>
+                </refsDecl>
                 <refsDecl xml:id="CTS">
                   <citeStructure match="/TEI/text/body" use="@xml:base">
                     <citeStructure unit="chapter" delim="." match=".//milestone[@unit='chapter']" use="@n"/>
@@ -157,7 +164,7 @@ Added to repository.
     <text xml:lang="eng">
         <front>
             <head>THE SPEECH OF M. T. CICERO IN DEFENCE OF CNAEUS PLANCIUS.</head>
-            <argument>
+            <div type="textpart" subtype="argument">
                 <head>THE ARGUMENT.</head>
                 <p>Cnaeus Plancius had been quaestor in <placeName key="tgn,7006667"
                         >Macedonia</placeName> when Cicero fled there from <placeName
@@ -170,9 +177,9 @@ Added to repository.
                     speech. </p>
                 <p>The speech appears to have been spoken in the year A. U. C. 609. Plancius was
                     acquitted.</p>
-            </argument>
+            </div>
         </front>
-        <body xml:base="urn:cts:latinLit:phi0474.phi028.perseus-eng1">
+        <body xml:base="urn:cts:latinLit:phi0474.phi028.perseus-eng1"><div type="translation" n="urn:cts:latinLit:phi0474.phi028.perseus-eng1" xml:lang="eng">
             <milestone n="1" unit="chapter"/>
             <milestone n="1" unit="section"/>
             <p>When, O judges, I saw that on account of the eminent and singular good faith of
@@ -1060,7 +1067,7 @@ Added to repository.
                 no author of it can be found; if he who has heard it appears to you either so
                 careless as to have forgotten where he heard it; or if he knows his authority to be
                 so insignificant that he is ashamed to confess that he recollects who he is,—then I
-                do beg of you not to let that common expression, “I heard that<gap reason="* * * *"
+                do beg of you not to let that common expression, “I heard that<gap reason="ellipsis"
                 />,” injure an innocent man upon his trial. <milestone n="24" unit="chapter"
                     /><milestone n="58" unit="section"/></p>
             <p>But I come now to Lucius Cassius, my own intimate friend, and I have not as yet made
@@ -1092,7 +1099,7 @@ Added to repository.
                     <l>“Men must always be vigilant; there are many snares in the path of virtuous
                         men.”</l>
                 </quote> You know the rest do you not? <quote>
-                    <l>“That which many men envy <gap reason="* * * *"/>”</l>
+                    <l>“That which many men envy <gap reason="ellipsis"/>”</l>
                 </quote><note anchored="true">This is a fragment of Attius from his play of
                     Philoctetes, see also the <bibl n="Cic. Sest. 48">oration for Sestius, chap.
                         xlviii</bibl>.</note> Which that wise and ingenious poet wrote not in order
@@ -1793,6 +1800,6 @@ Added to repository.
                 induced to hope that you will show yourselves the same men with reference to the
                 saving of Plancius that you did in my case; since by those tears which I now behold,
                 I am reminded of those which you so repeatedly and abundantly shed for my sake.</p>
-        </body>
+        </div></body>
     </text>
 </TEI>

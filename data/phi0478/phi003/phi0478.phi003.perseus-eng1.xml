@@ -60,6 +60,13 @@
                                 <refState unit="letter"/>
                                 <refState unit="section"/>
                         </refsDecl>
+                                <refsDecl n="CTS">
+                                	<cRefPattern n="section"
+                                		matchPattern="(\w+)"
+                                		replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/.//tei:milestone[@unit='section'][@n='$1'])">
+                                		<p>This pointer pattern extracts section</p>
+                                	</cRefPattern>
+                                </refsDecl>
                                 <refsDecl xml:id="CTS">
                                   <citeStructure match="/TEI/text/body" use="@xml:base">
                                     <citeStructure unit="section" delim="." match=".//milestone[@unit='section']" use="@n"/>
@@ -244,8 +251,8 @@ Combined into single file.
                 </revisionDesc>
         </teiHeader>
         <text xml:lang="eng">
-                <body xml:base="urn:cts:latinLit:phi0478.phi003.perseus-eng1">
-                        <div n="text=Pet." type="letter">
+                <body xml:base="urn:cts:latinLit:phi0478.phi003.perseus-eng1"><div type="translation" n="urn:cts:latinLit:phi0478.phi003.perseus-eng1" xml:lang="eng">
+                        <div n="text=Pet." type="textpart" subtype="letter">
                                 <head>DE PETITIONE CONSULATUS</head>
                                 <epigraph>
                                         <p>[This is rather an essay than a letter, and is not
@@ -258,9 +265,9 @@ Combined into single file.
                                                 at any rate it is a contribution to the picture of
                                                 the times.]</p>
                                 </epigraph>
-                                <opener>
-                                        <salute>Q. CICERO TO HIS BROTHER MARCUS (AT ROME)</salute>
-                                </opener>
+                                
+                                        <p rend="salute">Q. CICERO TO HIS BROTHER MARCUS (AT ROME)</p>
+                                
                                 <milestone unit="section" n="1"/>
                                 <p>Although you have all the accomplishments within the reach of
                                         human genius, experience, or acuteness, yet I thought it
@@ -1031,6 +1038,6 @@ Combined into single file.
                                         For I wish this little essay "on the duties of a candidate"
                                         to be regarded as complete in every respect.</p>
                         </div>
-                </body>
+                </div></body>
         </text>
 </TEI>

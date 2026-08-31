@@ -46,12 +46,12 @@
          <refsDecl n="CTS">
              <cRefPattern n="line"
                          matchPattern="(\w+).(\w+)"
-                         replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='edition']/tei:div[@n='$1']/tei:div[@n='$2'])">
+                         replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='translation']/tei:div[@type='edition']/tei:div[@n='$1']/tei:div[@n='$2'])">
                  <p>This pointer pattern extracts line</p>
              </cRefPattern>
              <cRefPattern n="book"
                          matchPattern="(\w+)"
-                         replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='edition']/tei:div[@n='$1'])">
+                         replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='translation']/tei:div[@type='edition']/tei:div[@n='$1'])">
                  <p>This pointer pattern extracts book</p>
              </cRefPattern>
          </refsDecl>
@@ -59,7 +59,7 @@
             <refState unit="card"/>
          </refsDecl>
             <refsDecl xml:id="CTS">
-              <citeStructure match="/TEI/text/body" use="@xml:base">
+              <citeStructure match="/TEI/text/body/div[@type='translation']" use="@n">
                 <citeStructure unit="book" delim=":" match="div/div[@subtype='book']" use="@n">
                   <citeStructure unit="line" delim="." match="l" use="@n"/>
                 </citeStructure>
@@ -85,12 +85,12 @@
 
    </teiHeader>
    <text xml:lang="eng">
-      <body xml:base="urn:cts:latinLit:phi0917.phi001.perseus-eng2">
+      <body xml:base="urn:cts:latinLit:phi0917.phi001.perseus-eng2"><div type="translation" n="urn:cts:latinLit:phi0917.phi001.perseus-eng2" xml:lang="eng">
          <div xml:lang="eng"
               type="translation">
 
             <div type="textpart" n="1" subtype="book"><!-- remove the arguments until we get a chance to fix up the line numbers, which are those of the translation, not the Latin
-<argument>
+<div type="textpart" subtype="argument">
 <list>
 <item>Introduction, <bibl n="Luc. 1.1">1-50</bibl>
 <item>Address to Nero,  <bibl n="Luc. 1.51">51-75</bibl>
@@ -109,7 +109,7 @@
 <item>Figulus prophesies the coming disasters, <bibl n="Luc. 1.701">701-746</bibl>;
 <item>and so does a frenzied matron, <bibl n="Luc. 1.751">751-776</bibl>
 </list>
-</argument>
+</div>
 -->
                <div n="1" type="textpart" subtype="line">
                   <l n="tr">WARS worse than civil on Emathian <note anchored="true">The great Emathian conqueror' (<placeName key="tgn,1030066">Milton</placeName>'s sonnet). <placeName key="tgn,7002718">Emathia</placeName> was apart of <placeName key="tgn,7006667">Macedonia</placeName>, but the word is used loosely for <placeName key="tgn,7001399">Thessaly</placeName> or <placeName key="tgn,7006667">Macedonia</placeName>.</note>  plains,</l>
@@ -966,7 +966,7 @@
                </div>
             </div>
             <div type="textpart" n="2" subtype="book"><!--
-<argument>
+<div type="textpart" subtype="argument">
 <list>
 <item>Remonstrance with the gods for allowing the future to be foretold, lines  <bibl n="Luc. 2.1">1-18</bibl>
 <item>Terror at Rome,  <bibl n="Luc. 2.18">18-75</bibl>
@@ -986,7 +986,7 @@ trated by Marius and Sulla,  <bibl n="Luc. 2.76">76-261</bibl>
 <item>Caesar tries to block the harbour,  <bibl n="Luc. 2.735">735-772</bibl>
 <item>Pompeiusescapes to Epirus,  <bibl n="Luc. 2.773">773-838</bibl>
 </list>
-</argument>
+</div>
 -->
                <div n="1" type="textpart" subtype="line">
                   <l n="tr">THUS was made plain the anger of the gods;</l>
@@ -1898,7 +1898,7 @@ trated by Marius and Sulla,  <bibl n="Luc. 2.76">76-261</bibl>
                </div>
             </div>
             <div type="textpart" n="3" subtype="book"><!--
-<argument>
+<div type="textpart" subtype="argument">
 <list>
 <item>Julia appears to Pompeius in a vision, lines  <bibl n="Luc. 3.1">1-45</bibl>
 <item>Caesar sends Curio to Sicily and Sardinia, and proceeds to Rome,  <bibl n="Luc. 3.46">46-127</bibl>
@@ -1910,7 +1910,7 @@ trated by Marius and Sulla,  <bibl n="Luc. 2.76">76-261</bibl>
 <item>The fight in the trenches,  <bibl n="Luc. 3.512">512-571</bibl>
 <item>Naval battle; various episodes; victory of Decimus Brutus,  <bibl n="Luc. 3.572">572-841</bibl>
 </list>
-</argument>
+</div>
 -->
                <div n="1" type="textpart" subtype="line">
                   <l n="tr">WITH canvas yielding to the southern wind</l>
@@ -2821,7 +2821,7 @@ trated by Marius and Sulla,  <bibl n="Luc. 2.76">76-261</bibl>
                </div>
             </div>
             <div type="textpart" n="4" subtype="book"><!--
-<argument>
+<div type="textpart" subtype="argument">
 <list>
 <item>War in Spain;  battle at Ilerda between Caesar and Pompeius' generals, Afranius and Petreius, lines  <bibl n="Luc. 4.1">1-53</bibl>
 <item>Floods and famine,  <bibl n="Luc. 4.54">54-133</bibl>
@@ -2837,7 +2837,7 @@ trated by Marius and Sulla,  <bibl n="Luc. 2.76">76-261</bibl>
 <item>but is defeated and slain by Juba,  <bibl n="Luc. 4.813">813-901</bibl>
 <item>His character.  <bibl n="Luc. 4.902">902-935</bibl>
 </list>
-</argument>
+</div>
 -->
                <div n="1" type="textpart" subtype="line">
                   <l n="tr">BUT in the distant regions of the earth</l>
@@ -3824,7 +3824,7 @@ lacrumas effusi, sortem civilium armorum misera latitia detestantes.'</quote>
                </div>
             </div>
             <div type="textpart" n="5" subtype="book"><!--
-<argument>
+<div type="textpart" subtype="argument">
 <list>
 <item>Meeting of the Senate in Epirus, lines  <bibl n="Luc. 5.1">1-74</bibl>
 <item>Appius consults the Oracle at Delphi.  Its history and description,  <bibl n="Luc. 5.75">75-275</bibl>
@@ -3839,7 +3839,7 @@ lacrumas effusi, sortem civilium armorum misera latitia detestantes.'</quote>
 <item>Is joined by Antonius,  <bibl n="Luc. 5.810">810-829</bibl>
 <item>Pompeius parts with Cornelia, whom he sends to Lesbos,  <bibl n="Luc. 5.830">830-936</bibl>
 </list>
-</argument>
+</div>
 -->
                <div n="1" type="textpart" subtype="line">
                   <l n="tr">THUS had the smiles of Fortune and her frowns</l>
@@ -4834,7 +4834,7 @@ lacrumas effusi, sortem civilium armorum misera latitia detestantes.'</quote>
                </div>
             </div>
             <div type="textpart" n="6" subtype="book"><!--
-<argument>
+<div type="textpart" subtype="argument">
 <list>
 <item>Description of Dyrrhachium, which Caesar attempts to capture,  <bibl n="Luc. 6.1">1-34</bibl>
 <item>He builds a wall round Pompeius' camp,  <bibl n="Luc. 6.35">35-80</bibl>
@@ -4847,7 +4847,7 @@ lacrumas effusi, sortem civilium armorum misera latitia detestantes.'</quote>
 <item>Enquiries of Sextus, and her answer,  <bibl n="Luc. 6.698">698-739</bibl>
 <item>She raises from the dead a corpse who answers her questions and dies again, <bibl n="Luc. 6.740">740-987</bibl>
 </list>
-</argument>
+</div>
 -->
                <div n="1" type="textpart" subtype="line">
                   <l n="tr">Now that the chiefs with minds intent on fight</l>
@@ -5921,7 +5921,7 @@ But more probably the meaning is that the wolf's bite gave the flesh magical eff
                </div>
             </div>
             <div type="textpart" n="7" subtype="book"><!--
-<argument>
+<div type="textpart" subtype="argument">
 <list>
 <item>The eve of the battle of Pharsalia and the dream of Pompeius, lines  <bibl n="Luc. 7.1">1-53</bibl>
 <item>The soldiers demand a battle, and are supported by Cicero in a speech,  <bibl n="Luc. 7.54">54-100</bibl>
@@ -5940,7 +5940,7 @@ But more probably the meaning is that the wolf's bite gave the flesh magical eff
 <item>Caesar occupies Pompeius' camp and leaves the dead unburied, which are devoured by birds and beasts, 973-997 <bibl n="Luc. 7.855">855-972</bibl>
 <item>Apostrophe to Thessaly,  <bibl n="Luc. 7.998">998-1028</bibl>
 </list>
-</argument>
+</div>
 -->
                <div n="1" type="textpart" subtype="line">
                   <l n="tr">NE'ER to the summons of the Eternal laws</l>
@@ -7065,7 +7065,7 @@ Book IX., 706.)</note>
                </div>
             </div>
             <div type="textpart" n="8" subtype="book"><!--
-<argument>
+<div type="textpart" subtype="argument">
 <list>
 <item>Pompeius flies to Lesbos, <bibl n="Luc. 8.1">lines 1=74</bibl>
 <item>and consoles his wife, <bibl n="Luc. 8.75">75-97</bibl>
@@ -7083,7 +7083,7 @@ Book IX., 706.)</note>
 <item>Cordus buries the body,  <bibl n="Luc. 8.830">830-963</bibl>
 <item>Apostrophe to Egypt,  <bibl n="Luc. 8.964">964-1025</bibl>
 </list>
-</argument>
+</div>
 -->
                <div n="1" type="textpart" subtype="line">
                   <l n="tr">Now through Alcides'<note anchored="true">Comp. Book VI., line 406.</note>  pass and <placeName key="tgn,7014367">Tempe</placeName>'s groves</l>
@@ -8192,7 +8192,7 @@ Book IX., 706.)</note>
                </div>
             </div>
             <div type="textpart" n="9" subtype="book"><!--
-<argument>
+<div type="textpart" subtype="argument">
 <list>
 <item>Apotheosis of Pompeius, lines  <bibl n="Luc. 9.1">1-26</bibl>
 <item>Cato collects the defeated forces and retreats to Africa, <bibl n="Luc. 26">26-64</bibl>
@@ -8218,7 +8218,7 @@ Book IX., 706.)</note>
 <item>Pompeius' head is presented to him,  <bibl n="Luc. 9.1199">1199-1227</bibl>
 <item>Caesar's reception of the gift, , and his speech, 1267-1322 <bibl n="Luc. 9.1228">1228-1266</bibl>
 </list>
-</argument>
+</div>
 -->
                <div n="1" type="textpart" subtype="line">
                   <l n="tr">YET in those ashes on the Pharian shore,</l>
@@ -9650,7 +9650,7 @@ The word is also used for a big cannon (' 1 King Henry IV.,' Act ii., Scent 3).<
                </div>
             </div>
             <div type="textpart" n="10" subtype="book"><!--
-<argument>
+<div type="textpart" subtype="argument">
 <list>
 <item>Caesar visits the tomb of Alexander,  <bibl n="Luc. 10.1">1-60</bibl>
 <item>Cleopatra comes to Caesar and asks for protection,  <bibl n="Luc. 10.61">61-126</bibl>
@@ -9661,7 +9661,7 @@ The word is also used for a big cannon (' 1 King Henry IV.,' Act ii., Scent 3).<
 <item>The troops are collected and Caesar is besieged in the palace,  <bibl n="Luc. 10.484">484-612</bibl>
 <item>Caesar occupies Pharos,;  and the poem ends <bibl n="Luc. 10.613">613-664</bibl>
 </list>
-</argument>
+</div>
 -->
                <div n="1" type="textpart" subtype="line">
                   <l n="tr">WHEN Caesar, following those who bore the head,</l>
@@ -10375,6 +10375,6 @@ by Virgil, 'Eclogue' iii., 41.</note>  excel mine own.</l>
                </div>
             </div>
          </div>
-      </body>
+      </div></body>
    </text>
 </TEI>

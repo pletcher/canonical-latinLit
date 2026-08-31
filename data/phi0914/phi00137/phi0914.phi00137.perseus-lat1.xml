@@ -36,7 +36,7 @@
                                 <publisher>Weidmannsche Buchhandlung</publisher>
                                 <date>1873</date>
                             </imprint>
-                            <biblScope type="volume">8</biblScope>
+                            <biblScope unit="volume">8</biblScope>
                         </monogr>
                     </biblStruct>
                 </listBibl>
@@ -48,9 +48,21 @@
                 <refState unit="chapter" delim="."/>
                 <refState unit="section"/>
             </refsDecl>
+                <refsDecl n="CTS">
+                	<cRefPattern n="chapter"
+                		matchPattern="(\w+).(\w+)"
+                		replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@subtype='book'][@n='$1']/.//tei:milestone[@unit='chapter'][@n='$2'])">
+                		<p>This pointer pattern extracts book and chapter</p>
+                	</cRefPattern>
+                	<cRefPattern n="book"
+                		matchPattern="(\w+)"
+                		replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@subtype='book'][@n='$1'])">
+                		<p>This pointer pattern extracts book</p>
+                	</cRefPattern>
+                </refsDecl>
                 <refsDecl xml:id="CTS">
                   <citeStructure match="/TEI/text/body" use="@xml:base">
-                    <citeStructure match="div[@type='book']" use="@n" unit="book" delim=":">
+                    <citeStructure match="div/div[@subtype='book']" use="@n" unit="book" delim=":">
                       <citeStructure match=".//milestone[@unit='chapter']" use="@n" unit="chapter" delim="." n="chunk"/>
                     </citeStructure>
                   </citeStructure>
@@ -79,8 +91,8 @@
         </revisionDesc>
     </teiHeader>
     <text xml:lang="lat">
-        <body xml:base="urn:cts:latinLit:phi0914.phi00137.perseus-lat1">
-            <div part="N" sample="complete" org="uniform" n="37" type="book">
+        <body xml:base="urn:cts:latinLit:phi0914.phi00137.perseus-lat1"><div type="edition" n="urn:cts:latinLit:phi0914.phi00137.perseus-lat1" xml:lang="lat">
+            <div part="N" sample="complete" org="uniform" n="37" type="textpart" subtype="book">
                 <p>
                     <milestone n="1" unit="chapter"/>
                     <milestone n="1" unit="section"/>
@@ -565,7 +577,7 @@
                     sua habiturum Pausistratus audivit, eam ipse extemplo habuit. partem navium ad
                     commeatus accersendos Halicarnassum, <note anchored="true" place="unspecified">
                         <date>a. Ch. 190.</date>
-                    </note> partem Samum ad urbem misit, <gap/> ut paratus esset, cum signum
+                    </note> partem Samum ad urbem misit, <gap reason="undefined"/> ut paratus esset, cum signum
                     adgrediendi a proditore accepisset. <milestone n="12" unit="section"/>
                     Polyxenidas augere simulando errorem; subducit quasdam naves, alias velut
                     subducturus esset, navalia reficit; remiges ex hibernis non Ephesum accersit,
@@ -805,7 +817,7 @@
                     </persName> tumultuario proelio cecidit; postremo tamen fusi fugatique sunt
                     Lycii atque in urbem compulsi, et Romani cum haud incruenta victoria ad naves
                     redierunt. <milestone n="13" unit="section"/> inde in Telmessicum profecti
-                    sinum, qui latere uno Cariam altero Lyciam contingit, omisso <gap/> Patara
+                    sinum, qui latere uno Cariam altero Lyciam contingit, omisso <gap reason="undefined"/> Patara
                     amplius temptandi Rhodii domum dimissi sunt, <milestone n="14" unit="section"/>
                     Livius praetervectus Asiam in Graeciam transmisit, ut conventis Scipionibus, qui
                     tum circa Thessaliam erant, in Italiam traiceret. </p>
@@ -1722,7 +1734,7 @@
                 <p>
                     <milestone n="2" unit="section"/> nebula matutina, crescente die levata in
                     nubes, caliginem dedit; <milestone n="3" unit="section"/> umor inde ab austro
-                    velut <gap/> perfudit omnia; quae nihil admodum Romanis, eadem perincommoda
+                    velut <gap reason="undefined"/> perfudit omnia; quae nihil admodum Romanis, eadem perincommoda
                     regiis erant: nam et obscuritas lucis in acie modica Romanis non adimebat in
                     omnis partes conspectum, et umor toto fere gravi armatu nihil gladios aut pila
                     hebetabat; <milestone n="4" unit="section"/>
@@ -1747,7 +1759,7 @@
                     </note> locaverat rex. <milestone n="9" unit="section"/> quod ubi Eumenes vidit,
                     haud ignarus pugnae, et quam anceps esset auxilii genus, si quis pavorem magis
                     equis iniceret, quam iusta adoriretur pugna, Cretenses sagittarios funditoresque
-                    et iaculatores <gap/> equitum non confertos, sed quam maxime possent dispersos
+                    et iaculatores <gap reason="undefined"/> equitum non confertos, sed quam maxime possent dispersos
                     excurrere iubet et ex omnibus simul partibus tela ingerere. <milestone n="10"
                         unit="section"/> haec velut procella partim vulneribus missilium undique
                     coniectorum partim clamoribus dissonis ita consternavit equos, ut repente velut
@@ -1879,7 +1891,7 @@
                         <surname full="yes">Scipionem</surname>
                     </persName> et per eum consulem adierunt; <milestone n="7" unit="section"/>
                     <pb n="notedatea" xml:id="vol.8.p.235"/> praebitoque iis petentibus frequenti
-                    consilio ad mandata edenda, “non tam, quid ipsi dicamus, <gap/> habemus” inquit
+                    consilio ad mandata edenda, “non tam, quid ipsi dicamus, <gap reason="undefined"/> habemus” inquit
                     Zeuxis, “quam ut a vobis quaeramus, Romani, quo <note anchored="true"
                         place="unspecified">
                         <date>a. Ch. 190.</date>
@@ -2861,6 +2873,6 @@
                     Thraciae oram missis ab Aeno et Maronia praesidia Antiochi deduci iussit, ut in
                     libertate eae civitates essent. </p>
             </div>
-        </body>
+        </div></body>
     </text>
 </TEI>
