@@ -1,3 +1,4 @@
+<?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI.2>
   <teiHeader>
     <fileDesc>
