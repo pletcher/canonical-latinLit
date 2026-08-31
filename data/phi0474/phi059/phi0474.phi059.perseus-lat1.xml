@@ -51,7 +51,14 @@
             <refState delim="." unit="letter"/>
             <refState unit="section"/>
          </refsDecl>
-      </encodingDesc>
+            <refsDecl xml:id="CTS">
+              <citeStructure match="/TEI/text/body" use="@xml:base">
+                <citeStructure unit="book" delim=":" match="div/div[@subtype='Book']" use="@n">
+                  <citeStructure unit="section" delim="." match="div/div[@subtype='section']" use="@n"/>
+                </citeStructure>
+              </citeStructure>
+            </refsDecl>
+</encodingDesc>
       <profileDesc >
          <langUsage>
             <language ident="lat">Latin
@@ -61,6 +68,7 @@
          </langUsage>
       </profileDesc>
       <revisionDesc>
+        <change who="Charles Pletcher" when="2026-08-26">Add citeStructure refsDecl</change>
 <change who="balmas01" when="2013-09-13">moving Greg's work-in-progress on CTS-izing greco-roman collection texts to a Work directory</change>
 <change who="gcrane" when="2013-06-08">TEI XML converted to facilitate CTS compatibility</change>
 <change who="gcrane" when="2011-07-21">small mods</change>
@@ -83,10 +91,9 @@
       </revisionDesc>
    </teiHeader>
    <text xml:lang="lat">
-      <body>
+      <body xml:base="urn:cts:latinLit:phi0474.phi059.perseus-lat1">
          <div xml:lang="lat"
-              type="edition"
-              n="urn:cts:latinLit:phi0474.phi059.perseus-lat1">
+              type="edition">
             <div type="textpart" n="1" subtype="Book">
                <head >LIBER PRIMVS</head>
                <div type="textpart" n="1" subtype="letter">

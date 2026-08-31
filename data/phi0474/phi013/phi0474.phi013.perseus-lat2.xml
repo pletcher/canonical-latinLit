@@ -67,7 +67,14 @@
 				<refState unit="speech" delim="."/>
 				<refState unit="section"/>
 			</refsDecl>
-		</encodingDesc>
+				<refsDecl xml:id="CTS">
+				  <citeStructure match="/TEI/text/body" use="@xml:base">
+				    <citeStructure unit="speech" delim=":" match="div/div[@subtype='speech']" use="@n">
+				      <citeStructure unit="section" delim="." match="div[@subtype='section']" use="@n" n="chunk"/>
+				    </citeStructure>
+				  </citeStructure>
+				</refsDecl>
+</encodingDesc>
 
 		<profileDesc>
 			<langUsage>
@@ -77,6 +84,7 @@
 		</profileDesc>
 
 		<revisionDesc>
+		  <change who="Charles Pletcher" when="2026-08-26">Add citeStructure refsDecl</change>
 			<change when="2026-06" who="Lisa Cerrato">Updates to header and encoding to reflect best practices.</change>
 			<change when="2016-04-20" who="Lisa Cerrato">fixed bad section breaks; made section default div; fixed title</change>
 			<change when="2015-10-29" who="Thibault Clerice">CTS according to Capitains Guidelines +
@@ -132,10 +140,10 @@
 	</teiHeader>
 	
 	<text xml:lang="lat">
-		<body>
+		<body xml:base="urn:cts:latinLit:phi0474.phi013.perseus-lat2">
 
 
-<div type="edition" xml:lang="lat" n="urn:cts:latinLit:phi0474.phi013.perseus-lat2">
+<div type="edition" xml:lang="lat">
 <head rend="align(center)">Orationes in Catilinam</head>
 
 

@@ -70,7 +70,12 @@
 					<p>This pointer pattern extracts chapter.</p>
 				</cRefPattern>
 			</refsDecl>
-		</encodingDesc>
+				<refsDecl xml:id="CTS">
+				  <citeStructure match="/TEI/text/body" use="@xml:base">
+				    <citeStructure unit="section" delim=":" match="div/div/div[@subtype='section']" use="@n"/>
+				  </citeStructure>
+				</refsDecl>
+</encodingDesc>
 
 		<profileDesc>
 			<langUsage>
@@ -80,6 +85,7 @@
 		</profileDesc>
 
 		<revisionDesc>
+		  <change who="Charles Pletcher" when="2026-08-26">Add citeStructure refsDecl</change>
 			<change when="2026-06" who="Lisa Cerrato">Updates to header and encoding to reflect best practices.</change>
 			<change who="Thibault Clérice" when="2021-01-31">Capitains + Epidoc</change>
 			<change who="Stella Dee" when="2014-08-01">edited markup</change>
@@ -108,8 +114,8 @@
 		</revisionDesc>
 	</teiHeader>
 	<text xml:lang="lat">
-<body> 
-<div type="edition" xml:lang="lat" n="urn:cts:latinLit:phi0474.phi035.perseus-lat2"> 
+<body xml:base="urn:cts:latinLit:phi0474.phi035.perseus-lat2"> 
+<div type="edition" xml:lang="lat"> 
    <head rend="align(center)">Philippicae Orationes in M. Antonium</head> 
 
 <div type="textpart" subtype="speech" xml:base="urn:cts:latinLit:phi0474.phi035.perseus-lat2" n="1"> 

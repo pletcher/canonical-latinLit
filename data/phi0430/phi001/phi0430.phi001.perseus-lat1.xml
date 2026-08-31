@@ -62,7 +62,12 @@
           <p>keyboarding</p>
         </correction>
       </editorialDecl>
-    </encodingDesc>
+        <refsDecl xml:id="CTS">
+          <citeStructure match="/TEI/text/body" use="@xml:base">
+            <citeStructure unit="chapter" delim=":" match="div/div[@subtype='chapter']" use="@n"/>
+          </citeStructure>
+        </refsDecl>
+</encodingDesc>
     
     <profileDesc>
       <langUsage>
@@ -71,15 +76,16 @@
       </langUsage>
     </profileDesc>    
     <revisionDesc>
+      <change who="Charles Pletcher" when="2026-08-26">Add citeStructure refsDecl</change>
       <change who="Lisa Cerrato" when="2026-01-20">EpiDoc and CTS conforming markup and other cleanup.</change> 
     </revisionDesc>
   </teiHeader>
   
-<text>
-  <body>
+<text xml:lang="lat">
+  <body xml:base="urn:cts:latinLit:phi0430.phi001.perseus-lat1">
     
 
-<div xml:lang="lat" type="edition" n="urn:cts:latinLit:phi0430.phi001.perseus-lat1">
+<div xml:lang="lat" type="edition">
 <pb n="p.310"/>
 
 

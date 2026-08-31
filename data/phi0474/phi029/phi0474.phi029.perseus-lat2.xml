@@ -71,7 +71,12 @@
 					<p>This pointer pattern extracts section.</p>
 				</cRefPattern>
 			</refsDecl>
-		</encodingDesc>
+				<refsDecl xml:id="CTS">
+				  <citeStructure match="/TEI/text/body" use="@xml:base">
+				    <citeStructure unit="section" delim=":" match="div/div[@subtype='section']" use="@n"/>
+				  </citeStructure>
+				</refsDecl>
+</encodingDesc>
 
 		<profileDesc>
 			<langUsage>
@@ -81,6 +86,7 @@
 		</profileDesc>
 
 		<revisionDesc>
+		  <change who="Charles Pletcher" when="2026-08-26">Add citeStructure refsDecl</change>
 <change when="2026-06" who="Lisa Cerrato">Updates to header and encoding to reflect best practices.</change>
 <change who="Michael Konieczny" when="2021-02-08">Revisions for EpiDoc+CTS compliance</change> 
 <change who="Thibault Clérice" when="2021-01-29">Capitains + Epidoc</change> 
@@ -105,10 +111,10 @@
 		</revisionDesc>
 	</teiHeader>
 	
-	<text>
-	<body>
+	<text xml:lang="lat">
+	<body xml:base="urn:cts:latinLit:phi0474.phi029.perseus-lat2">
 	
-<div type="edition" xml:lang="lat" n="urn:cts:latinLit:phi0474.phi029.perseus-lat2">
+<div type="edition" xml:lang="lat">
 	<head rend="align(center)">PRO M. SCAVRO ORATIO</head>
 
 <div n="a" type="textpart" subtype="section" xml:base="urn:cts:latinLit:phi0474.phi029.perseus-lat2"><p rend="align(indent)"> <reg>maxime</reg> fuit optandum M. Scauro, iudices, ut nullo suscepto cuiusquam odio sine offensione ac molestia retineret, id quod praecipue semper studuit, generis, familiae, nominis dignitatem<note>maxime ... retineret <hi rend="italic">August.</hi>: id quod ... dignitatem <hi rend="italic">Arusian.</hi>: <hi rend="italic">conexuit Beier</hi></note>. </p> </div> 

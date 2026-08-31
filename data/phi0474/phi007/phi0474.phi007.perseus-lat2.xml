@@ -65,7 +65,12 @@
          <refsDecl>
             <refState unit="section"/>
          </refsDecl>
-      </encodingDesc>
+            <refsDecl xml:id="CTS">
+              <citeStructure match="/TEI/text/body" use="@xml:base">
+                <citeStructure unit="section" delim=":" match="div/div[@subtype='section']" use="@n"/>
+              </citeStructure>
+            </refsDecl>
+</encodingDesc>
       <profileDesc>
          <langUsage>
             <language ident="lat">Latin</language>
@@ -73,6 +78,7 @@
          </langUsage>
       </profileDesc>
       <revisionDesc>
+        <change who="Charles Pletcher" when="2026-08-26">Add citeStructure refsDecl</change>
          <change when="2026-06" who="Lisa Cerrato">Updates to header and encoding to reflect best practices.</change>
          <change when="2016-04-19" who="Lisa Cerrato">Minor edits and cleanup.</change>
          <change when="2015-12-17" who="Zach Himes">Cleaned up teiHeader. Converted to TEI P5 and EpiDoc.</change>
@@ -97,11 +103,11 @@
          <change when="1997-03-26" who="DAS">ed.</change>
       </revisionDesc>
    </teiHeader>
-   <text>
-      <body>
+   <text xml:lang="lat">
+      <body xml:base="urn:cts:latinLit:phi0474.phi007.perseus-lat2">
          
 
-<div type="edition" xml:lang="lat" n="urn:cts:latinLit:phi0474.phi007.perseus-lat2" subtype="edition"> 
+<div type="edition" xml:lang="lat" subtype="edition"> 
 <head rend="align(indent)">PRO M. FONTEIO ORATIO</head> 
  
 <div type="textpart" subtype="section" xml:base="urn:cts:latinLit:phi0474.phi007.perseus-lat2" n="1"> <p rend="align(indent)"><milestone n="1" unit="chapter"/><gap reason="lost" rend=" . . . "/> <add>o</add>portuisse an ita dissolvit ut omnes alii dissolverunt? <reg>nam</reg> ita ego defendo M. Fonteium, iudices, itaque contendo post legem Valeriam latam<note> <app> <lem>latam</lem> </app> a Metello <hi rend="italic">suppl. Mommsen</hi> </note> <gap reason="lost" rend=" . . . "/> te <gap reason="lost" rend=" . . . "/> quaestore usque ad T. Crispinum quaestorem aliter neminem solvisse; hunc omnium superiorum, huius autem omnis qui postea fuerint auctoritatem dico secutos. </p> </div> 

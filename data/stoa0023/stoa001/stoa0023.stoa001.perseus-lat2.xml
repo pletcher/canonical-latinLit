@@ -61,7 +61,16 @@
                <p>This pointer pattern extracts book</p>
             </cRefPattern>
          </refsDecl>
-      </encodingDesc>
+            <refsDecl xml:id="CTS">
+              <citeStructure match="/TEI/text/body" use="@xml:base">
+                <citeStructure unit="book" delim=":" match="div/div[@subtype='book']" use="@n">
+                  <citeStructure unit="chapter" delim="." match="div[@subtype='chapter']" use="@n">
+                    <citeStructure unit="section" delim="." match="div[@subtype='section']" use="@n"/>
+                  </citeStructure>
+                </citeStructure>
+              </citeStructure>
+            </refsDecl>
+</encodingDesc>
       <profileDesc>
          <langUsage>
             <language ident="lat">Latin</language>
@@ -70,15 +79,16 @@
          </langUsage>
       </profileDesc>
       <revisionDesc>
+        <change who="Charles Pletcher" when="2026-08-26">Add citeStructure refsDecl</change>
          <change when="2019-04-09" who="Lisa Cerrato">fixing title and other miscellaneous conversion errors such as bad Unicode Greek; bumped URN</change>
          <change when="2015-12-11" who="Thibault Clérice">CTS and Epidoc</change>
          <change when="2006-01-01" who="Gregory Crane">Tagging</change>
          <change when="2009-05-27" who="RS">(n/a)</change>
       </revisionDesc>
    </teiHeader>
-   <text>
-      <body> 
-<div xml:lang="lat" type="edition" n="urn:cts:latinLit:stoa0023.stoa001.perseus-lat2"> 
+   <text xml:lang="lat">
+      <body xml:base="urn:cts:latinLit:stoa0023.stoa001.perseus-lat2"> 
+<div xml:lang="lat" type="edition"> 
    <head>Ammiani Marcellini Rerum Gestarum libri qui supersunt</head> <pb n="v1.p.2"/> 
 <div type="textpart" n="14" subtype="book"> <head>Liber XIV</head> 
 <div type="textpart" n="1" subtype="chapter"> <head> Galli Caesaris saevitia.<note>These summaries, which are not the work of Ammianus but of some early editor, are put for convenience at the beginning of each chapter. Usually the summaries of each book are put all together at the beginning of that book, or (e.g. by Eyssenhardt) the summaries of all the books are collected at the end of the entire text.</note> </head> 

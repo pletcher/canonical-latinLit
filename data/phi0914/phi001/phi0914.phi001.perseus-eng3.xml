@@ -77,7 +77,16 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 				        <refState unit="book"/>
 				        <refState n="chunk" unit="chapter"/>
 			      </refsDecl>
-		    </encodingDesc>
+		    		    <refsDecl xml:id="CTS">
+		    		      <citeStructure match="/TEI/text/body" use="@xml:base">
+		    		        <citeStructure unit="book" delim=":" match="div/div[@subtype='book']" use="@n">
+		    		          <citeStructure unit="chapter" delim="." match="div[@subtype='chapter']" use="@n">
+		    		            <citeStructure unit="section" delim="." match="div[@subtype='section']" use="@n"/>
+		    		          </citeStructure>
+		    		        </citeStructure>
+		    		      </citeStructure>
+		    		    </refsDecl>
+</encodingDesc>
 		    <profileDesc>
 			      <langUsage>
 				        <language ident="eng">English</language>
@@ -85,7 +94,8 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 				        <language ident="fre">French</language>
 			      </langUsage>
 		    </profileDesc>
-		    <revisionDesc><!--
+		    <revisionDesc>
+		      <change who="Charles Pletcher" when="2026-08-26">Add citeStructure refsDecl</change><!--
 			<change>
 				<date>10/6/97</date>
 				<respStmt>
@@ -123,9 +133,9 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 			<change when="2015-01-07" who="Stella Dee">edited markup</change>
 		    </revisionDesc>
 	  </teiHeader>
-	  <text>
-		    <body>
-		    	<div n="urn:cts:latinLit:phi0914.phi001.perseus-eng3" type="edition" xml:lang="eng">
+	  <text xml:lang="eng">
+		    <body xml:base="urn:cts:latinLit:phi0914.phi001.perseus-eng3">
+		    	<div type="edition" xml:lang="eng">
 			      <div subtype="book" n="1" type="textpart">
 				        <head>Book I</head>
 				        <head>The Earliest Legends</head>

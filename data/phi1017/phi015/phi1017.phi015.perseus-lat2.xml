@@ -68,7 +68,14 @@
               <p>This pointer pattern extracts letter.</p>
           </cRefPattern>
       </refsDecl>
-		</encodingDesc>
+				<refsDecl xml:id="CTS">
+				  <citeStructure match="/TEI/text/body" use="@xml:base">
+				    <citeStructure unit="book" delim=":" match="div/div[@subtype='book']" use="@n">
+				      <citeStructure unit="section" delim="." match="div/div[@subtype='section']" use="@n"/>
+				    </citeStructure>
+				  </citeStructure>
+				</refsDecl>
+</encodingDesc>
 		
 		<profileDesc>
 			<langUsage>
@@ -77,6 +84,7 @@
 			</langUsage>
 		</profileDesc>
 		<revisionDesc>
+		  <change who="Charles Pletcher" when="2026-08-26">Add citeStructure refsDecl</change>
 		<change when="2025-12-10" who="Lisa Cerrato">Encoding review and updates including to header for compliance with current best practices. Structural updates, checking section breaks, fixing beta code, punctuation, quotations and paragraphs, etc.</change>
 		<change when="2015-11-12" who="Thibault Clerice">New URN, Epidoc and CTS</change>
 	   <change when="2009-01-01" who="gcrane">Tagging</change>		
@@ -84,9 +92,9 @@
 	</teiHeader>
 
 
-<text>
-<body>
-<div type="edition" n="urn:cts:latinLit:phi1017.phi015.perseus-lat2" xml:lang="lat">
+<text xml:lang="lat">
+<body xml:base="urn:cts:latinLit:phi1017.phi015.perseus-lat2">
+<div type="edition" xml:lang="lat">
 <milestone unit="volume" n="1"/> <pb n="v1.p.2"/>
 
 <div type="textpart" subtype="book" xml:base="urn:cts:latinLit:phi1017.phi015.perseus-lat2" n="1">

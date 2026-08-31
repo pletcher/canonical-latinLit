@@ -54,7 +54,12 @@
 			<refsDecl>
 				<refState delim="." unit="book"/>
 			</refsDecl>
-		</encodingDesc>
+				<refsDecl xml:id="CTS">
+				  <citeStructure match="/TEI/text/body" use="@xml:base">
+				    <citeStructure match="div[@type='book']" use="@n" unit="book" delim=":" n="chunk"/>
+				  </citeStructure>
+				</refsDecl>
+</encodingDesc>
 
 		<profileDesc>
 			<langUsage>
@@ -66,6 +71,7 @@
 		</profileDesc>
 
 		<revisionDesc>
+		  <change who="Charles Pletcher" when="2026-08-26">Add citeStructure refsDecl</change>
 			<!-- <change>
 	<date>2006/7/13</date>
 	<respStmt><name>Gregory Crane</name><resp>ed.</resp></respStmt>
@@ -75,8 +81,8 @@
 			<change when="2015-01-07" who="Stella Dee">edited markup</change>
 		</revisionDesc>
 	</teiHeader>
-	<text>
-		<body>
+	<text xml:lang="lat">
+		<body xml:base="urn:cts:latinLit:phi0914.phi001fr.perseus-lat1">
 
 			<head>Librorum XLVI—CXLII Periochae.</head>
 

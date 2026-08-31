@@ -67,7 +67,12 @@
 			<refsDecl>
 				<refState unit="section"/>
 			</refsDecl>
-		</encodingDesc>
+				<refsDecl xml:id="CTS">
+				  <citeStructure match="/TEI/text/body" use="@xml:base">
+				    <citeStructure unit="section" delim=":" match="div/div[@subtype='section']" use="@n"/>
+				  </citeStructure>
+				</refsDecl>
+</encodingDesc>
 
 		<profileDesc>
 			<langUsage>
@@ -78,6 +83,7 @@
 
 
 		<revisionDesc>
+		  <change who="Charles Pletcher" when="2026-08-26">Add citeStructure refsDecl</change>
 			<change when="2026-06" who="Lisa Cerrato">Updates to header and encoding to reflect best practices.</change>
 			<change when="2016-04-13" who="Lisa Cerrato">CTS and EpiDoc review; bumped URN; minor edits</change>
 			<change when="2016-03-10" who="Zach Himes">Converted milestone sections to divs</change>
@@ -116,11 +122,11 @@
 			<change when="1996-03-26" who="DAS">ed.</change>
 		</revisionDesc>
 	</teiHeader>
-	<text>
-		<body>
+	<text xml:lang="lat">
+		<body xml:base="urn:cts:latinLit:phi0474.phi009.perseus-lat2">
 			
 
-<div type="edition" xml:lang="lat" n="urn:cts:latinLit:phi0474.phi009.perseus-lat2" subtype="edition"> 
+<div type="edition" xml:lang="lat" subtype="edition"> 
 <head rend="align(indent)">DE IMPERIO CN. POMPEI AD QVIRITES ORATIO</head> 
 
 

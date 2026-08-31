@@ -46,7 +46,14 @@
                 <refState unit="book"/>
                 <refState n="chunk" unit="chapter"/>
             </refsDecl>
-        </encodingDesc>
+                <refsDecl xml:id="CTS">
+                  <citeStructure match="/TEI/text/body" use="@xml:base">
+                    <citeStructure match="div[@type='book']" use="@n" unit="book" delim=":">
+                      <citeStructure match=".//milestone[@unit='chapter']" use="@n" unit="chapter" delim="." n="chunk"/>
+                    </citeStructure>
+                  </citeStructure>
+                </refsDecl>
+</encodingDesc>
         <profileDesc>
             <langUsage default="false">
                 <language ident="la">Latin</language>
@@ -55,6 +62,7 @@
             </langUsage>
         </profileDesc>
         <revisionDesc>
+          <change who="Charles Pletcher" when="2026-08-26">Add citeStructure refsDecl</change>
             <!--
             <change>
                 <date>2006</date>
@@ -68,8 +76,8 @@
             <change who="Stella Dee" when="2014-10-09">edited markup</change>
         </revisionDesc>
     </teiHeader>
-    <text xml:lang="la">
-        <body>
+    <text xml:lang="lat">
+        <body xml:base="urn:cts:latinLit:phi0914.phi00125.perseus-lat3">
             <div type="book" n="25" org="uniform" sample="complete" part="N">
                 <head>Liber XXV</head>
                 <p>

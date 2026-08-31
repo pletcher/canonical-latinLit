@@ -67,7 +67,12 @@
                 <refState unit="book"/>
                 <refState unit="chapter" n="chunk"/>
             </refsDecl>
-        </encodingDesc>
+                <refsDecl xml:id="CTS">
+                  <citeStructure match="/TEI/text/body" use="@xml:base">
+                    <citeStructure match="div[@type='book']" use="@n" unit="book" delim=":" n="chunk"/>
+                  </citeStructure>
+                </refsDecl>
+</encodingDesc>
         <profileDesc>
             <langUsage default="false">
                 <language ident="en">English </language>
@@ -76,6 +81,7 @@
             </langUsage>
         </profileDesc>
         <revisionDesc>
+          <change who="Charles Pletcher" when="2026-08-26">Add citeStructure refsDecl</change>
             <!--
             <change>
                 <date>4/26/2006</date>
@@ -120,8 +126,8 @@ Added to repository. Passed SGML parse.
             <change when="2014-10-09" who="Stella Dee">edited markup</change>
         </revisionDesc>
     </teiHeader>
-    <text xml:lang="en">
-        <body>
+    <text xml:lang="eng">
+        <body xml:base="urn:cts:latinLit:phi0914.phi00140.perseus-eng3">
             <div part="N" sample="complete" org="uniform" n="40" type="book">
                 <head>Perseus and Demetrius</head>
                 <div part="N" sample="complete" org="uniform" n="1" type="chapter">

@@ -71,7 +71,12 @@
 					<p>This pointer pattern extracts section.</p>
 				</cRefPattern>
 			</refsDecl>
-		</encodingDesc>
+				<refsDecl xml:id="CTS">
+				  <citeStructure match="/TEI/text/body" use="@xml:base">
+				    <citeStructure unit="section" delim=":" match="div/div[@subtype='section']" use="@n"/>
+				  </citeStructure>
+				</refsDecl>
+</encodingDesc>
 
 		<profileDesc>
 			<langUsage>
@@ -81,6 +86,7 @@
 		</profileDesc>
 
 		<revisionDesc>
+		  <change who="Charles Pletcher" when="2026-08-26">Add citeStructure refsDecl</change>
 <change when="2026-06" who="Lisa Cerrato">Updates to header and encoding to reflect best practices.</change>
 <change who="Michael Konieczny" when="2021-02-06">Revisions for EpiDoc+CTS compliance</change> 
 <change who="Thibault Clérice" when="2021-01-29">Capitains + Epidoc</change> 
@@ -104,10 +110,10 @@
 <change when="1997-10-17" who="textgod">Added CVS log.</change>
 		</revisionDesc>
 	</teiHeader>
-	<text>
-	<body>
+	<text xml:lang="lat">
+	<body xml:base="urn:cts:latinLit:phi0474.phi028.perseus-lat2">
 	
-<div type="edition" xml:lang="lat" n="urn:cts:latinLit:phi0474.phi028.perseus-lat2">
+<div type="edition" xml:lang="lat">
 	<head rend="align(center)">PRO CN. PLANCIO ORATIO</head>
 
 <div n="1" type="textpart" subtype="section" xml:base="urn:cts:latinLit:phi0474.phi028.perseus-lat2"><p rend="align(indent)"><milestone resp="editor" n="1" unit="chapter"/> <reg>cum</reg> propter egregiam et singularem Cn. Planci, iudices, in mea salute custodienda fidem tam multos et bonos viros eius honori viderem esse fautores, capiebam animo non mediocrem voluptatem quod, cuius officium mihi saluti fuisset, ei meorum temporum memoriam suffragari videbam. <reg>cum</reg> autem audirem meos partim inimicos, partim invidos huic accusationi esse fautores, eandemque rem adversariam esse in iudicio Cn. Plancio quae in petitione fuisset adiutrix, dolebam, iudices, et acerbe ferebam, si huius salus ob eam ipsam causam esset infestior quod is meam salutem atque vitam sua benivolentia praesidio custodiaque texisset. </p> </div> 
