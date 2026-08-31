@@ -7,22 +7,22 @@
             <title xml:lang="lat">De Arte Poetica liber</title>
             <author>Q. Horatius Flaccus</author>
             <sponsor>Perseus Project, Tufts University</sponsor>
-		          <principal>Gregory Crane</principal>
-		          <respStmt>
-		             <resp>Prepared under the supervision of</resp>
-		             <name>Bridget Almas</name>
-		             <name>Lisa Cerrato</name>
-		             <name>David Smith</name>
-		          </respStmt>
+            <principal>Gregory Crane</principal>
+            <respStmt>
+               <resp>Prepared under the supervision of</resp>
+               <name>Bridget Almas</name>
+               <name>Lisa Cerrato</name>
+               <name>David Smith</name>
+            </respStmt>
             <funder n="org:NEH">The National Endowment for the Humanities</funder>
          </titleStmt>
          <extent>about 112Kb</extent>
          <publicationStmt>
-		          <publisher>Trustees of Tufts University</publisher>
-		          <pubPlace>Medford, MA</pubPlace>
-		          <authority>Perseus Project</authority>
+            <publisher>Trustees of Tufts University</publisher>
+            <pubPlace>Medford, MA</pubPlace>
+            <authority>Perseus Project</authority>
             <date type="release">2000-08-01</date>
-		       </publicationStmt>
+         </publicationStmt>
          <sourceDesc>
             <biblStruct>
                <monogr>
@@ -36,31 +36,34 @@
                   </imprint>
                   <biblScope unit="volume">2</biblScope>
                </monogr>
-               <ref target="https://hdl.handle.net/2027/hvd.hxiisl?urlappend=%3Bseq=389">Hathi Trust</ref>               
+               <ref target="https://hdl.handle.net/2027/hvd.hxiisl?urlappend=%3Bseq=389">Hathi Trust</ref>
             </biblStruct>
          </sourceDesc>
       </fileDesc>
 
       <encodingDesc>
          <refsDecl n="CTS">
-            <cRefPattern n="line" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div//tei:l[@n='$1'])">
+            <cRefPattern n="line" matchPattern="(\w+)"
+               replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div//tei:l[@n='$1'])">
                <p>This pointer pattern extracts line</p>
             </cRefPattern>
          </refsDecl>
          <refsDecl n="TEI.2">
-            <refState unit="line"/>
+            <refState unit="line" />
          </refsDecl>
          <refsDecl n="TEI.2">
-            <refState n="chunk" unit="card"/>
+            <refState n="chunk" unit="card" />
          </refsDecl>
 
 
-            <refsDecl xml:id="CTS">
-              <citeStructure match="/TEI/text/body" use="@xml:base">
-                <citeStructure unit="line" delim=":" match="l" use="@n"/>
-              </citeStructure>
-            </refsDecl>
-</encodingDesc>
+         <refsDecl xml:id="CTS">
+            <citeStructure match="/TEI/text/body" use="@xml:base">
+               <citeStructure use="@n" match="div[@type='edition']" n="chunk">
+                  <citeStructure delim=":" match="l" use="@n" />
+               </citeStructure>
+            </citeStructure>
+         </refsDecl>
+      </encodingDesc>
 
       <profileDesc>
          <langUsage>
@@ -73,22 +76,26 @@
       </profileDesc>
 
       <revisionDesc>
-        <change who="Charles Pletcher" when="2026-08-26">Add citeStructure refsDecl</change>
-        <change who="Thibault Clérice" when="2016-11-16">CapiTainS, Epidoc and Bump</change>
-        <change who="gcrane" when="2011-01-15">base file for sdl</change> 
-        <change who="rsingh04" when="2009-11-24">moved more xml files around based on copyright status</change> 
-        <change who="lcerrato" when="2008-11-14">fixed author name for consistent sorting</change> 
-        <change who="packel" when="2005-08-01">removed stray item tags</change> 
-        <change who="packel" when="2005-07-25">Converted to XML</change> 
-        <change who="packel" when="2005-07-21">added a milestone at the beginning of the text</change> 
-        <change who="yorkc" when="2003-07-01">Updated texts to TEI P4 and Perseus P4 extensions; minor cleanup (esp. character encodings and typos.)</change> 
-        <change who="amahoney" when="2000-06-09">new texts (they parse but haven't been proofread yet)</change> 
+         <change who="Charles Pletcher" when="2026-08-26">Add citeStructure refsDecl</change>
+         <change who="Thibault Clérice" when="2016-11-16">CapiTainS, Epidoc and Bump</change>
+         <change who="gcrane" when="2011-01-15">base file for sdl</change>
+         <change who="rsingh04" when="2009-11-24">moved more xml files around based on copyright
+            status</change>
+         <change who="lcerrato" when="2008-11-14">fixed author name for consistent sorting</change>
+         <change who="packel" when="2005-08-01">removed stray item tags</change>
+         <change who="packel" when="2005-07-25">Converted to XML</change>
+         <change who="packel" when="2005-07-21">added a milestone at the beginning of the text</change>
+         <change who="yorkc" when="2003-07-01">Updated texts to TEI P4 and Perseus P4 extensions;
+            minor cleanup (esp. character encodings and typos.)</change>
+         <change who="amahoney" when="2000-06-09">new texts (they parse but haven't been proofread
+            yet)</change>
       </revisionDesc>
    </teiHeader>
 
    <text xml:lang="lat">
-      <body xml:base="urn:cts:latinLit:phi0893.phi006.perseus-lat2"><div n="urn:cts:latinLit:phi0893.phi006.perseus-lat2" xml:lang="lat" type="edition">
-            
+      <body xml:base="urn:cts:latinLit:phi0893.phi006.perseus-lat2">
+         <div n="urn:cts:latinLit:phi0893.phi006.perseus-lat2" xml:lang="lat" type="edition">
+
             <l n="1">Humano capiti cervicem pictor equinam </l>
             <l n="2">iungere si velit, et varias inducere plumas, </l>
             <l n="3">undique conlatis membris, ut turpiter atrum </l>
@@ -100,7 +107,7 @@
             <l n="9">reddatur formae. 'pictoribus atque poetis </l>
             <l n="10">quidlibet audendi semper fuit aequa potestas.' </l>
             <l n="11">scimus, et hanc veniam petimusque damusque vicissim; </l>
-            <l n="12">sed non ut placidis coeant inmitia, non ut  </l>
+            <l n="12">sed non ut placidis coeant inmitia, non ut </l>
             <l n="13">serpentes avibus geminentur, tigribus agni. </l>
             <l n="14">inceptis gravibus plerumque et magna professis </l>
             <l n="15">purpureus, late qui splendeat, unus et alter </l>
@@ -127,7 +134,7 @@
             <l n="36">non magis esse velim quam naso vivere pravo, </l>
             <l n="37">spectandum nigris oculis nigroque capillo. </l>
             <l n="38">sumite materiam vestris, qui scribitis, aequam </l>
-            <l n="39">viribus et versate diu, quid ferre recusent,  </l>
+            <l n="39">viribus et versate diu, quid ferre recusent, </l>
             <l n="40">quid valeant umeri. cui lecta potenter erit res, </l>
             <l n="41">nec facundia deseret hunc nec lucidus ordo. </l>
             <l n="42">ordinis haec virtus erit et venus, aut ego fallor, </l>
@@ -135,8 +142,8 @@
             <l n="44">pleraque differat et praesens in tempus omittat. </l>
 
 
-       
-            <l n="46"><note resp="perseus">Lines 46 and 45 reordered. Print preserves natural order.</note>in verbis etiam tenuis cautusque serendis </l>
+            <l n="46"><note resp="perseus">Lines 46 and 45 reordered. Print preserves natural order.</note>in
+               verbis etiam tenuis cautusque serendis </l>
             <l n="45">hoc amet, hoc spernat promissi carminis auctor. </l>
             <l n="47">dixeris egregie, notum si callida verbum </l>
             <l n="48">reddiderit iunctura novum. si forte necesse est </l>
@@ -152,7 +159,7 @@
             <l n="58">nomina protulerit? licuit semperque licebit </l>
             <l n="59">signatum praesente nota producere nomen. </l>
             <l n="60">ut silvae foliis pronos mutantur in annos, </l>
-            <l n="61">prima cadunt: ita verborum vetus interit aetas,  </l>
+            <l n="61">prima cadunt: ita verborum vetus interit aetas, </l>
             <l n="62">et iuvenum ritu florent modo nata vigentque. </l>
             <l n="63">debemur morti nos nostraque: sive receptus </l>
             <l n="64">terra Neptunus classes Aquilonibus arcet, </l>
@@ -163,7 +170,7 @@
             <l n="69">nedum sermonum stet honos et gratia vivax. </l>
             <l n="70">multa renascentur quae iam cecidere cadentque </l>
             <l n="71">quae nunc sunt in honore vocabula, si volet usus, </l>
-            <l n="72">quem penes arbitrium est et ius et norma loquendi. 
+            <l n="72">quem penes arbitrium est et ius et norma loquendi.
 
 
             </l>
@@ -181,7 +188,7 @@
             <l n="84">et pugilem victorem et equum certamine primum </l>
             <l n="85">et iuvenum curas et libera vina referre: </l>
             <l n="86">descriptas servare vices operumque colores </l>
-            <l n="87">cur ego si nequeo ignoroque poeta salutor?  </l>
+            <l n="87">cur ego si nequeo ignoroque poeta salutor? </l>
             <l n="88">cur nescire pudens prave quam discere malo? </l>
             <l n="89">versibus exponi tragicis res comica non volt; </l>
             <l n="90">indignatur item privatis ac prope socco </l>
@@ -192,7 +199,7 @@
             <l n="95">et tragicus plerumque dolet sermone pedestri, </l>
             <l n="96">Telephus et Peleus cum pauper et exsul uterque </l>
             <l n="97">proiicit ampullas et sesquipedalia verba, </l>
-            <l n="98">si curat cor spectantis tetigisse querella. 
+            <l n="98">si curat cor spectantis tetigisse querella.
 
 
             </l>
@@ -210,7 +217,7 @@
             <l n="110">aut ad humum maerore gravi deducit et angit: </l>
             <l n="111">post effert animi motus interprete lingua. </l>
             <l n="112">si dicentis erunt fortunis absona dicta, </l>
-            <l n="113">Romani tollent equites peditesque cachinnum.  </l>
+            <l n="113">Romani tollent equites peditesque cachinnum. </l>
             <l n="114">intererit multum, Davusne loquatur an heros, </l>
             <l n="115">maturusne senex an adhuc florente iuventa </l>
             <l n="116">fervidus, et matrona potens an sedula nutrix, </l>
@@ -221,7 +228,7 @@
             <l n="121">inpiger, iracundus, inexorabilis, acer </l>
             <l n="122">iura neget sibi nata, nihil non adroget armis. </l>
             <l n="123">sit Medea ferox invictaque, flebilis Ino, </l>
-            <l n="124">perfidus Ixion, Io vaga, tristis Orestes. 
+            <l n="124">perfidus Ixion, Io vaga, tristis Orestes.
 
 
             </l>
@@ -239,7 +246,7 @@
             <l n="136">nec sic incipies, ut scriptor cyclicus olim: </l>
             <l n="137">'fortunam Priami cantabo et nobile bellum.' </l>
             <l n="138">quid dignum tanto feret hic promissor hiatu? </l>
-            <l n="139">parturient montes, nascetur ridiculus mus.  </l>
+            <l n="139">parturient montes, nascetur ridiculus mus. </l>
             <l n="140">quanto rectius hic, qui nil molitur inepte: </l>
             <l n="141">'dic mihi, Musa, virum, captae post tempora Troiae </l>
             <l n="142">qui mores hominum multorum vidit et urbes.' </l>
@@ -252,7 +259,7 @@
             <l n="149">non secus ac notas auditorem rapit et quae </l>
             <l n="150">desperat tractata nitescere posse relinquit </l>
             <l n="151">atque ita mentitur, sic veris falsa remiscet, </l>
-            <l n="152">primo ne medium, medio ne discrepet imum. 
+            <l n="152">primo ne medium, medio ne discrepet imum.
 
 
             </l>
@@ -269,7 +276,7 @@
             <l n="163">cereus in vitium flecti, monitoribus asper, </l>
             <l n="164">utilium tardus provisor, prodigus aeris, </l>
             <l n="165">sublimis cupidusque et amata relinquere pernix. </l>
-            <l n="166">conversis studiis aetas animusque virilis  </l>
+            <l n="166">conversis studiis aetas animusque virilis </l>
             <l n="167">quaerit opes et amicitias, inservit honori, </l>
             <l n="168">conmisisse cavet quod mox mutare laboret. </l>
             <l n="169">multa senem circumveniunt incommoda, vel quod </l>
@@ -291,7 +298,7 @@
             <l n="185">ne pueros coram populo Medea trucidet </l>
             <l n="186">aut humana palam coquat exta nefarius atreus </l>
             <l n="187">aut in avem Procne vertatur, Cadmus in anguem. </l>
-            <l n="188">quodcumque ostendis mihi sic, incredulus odi. 
+            <l n="188">quodcumque ostendis mihi sic, incredulus odi.
 
 
             </l>
@@ -302,7 +309,7 @@
             <l n="193">actoris partis chorus officiumque virile </l>
             <l n="194">defendat, neu quid medios intercinat actus </l>
             <l n="195">quod non proposito conducat et haereat apte. </l>
-            <l n="196">ille bonis faveatque et consilietur amice  </l>
+            <l n="196">ille bonis faveatque et consilietur amice </l>
             <l n="197">et regat iratos et amet pacare tumentis, </l>
             <l n="198">ille dapes laudet mensae brevis, ille salubrem </l>
             <l n="199">iustitiam legesque et apertis otia portis, </l>
@@ -325,14 +332,14 @@
             <l n="216">sic etiam fidibus voces crevere severis, </l>
             <l n="217">et tulit eloquium insolitum facundia praeceps </l>
             <l n="218">utiliumque sagax rerum et divina futuri </l>
-            <l n="219">sortilegis non discrepuit sententia Delphis. 
+            <l n="219">sortilegis non discrepuit sententia Delphis.
 
 
             </l>
             <l n="220">carmine qui tragico vilem certavit ob hircum, </l>
             <l n="221">mox etiam agrestis Satyros nudavit et asper </l>
             <l n="222">incolumi gravitate iocum temptavit eo quod </l>
-            <l n="223">inlecebris erat et grata novitate morandus  </l>
+            <l n="223">inlecebris erat et grata novitate morandus </l>
             <l n="224">spectator functusque sacris et potus et exlex. </l>
             <l n="225">verum ita risores, ita commendare dicacis </l>
             <l n="226">conveniet Satyros, ita vertere seria ludo, </l>
@@ -363,7 +370,7 @@
             <l n="251">syllaba longa brevi subiecta vocatur Iambus, </l>
             <l n="252">pes citus: unde etiam trimetris adcrescere iussit </l>
             <l n="253">nomen iambeis, cum senos redderet ictus, </l>
-            <l n="254">primus ad extremum similis sibi: non ita pridem,  </l>
+            <l n="254">primus ad extremum similis sibi: non ita pridem, </l>
             <l n="255">tardior ut paulo graviorque veniret ad auris, </l>
             <l n="256">spondeos stabilis in iura paterna recepit </l>
             <l n="257">commodus et patiens, non ut de sede secunda </l>
@@ -383,7 +390,7 @@
             <l n="271">laudavere sales, nimium patienter utrumque, </l>
             <l n="272">ne dicam stulte, mirati, si modo ego et vos </l>
             <l n="273">scimus inurbanum lepido seponere dicto </l>
-            <l n="274">legitimumque sonum digitis callemus et aure. 
+            <l n="274">legitimumque sonum digitis callemus et aure.
 
 
             </l>
@@ -395,7 +402,7 @@
             <l n="280">et docuit magnumque loqui nitique cothurno. </l>
             <l n="281">successit vetus his comoedia, non sine multa </l>
             <l n="282">laude; sed in vitium libertas excidit et vim </l>
-            <l n="283">dignam lege regi: lex est accepta chorusque  </l>
+            <l n="283">dignam lege regi: lex est accepta chorusque </l>
             <l n="284">turpiter obticuit sublato iure nocendi. </l>
             <l n="285">nil intemptatum nostri liquere poetae </l>
             <l n="286">nec minimum meruere decus vestigia Graeca </l>
@@ -420,13 +427,13 @@
             <l n="305">reddere quae ferrum valet exsors ipsa secandi; </l>
             <l n="306">munus et officium, nil scribens ipse, docebo, </l>
             <l n="307">unde parentur opes, quid alat formetque poetam, </l>
-            <l n="308">quid deceat, quid non, quo virtus, quo ferat error. 
+            <l n="308">quid deceat, quid non, quo virtus, quo ferat error.
 
 
             </l>
             <l n="309">scribendi recte sapere est et principium et fons. </l>
             <l n="310">rem tibi Socraticae poterunt ostendere chartae </l>
-            <l n="311">verbaque provisam rem non invita sequentur.  </l>
+            <l n="311">verbaque provisam rem non invita sequentur. </l>
             <l n="312">qui didicit, patriae quid debeat et quid amicis, </l>
             <l n="313">quo sit amore parens, quo frater amandus et hospes, </l>
             <l n="314">quod sit conscripti, quod iudicis officium, quae </l>
@@ -455,13 +462,13 @@
             <l n="337">omne supervacuum pleno de pectore manat. </l>
             <l n="338">ficta voluptatis causa sint proxima veris: </l>
             <l n="339">ne quodcumque volet poscat sibi fabula credi </l>
-            <l n="340">neu pransae Lamiae vivum puerum extrahat alvo.  </l>
+            <l n="340">neu pransae Lamiae vivum puerum extrahat alvo. </l>
             <l n="341">centuriae seniorum agitant expertia frugis, </l>
             <l n="342">celsi praetereunt austera poemata Rhamnes: </l>
             <l n="343">omne tulit punctum, qui miscuit utile dulci </l>
             <l n="344">lectorem delectando pariterque monendo. </l>
             <l n="345">hic meret aera liber Sosiis, hic et mare transit </l>
-            <l n="346">et longum noto scriptori prorogat aevum. 
+            <l n="346">et longum noto scriptori prorogat aevum.
 
 
             </l>
@@ -488,7 +495,7 @@
             <l n="367">fingeris ad rectum et per te sapis, hoc tibi dictum </l>
             <l n="368">tolle memor, certis medium et tolerabile rebus </l>
             <l n="369">recte concedi: consultus iuris et actor </l>
-            <l n="370">causarum mediocris abest virtute diserti  </l>
+            <l n="370">causarum mediocris abest virtute diserti </l>
             <l n="371">Messallae nec scit quantum Cascellius Aulus, </l>
             <l n="372">sed tamen in pretio est: mediocribus esse poetis </l>
             <l n="373">non homines, non Di, non concessere columnae. </l>
@@ -508,7 +515,7 @@
             <l n="387">scripseris, in Meti descendat iudicis auris </l>
             <l n="388">et patris et nostras nonumque prematur in annum </l>
             <l n="389">membranis intus positis: delere licebit, </l>
-            <l n="390">quod non edideris, nescit vox missa reverti. 
+            <l n="390">quod non edideris, nescit vox missa reverti.
 
 
             </l>
@@ -521,7 +528,7 @@
             <l n="397">publica privatis secernere, sacra profanis, </l>
             <l n="398">concubitu prohibere vago, dare iura maritis, </l>
             <l n="399">oppida moliri, leges incidere ligno. </l>
-            <l n="400">sic honor et nomen divinis vatibus atque  </l>
+            <l n="400">sic honor et nomen divinis vatibus atque </l>
             <l n="401">carminibus venit. post hos insignis Homerus </l>
             <l n="402">Tyrtaeusque mares animos in Martia bella </l>
             <l n="403">versibus exacuit; dictae per carmina sortes </l>
@@ -539,7 +546,7 @@
             <l n="415">tibicen, didicit prius extimuitque magistrum. </l>
             <l n="416">nunc satis est dixisse 'ego mira poemata pango; </l>
             <l n="417">occupet extremum scabies; mihi turpe relinqui est </l>
-            <l n="418">et quod non didici sane nescire fateri'. 
+            <l n="418">et quod non didici sane nescire fateri'.
 
 
             </l>
@@ -552,7 +559,7 @@
             <l n="425">noscere mendacem verumque beatus amicum. </l>
             <l n="426">tu seu donaris seu quid donare voles cui, </l>
             <l n="427">nolito ad versus tibi factos ducere plenum </l>
-            <l n="428">laetitiae; clamabit enim 'pulchre! bene! recte!'  </l>
+            <l n="428">laetitiae; clamabit enim 'pulchre! bene! recte!' </l>
             <l n="429">pallescet, super his etiam stillabit amicis </l>
             <l n="430">ex oculis rorem, saliet, tundet pede terram. </l>
             <l n="431">ut, qui conducti plorant in funere, dicunt </l>
@@ -576,13 +583,13 @@
             <l n="449">arguet ambigue dictum, mutanda notabit: </l>
             <l n="450">fiet Aristarchus; non dicet 'cur ego amicum </l>
             <l n="451">offendam in nugis?' hae nugae seria ducent </l>
-            <l n="452">in mala derisum semel exceptumque sinistre. 
+            <l n="452">in mala derisum semel exceptumque sinistre.
 
 
             </l>
             <l n="453">ut mala quem scabies aut morbus regius urget </l>
             <l n="454">aut fanaticus error et iracunda Diana, </l>
-            <l n="455">vesanum tetigisse timent fugiuntque poetam  </l>
+            <l n="455">vesanum tetigisse timent fugiuntque poetam </l>
             <l n="456">qui sapiunt, agitant pueri incautique sequuntur. </l>
             <l n="457">hic, dum sublimis versus ructatur et errat, </l>
             <l n="458">si veluti merulis intentus decidit auceps </l>
@@ -603,7 +610,7 @@
             <l n="473">obiectos caveae valuit si frangere clatros, </l>
             <l n="474">indoctum doctumque fugat recitator acerbus; </l>
             <l n="475">quem vero arripuit, tenet occiditque legendo, </l>
-            <l n="476">non missura cutem, nisi plena cruoris, hirudo.'  </l>
+            <l n="476">non missura cutem, nisi plena cruoris, hirudo.' </l>
          </div>
       </body>
    </text>

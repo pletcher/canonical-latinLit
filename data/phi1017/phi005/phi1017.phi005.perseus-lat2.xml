@@ -74,7 +74,7 @@
          </refsDecl>
             <refsDecl xml:id="CTS">
               <citeStructure match="/TEI/text/body" use="@xml:base">
-                <citeStructure use="@n" match="milestone[@unit='card']" n="chunk" delim=":"/>
+                <citeStructure use="@n" match="div/milestone[@unit='card']" n="chunk" delim=":"/>
                 <citeStructure unit="line" delim=":" match=".//l" use="@n"/>
               </citeStructure>
             </refsDecl>

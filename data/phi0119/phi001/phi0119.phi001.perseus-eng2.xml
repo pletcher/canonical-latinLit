@@ -70,7 +70,7 @@
          </editorialDecl>
          <refsDecl xml:id="CTS">
             <citeStructure match="/TEI/text/body" use="@xml:base">
-               <citeStructure unit="act" delim=":" match="div[@subtype='act']" use="@n">
+               <citeStructure unit="act" delim=":" match="div/div[@subtype='act']" use="@n">
                   <citeStructure unit="scene" delim="." match="div[@subtype='scene']" use="@n">
                      <citeStructure unit="line" delim="." match="l" use="@n" />
                   </citeStructure>

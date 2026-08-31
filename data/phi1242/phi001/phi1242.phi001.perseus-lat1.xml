@@ -75,8 +75,10 @@
                 <refsDecl xml:id="CTS">
                   <citeStructure match="/TEI/text/body" use="@xml:base">
                     <citeStructure unit="book" delim=":" match="div/div[@subtype='book']" use="@n">
-                      <citeStructure unit="chapter" delim="." match="div[@subtype='chapter']" use="@n">
-                        <citeStructure unit="section" delim="." match="div[@subtype='section']" use="@n"/>
+                      <citeStructure unit="topic" delim="." match="div[@subtype='topic']" use="@n">
+                        <citeStructure unit="chapter" delim="." match="div[@subtype='chapter']" use="@n">
+                          <citeStructure unit="section" delim="." match="div[@subtype='section']" use="@n"/>
+                        </citeStructure>
                       </citeStructure>
                     </citeStructure>
                   </citeStructure>
