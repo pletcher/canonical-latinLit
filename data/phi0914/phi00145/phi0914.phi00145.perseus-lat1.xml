@@ -54,7 +54,9 @@
 			</refsDecl>
 				<refsDecl xml:id="CTS">
 				  <citeStructure match="/TEI/text/body" use="@xml:base">
-				    <citeStructure match=".//milestone[@unit='chapter']" use="@n" unit="chapter" delim="." n="chunk"/>
+				    <citeStructure match="div[@type='book']" use="@n" unit="book" delim=":">
+				      <citeStructure match=".//milestone[@unit='chapter']" use="@n" unit="chapter" delim="." n="chunk"/>
+				    </citeStructure>
 				  </citeStructure>
 				</refsDecl>
 </encodingDesc>
@@ -68,6 +70,7 @@
 		</profileDesc>
 
 		<revisionDesc>
+		  <change who="Charles Pletcher" when="2026-09-02">Uncomment book div wrapper and add book-level citeStructure entry, matching sibling volumes</change>
 		  <change who="Charles Pletcher" when="2026-08-26">Add citeStructure refsDecl</change>
 			<!--  <change>
 	<date>2006/7/03</date>
@@ -82,7 +85,7 @@
 	<text xml:lang="lat">
 		<body xml:base="urn:cts:latinLit:phi0914.phi00145.perseus-lat1">
 
-			<!--<div1 type="book" n="45">-->
+			<div type="book" n="45" org="uniform" sample="complete" part="N">
 
 			<pb n="vol.10.2.p.1"/>
 			<p><milestone unit="chapter" n="1"/><milestone unit="section" n="1"/>victoriae nuntii,
@@ -1949,7 +1952,7 @@
 				moratus circa urbem triginta haud amplius dies in regnum est profectus. <milestone
 					unit="section" n="21"/> actumque in Asia bellum <gap/>
 			</p>
-			<!--</div1>-->
+			</div>
 
 		</body>
 	</text>
