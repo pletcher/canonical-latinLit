@@ -152,7 +152,8 @@
   </revisionDesc>
  </teiHeader>
  <text xml:lang="eng">
- <body xml:base="urn:cts:latinLit:phi0474.phi008.perseus-eng2"><div n="urn:cts:latinLit:phi0474.phi008.perseus-eng2" type="translation" xml:lang="eng" subtype="translation">
+ <body xml:base="urn:cts:latinLit:phi0474.phi008.perseus-eng2">
+ <div type="translation" xml:lang="eng" subtype="translation">
   <head>THE ORATION OF M. T. CICERO IN BEHALF OF AULUS CAECINA.</head>
   <div type="commentary" resp="ed">
   <head>THE ARGUMENT.</head>

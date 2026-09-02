@@ -154,7 +154,8 @@
  </teiHeader>
  
  <text xml:lang="eng">
-  <body xml:base="urn:cts:latinLit:phi0474.phi010.perseus-eng2"><div n="urn:cts:latinLit:phi0474.phi010.perseus-eng2" type="translation" xml:lang="eng" subtype="translation">
+  <body xml:base="urn:cts:latinLit:phi0474.phi010.perseus-eng2">
+   <div type="translation" xml:lang="eng" subtype="translation">
     <head>THE SPEECH OF M. T. CICERO IN DEFENCE OF AULUS CLUENTIUS HABITUS.</head>
    <div type="commentary" resp="ed">
    

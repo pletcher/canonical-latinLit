@@ -119,7 +119,8 @@
 	
 	
 	<text xml:lang="lat">
-	<body xml:base="urn:cts:latinLit:phi0474.phi011.perseus-lat2"><div n="urn:cts:latinLit:phi0474.phi011.perseus-lat2" type="edition" xml:lang="lat" subtype="edition">
+	<body xml:base="urn:cts:latinLit:phi0474.phi011.perseus-lat2">
+	<div type="edition" xml:lang="lat" subtype="edition">
 	<head rend="align(center)">Orationes de Lege Agraria</head>
 	
 <div type="textpart" subtype="speech" xml:base="urn:cts:latinLit:phi0474.phi011.perseus-lat2" n="1"> 

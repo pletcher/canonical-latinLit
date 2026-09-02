@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
-  <teiHeader xml:lang="eng">
+  <teiHeader xml:lang="eng" type="text">
     <fileDesc>
       <titleStmt>
         <title>Letters to his brother Quintus</title>
@@ -63,7 +63,7 @@
       </refsDecl>
         <refsDecl xml:id="CTS">
           <citeStructure match="/TEI/text/body" use="@xml:base">
-            <citeStructure unit="letter" delim=":" match="div[@subtype='letter']" use="@n">
+            <citeStructure unit="letter" delim=":" match="div[@type='letter']" use="@n">
               <citeStructure unit="section" delim="." match=".//milestone[@unit='section']" use="@n"/>
             </citeStructure>
           </citeStructure>
@@ -249,7 +249,7 @@ Combined into single file.
   <text xml:lang="eng">
     <body xml:base="urn:cts:latinLit:phi0474.phi058.perseus-eng1">
       <div n="Q">
-        <div n="text=Q FR:book=1:letter=1" type="textpart" subtype="letter" id="s29">
+        <div n="text=Q FR:book=1:letter=1" type="letter" id="s29">
           <head>XXIX (Q FR I, 1)</head>
 
           <opener>
@@ -777,7 +777,7 @@ Combined into single file.
             everything you say and do. It remains only to beg you to take the greatest care of your
             health, if you wish me and all your friends to be well also. Farewell. </p>
         </div>
-        <div n="text=Q FR:book=1:letter=2" type="textpart" subtype="letter" id="s52">
+        <div n="text=Q FR:book=1:letter=2" type="letter" id="s52">
           <head>LII (Q FR I, 2)</head>
 
           <opener>
@@ -1065,7 +1065,7 @@ Combined into single file.
             are eminently so. Wherefore keep a good heart and high hopes. However, I will keep you
             constantly informed on particular events as they occur from day to day. </p>
         </div>
-        <div n="text=Q FR:book=1:letter=3" type="textpart" subtype="letter" id="s65">
+        <div n="text=Q FR:book=1:letter=3" type="letter" id="s65">
           <head>LXV (Q FR I, 3)</head>
 
           <opener>
@@ -1188,7 +1188,7 @@ Combined into single file.
             every subject. Be as brave as the nature of the case admits. <placeName
               key="tgn,7011182">Thessalonica</placeName>, 13 June. </p>
         </div>
-        <div n="text=Q FR:book=1:letter=4" type="textpart" subtype="letter" id="s71">
+        <div n="text=Q FR:book=1:letter=4" type="letter" id="s71">
           <head>LXXI (Q FR I, 4)</head>
 
           <opener>
@@ -1244,7 +1244,7 @@ Combined into single file.
             much affection and loyalty. <pb n="160"/>
           </p>
         </div>
-        <div n="text=Q FR:book=2:letter=1" type="textpart" subtype="letter" id="s92">
+        <div n="text=Q FR:book=2:letter=1" type="letter" id="s92">
           <head>XCII (Q FR II, i)</head>
 
           <opener>
@@ -1342,7 +1342,7 @@ Combined into single file.
             seems likely to be friendly to me: Plancius, of course, is wholly ours. Pray, if you
             love me, be careful and cautious about sailing in December. </p>
         </div>
-        <div n="text=Q FR:book=2:letter=2" type="textpart" subtype="letter" id="s99">
+        <div n="text=Q FR:book=2:letter=2" type="letter" id="s99">
           <head>XCIX (Q FR II, 2)</head>
 
           <opener>
@@ -1393,7 +1393,7 @@ Combined into single file.
             there are countless things, in regard to which I miss you daily in every possible way.
             Your family and my own are well. <milestone unit="para"/>18 January. </p>
         </div>
-        <div n="text=Q FR:book=2:letter=3" type="textpart" subtype="letter" id="s101">
+        <div n="text=Q FR:book=2:letter=3" type="letter" id="s101">
           <head>CI (Q FR II, 3)</head>
 
           <opener>
@@ -1520,7 +1520,7 @@ Combined into single file.
               e., get out of it as soon as you can. </note>
             <milestone unit="para"/>15 February. </p>
         </div>
-        <div n="text=Q FR:book=2:letter=4" type="textpart" subtype="letter" id="s104">
+        <div n="text=Q FR:book=2:letter=4" type="letter" id="s104">
           <head>CIV (Q FR II, 4 AND PART OF 6)</head>
 
           <opener>
@@ -1632,7 +1632,7 @@ Combined into single file.
             possible. That is what I desire: but although it is yourself, of course, that I most
             look forward to, yet meanwhile I long for a letter. Farewell, my dear brother. </p>
         </div>
-        <div n="text=Q FR:book=2:letter=5" type="textpart" subtype="letter" id="s105">
+        <div n="text=Q FR:book=2:letter=5" type="letter" id="s105">
           <head>CV (Q FR II, 5 AND PARTS OF 6 AND 7)</head>
 
           <opener>
@@ -1694,7 +1694,7 @@ Combined into single file.
               Mintumae. </note> should be suspended till your return. Take good care, my dear
             brother, of your health, and come as soon as possible. </p>
         </div>
-        <div n="text=Q FR:book=2:letter=6" type="textpart" subtype="letter" id="s116">
+        <div n="text=Q FR:book=2:letter=6" type="letter" id="s116">
           <head>CXVI (Q FR II, 6)</head>
 
           <opener>
@@ -1727,7 +1727,7 @@ Combined into single file.
             my prayer: of course, you will dine with me the day of your arrival. <pb n="244"/>
           </p>
         </div>
-        <div n="text=Q FR:book=2:letter=7" type="textpart" subtype="letter" id="s119">
+        <div n="text=Q FR:book=2:letter=7" type="letter" id="s119">
           <head>CXIX (Q FR II, 7)</head>
 
           <opener>
@@ -1777,7 +1777,7 @@ Combined into single file.
             short, they manage everything their own way, and wish all the world to understand it to
             be so. </p>
         </div>
-        <div n="text=Q FR:book=2:letter=8" type="textpart" subtype="letter" id="s122">
+        <div n="text=Q FR:book=2:letter=8" type="letter" id="s122">
           <head>CXXII (Q FR II, 8)</head>
 
           <opener>
@@ -1844,7 +1844,7 @@ Combined into single file.
               and converse in. It hardly refers to a supply of vegetables, as some suggest.</note>
           </p>
         </div>
-        <div n="text=Q FR:book=2:letter=9" type="textpart" subtype="letter" id="s131">
+        <div n="text=Q FR:book=2:letter=9" type="letter" id="s131">
           <head>CXXXI (Q FR II, 9)</head>
 
           <opener>
@@ -1883,7 +1883,7 @@ Combined into single file.
             succeed in reading the <title>Empedoclea</title> of Sallustius, I shall regard you as a
             hero, yet scarcely human. </p>
         </div>
-        <div n="text=Q FR:book=2:letter=10" type="textpart" subtype="letter" id="s132">
+        <div n="text=Q FR:book=2:letter=10" type="letter" id="s132">
           <head>CXXXII (Q FR II, 10)</head>
 
           <opener>
@@ -1959,7 +1959,7 @@ Combined into single file.
               satisfactory, yet it is the best that has been given. </note>
           </p>
         </div>
-        <div n="text=Q FR:book=2:letter=11" type="textpart" subtype="letter" id="s134">
+        <div n="text=Q FR:book=2:letter=11" type="letter" id="s134">
           <head>CXXXIV (Q FR II, II [13])</head>
 
           <opener>
@@ -2035,7 +2035,7 @@ Combined into single file.
             transactions on the Lupercalia (15th February). Enjoy yourself with our dear boy to your
             heart's content. </p>
         </div>
-        <div n="text=Q FR:book=2:letter=12" type="textpart" subtype="letter" id="s138">
+        <div n="text=Q FR:book=2:letter=12" type="letter" id="s138">
           <head>CXXXVIII (Q FR II, 12 [14])</head>
 
           <opener>
@@ -2073,7 +2073,7 @@ Combined into single file.
             your army. You will find him grateful and attentive. I earnestly beg you to be very
             friendly to Trebatius. </p>
         </div>
-        <div n="text=Q FR:book=2:letter=13" type="textpart" subtype="letter" id="s140">
+        <div n="text=Q FR:book=2:letter=13" type="letter" id="s140">
           <head>CXL (Q FR II,13)</head>
 
           <opener>
@@ -2135,7 +2135,7 @@ Combined into single file.
                 n="Eur. Supp. 119">Eur. Supp. 119</bibl>). </note>
           </p>
         </div>
-        <div n="text=Q FR:book=2:letter=14" type="textpart" subtype="letter" id="s141">
+        <div n="text=Q FR:book=2:letter=14" type="letter" id="s141">
           <head>CXLI (Q FR II, 14 [15 b])</head>
 
           <opener>
@@ -2183,7 +2183,7 @@ Combined into single file.
             more avail than all laws and jurors put together. <pb n="280"/>
           </p>
         </div>
-        <div n="text=Q FR:book=2:letter=15" type="textpart" subtype="letter" id="s146">
+        <div n="text=Q FR:book=2:letter=15" type="letter" id="s146">
           <head>CXLVI (Q FR II, 15)</head>
 
           <opener>
@@ -2234,7 +2234,7 @@ Combined into single file.
             You needn't be afraid: I shall not admire myself one whit the less. On this subject
             speak like a lover of truth, and with your usual brotherly frankness. </p>
         </div>
-        <div n="text=Q FR:book=3:letter=1" type="textpart" subtype="letter" id="s147">
+        <div n="text=Q FR:book=3:letter=1" type="letter" id="s147">
           <head>CXLVII (Q FR III, 1)</head>
 
           <opener>
@@ -2510,7 +2510,7 @@ Combined into single file.
             Many, many wishes, dear brother, for your health. <pb n="300"/>
           </p>
         </div>
-        <div n="text=Q FR:book=3:letter=2" type="textpart" subtype="letter" id="s149">
+        <div n="text=Q FR:book=3:letter=2" type="letter" id="s149">
           <head>CXLIX (Q FR III, 2)</head>
 
           <opener>
@@ -2585,7 +2585,7 @@ Combined into single file.
             news. At home all is well : your house itself is being proceeded with by the contractors
             with fair expedition. </p>
         </div>
-        <div n="text=Q FR:book=3:letter=3" type="textpart" subtype="letter" id="s150">
+        <div n="text=Q FR:book=3:letter=3" type="letter" id="s150">
           <head>CL (Q FR III, 3)</head>
 
           <opener>
@@ -2643,7 +2643,7 @@ Combined into single file.
             will write and tell me most carefully in what district you are going to pass the winter,
             and what your prospects are. </p>
         </div>
-        <div n="text=Q FR:book=3:letter=4" type="textpart" subtype="letter" id="s151">
+        <div n="text=Q FR:book=3:letter=4" type="letter" id="s151">
           <head>CLI (Q FR III, 4)</head>
 
           <opener>
@@ -2729,7 +2729,7 @@ Combined into single file.
             of brothers, take good care of your health. <pb n="310"/>
           </p>
         </div>
-        <div n="text=Q FR:book=3:letter=5" type="textpart" subtype="letter" id="s154">
+        <div n="text=Q FR:book=3:letter=5" type="letter" id="s154">
           <head>CLIV (Q FR III,5-6)</head>
 
           <opener>
@@ -2818,7 +2818,7 @@ Combined into single file.
             last two letters. <pb n="331"/>
           </p>
         </div>
-        <div n="text=Q FR:book=3:letter=7" type="textpart" subtype="letter" id="s155">
+        <div n="text=Q FR:book=3:letter=7" type="letter" id="s155">
           <head>CLV (Q FR III, 7)</head>
 
           <opener>
@@ -2844,7 +2844,7 @@ Combined into single file.
             when you were at Samos. Good-bye, dearest and best of brothers. <pb n="332"/>
           </p>
         </div>
-        <div n="text=Q FR:book=3:letter=8" type="textpart" subtype="letter" id="s158">
+        <div n="text=Q FR:book=3:letter=8" type="letter" id="s158">
           <head>CLVIII (Q FR III, 8)</head>
 
           <opener>
@@ -2921,7 +2921,7 @@ Combined into single file.
             is only an executor, and might have reflected that he is now an executor, not an aedile.
             That is about all I had to write. Take care of yourself, dearest brother. </p>
         </div>
-        <div n="text=Q FR:book=3:letter=9" type="textpart" subtype="letter" id="s159">
+        <div n="text=Q FR:book=3:letter=9" type="letter" id="s159">
           <head>CLIX (Q FR III, 9)</head>
 
           <opener>
@@ -3000,7 +3000,7 @@ Combined into single file.
         </div>
       </div>
       <div n="FR">
-        <div n="text=Q FR:book=1:letter=1" type="textpart" subtype="letter" id="s29">
+        <div n="text=Q FR:book=1:letter=1" type="letter" id="s29">
           <head>XXIX (Q FR I, 1)</head>
 
           <opener>
@@ -3528,7 +3528,7 @@ Combined into single file.
             everything you say and do. It remains only to beg you to take the greatest care of your
             health, if you wish me and all your friends to be well also. Farewell. </p>
         </div>
-        <div n="text=Q FR:book=1:letter=2" type="textpart" subtype="letter" id="s52">
+        <div n="text=Q FR:book=1:letter=2" type="letter" id="s52">
           <head>LII (Q FR I, 2)</head>
 
           <opener>
@@ -3816,7 +3816,7 @@ Combined into single file.
             are eminently so. Wherefore keep a good heart and high hopes. However, I will keep you
             constantly informed on particular events as they occur from day to day. </p>
         </div>
-        <div n="text=Q FR:book=1:letter=3" type="textpart" subtype="letter" id="s65">
+        <div n="text=Q FR:book=1:letter=3" type="letter" id="s65">
           <head>LXV (Q FR I, 3)</head>
 
           <opener>
@@ -3939,7 +3939,7 @@ Combined into single file.
             every subject. Be as brave as the nature of the case admits. <placeName
               key="tgn,7011182">Thessalonica</placeName>, 13 June. </p>
         </div>
-        <div n="text=Q FR:book=1:letter=4" type="textpart" subtype="letter" id="s71">
+        <div n="text=Q FR:book=1:letter=4" type="letter" id="s71">
           <head>LXXI (Q FR I, 4)</head>
 
           <opener>
@@ -3995,7 +3995,7 @@ Combined into single file.
             much affection and loyalty. <pb n="160"/>
           </p>
         </div>
-        <div n="text=Q FR:book=2:letter=1" type="textpart" subtype="letter" id="s92">
+        <div n="text=Q FR:book=2:letter=1" type="letter" id="s92">
           <head>XCII (Q FR II, i)</head>
 
           <opener>
@@ -4093,7 +4093,7 @@ Combined into single file.
             seems likely to be friendly to me: Plancius, of course, is wholly ours. Pray, if you
             love me, be careful and cautious about sailing in December. </p>
         </div>
-        <div n="text=Q FR:book=2:letter=2" type="textpart" subtype="letter" id="s99">
+        <div n="text=Q FR:book=2:letter=2" type="letter" id="s99">
           <head>XCIX (Q FR II, 2)</head>
 
           <opener>
@@ -4144,7 +4144,7 @@ Combined into single file.
             there are countless things, in regard to which I miss you daily in every possible way.
             Your family and my own are well. <milestone unit="para"/>18 January. </p>
         </div>
-        <div n="text=Q FR:book=2:letter=3" type="textpart" subtype="letter" id="s101">
+        <div n="text=Q FR:book=2:letter=3" type="letter" id="s101">
           <head>CI (Q FR II, 3)</head>
 
           <opener>
@@ -4271,7 +4271,7 @@ Combined into single file.
               e., get out of it as soon as you can. </note>
             <milestone unit="para"/>15 February. </p>
         </div>
-        <div n="text=Q FR:book=2:letter=4" type="textpart" subtype="letter" id="s104">
+        <div n="text=Q FR:book=2:letter=4" type="letter" id="s104">
           <head>CIV (Q FR II, 4 AND PART OF 6)</head>
 
           <opener>
@@ -4383,7 +4383,7 @@ Combined into single file.
             possible. That is what I desire: but although it is yourself, of course, that I most
             look forward to, yet meanwhile I long for a letter. Farewell, my dear brother. </p>
         </div>
-        <div n="text=Q FR:book=2:letter=5" type="textpart" subtype="letter" id="s105">
+        <div n="text=Q FR:book=2:letter=5" type="letter" id="s105">
           <head>CV (Q FR II, 5 AND PARTS OF 6 AND 7)</head>
 
           <opener>
@@ -4445,7 +4445,7 @@ Combined into single file.
               Mintumae. </note> should be suspended till your return. Take good care, my dear
             brother, of your health, and come as soon as possible. </p>
         </div>
-        <div n="text=Q FR:book=2:letter=6" type="textpart" subtype="letter" id="s116">
+        <div n="text=Q FR:book=2:letter=6" type="letter" id="s116">
           <head>CXVI (Q FR II, 6)</head>
 
           <opener>
@@ -4478,7 +4478,7 @@ Combined into single file.
             my prayer: of course, you will dine with me the day of your arrival. <pb n="244"/>
           </p>
         </div>
-        <div n="text=Q FR:book=2:letter=7" type="textpart" subtype="letter" id="s119">
+        <div n="text=Q FR:book=2:letter=7" type="letter" id="s119">
           <head>CXIX (Q FR II, 7)</head>
 
           <opener>
@@ -4528,7 +4528,7 @@ Combined into single file.
             short, they manage everything their own way, and wish all the world to understand it to
             be so. </p>
         </div>
-        <div n="text=Q FR:book=2:letter=8" type="textpart" subtype="letter" id="s122">
+        <div n="text=Q FR:book=2:letter=8" type="letter" id="s122">
           <head>CXXII (Q FR II, 8)</head>
 
           <opener>
@@ -4595,7 +4595,7 @@ Combined into single file.
               and converse in. It hardly refers to a supply of vegetables, as some suggest.</note>
           </p>
         </div>
-        <div n="text=Q FR:book=2:letter=9" type="textpart" subtype="letter" id="s131">
+        <div n="text=Q FR:book=2:letter=9" type="letter" id="s131">
           <head>CXXXI (Q FR II, 9)</head>
 
           <opener>
@@ -4634,7 +4634,7 @@ Combined into single file.
             succeed in reading the <title>Empedoclea</title> of Sallustius, I shall regard you as a
             hero, yet scarcely human. </p>
         </div>
-        <div n="text=Q FR:book=2:letter=10" type="textpart" subtype="letter" id="s132">
+        <div n="text=Q FR:book=2:letter=10" type="letter" id="s132">
           <head>CXXXII (Q FR II, 10)</head>
 
           <opener>
@@ -4710,7 +4710,7 @@ Combined into single file.
               satisfactory, yet it is the best that has been given. </note>
           </p>
         </div>
-        <div n="text=Q FR:book=2:letter=11" type="textpart" subtype="letter" id="s134">
+        <div n="text=Q FR:book=2:letter=11" type="letter" id="s134">
           <head>CXXXIV (Q FR II, II [13])</head>
 
           <opener>
@@ -4786,7 +4786,7 @@ Combined into single file.
             transactions on the Lupercalia (15th February). Enjoy yourself with our dear boy to your
             heart's content. </p>
         </div>
-        <div n="text=Q FR:book=2:letter=12" type="textpart" subtype="letter" id="s138">
+        <div n="text=Q FR:book=2:letter=12" type="letter" id="s138">
           <head>CXXXVIII (Q FR II, 12 [14])</head>
 
           <opener>
@@ -4824,7 +4824,7 @@ Combined into single file.
             your army. You will find him grateful and attentive. I earnestly beg you to be very
             friendly to Trebatius. </p>
         </div>
-        <div n="text=Q FR:book=2:letter=13" type="textpart" subtype="letter" id="s140">
+        <div n="text=Q FR:book=2:letter=13" type="letter" id="s140">
           <head>CXL (Q FR II,13)</head>
 
           <opener>
@@ -4886,7 +4886,7 @@ Combined into single file.
                 n="Eur. Supp. 119">Eur. Supp. 119</bibl>). </note>
           </p>
         </div>
-        <div n="text=Q FR:book=2:letter=14" type="textpart" subtype="letter" id="s141">
+        <div n="text=Q FR:book=2:letter=14" type="letter" id="s141">
           <head>CXLI (Q FR II, 14 [15 b])</head>
 
           <opener>
@@ -4934,7 +4934,7 @@ Combined into single file.
             more avail than all laws and jurors put together. <pb n="280"/>
           </p>
         </div>
-        <div n="text=Q FR:book=2:letter=15" type="textpart" subtype="letter" id="s146">
+        <div n="text=Q FR:book=2:letter=15" type="letter" id="s146">
           <head>CXLVI (Q FR II, 15)</head>
 
           <opener>
@@ -4985,7 +4985,7 @@ Combined into single file.
             You needn't be afraid: I shall not admire myself one whit the less. On this subject
             speak like a lover of truth, and with your usual brotherly frankness. </p>
         </div>
-        <div n="text=Q FR:book=3:letter=1" type="textpart" subtype="letter" id="s147">
+        <div n="text=Q FR:book=3:letter=1" type="letter" id="s147">
           <head>CXLVII (Q FR III, 1)</head>
 
           <opener>
@@ -5261,7 +5261,7 @@ Combined into single file.
             Many, many wishes, dear brother, for your health. <pb n="300"/>
           </p>
         </div>
-        <div n="text=Q FR:book=3:letter=2" type="textpart" subtype="letter" id="s149">
+        <div n="text=Q FR:book=3:letter=2" type="letter" id="s149">
           <head>CXLIX (Q FR III, 2)</head>
 
           <opener>
@@ -5336,7 +5336,7 @@ Combined into single file.
             news. At home all is well : your house itself is being proceeded with by the contractors
             with fair expedition. </p>
         </div>
-        <div n="text=Q FR:book=3:letter=3" type="textpart" subtype="letter" id="s150">
+        <div n="text=Q FR:book=3:letter=3" type="letter" id="s150">
           <head>CL (Q FR III, 3)</head>
 
           <opener>
@@ -5394,7 +5394,7 @@ Combined into single file.
             will write and tell me most carefully in what district you are going to pass the winter,
             and what your prospects are. </p>
         </div>
-        <div n="text=Q FR:book=3:letter=4" type="textpart" subtype="letter" id="s151">
+        <div n="text=Q FR:book=3:letter=4" type="letter" id="s151">
           <head>CLI (Q FR III, 4)</head>
 
           <opener>
@@ -5480,7 +5480,7 @@ Combined into single file.
             of brothers, take good care of your health. <pb n="310"/>
           </p>
         </div>
-        <div n="text=Q FR:book=3:letter=5" type="textpart" subtype="letter" id="s154">
+        <div n="text=Q FR:book=3:letter=5" type="letter" id="s154">
           <head>CLIV (Q FR III,5-6)</head>
 
           <opener>
@@ -5569,7 +5569,7 @@ Combined into single file.
             last two letters. <pb n="331"/>
           </p>
         </div>
-        <div n="text=Q FR:book=3:letter=7" type="textpart" subtype="letter" id="s155">
+        <div n="text=Q FR:book=3:letter=7" type="letter" id="s155">
           <head>CLV (Q FR III, 7)</head>
 
           <opener>
@@ -5595,7 +5595,7 @@ Combined into single file.
             when you were at Samos. Good-bye, dearest and best of brothers. <pb n="332"/>
           </p>
         </div>
-        <div n="text=Q FR:book=3:letter=8" type="textpart" subtype="letter" id="s158">
+        <div n="text=Q FR:book=3:letter=8" type="letter" id="s158">
           <head>CLVIII (Q FR III, 8)</head>
 
           <opener>
@@ -5672,7 +5672,7 @@ Combined into single file.
             is only an executor, and might have reflected that he is now an executor, not an aedile.
             That is about all I had to write. Take care of yourself, dearest brother. </p>
         </div>
-        <div n="text=Q FR:book=3:letter=9" type="textpart" subtype="letter" id="s159">
+        <div n="text=Q FR:book=3:letter=9" type="letter" id="s159">
           <head>CLIX (Q FR III, 9)</head>
 
           <opener>

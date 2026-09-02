@@ -153,7 +153,8 @@
  </teiHeader>
  
  <text xml:lang="eng">
-  <body xml:base="urn:cts:latinLit:phi0474.phi014.perseus-eng2"><div n="urn:cts:latinLit:phi0474.phi014.perseus-eng2" type="translation" xml:lang="eng" subtype="translation">
+  <body xml:base="urn:cts:latinLit:phi0474.phi014.perseus-eng2">
+   <div type="translation" xml:lang="eng" subtype="translation">
     
    <head>THE ORATION OF M. T. CICERO IN DEFENCE OF L. MURENA, PROSECUTED FOR BRIBERY.</head>
    <div type="textpart" subtype="commentary" resp="editor">   

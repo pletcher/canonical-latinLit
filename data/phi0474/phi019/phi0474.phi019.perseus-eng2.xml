@@ -164,7 +164,8 @@
  </teiHeader>
 
  <text xml:lang="eng">
-  <body xml:base="urn:cts:latinLit:phi0474.phi019.perseus-eng2"><div n="urn:cts:latinLit:phi0474.phi019.perseus-eng2" type="translation" xml:lang="eng"
+  <body xml:base="urn:cts:latinLit:phi0474.phi019.perseus-eng2">
+   <div type="translation" xml:lang="eng"
     subtype="translation">
     <head>THE SPEECH OF M. T. CICERO AFTER HIS RETURN. ADDRESSED TO THE SENATE.</head>
     <div type="textpart" subtype="commentary" resp="editor">

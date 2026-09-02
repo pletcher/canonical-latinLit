@@ -6,7 +6,7 @@
 %PersProse;
 ]>
 <TEI.2>
-<teiHeader xml:lang="eng">
+<teiHeader xml:lang="eng" type="text" status="new">
 <fileDesc>
 <titleStmt>
 	<title>De Divinatione</title>
@@ -47,18 +47,6 @@
 		<state unit="book"/>
 		<state unit="section"/>
 	</refsDecl>
-<refsDecl xmlns="http://www.tei-c.org/ns/1.0" n="CTS">
-	<cRefPattern n="section"
-		matchPattern="(\w+).(\w+)"
-		replacementPattern="#xpath(/TEI.2/text/body/div1[@type='book'][@n='$1']/div2[@type='section'][@n='$2'])">
-		<p>This pointer pattern extracts book and section</p>
-	</cRefPattern>
-	<cRefPattern n="book"
-		matchPattern="(\w+)"
-		replacementPattern="#xpath(/TEI.2/text/body/div1[@type='book'][@n='$1'])">
-		<p>This pointer pattern extracts book</p>
-	</cRefPattern>
-</refsDecl>
 <refsDecl xml:id="CTS">
   <citeStructure match="/TEI/text/body" use="@xml:base">
     <citeStructure match="div1[@type='book']" use="@n" unit="book" delim=":">
@@ -2115,7 +2103,7 @@ et cum purpurea veste processit, in extis bovis
 opimi cor non fuit. <reg>num</reg> igitur censes ullum animal,
 quod sanguinem habeat, sine corde esse posse?
 <reg>qua</reg> ille rei novitate non<note><hi rend="italics">I insert</hi> non <hi rend="italics">because the story contradicts Suet. <reg>iul</reg>.
-Caesar, ch. 77</hi>  <gap reason="undefined"/> nec pro ostento ducendum, si pecudi
+Caesar, ch. 77</hi>  <gap/> nec pro ostento ducendum, si pecudi
 cor defuisset (<hi rend="italics">sc.</hi> Caesar dixit), <hi rend="italics">and is inconsistent with
 Caesar's character.</hi></note> perculsus cum Spurinna
 diceret timendum esse ne et consilium et vita
@@ -2331,7 +2319,7 @@ in <hi rend="italics">Chryse</hi> physicus inducitur, minime naturam rerum
 cognosse videatur:
 
 <quote rend="blockquote">
-<l> <gap reason="undefined"/> nam istis qui linguam avium int&eacute;llegunt</l>
+<l> <gap/> nam istis qui linguam avium int&eacute;llegunt</l>
 <l>plusque &eacute;x alieno i&eacute;core sapiunt quam &eacute;x suo,</l>
 <l>magis a&uacute;diendum quam auscultandum c&eacute;nseo.</l></quote>
 
@@ -2380,7 +2368,7 @@ arbitror et monere etiam ac multa praedicere,
 levitate, vanitate, malitia exclusa divinationem
 probo.</quote>
 <reg>quae</reg> cum dixisset Quintus, <quote><reg>praeclare</reg> tu quidem,</quote>
-inquam, <quote>paratus, Quinte, venisti  <gap reason="undefined"/> </quote><note>quinte, venisti <hi rend="italics">cod. R.</hi></note> </p></div2></div1>
+inquam, <quote>paratus, Quinte, venisti  <gap/> </quote><note>quinte, venisti <hi rend="italics">cod. R.</hi></note> </p></div2></div1>
 
 <pb id="p.370"/>
 
@@ -3706,7 +3694,7 @@ a propraetoribus administrantur, qui auspicia non
 habent!</p></div2>
 
 <div2 type="section" n="77"><p> <reg>itaque</reg> nec amnis transeunt auspicato nec
-tripudio auspicantur.<note><hi rend="italics">MSS., Dav., Giese, Moser, have</hi> Nam ex acuminibus  <gap reason="undefined"/> optimus <hi rend="italics">following</hi> auspicantur.</note> Ubi ergo avium divinatio?
+tripudio auspicantur.<note><hi rend="italics">MSS., Dav., Giese, Moser, have</hi> Nam ex acuminibus  <gap/> optimus <hi rend="italics">following</hi> auspicantur.</note> Ubi ergo avium divinatio?
 quae, quoniam ab eis, qui auspicia nulla habent, bella
 
 <pb id="p.458"/>
@@ -4311,7 +4299,7 @@ nec di nec homines esse patientur.</p>
 eademque paulo post:
 
 <quote rend="blockquote">
-<l>eheu videte  <gap reason="undefined"/> </l></quote>
+<l>eheu videte  <gap/> </l></quote>
 
 </p></div2>
 
@@ -4750,8 +4738,8 @@ enim solidis et a certis figuris vult fluere 'imagines.'
 Quod igitur Marii corpus erat? 'Ex eo,' inquit,
 'quod fuerat.' Ista igitur me 'imago' Mari in
 campum Atinatem persequebatur? 'Plena sunt
-<quote>imaginum</quote> omnia';<note><hi rend="italics"><reg>in</reg> MSS. and Dav.</hi> <reg>plena</reg>  <gap reason="undefined"/> omnia <hi rend="italics">immediately follows</hi>
-ex eo  <gap reason="undefined"/> quod fuerat</note> nulla enim species cogitari
+<quote>imaginum</quote> omnia';<note><hi rend="italics"><reg>in</reg> MSS. and Dav.</hi> <reg>plena</reg>  <gap/> omnia <hi rend="italics">immediately follows</hi>
+ex eo  <gap/> quod fuerat</note> nulla enim species cogitari
 potest nisi pulsu 'imaginum.'</p></div2>
 
 <div2 type="section" n="138"><p><reg>quid</reg> ergo? istae

@@ -59,9 +59,7 @@
             <refsDecl xml:id="CTS">
               <citeStructure match="/TEI/text/body" use="@xml:base">
                 <citeStructure unit="book" delim=":" match="div/div[@subtype='Book']" use="@n">
-                  <citeStructure unit="letter" delim="." match="div[@subtype='letter']" use="@n">
-                    <citeStructure unit="section" delim="." match="div[@subtype='section']" use="@n"/>
-                  </citeStructure>
+                  <citeStructure unit="section" delim="." match="div/div[@subtype='section']" use="@n"/>
                 </citeStructure>
               </citeStructure>
             </refsDecl>
@@ -106,7 +104,8 @@
       </revisionDesc>
    </teiHeader>
    <text xml:lang="lat">
-      <body xml:base="urn:cts:latinLit:phi0474.phi056.perseus-lat1"><div n="urn:cts:latinLit:phi0474.phi056.perseus-lat1" xml:lang="lat"
+      <body xml:base="urn:cts:latinLit:phi0474.phi056.perseus-lat1">
+         <div xml:lang="lat"
               type="edition">
             <div type="textpart" n="1" subtype="Book">
                <head >AD P. LENTVLVM</head>
