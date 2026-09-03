@@ -125,7 +125,28 @@
 					textgod Canonicalized Latin id. Revision 1.1 1997/10/24 21:36:18 textgod Added
 					to repository. Passed SGML parse. </item>
 			</change>-->
-			<change when="2015-01-07" who="Stella Dee">edited markup</change>
+			<change when="2015-01-07" who="Stella Dee">edited markup</change><!--
+			<change>
+				<date>4/26/2006</date>
+				<respStmt>
+					<name>Jason Bates</name>
+					<resp>ed.</resp>
+				</respStmt>
+				<item> $Log: liv.rob_eng2.xml,v $ Revision 1.3 2013-09-13 11:20:31 balmas01 reverting
+					texts back to pre_cts_reorg tagged version Revision 1.1 2009-12-01 18:17:55
+					rsingh04 moved more xml files around based on copyright status Revision 1.6
+					2009/07/17 16:01:55 rsingh04 major fixes to Livy texts. separated english from
+					latin in loeb texts, added separate abbs for each book since texts do not have
+					all the books. got rid of views because they didn't work well and were a pain.
+					things should not link up between different texts much better Revision 1.5
+					2008/11/14 22:05:52 lcerrato fixing author names for consistent sorting Revision
+					1.4 2008/11/14 20:52:40 rsingh04 updated titles Revision 1.3 2008/11/14 18:45:59
+					lcerrato fixed dup books 27, added header for book 28 and book 21 (found online)
+					Revision 1.2 2006/10/04 13:29:19 gcrane small mods Revision 1.1 2006/09/02
+					14:04:03 gcrane copies of the xlation without any automagically added sections
+					Revision 1.1 2006/04/28 02:13:21 gcrane added HEADs for individual books Revision
+					1.1 2005/07/25 14:55:30 packel Added to repository. Passed SGML parse. </item>
+			</change>-->
 		    </revisionDesc>
 	  </teiHeader>
 	  <text xml:lang="eng">

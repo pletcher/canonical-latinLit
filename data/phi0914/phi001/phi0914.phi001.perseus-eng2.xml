@@ -137,6 +137,10 @@
 		</profileDesc>
 		<revisionDesc>
 			<change who="Charles Pletcher" when="2026-09-02">Compiled this file from phi0011-phi0019 and phi00121-phi00145 (the Bohn/Spillan-Edmonds-McDevitte translation), merging the four translator/volume segments into one continuous book-chapter-section structure and tagging each book div with a source attribute pointing to its origin URN; part of the Livy (phi0914) consolidation, MinimumViablePerseus#182. See notesStmt for how embedded editorial supplements and irregular section numbering were handled.</change>
+			<change who="Charles Pletcher" when="2026-08-26">Add citeStructure refsDecl</change>
+			<change who="Stella Dee" when="2014-10-09">edited markup</change>
+			<change>4/5/2006 Gregory Crane ed. initial file</change>
+			<change>4/4/2006 Gregory Crane ed. initial file</change>
 		</revisionDesc>
 	</teiHeader>
 	<text xml:lang="eng">

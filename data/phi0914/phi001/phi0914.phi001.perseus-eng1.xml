@@ -263,6 +263,9 @@
 		</profileDesc>
 		<revisionDesc>
 			<change who="Charles Pletcher" when="2026-09-03">Compiled this file from phi0011-phi0019, phi00121-phi00145, and the periochae dirs phi00111s-phi00120s (the Loeb Classical Library English translation, Foster/Moore/Sage/Schlesinger), merging all thirteen volumes into one continuous book-chapter-section structure and tagging each book div with a source attribute pointing to its origin URN; part of the Livy (phi0914) consolidation, MinimumViablePerseus#182. See notesStmt for how irregular section numbering was handled.</change>
+			<change who="Charles Pletcher" when="2026-08-26">Add citeStructure refsDecl</change>
+			<change who="Stella Dee" when="2014-10-09">edited markup</change>
+			<change>2006 GRC tagging</change>
 		</revisionDesc>
 	</teiHeader>
 	<text xml:lang="eng">

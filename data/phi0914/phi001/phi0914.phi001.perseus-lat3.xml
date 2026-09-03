@@ -123,6 +123,74 @@
 		</profileDesc>
 		<revisionDesc>
 			<change who="Charles Pletcher" when="2026-09-02">Compiled this file from phi0011-phi0019 and phi00121-phi00130 (the Oxford Classical Text, Conway/Walters/Johnson), merging the four volumes into one continuous book-chapter-section structure and tagging each book div with a source attribute pointing to its origin URN; part of the Livy (phi0914) consolidation, MinimumViablePerseus#182. This is a supplementary, non-default edition -- see notesStmt.</change>
+			<change who="Charles Pletcher" when="2026-08-26">Add citeStructure refsDecl</change>
+			<change who="Stella Dee" when="2014-10-09">edited markup</change>
+			<change>4/3/2006 Gregory Crane ed. created XML file</change>
+			<change>2006 GRC tagging</change><!--
+			<change>
+				<date>10/6/97</date>
+				<respStmt>
+					<name>David Smith</name>
+					<resp>ed.</resp>
+				</respStmt>
+				<item> $Log: livy.oct01-05.xml,v $ Revision 1.1 2011-01-16 01:35:25 gcrane alternate
+					editions Revision 1.1 2009/12/01 18:17:53 rsingh04 moved more xml files around
+					based on copyright status Revision 1.6 2009/05/18 12:45:40 gcrane A script went
+					through using Roman praenomina to find likely Personal Names and then tagged
+					these using the TEI P4 tags. Praenomina are foreNames, nomina are surnames and
+					cognomina are addNames. Lucii filius etc. is a genName. The automated results
+					were quickly scanned and only the most obvious errors corrected. Revision 1.5
+					2008/11/14 22:05:57 lcerrato fixing author names for consistent sorting Revision
+					1.4 2008/11/14 20:52:41 rsingh04 updated titles Revision 1.3 2007/01/03 20:07:30
+					packel removed useless book:chapter scheme Revision 1.2 2006/10/04 13:29:26
+					gcrane small mods Revision 1.1 2006/10/01 14:15:28 gcrane renamed version of
+					livy.oct1-5.xml Revision 1.4 2006/09/29 19:53:11 packel fixes Revision 1.3
+					2006/08/31 23:52:48 gcrane corrections added Revision 1.2 2006/07/28 18:02:23
+					gcrane smal fixes Revision 1.1 2006/07/28 12:00:37 gcrane this now contains (1)
+					only the books in liyv oct1 and (2) page numbers to an image book version
+					Revision 1.5 2006/07/25 13:05:22 gcrane The sections have been checked and
+					regularized across editions Revision 1.4 2006/07/24 01:16:24 gcrane small fixes
+					Revision 1.3 2006/07/13 15:38:45 gcrane a few errors fixed Revision 1.2
+					2005/08/01 16:16:32 packel removed stray item tags Revision 1.1 2005/07/25
+					14:55:34 packel Converted to XML Revision 1.6 2003/07/01 22:17:13 yorkc Updated
+					texts to TEI P4 and Perseus P4 extensions; minor cleanup (esp. character
+					encodings and typos.) Revision 1.5 2001/10/01 19:39:49 amahoney fix milestone
+					break in middle of word Revision 1.4 2000/03/04 20:34:48 dasmith Added separate
+					funder entity to TEI header. Revision 1.3 1999/08/04 20:07:33 textgod
+					Canonicalized Latin id. Revision 1.2 1997/10/24 22:05:08 textgod Fixed
+					%^&amp;*$* praenomen section breaks. Revision 1.1 1997/10/06 23:04:12 textgod
+					Added to repository. Passed SGML parse. </item>
+			</change>
+			<change>
+				<date>10/6/97</date>
+				<respStmt>
+					<name>David Smith</name>
+					<resp>ed.</resp>
+				</respStmt>
+				<item> $Log: livy.oct06-10.xml,v $ Revision 1.1 2011-01-16 01:35:25 gcrane alternate
+					editions Revision 1.1 2009/12/01 18:17:57 rsingh04 moved more xml files around
+					based on copyright status Revision 1.5 2009/05/18 12:45:40 gcrane A script went
+					through using Roman praenomina to find likely Personal Names and then tagged
+					these using the TEI P4 tags. Praenomina are foreNames, nomina are surnames and
+					cognomina are addNames. Lucii filius etc. is a genName. The automated results
+					were quickly scanned and only the most obvious errors corrected. Revision 1.4
+					2008/11/14 22:05:57 lcerrato fixing author names for consistent sorting Revision
+					1.3 2008/11/14 20:52:41 rsingh04 updated titles Revision 1.2 2007/01/03 20:07:30
+					packel removed useless book:chapter scheme Revision 1.1 2006/10/04 13:29:26
+					gcrane small mods Revision 1.2 2006/09/29 19:53:12 packel fixes Revision 1.1
+					2006/07/30 21:17:15 gcrane added to repository Revision 1.5 2006/07/25 13:05:22
+					gcrane The sections have been checked and regularized across editions Revision
+					1.4 2006/07/24 01:16:24 gcrane small fixes Revision 1.3 2006/07/13 15:38:45
+					gcrane a few errors fixed Revision 1.2 2005/08/01 16:16:32 packel removed stray
+					item tags Revision 1.1 2005/07/25 14:55:34 packel Converted to XML Revision 1.6
+					2003/07/01 22:17:13 yorkc Updated texts to TEI P4 and Perseus P4 extensions;
+					minor cleanup (esp. character encodings and typos.) Revision 1.5 2001/10/01
+					19:39:49 amahoney fix milestone break in middle of word Revision 1.4 2000/03/04
+					20:34:48 dasmith Added separate funder entity to TEI header. Revision 1.3
+					1999/08/04 20:07:33 textgod Canonicalized Latin id. Revision 1.2 1997/10/24
+					22:05:08 textgod Fixed %^&amp;*$* praenomen section breaks. Revision 1.1
+					1997/10/06 23:04:12 textgod Added to repository. Passed SGML parse. </item>
+			</change>-->
 		</revisionDesc>
 	</teiHeader>
 	<text xml:lang="lat">

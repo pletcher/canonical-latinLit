@@ -161,6 +161,11 @@
 		</profileDesc>
 		<revisionDesc>
 			<change who="Charles Pletcher" when="2026-09-03">Compiled this file from phi00131-phi00145 (Weissenborn's German commentary edition), merging all seven volumes (books 31-45) into one continuous book-chapter-section structure and tagging each book div with a source attribute pointing to its origin URN; part of the Livy (phi0914) consolidation, MinimumViablePerseus#182. This is a supplementary, non-default edition -- see notesStmt. Book 45's source-file prerequisite (a commented-out book div wrapper) was fixed separately before this merge.</change>
+			<change who="Charles Pletcher" when="2026-09-02">Uncomment book div wrapper and add book-level citeStructure entry, matching sibling volumes</change>
+			<change who="Charles Pletcher" when="2026-08-26">Add citeStructure refsDecl</change>
+			<change who="Stella Dee" when="2014-10-09">edited markup</change>
+			<change>2006/7/03 Gregory Crane ed.</change>
+			<change>2006/7/03 Gregory Craneed.</change>
 		</revisionDesc>
 	</teiHeader>
 	<text xml:lang="lat">
