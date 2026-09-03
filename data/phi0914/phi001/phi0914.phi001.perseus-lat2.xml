@@ -114,6 +114,7 @@
             </langUsage>
         </profileDesc>
         <revisionDesc>
+          <change who="Charles Pletcher" when="2026-09-03">Marked 14 section divs in books 1-45 (6.29.10, 28.3.4, 29.35.15, 31.26.3, 41.17.7, 42.5.3, 42.10.3, 42.60.10, 44.1.8, 44.6.4, 44.24.2, 44.27.5, 44.28.12, 44.30.11) with &lt;gap reason="lost"/&gt; -- these were bare empty divs (no text, no gap marker) since the file's first commit (the original milestone-to-div conversion), while the corresponding loci have real text in this corpus's other Latin editions (oct-lat, weissenborn-comm-lat), confirming the gap is a conversion artifact and not a genuine manuscript lacuna. The original source content is unrecoverable; git history has no earlier milestone-based version of this file to reconvert from.</change>
           <change who="Charles Pletcher" when="2026-09-02">Merged phi001fr's books 46-142 (fragments/periochae, Weissenborn/Müller Teubner ed., pars IV) in as sibling textpart-book divs under part 4, completing this edition's coverage from book 45 through book 142; part of the Livy (phi0914) consolidation, MinimumViablePerseus#182</change>
           <change who="Charles Pletcher" when="2026-08-26">Add citeStructure refsDecl</change>
         	<change when="2018-06-21" who="Lisa Cerrato">updating lost typographical corrections; regularizing quotation marks with vary across print editions and were inconsistent in this file</change>
@@ -22835,7 +22836,7 @@
                                     dictatura se abdicavit.</p>
                             </div>
                             <div type="textpart" subtype="section" n="10">
-                                <p/>
+                                <p><gap reason="lost"/></p>
                             </div>
                         </div>
                         <div type="textpart" subtype="chapter" n="30">
@@ -66040,7 +66041,7 @@
 									excursiones circa mediterraneos populos faciendas.</p>
 							</div>
 							<div type="textpart" subtype="section" n="4">
-								<p/>
+								<p><gap reason="lost"/></p>
 							</div>
 							<div type="textpart" subtype="section" n="5">
 								<p>Scipio castris prope urbem positis priusquam circumvallaret
@@ -72625,7 +72626,7 @@
 									ad extremum autumni gesta.</p>
 							</div>
 							<div type="textpart" subtype="section" n="15">
-								<p/>
+								<p><gap reason="lost"/></p>
 							</div>
 						</div>
 						<div type="textpart" subtype="chapter" n="36">
@@ -77696,7 +77697,7 @@
 									</choice> consedit,</p>
 							</div>
 							<div type="textpart" subtype="section" n="3">
-								<p/>
+								<p><gap reason="lost"/></p>
 							</div>
 							<div type="textpart" subtype="section" n="4">
 								<p>ut, si ex castello ab Eleusine in praedantis suos impetus fieret,
@@ -112574,7 +112575,7 @@
 									terrorem admoventes, circumvectarentur.</p>
 							</div>
 							<div type="textpart" subtype="section" n="7">
-								<p/>
+								<p><gap reason="lost"/></p>
 							</div>
 							<div type="textpart" subtype="section" n="8">
 								<p>eodem Pisas et. Q. Petilius consul ad conveniendum exercitui <hi
@@ -113601,7 +113602,7 @@
 									nullius liberae civitatis fortunam secum mutatam vellent.</p>
 							</div>
 							<div type="textpart" subtype="section" n="3">
-								<p/>
+								<p><gap reason="lost"/></p>
 							</div>
 							<div type="textpart" subtype="section" n="4">
 								<p>contra Persea fama erat post patris mortem uxorem manu sua
@@ -113870,7 +113871,7 @@
 									eorum Romae, et omnes in suis civitatibus censerentur.</p>
 							</div>
 							<div type="textpart" subtype="section" n="3">
-								<p/>
+								<p><gap reason="lost"/></p>
 							</div>
 							<div type="textpart" subtype="section" n="4">
 								<p>concors et e re publica censura fuit. omnes, quos senatu moverunt
@@ -116815,7 +116816,7 @@
 									donati.</p>
 							</div>
 							<div type="textpart" subtype="section" n="10">
-								<p/>
+								<p><gap reason="lost"/></p>
 							</div>
 						</div>
 						<div type="textpart" subtype="chapter" n="61">
@@ -118704,7 +118705,7 @@
 									exercitum <hi rend="italics">mansit</hi> — </p>
 							</div>
 							<div type="textpart" subtype="section" n="8">
-								<p/>
+								<p><gap reason="lost"/></p>
 							</div>
 							<div type="textpart" subtype="section" n="9">
 								<p>summa concordia fuit. paucis post diebus consul contionem apud
@@ -119011,7 +119012,7 @@
 									fecit.</p>
 							</div>
 							<div type="textpart" subtype="section" n="4">
-								<p/>
+								<p><gap reason="lost"/></p>
 							</div>
 							<div type="textpart" subtype="section" n="5">
 								<p>duos enim saltus, per quos inde evadere possent, habebant <pb
@@ -120128,7 +120129,7 @@
 									oppugnare.</p>
 							</div>
 							<div type="textpart" subtype="section" n="2">
-								<p/>
+								<p><gap reason="lost"/></p>
 							</div>
 							<div type="textpart" subtype="section" n="3">
 								<p>Attalo adiutore patrem suum oppressum; Eumene adiuvante et quadam
@@ -120344,7 +120345,7 @@
 									possent.</p>
 							</div>
 							<div type="textpart" subtype="section" n="5">
-								<p/>
+								<p><gap reason="lost"/></p>
 							</div>
 							<div type="textpart" subtype="section" n="6">
 								<p>ipsis quoque Romanis de se cogitandum fuisset, quando neque
@@ -120451,7 +120452,7 @@
 									petebant.</p>
 							</div>
 							<div type="textpart" subtype="section" n="12">
-								<p/>
+								<p><gap reason="lost"/></p>
 							</div>
 							<div type="textpart" subtype="section" n="13">
 								<p>sed propius urbem lembi accessuque commodiore cum exposuissent
@@ -120578,7 +120579,7 @@
 									accensus, bellum haud dubie adversus eum gesturus.</p>
 							</div>
 							<div type="textpart" subtype="section" n="11">
-								<p/>
+								<p><gap reason="lost"/></p>
 							</div>
 							<div type="textpart" subtype="section" n="12">
 								<p>Anicius praetor eo tempore Apolloniae auditis, quae in Illyrico
