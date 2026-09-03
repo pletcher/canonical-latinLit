@@ -1,63 +1,63 @@
 <work xmlns="http://chs.harvard.edu/xmlns/cts" groupUrn="urn:cts:latinLit:phi0914"
     urn="urn:cts:latinLit:phi0914.phi001" xml:lang="lat">
     <title xml:lang="lat">Ab urbe condita</title>
-    <edition urn="urn:cts:latinLit:phi0914.phi001.perseus-lat2"
-        workUrn="urn:cts:latinLit:phi0914.phi001" xml:lang="lat">
-        <label xml:lang="lat">Ab urbe condita</label>
-        <description xml:lang="eng">Default reading edition. Books 1-142 (complete). Titi Livi ab
-            urbe condita libri editionem priman, Pars I-IV, Libri I-XL. Editio Stereotypica.
-            Weissenborn, Wilhelm; Mueller, Moritz, editors. Leipzig: Teubner, 1884-1911.</description>
-    </edition>
-
-    <edition urn="urn:cts:latinLit:phi0914.phi001.perseus-lat3"
-        workUrn="urn:cts:latinLit:phi0914.phi001" xml:lang="lat">
-        <label xml:lang="lat">Ab urbe condita</label>
-        <description xml:lang="eng">Supplementary edition. Partial coverage: books 1-10, 21-30 only.
-            Livy. Ab urbe condita. Conway, Robert Seymour; Walters, Charles Flamstead;
-            Johnson, Stephen Keymer, editors. Oxford: Oxford University Press, 1914-1935. (Oxford
-            Classical Texts)</description>
-    </edition>
-    <edition urn="urn:cts:latinLit:phi0914.phi001.perseus-lat4"
-        workUrn="urn:cts:latinLit:phi0914.phi001" xml:lang="lat">
-        <label xml:lang="lat">Ab urbe condita</label>
-        <description xml:lang="eng">Supplementary edition (Latin text accompanying the Loeb
-            translation). Partial coverage: books 1-5, 8-10, 21-30, 43-45, with periochae 11-20;
-            books 6-7 and 31-42 have no Latin source text available. Livy. Ab Urbe Condita, With An
-            English Translation.
-            Foster, Benjamin Oliver; Moore, Frank Gardener; Schlesinger, Alfred C., editors.
-            Cambridge, Mass.; London: Harvard University Press; William Heinemann, Ltd., 1919-1959.
-            (Loeb Classical Library)</description>
-    </edition>
-    <edition urn="urn:cts:latinLit:phi0914.phi001.perseus-lat5"
-        workUrn="urn:cts:latinLit:phi0914.phi001" xml:lang="lat">
-        <label xml:lang="lat">Ab urbe condita libri, erklärt von M. Weissenborn</label>
-        <description xml:lang="eng">Supplementary edition (German commentary text). Partial
-            coverage: books 31-45 only. Livy. Ab urbe condita libri.
-            Weissenborn, W.; Müller, H. J., editors. Berlin: Weidmannsche Buchhandlung, 1873-1883.</description>
-    </edition>
 
     <translation urn="urn:cts:latinLit:phi0914.phi001.perseus-eng1"
         workUrn="urn:cts:latinLit:phi0914.phi001" xml:lang="eng">
         <label xml:lang="eng">History of Rome</label>
-        <description xml:lang="eng">Default reading translation. Books 1-10, 21-45, with periochae
-            11-20. Livy. Ab Urbe Condita, With An English Translation.
+        <description xml:lang="eng">
             Foster, Benjamin Oliver; Moore, Frank Gardener; Sage, Evan T.; Schlesinger, Alfred C.,
             translators.
             Cambridge, Mass.; London: Harvard University Press; William Heinemann, Ltd., 1919-1959.
-            (Loeb Classical Library)</description>
+            (Loeb Classical Library)
+        </description>
     </translation>
     <translation urn="urn:cts:latinLit:phi0914.phi001.perseus-eng2"
         workUrn="urn:cts:latinLit:phi0914.phi001" xml:lang="eng">
         <label xml:lang="eng">History of Rome</label>
-        <description xml:lang="eng">Supplementary translation. Books 1-10, 21-45. Livy. History of
-            Rome by Titus Livius. Spillan, D.; Edmonds, Cyrus; McDevitte, William A., translators.
-            London: Henry G. Bohn, 1849-1868. (Bohn's Classical Library)</description>
+        <description xml:lang="eng">Spillan, D.; Edmonds, Cyrus; McDevitte, William A., translators.
+            London: Henry G. Bohn, 1849-1868. (Bohn's Classical Library)
+        </description>
     </translation>
     <translation urn="urn:cts:latinLit:phi0914.phi001.perseus-eng3"
         workUrn="urn:cts:latinLit:phi0914.phi001" xml:lang="eng">
         <label xml:lang="eng">History of Rome</label>
-        <description xml:lang="eng">Supplementary translation. Books 1-10, 21-45. Livy. History of
-            Rome, Volumes 1-2. Roberts, Canon, Rev, translator.
-            London, New York: J. M. Dent and Sons; E. P. Dutton and Co., 1912.</description>
+        <description xml:lang="eng">Volumes 1-2. Roberts, Canon, Rev, translator.
+            London, New York: J. M. Dent and Sons; E. P. Dutton and Co., 1912.
+        </description>
     </translation>
+
+    <edition urn="urn:cts:latinLit:phi0914.phi001.perseus-lat2"
+        workUrn="urn:cts:latinLit:phi0914.phi001" xml:lang="lat">
+        <label xml:lang="lat">Ab urbe condita</label>
+        <description xml:lang="eng">Pars I-IV, Libri I-XL. Editio Stereotypica.
+            Weissenborn, Wilhelm; Mueller, Moritz, editors. Leipzig: Teubner, 1884-1911.
+        </description>
+    </edition>
+    <edition urn="urn:cts:latinLit:phi0914.phi001.perseus-lat3"
+        workUrn="urn:cts:latinLit:phi0914.phi001" xml:lang="lat">
+        <label xml:lang="lat">Ab urbe condita</label>
+        <description xml:lang="eng">Conway, Robert Seymour; Walters, Charles Flamstead;
+            Johnson, Stephen Keymer, editors. Oxford: Oxford University Press, 1914-1935. (Oxford
+            Classical Texts)
+        </description>
+    </edition>
+    <edition urn="urn:cts:latinLit:phi0914.phi001.perseus-lat4"
+        workUrn="urn:cts:latinLit:phi0914.phi001" xml:lang="lat">
+        <label xml:lang="lat">Ab urbe condita</label>
+        <description xml:lang="eng">
+            Foster, Benjamin Oliver; Moore, Frank Gardener; Schlesinger, Alfred C., editors.
+            Cambridge, Mass.; London: Harvard University Press; William Heinemann, Ltd., 1919-1959.
+            (Loeb Classical Library)
+        </description>
+    </edition>
+    <edition urn="urn:cts:latinLit:phi0914.phi001.perseus-lat5"
+        workUrn="urn:cts:latinLit:phi0914.phi001" xml:lang="lat">
+        <label xml:lang="lat">Ab urbe condita libri, erklärt von M. Weissenborn</label>
+        <description xml:lang="eng">
+            Weissenborn, W.; Müller, H. J., editors. Berlin: Weidmannsche Buchhandlung, 1873-1883.
+        </description>
+    </edition>
+
+
 </work>
